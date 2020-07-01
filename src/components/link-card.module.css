@@ -1,0 +1,24 @@
+.card {
+    min-height: 100px;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
+    text-decoration: none;
+    color: black;
+}
+.icon {
+    height: 56px;
+    width: 56px;
+    margin-right: 16px;
+}
+.description {
+    padding: 0 16px;
+}
+.title {
+
+}
