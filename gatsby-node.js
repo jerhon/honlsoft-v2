@@ -51,7 +51,6 @@ async function createBlogArticles(actions, graphql, reporter) {
         url = node.frontmatter.type + "/" + node.parent.name
       }
 
-      console.log(node.parent.name)
       createPage({
         path: url,
         component: blogPostTemplate,
