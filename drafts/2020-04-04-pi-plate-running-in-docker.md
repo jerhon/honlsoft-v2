@@ -1,6 +1,6 @@
 --- 
 date: "2020-04-04"
-title: "The Pi-plate: "
+title: "The Pi-plate: Running in Docker"
 tags: ["pi-plate", "docker", "website"]
 type: "blog"
 ---
