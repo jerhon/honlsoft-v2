@@ -10,7 +10,7 @@ export interface BreadcrumbInfo {
 const Breadcrumb = ({ links  }) => {
     let ret : JSX.Element[] = [];
     if (links.length > 0) {
-        let linksArray = links.map((l) => (<Link to={l.url}>{l.title}</Link>))
+        let linksArray = links.map((l) => (<Link key={l.title} to={l.url}>{l.title}</Link>))
         for (let link of linksArray) {
             ret.push(link);
             ret.push((<span> &gt; </span>));
