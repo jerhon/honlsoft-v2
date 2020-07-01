@@ -17,12 +17,12 @@ export class SiteHeader extends React.Component<{siteName: string}> {
         </h1>
       </div>
       <div className={headerStyles.headerRight}>
-        <Link to="https://github.com/jerhon" className={headerStyles.link}>
+        <a href="https://github.com/jerhon" className={headerStyles.link}>
           <img src="/img/github.svg"></img>
-        </Link>
-        <Link to="https://www.linkedin.com/in/jhonl/" className={headerStyles.link}>
+        </a>
+        <a href="https://www.linkedin.com/in/jhonl/" className={headerStyles.link}>
           <img src="/img/linkedin.svg"></img>
-        </Link>
+        </a>
       </div>
     </header>);
   }
