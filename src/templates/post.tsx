@@ -13,10 +13,13 @@ const PostTemplate = ({ data: { post, relatedPosts } }) => {
 	const date = post.frontmatter.date;
     const html = post.html;
 
-    let links = relatedPosts.edges.map((p) => ({ 
-        title: p.node.frontmatter.title, 
-        url:  getPostUrl(post.node)
-    }));
+    let links = [];
+    if (relatedPosts && relatedPosts.edges && relatedPosts.edges.length) {
+        links = relatedPosts.edges.map((p) => ({ 
+            title: p.node.frontmatter.title, 
+            url:  getPostUrl(p.node)
+        }));
+    }
     
     let breadcrumbs = getPostBreadcrumbs(post);
 
@@ -38,6 +41,7 @@ const PostTemplate = ({ data: { post, relatedPosts } }) => {
 export const postQuery = graphql`
     query($id: String!, $project: [String]) {
 		post: markdownRemark(id: { eq: $id }) {
+            id
 			html
 			frontmatter {
                 title
