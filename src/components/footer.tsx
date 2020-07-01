@@ -6,7 +6,8 @@ const Footer = () => {
         <div className="page-width">
             © {new Date().getFullYear()} Jeremy Honl, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://www.gatsbyjs.org">Gatsby</a>. 
+          Images are from <a href="https://www.unsplash.com">Unsplash</a>.
         </div>
     </footer>)
 }
