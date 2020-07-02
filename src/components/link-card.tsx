@@ -1,6 +1,6 @@
+import { Link } from "gatsby";
 import React from "react";
 import cardStyles from "./link-card.module.css";
-import { Link } from "gatsby";
 
 interface props {
     title: string,

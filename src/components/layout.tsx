@@ -5,8 +5,7 @@ import "./styles.css"
 import Footer from "./footer"
 import styles from "./layout.module.css"
 
-export const Layout = ({ children }) => {
-
+const Layout = ({ children }) => {
   return (
     <div className={styles.container} style={{minHeight: '100vh'}}>
       <SiteHeader siteName="Honlsoft" />
@@ -16,3 +15,4 @@ export const Layout = ({ children }) => {
   )
 }
 
+export default Layout;

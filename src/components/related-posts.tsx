@@ -1,5 +1,4 @@
 import React from "react";
-import { graphql } from "gatsby";
 
 export interface props {
     links: {
@@ -9,7 +8,6 @@ export interface props {
 }
 
 const RelatedPosts = (props: props) => {
-
     if (props.links.length) {
         let links = props.links.map((n) => (<li><a href={n.url}>{n.title}</a></li>));
 
@@ -23,6 +21,5 @@ const RelatedPosts = (props: props) => {
         return (<></>);
     }
 };
-
 
 export default RelatedPosts;

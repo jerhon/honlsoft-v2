@@ -1,41 +1,39 @@
-import React from "react";
-import { Layout } from "../components/layout";
 import { graphql } from "gatsby";
-import SEO from "../components/seo";
+import React from "react";
+
+import Layout from "../components/layout";
 import PageHeader from "../components/page-header";
 import RelatedPosts from "../components/related-posts";
+import SEO from "../components/seo";
 import { getPostBreadcrumbs, getPostUrl } from "../utils";
 
-
-
 const PostTemplate = ({ data: { post, relatedPosts } }) => {
-	const title = post.frontmatter.title;
-	const date = post.frontmatter.date;
+    const title = post.frontmatter.title;
+    const date = post.frontmatter.date;
     const html = post.html;
 
     let links = [];
     if (relatedPosts && relatedPosts.edges && relatedPosts.edges.length) {
-        links = relatedPosts.edges.map((p) => ({ 
-            title: p.node.frontmatter.title, 
-            url:  getPostUrl(p.node)
+        links = relatedPosts.edges.map((p) => ({
+            title: p.node.frontmatter.title,
+            url: getPostUrl(p.node)
         }));
     }
-    
+
     let breadcrumbs = getPostBreadcrumbs(post);
 
-	return (
+    return (
         <Layout>
             <SEO title={title}></SEO>
             <PageHeader title={title} breadcrumbs={breadcrumbs} />
-            
+
             <div className="page-width">
                 <div dangerouslySetInnerHTML={{ __html: html }} />
-                
-            <RelatedPosts links={links} />
+                <RelatedPosts links={links} />
             </div>
 
         </Layout>
-	);
+    );
 };
 
 export const postQuery = graphql`

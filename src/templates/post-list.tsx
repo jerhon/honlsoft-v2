@@ -1,13 +1,10 @@
 import React from "react";
-import { Layout } from "../components/layout";
+import Layout from "../components/layout";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import PageHeader from "../components/page-header";
 import { singular, capitalize, getPostUrl } from "../utils";
 
-
-
 const PostList = ({data}) => {
-
 
     let posts = data.allMarkdownRemark.edges.map((n) => ({
         excerpt: n.node.excerpt,

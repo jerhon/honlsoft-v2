@@ -8,7 +8,6 @@
 .blue-back *:visited {
     color: white;
 }
-
 .page-width {
     padding: 32px 32px;
     max-width: 1200px;
@@ -19,4 +18,7 @@ a {
 }
 .centered {
     margin: auto;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Oswald';
 }

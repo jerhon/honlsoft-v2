@@ -3,16 +3,14 @@ import titlePictureStyles from "./title-picture.module.css";
 
 // TODO: Parameterize Picture URL, Height
 
-export class TitlePicture extends React.Component<{tagLine: string}> {
+export interface Props {
+    tagLine: string;
+}
 
-    render() {
-        return (
+const TitlePicture = ({tagLine}) => (
             <div className={titlePictureStyles.container}>
-                <h3 className={titlePictureStyles.tagLine}>{this.props.tagLine}</h3>
+                <h3 className={titlePictureStyles.tagLine}>{tagLine}</h3>
             </div>
         );
-    }
-    
-}
 
 export default TitlePicture;
