@@ -7,7 +7,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Jeremy Honl, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>. 
-          Images are from <a href="https://www.unsplash.com">Unsplash</a>.
+          Mountain image is from <a href="https://www.unsplash.com">Unsplash</a>.
         </div>
     </footer>)
 }
