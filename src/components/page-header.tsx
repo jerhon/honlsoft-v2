@@ -3,14 +3,14 @@ import Breadcrumb, { BreadcrumbInfo } from "./breadcrumb";
 
 export interface Props {
     title: string;
-    breadcrumbs: BreadcrumbInfo[];
+    breadcrumbs: BreadcrumbInfo[] | undefined;
 }
 
-const PageHeader = ({title, breadcrumbs}) => {
+const PageHeader = ({title, breadcrumbs} : Props) => {
     return (<div className="blue-back">
         <div className="page-width">
         <h1 style={{ margin: '50px 0px' }}>{title}</h1>
-        <div><Breadcrumb links={breadcrumbs} ></Breadcrumb></div>
+        { breadcrumbs ? (<div><Breadcrumb links={breadcrumbs} ></Breadcrumb> </div>) : null }
         </div>
     </div>);
 }
