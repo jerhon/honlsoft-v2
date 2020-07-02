@@ -1,9 +1,12 @@
 import React from "react";
-import { Link } from "gatsby";
 import Breadcrumb, { BreadcrumbInfo } from "./breadcrumb";
 
+export interface Props {
+    title: string;
+    breadcrumbs: BreadcrumbInfo[];
+}
 
-const PageHeader = ({title, breadcrumbs} : {title: string, breadcrumbs: BreadcrumbInfo[]}) => {
+const PageHeader = ({title, breadcrumbs}) => {
     
     return (<div className="blue-back">
         <div className="page-width">

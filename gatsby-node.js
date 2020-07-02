@@ -90,8 +90,6 @@ async function createTypePagination(actions, graphql, type) {
       }
     `)
 
-    console.log(result);
-
     let totalBlogs = result.data.allMarkdownRemark.edges.length;
     const pageSize = 10;
 

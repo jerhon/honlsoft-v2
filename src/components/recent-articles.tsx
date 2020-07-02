@@ -63,8 +63,6 @@ const PostLookup = () => {
         }
     }`);
 
-    console.log(data);
-
     let articleData = data.allMarkdownRemark.edges.map((d) => ({ 
         title: d.node.frontmatter.title, 
         date: d.node.frontmatter.date,
@@ -72,8 +70,6 @@ const PostLookup = () => {
         readTime: d.node.timeToRead,
         url: '/blog/' + d.node.parent.name
     }))
-
-    console.log(articleData);
 
     return (<RecentArticles articles={articleData}></RecentArticles>)
 }

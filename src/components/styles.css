@@ -1,0 +1,22 @@
+.blue-back {
+    background-color: #005eb8;
+    color: white;
+}
+.blue-back * {
+    color: white
+}
+.blue-back *:visited {
+    color: white;
+}
+
+.page-width {
+    padding: 32px 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+a {
+    color: black;
+}
+.centered {
+    margin: auto;
+}
