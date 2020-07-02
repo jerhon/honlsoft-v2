@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "../components/layout";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { Link, graphql } from "gatsby";
 import PageHeader from "../components/page-header";
 import { singular, capitalize, getPostUrl } from "../utils";
+import Pager from "../components/pager";
 
-const PostList = ({data}) => {
+const PostList = ({ data }) => {
 
     let posts = data.allMarkdownRemark.edges.map((n) => ({
         excerpt: n.node.excerpt,
@@ -15,7 +16,7 @@ const PostList = ({data}) => {
     }));
 
     let type: string = data.allMarkdownRemark.edges[0].node.frontmatter.type;
-    
+
     let postLayout = posts.map((a) => (<div>
         <Link to={a.url}><h3>{a.title}</h3></Link>
         <p>{a.excerpt}</p>
@@ -25,18 +26,42 @@ const PostList = ({data}) => {
     </div>))
 
     let breadCrumbs = [
-        {title:"Home", url:"/"}, 
-        {title:capitalize(type), url: "/" + type}
+        { title: "Home", url: "/" },
+        { title: capitalize(type), url: "/" + type }
     ];
 
     let titleType = singular(capitalize(type));
+
+    // todo: split this all out into seperate logic
+
+    let url = window.location.href;
+    let idx = +url.substring(url.lastIndexOf('/') + 1);
+    let baseUrl = '/' + type + '/';
+
+    let backUrl: string | undefined;
+    let forwardUrl: string | undefined;
+
+    if (idx) {
+        if (idx > 1) {
+            backUrl = baseUrl + (idx - 1).toString();
+        } else if (idx == 1) {
+            backUrl = baseUrl;
+        }
+    }
+    if (!idx) {
+        idx = 0;
+    }
+    if (posts.length > 10) {
+        forwardUrl = baseUrl + (idx + 1);
+    }
 
     return (<Layout>
         <PageHeader title={titleType + " Posts"} breadcrumbs={breadCrumbs} />
         <div className="page-width">
             {postLayout}
         </div>
-        <div>
+        <div className="page-width">
+            <Pager backUrl={backUrl} forwardUrl={forwardUrl} />
         </div>
     </Layout>)
 }

@@ -106,7 +106,7 @@ async function createTypePagination(actions, graphql, type) {
         component: blogListTemplate,
         context: {
           type: type,
-          limit: pageSize,
+          limit: pageSize + 1,
           skip: i * pageSize
         }, // additional data can be passed via context
       })
