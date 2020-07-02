@@ -5,7 +5,7 @@ import PageHeader from "../components/page-header";
 import { singular, capitalize, getPostUrl } from "../utils";
 import Pager from "../components/pager";
 
-const PostList = ({ data }) => {
+const PostList = ({ data, location }) => {
 
     let posts = data.allMarkdownRemark.edges.map((n) => ({
         excerpt: n.node.excerpt,
@@ -34,7 +34,7 @@ const PostList = ({ data }) => {
 
     // todo: split this all out into seperate logic
 
-    let url = window.location.href;
+    let url:string = location.pathname;
     let idx = +url.substring(url.lastIndexOf('/') + 1);
     let baseUrl = '/' + type + '/';
 
