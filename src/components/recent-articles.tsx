@@ -12,7 +12,7 @@ export interface Article {
 
 class RecentArticles extends React.Component<{ articles: Article[] }> {
     renderArticle(a: Article) {
-        return (<div>
+        return (<div key={a.url}>
             <Link to={a.url}><h3>{a.title}</h3></Link>
             <p>{a.excerpt}</p>
             <div>{a.date} | approximately {a.readTime} minutes to read</div>

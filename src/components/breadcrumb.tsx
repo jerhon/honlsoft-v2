@@ -13,7 +13,7 @@ const Breadcrumb = ({ links  }) => {
         let linksArray = links.map((l) => (<Link key={l.title} to={l.url}>{l.title}</Link>))
         for (let link of linksArray) {
             ret.push(link);
-            ret.push((<span> &gt; </span>));
+            ret.push((<span key={link.key + ' span'}> &gt; </span>));
         }
         ret.pop();
     }

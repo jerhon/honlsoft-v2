@@ -17,7 +17,7 @@ const PostList = ({ data, location }) => {
 
     let type: string = data.allMarkdownRemark.edges[0].node.frontmatter.type;
 
-    let postLayout = posts.map((a) => (<div>
+    let postLayout = posts.map((a) => (<div key={a.url}>
         <Link to={a.url}><h3>{a.title}</h3></Link>
         <p>{a.excerpt}</p>
         <div>{a.date} | approximately {a.timeToRead} minutes to read</div>

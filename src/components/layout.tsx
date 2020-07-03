@@ -7,7 +7,7 @@ import styles from "./layout.module.css"
 
 const Layout = ({ children }) => {
   return (
-    <div className={styles.container} style={{minHeight: '100vh'}}>
+    <div className={styles.container} >
       <SiteHeader siteName="Honlsoft" />
       <main className={styles.main} style={{height: '100%'}}>{children}</main>
       <Footer />

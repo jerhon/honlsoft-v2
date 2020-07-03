@@ -1,24 +1,24 @@
 .card {
     min-height: 100px;
+    padding: 8px;
 }
 .header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-self: center;
-    align-self: center;
-    align-content: center;
     text-decoration: none;
     color: black;
+    margin: 0px auto 16px;
 }
+
+.title {
+    margin: 0px;
+} 
+
 .icon {
     height: 56px;
     width: 56px;
-    margin-right: 16px;
+    margin: 0px 24px 0px 0px;
 }
 .description {
-    padding: 0 16px;
-}
-.title {
-
 }
