@@ -39,13 +39,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Honlsoft`,
+        short_name: `Honlsoft`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#005eb8`,
+        theme_color: `#005eb8`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/honl-soft-logo.png`, // This path is relative to the root of the site.
       },
     },
     {
