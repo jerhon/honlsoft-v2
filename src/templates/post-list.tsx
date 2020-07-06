@@ -1,9 +1,10 @@
+import { graphql, Link } from "gatsby";
 import React from "react";
 import Layout from "../components/layout";
-import { Link, graphql } from "gatsby";
 import PageHeader from "../components/page-header";
-import { singular, capitalize, getPostUrl } from "../utils";
 import Pager from "../components/pager";
+import SEO from "../components/seo";
+import { capitalize, getPostUrl, plural, singular } from "../utils";
 
 const PostList = ({ data, location }) => {
 
@@ -31,10 +32,11 @@ const PostList = ({ data, location }) => {
     ];
 
     let titleType = singular(capitalize(type));
+    let title = titleType + " Posts";
 
     // todo: split this all out into seperate logic
 
-    let url:string = location.pathname;
+    let url: string = location.pathname;
     let idx = +url.substring(url.lastIndexOf('/') + 1);
     let baseUrl = '/' + type + '/';
 
@@ -56,7 +58,8 @@ const PostList = ({ data, location }) => {
     }
 
     return (<Layout>
-        <PageHeader title={titleType + " Posts"} breadcrumbs={breadCrumbs} />
+        <SEO title={title}></SEO>
+        <PageHeader title={title} breadcrumbs={breadCrumbs} />
         <div className="page-width">
             {postLayout}
         </div>
