@@ -6,7 +6,7 @@ export interface Props {
     breadcrumbs: BreadcrumbInfo[] | undefined;
 }
 
-const PageHeader = ({title, breadcrumbs} : Props) => {
+function PageHeader({title, breadcrumbs} : Props) {
     return (<div className="blue-back">
         <div className="page-width">
         <h1 style={{ margin: '50px 0px' }}>{title}</h1>

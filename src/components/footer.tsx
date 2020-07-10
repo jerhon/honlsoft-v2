@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./footer.module.css";
 
-const Footer = () => {
+function Footer() {
     return (<footer className={styles.footer}>
         <div className="page-width">
             © {new Date().getFullYear()} Jeremy Honl, Built with

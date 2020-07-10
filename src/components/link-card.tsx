@@ -9,7 +9,7 @@ interface props {
     url: string
 }
 
-const LinkCard = ({title, description, icon, url} : props ) => {
+function LinkCard({title, description, icon, url} : props ) {
 
     return (
         <div className={cardStyles.card}>

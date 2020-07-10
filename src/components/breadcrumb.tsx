@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "gatsby";
-import { JsxAttribute } from "typescript";
 
 export interface BreadcrumbInfo {
     title: string;
     url: string;
 }
+export interface BreadcrumbProps {
+    links: BreadcrumbInfo[];
+}
 
-const Breadcrumb = ({ links  }) => {
+function Breadcrumb({ links } : BreadcrumbProps) {
     let ret : JSX.Element[] = [];
     if (links.length > 0) {
         let linksArray = links.map((l) => (<Link key={l.title} to={l.url}>{l.title}</Link>))
