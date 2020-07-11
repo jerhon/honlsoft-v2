@@ -20,7 +20,7 @@ export class IndexPage extends React.Component {
         <LinkCard title="About Me" icon="/img/account-circle.svg" description="My personal profile.  Learn all about how I started coding, and what I'm doing now." url="/about" />
       </ResponsiveGrid>
       </div>
-      <div className="blue-back" style={{width: '100%'}}>
+      <div className="blue-back-gradient" style={{width: '100%'}}>
         <div className="page-width">
           <h2>Recent Posts</h2>
           <hr />

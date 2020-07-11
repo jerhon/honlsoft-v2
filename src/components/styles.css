@@ -1,3 +1,19 @@
+.blue-back-gradient {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#005eb8+1,005ea8+46,509ee8+100 */
+    background: #005eb8; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #005eb8 1%, #005ea8 46%, #509ee8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #005eb8 1%,#005ea8 46%,#509ee8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #005eb8 1%,#005ea8 46%,#505ee8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005eb8', endColorstr='#509ee8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.blue-back-gradient * {
+    color: white;
+}
+.blue-back-gradient *:visited {
+    color: white;
+}
+
+
 .blue-back {
     background-color: #005eb8;
     color: white;
@@ -8,6 +24,8 @@
 .blue-back *:visited {
     color: white;
 }
+
+
 .page-width {
     padding: 32px 32px;
     max-width: 1200px;
@@ -22,3 +40,4 @@ a {
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Oswald';
 }
+
