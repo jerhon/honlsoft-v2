@@ -35,7 +35,12 @@ class RecentArticles extends React.Component<{ articles: Article[] }> {
 const PostLookup = () => {
     let data = useStaticQuery(graphql`
     {
-        allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, limit: 5) {
+    
+        allMarkdownRemark(
+            sort: {order: DESC, fields: [frontmatter___date]}, 
+            limit: 5, 
+            filter: { frontmatter: {type: {eq: "blog" }} }
+        ) {
             edges {
             node {
                 excerpt(pruneLength: 240)
@@ -63,8 +68,8 @@ const PostLookup = () => {
         }
     }`);
 
-    let articleData = data.allMarkdownRemark.edges.map((d) => ({ 
-        title: d.node.frontmatter.title, 
+    let articleData = data.allMarkdownRemark.edges.map((d) => ({
+        title: d.node.frontmatter.title,
         date: d.node.frontmatter.date,
         excerpt: d.node.excerpt,
         readTime: d.node.timeToRead,
