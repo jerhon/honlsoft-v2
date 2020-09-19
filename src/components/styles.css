@@ -27,10 +27,17 @@
 
 
 .page-width {
-    padding: 32px 32px;
-    max-width: 1200px;
+    padding: 24px;
+    max-width: 1140px;
     margin: 0 auto;
 }
+.larger-page-width {
+    padding: 24px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+
 a {
     color: black;
 }
@@ -38,6 +45,6 @@ a {
     margin: auto;
 }
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'Oswald';
+    font-family: 'Oswald', 'Arial';
 }
 

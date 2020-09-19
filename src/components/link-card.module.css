@@ -8,17 +8,20 @@
     align-items: center;
     text-decoration: none;
     color: black;
-    margin: 0px auto 16px;
+    margin: 0 auto 16px;
 }
 
 .title {
-    margin: 0px;
-} 
+    margin: 16px auto;
+}
 
 .icon {
-    height: 56px;
-    width: 56px;
-    margin: 0px 24px 0px 0px;
+    height: 128px;
+    width: 182px;
+    margin: 0 auto;
+    display: block;
 }
 .description {
+    text-align: center;
+    margin: 16px;
 }

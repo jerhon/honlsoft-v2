@@ -4,14 +4,14 @@
     display: flex;
     flex-flow: row wrap;
     /* This aligns items to the end line on main-axis */
-    justify-content: space-between;       
+    justify-content: space-evenly;
 }
 
 .navigation div {
     flex: 1 1 300px;
 }
 
-/* Medium screens 
+/* Medium screens
 @media all and (max-width: 800px) {
     .navigation {
         justify-content: space-around;
@@ -20,7 +20,7 @@
 */
 
 /* Small screens */
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1024px) {
     .navigation {
         /* On small screens, we are no longer using row direction but column */
         flex-direction: column;
