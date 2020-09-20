@@ -1,7 +1,23 @@
 .card {
     min-height: 100px;
     padding: 8px;
+    background-color: white;
+    max-width: 300px;
+    display: block;
 }
+.card a {
+    text-decoration: none;
+}
+.card a:visited {
+    text-decoration: none;
+}
+.card:hover .header {
+    transform: rotateZ(10deg);
+}
+.card:hover .icon {
+    transform: rotateZ(10deg);
+}
+
 .header {
     display: flex;
     flex-direction: row;
@@ -9,6 +25,8 @@
     text-decoration: none;
     color: black;
     margin: 0 auto 16px;
+
+    transition: transform 250ms ease-out ;
 }
 
 .title {
@@ -20,6 +38,8 @@
     width: 182px;
     margin: 0 auto;
     display: block;
+
+    transition: transform 250ms ease-out ;
 }
 .description {
     text-align: center;
