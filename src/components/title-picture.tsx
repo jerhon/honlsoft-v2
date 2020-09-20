@@ -5,12 +5,14 @@ import titlePictureStyles from "./title-picture.module.css";
 
 export interface Props {
     tagLine: string;
+    className?: string;
 }
 
-const TitlePicture = ({tagLine}) => (
-            <div className={titlePictureStyles.container}>
-                <h3 className={titlePictureStyles.tagLine}>{tagLine}</h3>
-            </div>
-        );
+function TitlePicture({tagLine, className}) {
+  const classes = className ? titlePictureStyles.container + " " + className : titlePictureStyles;
+  return (<div className={classes}>
+      <h3 className={titlePictureStyles.tagLine}>{tagLine}</h3>
+  </div>);
+}
 
 export default TitlePicture;
