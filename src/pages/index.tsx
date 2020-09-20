@@ -7,6 +7,8 @@ import LinkCard from "../components/link-card"
 import RecentArticles from "../components/recent-articles"
 import { Link } from "gatsby"
 import { BlueSection } from "../components/blue-section"
+import styles from "./index.module.css";
+
 import "intersection-observer"
 
 export class IndexPage extends React.Component {
@@ -14,7 +16,7 @@ export class IndexPage extends React.Component {
   render() {
     return (<Layout>
       <SEO title="Home" />
-      <TitlePicture tagLine="Building software shouldn't feel like climbing a mountain." />
+      <TitlePicture className={styles.mountainsBackground} tagLine="Building software shouldn't feel like climbing a mountain." />
       <BlueSection>
         <h3>Find out more...</h3>
       </BlueSection>
@@ -30,6 +32,7 @@ export class IndexPage extends React.Component {
                       url="/about" />
           </ResponsiveGrid>
       </div>
+      <TitlePicture className={styles.oceanBackground} tagLine="Building software shouldn't feel like crossing an ocean." />
       <BlueSection>
         <h3>Read recent posts...</h3>
       </BlueSection>
