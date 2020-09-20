@@ -29,7 +29,7 @@ class RecentArticles extends React.Component<{ articles: Article[] }> {
                     e.target.classList.add(styles.slideIn);
                 }
             })
-        }, { threshold: 0.75 });
+        }, { rootMargin: "0px 0px -10% 0px" });
 
         const elements = document.getElementsByClassName("recent-article");
         for (let i = 0; i < elements.length; i++) {
@@ -45,7 +45,7 @@ class RecentArticles extends React.Component<{ articles: Article[] }> {
     }
 
     render() {
-        return (<div>
+        return (<div className={styles.container}>
             {this.renderAllArticles()}
         </div>);
     }

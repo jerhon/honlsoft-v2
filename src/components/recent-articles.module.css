@@ -7,3 +7,6 @@
     transform: translateX(0px);
     opacity: 1.0;
 }
+.container {
+    overflow-x: hidden;
+}
