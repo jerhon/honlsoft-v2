@@ -1,5 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
+import styles from "./recent-articles.module.css";
 
 export interface Article {
     title: string,
@@ -12,13 +13,31 @@ export interface Article {
 
 class RecentArticles extends React.Component<{ articles: Article[] }> {
     renderArticle(a: Article) {
-        return (<div key={a.url}>
+        return (<div className={"recent-article " + styles.article } key={a.url}>
             <Link to={a.url}><h3>{a.title}</h3></Link>
             <p>{a.excerpt}</p>
             <div>{a.date} | approximately {a.readTime} minutes to read</div>
             <br />
             <hr />
         </div>);
+    }
+
+    componentDidMount() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.filter((e) => e.isIntersecting).forEach((e) => {
+                if (!e.target.classList.contains(styles.slideIn)) {
+                    e.target.classList.add(styles.slideIn);
+                }
+            })
+        }, { threshold: 0.75 });
+
+        const elements = document.getElementsByClassName("recent-article");
+        for (let i = 0; i < elements.length; i++) {
+            const element = elements.item(i);
+            if (element) {
+                observer.observe(element);
+            }
+        }
     }
 
     renderAllArticles() {

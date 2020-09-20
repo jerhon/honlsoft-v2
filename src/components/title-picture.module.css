@@ -10,8 +10,13 @@
 
     background-image: url('/img/mountains-dark-2.jpg');
     background-size: cover;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.tagLine { 
+.tagLine {
     flex: 1 1 auto;
     font-family: 'Oswald';
     color: rgba(255, 255, 255, 0.7);

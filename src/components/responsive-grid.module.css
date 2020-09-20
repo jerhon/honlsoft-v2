@@ -2,7 +2,7 @@
 /* Large */
 .navigation {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     /* This aligns items to the end line on main-axis */
     justify-content: space-evenly;
 }
@@ -24,6 +24,7 @@
     .navigation {
         /* On small screens, we are no longer using row direction but column */
         flex-direction: column;
+        align-items: center;
     }
     .navigation div {
         flex: 0 0 auto;
