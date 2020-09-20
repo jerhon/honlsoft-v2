@@ -7,6 +7,7 @@ import LinkCard from "../components/link-card"
 import RecentArticles from "../components/recent-articles"
 import { Link } from "gatsby"
 import { BlueSection } from "../components/blue-section"
+import "intersection-observer"
 
 export class IndexPage extends React.Component {
 
