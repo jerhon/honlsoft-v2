@@ -1,5 +1,6 @@
 import React from "react";
-import titlePictureStyles from "./title-picture.module.css";
+import styles from "./title-picture.module.css";
+import { InViewModifier } from "./InViewModifier"
 
 // TODO: Parameterize Picture URL, Height
 
@@ -9,9 +10,11 @@ export interface Props {
 }
 
 function TitlePicture({tagLine, className}) {
-  const classes = className ? titlePictureStyles.container + " " + className : titlePictureStyles;
+  const classes = className ? styles.container + " " + className : styles;
   return (<div className={classes}>
-      <h3 className={titlePictureStyles.tagLine}>{tagLine}</h3>
+    <InViewModifier className={styles.tagLineContainer} inViewClassName={styles.tagLineVisible} sticky={true}>
+      <h3 className={styles.tagLine}>{tagLine}</h3>
+    </InViewModifier>
   </div>);
 }
 
