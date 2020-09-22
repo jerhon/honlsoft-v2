@@ -13,11 +13,21 @@
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
 }
+
 .tagLine {
-    flex: 1 1 auto;
     font-family: 'Oswald';
-    color: rgba(255, 255, 255, 0.7);
     text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tagLineContainer {
+    color: rgba(255, 255, 255, 0.0);
+    transition: color 1s ease-in;
+    text-align: center;
+    flex: 1 1 auto;
+}
+.tagLineVisible {
+    color: rgba(255, 255, 255, 0.8);
 }
