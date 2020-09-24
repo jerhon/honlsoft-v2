@@ -7,7 +7,7 @@ type: "blog"
 
 I've been watching a few pluralsight courses on CSS transitions lately.
 I've been observing other sites and have noticed a lot of little transitions that improve the overall feel of the site.
-Things like rotating elements, fading in text, motion in to provide simple animations, etc can add a new level interactivity.
+Things like rotating elements, fading in text, or motion to provide simple animations can add a new level interactivity.
 CSS transitions are a great tool to add these, and inject some life into webpages.
 
 In this post, I'm going to introduce an extremely simple usage of the transition CSS property.
@@ -39,6 +39,7 @@ It would apply over the transform property and perform a linear transition over 
 
 In order to trigger the transform to occur, the transform property would need to be changed.
 This can be triggered by having two classes with differing values.
+Another could be triggering a property change on a CSS selector such as :hover or :focus.
 
 For example, to slightly rotate an element when it were hovered over, the CSS would look like this.
 
@@ -74,7 +75,7 @@ Transform is perhaps the best property as many of its functions are implemented 
 There is also an option to animate all properties.
 While it makes it very simple, be careful with this.
 That's telling the browser to watch all the properties of an element for a change.
-That can be VERY expensive!
+That can be VERY expensive performance wise!
 A good rule of thumb is to only apply transitions to the properties which they should take place over.
 
 ## CSS Transition Timing Function
@@ -100,6 +101,6 @@ There are links that have a slight rotation that hovers.
  
 I also had set up later in the page text that moves in from the right page as it comes into view for recent posts.
 I used transitions coupled with an "Intersection Observer".
-I'll detail that in a future post.
+I'll detail how to work with that in a future post.
 
 ![Rotating link card](./honlsoft-transitions.jpg)
