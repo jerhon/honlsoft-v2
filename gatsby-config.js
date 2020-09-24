@@ -95,11 +95,14 @@ module.exports = {
             options: {
               theme: 'Light+ (default light)' // Or install your favorite theme from GitHub
             }
+          },
+          {
+            resolve: `gatsby-remark-embedder`
           }
         ],
       },
     }
-  
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
