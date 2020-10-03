@@ -1,5 +1,5 @@
 ---
-date: "2020-10-02"
+date: "2020-10-03"
 title: "Detecting HTML Elements with an Intersection Observer"
 tags: ["web-development", "css", "css-transitions"]
 type: "blog"
