@@ -1,6 +1,6 @@
 ---
 date: "2020-10-02"
-title: "Detecting HTML Elements with Intersection Observer"
+title: "Detecting HTML Elements with an Intersection Observer"
 tags: ["web-development", "css", "css-transitions"]
 type: "blog"
 ---
