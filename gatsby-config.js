@@ -61,10 +61,10 @@ module.exports = {
       options: {
         fonts: [
           `Oswald`,
-          `Open Sans` // you can also specify font weights and styles
+          `Open Sans`, // you can also specify font weights and styles
         ],
-        display: 'swap'
-      }
+        display: "swap",
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -87,21 +87,21 @@ module.exports = {
               // base for generating different widths of each image.
               maxWidth: 1000,
               quality: 80,
-              withWebp: true
+              withWebp: true,
             },
           },
           {
             resolve: `gatsby-remark-vscode`,
             options: {
-              theme: 'Light+ (default light)' // Or install your favorite theme from GitHub
-            }
+              theme: "Light+ (default light)", // Or install your favorite theme from GitHub
+            },
           },
           {
-            resolve: `gatsby-remark-embedder`
-          }
+            resolve: `gatsby-remark-embedder`,
+          },
         ],
       },
-    }
+    },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
@@ -109,4 +109,4 @@ module.exports = {
   ],
 }
 
-require("ts-node").register();
+require("ts-node").register()

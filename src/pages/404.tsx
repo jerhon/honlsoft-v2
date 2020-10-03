@@ -10,7 +10,9 @@ const NotFoundPage = () => (
     <PageHeader title="NOT FOUND" breadcrumbs={undefined} />
     <br />
     <div className="centered">
-    <p style={{textAlign: 'center'}}>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <p style={{ textAlign: "center" }}>
+        You just hit a route that doesn&#39;t exist... the sadness.
+      </p>
     </div>
   </Layout>
 )

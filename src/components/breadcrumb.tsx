@@ -1,25 +1,29 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from "react"
+import { Link } from "gatsby"
 
 export interface BreadcrumbInfo {
-    title: string;
-    url: string;
+  title: string
+  url: string
 }
 export interface BreadcrumbProps {
-    links: BreadcrumbInfo[];
+  links: BreadcrumbInfo[]
 }
 
-function Breadcrumb({ links } : BreadcrumbProps) {
-    let ret : JSX.Element[] = [];
-    if (links.length > 0) {
-        let linksArray = links.map((l) => (<Link key={l.title} to={l.url}>{l.title}</Link>))
-        for (let link of linksArray) {
-            ret.push(link);
-            ret.push((<span key={link.key + ' span'}> &gt; </span>));
-        }
-        ret.pop();
+function Breadcrumb({ links }: BreadcrumbProps) {
+  let ret: JSX.Element[] = []
+  if (links.length > 0) {
+    let linksArray = links.map(l => (
+      <Link key={l.title} to={l.url}>
+        {l.title}
+      </Link>
+    ))
+    for (let link of linksArray) {
+      ret.push(link)
+      ret.push(<span key={link.key + " span"}> &gt; </span>)
     }
-    return (<div>{ret}</div>);
-};
+    ret.pop()
+  }
+  return <div>{ret}</div>
+}
 
-export default Breadcrumb;
+export default Breadcrumb

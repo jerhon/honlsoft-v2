@@ -1,25 +1,29 @@
-import React from "react";
+import React from "react"
 
 export interface props {
-    links: {
-        title: string;
-        url: string;
-    }[];
+  links: {
+    title: string
+    url: string
+  }[]
 }
 
 function RelatedPosts(props: props) {
-    if (props.links.length) {
-        let links = props.links.map((n) => (<li><a href={n.url}>{n.title}</a></li>));
+  if (props.links.length) {
+    let links = props.links.map(n => (
+      <li>
+        <a href={n.url}>{n.title}</a>
+      </li>
+    ))
 
-        return (<div>
-            <h3>Related Posts</h3>
-            <ul>
-                {links}
-            </ul>
-        </div>);        
-    } else {
-        return (<></>);
-    }
-};
+    return (
+      <div>
+        <h3>Related Posts</h3>
+        <ul>{links}</ul>
+      </div>
+    )
+  } else {
+    return <></>
+  }
+}
 
-export default RelatedPosts;
+export default RelatedPosts

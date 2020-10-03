@@ -7,12 +7,14 @@ import styles from "./layout.module.css"
 
 function Layout({ children }) {
   return (
-    <div className={styles.container} >
+    <div className={styles.container}>
       <SiteHeader siteName="Honlsoft" />
-      <main className={styles.main} style={{height: '100%'}}>{children}</main>
+      <main className={styles.main} style={{ height: "100%" }}>
+        {children}
+      </main>
       <Footer />
     </div>
   )
 }
 
-export default Layout;
+export default Layout

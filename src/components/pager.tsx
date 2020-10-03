@@ -1,20 +1,34 @@
-import React from "react";
-import styles from "./pager.module.css";
+import React from "react"
+import styles from "./pager.module.css"
 
 export interface PagerProps {
-    backUrl?: string;
-    forwardUrl?: string;
+  backUrl?: string
+  forwardUrl?: string
 }
 
-function Pager({backUrl, forwardUrl} : PagerProps) {
+function Pager({ backUrl, forwardUrl }: PagerProps) {
+  let left = backUrl ? (
+    <a href={backUrl}>
+      <img src="/img/arrow_left.svg" /> Previous
+    </a>
+  ) : (
+    <></>
+  )
+  let right = forwardUrl ? (
+    <a href={forwardUrl}>
+      Next
+      <img src="/img/arrow_right.svg" />
+    </a>
+  ) : (
+    <></>
+  )
 
-    let left = backUrl ? <a href={backUrl}><img src="/img/arrow_left.svg" /> Previous</a> : <></>;
-    let right = forwardUrl ? <a href={forwardUrl}>Next<img src="/img/arrow_right.svg" /></a> : <></>
-
-    return <div className={styles.pager}>
-        {left}
-        {right}
+  return (
+    <div className={styles.pager}>
+      {left}
+      {right}
     </div>
-};
+  )
+}
 
-export default Pager;
+export default Pager

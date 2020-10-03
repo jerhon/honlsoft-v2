@@ -13,10 +13,11 @@
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    backdrop-filter: grayscale(0%);
 }
 
 .tagLine {
-    font-family: 'Oswald';
+    font-family: 'Oswald', sans-serif;
     text-align: center;
     width: 100%;
     margin: 0 auto;
@@ -28,6 +29,7 @@
     text-align: center;
     flex: 1 1 auto;
 }
+
 .tagLineVisible {
     color: rgba(255, 255, 255, 0.8);
 }

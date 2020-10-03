@@ -33,7 +33,7 @@ It would apply over the transform property and perform a linear transition over 
 
 ```css
 .transitionElement {
-    transition: transform 400ms linear;
+  transition: transform 400ms linear;
 }
 ```
 
@@ -44,12 +44,12 @@ Another could be triggering a property change on a CSS selector such as :hover o
 For example, to slightly rotate an element when it were hovered over, the CSS would look like this.
 
 ```css
-.element { 
-    transition: transform 400ms linear;
+.element {
+  transition: transform 400ms linear;
 }
 
 .element:hover {
-    transform: rotateZ(15deg); 
+  transform: rotateZ(15deg);
 }
 ```
 
@@ -57,7 +57,7 @@ Here's a sample codepen that illustrates this.
 
 https://codepen.io/jerhon/pen/XWdxOML
 
-Another example is fading text in or out.  This can be done via a transition on the opacity property.
+Another example is fading text in or out. This can be done via a transition on the opacity property.
 
 https://codepen.io/jerhon/pen/OJNdyvE
 
@@ -98,7 +98,7 @@ As always, make sure to do some cross browser testing to be sure everything work
 
 You can see some animations in action on the [Honlsoft homepage](https://www.honlsoft.com).
 There are links that have a slight rotation that hovers.
- 
+
 I also had set up later in the page text that moves in from the right page as it comes into view for recent posts.
 I used transitions coupled with an "Intersection Observer".
 I'll detail how to work with that in a future post.
