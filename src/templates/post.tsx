@@ -10,6 +10,7 @@ import { getPostBreadcrumbs, getPostUrl } from "../utils"
 const PostTemplate = ({ data: { post, relatedPosts } }) => {
   const title = post.frontmatter.title
   const date = post.frontmatter.date
+  const description = post.frontmatter.description ?? post.description;
   const html = post.html
 
   let links = []
@@ -24,7 +25,7 @@ const PostTemplate = ({ data: { post, relatedPosts } }) => {
 
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO title={title} description={description} />
       <PageHeader title={title} breadcrumbs={breadcrumbs} />
 
       <div className="page-width">
@@ -40,12 +41,14 @@ export const postQuery = graphql`
     post: markdownRemark(id: { eq: $id }) {
       id
       html
+      description: excerpt(truncate: true)
       frontmatter {
         title
         type
         date(formatString: "MMMM, DD, YYYY")
         tags
         page
+        description
       }
       parent {
         id

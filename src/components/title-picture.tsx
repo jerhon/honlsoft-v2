@@ -10,7 +10,9 @@ export interface Props {
 }
 
 function TitlePicture({ tagLine, className }) {
-  const classes = className ? styles.container + " " + className : styles.container;
+  const classes = className
+    ? styles.container + " " + className
+    : styles.container
   return (
     <div className={classes}>
       <InViewModifier

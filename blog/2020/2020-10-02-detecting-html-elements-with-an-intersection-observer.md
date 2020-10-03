@@ -3,6 +3,7 @@ date: "2020-10-02"
 title: "Detecting HTML Elements with an Intersection Observer"
 tags: ["web-development", "css", "css-transitions"]
 type: "blog"
+description: "A basic example and description of using an intersection observer in a web page."
 ---
 
 Ever wanted to animate an HTML element as it becomes visible on a webpage?
