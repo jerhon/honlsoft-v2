@@ -1,10 +1,20 @@
 import React from "react"
-import styles from "./footer.module.css"
+import { Container, makeStyles } from "@material-ui/core"
+
+const useStyles = makeStyles({
+  footer: {
+    backgroundColor: '#eee',
+    padding: '16px 0',
+    marginTop: '16px'
+  }
+})
 
 function Footer() {
+  const styles = useStyles();
+
   return (
     <footer className={styles.footer}>
-      <div className="page-width">
+      <Container>
         © {new Date().getFullYear()} Jeremy Honl, Built with
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>. Images are from{" "}
@@ -12,11 +22,7 @@ function Footer() {
         <a href="https://unsplash.com/@conorsexton?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
           Conor Sexton
         </a>{" "}
-        and{" "}
-        <a href="https://unsplash.com/@simonfitall?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-          Simon Fitall
-        </a>
-      </div>
+      </Container>
     </footer>
   )
 }

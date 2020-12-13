@@ -1,11 +1,9 @@
 .container {
-    /* Flex properties, set it up so the tagline sits in the center of the picture. */
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
 
     width: 100%;
-    height: 400px;
+    height: calc(100vh - 64px);
     padding: 32px;
 
     background-size: cover;
@@ -16,6 +14,11 @@
     backdrop-filter: grayscale(0%);
 }
 
+.children {
+    flex: 0 0 auto;
+    margin: 0 auto;
+}
+
 .tagLine {
     font-family: 'Oswald', sans-serif;
     text-align: center;
@@ -24,12 +27,16 @@
 }
 
 .tagLineContainer {
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+
     color: rgba(255, 255, 255, 0.0);
     transition: color 1s ease-in;
     text-align: center;
-    flex: 1 1 auto;
+    align-items: center;
 }
 
 .tagLineVisible {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.85);
 }

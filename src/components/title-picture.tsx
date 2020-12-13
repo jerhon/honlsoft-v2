@@ -1,27 +1,30 @@
 import React from "react"
 import styles from "./title-picture.module.css"
-import { InViewModifier } from "./InViewModifier"
+import { InViewModifier } from "./in-view-modifier"
+import clsx from "clsx"
 
 // TODO: Parameterize Picture URL, Height
 
-export interface Props {
+export interface TitlePictureProps {
+  id?: string;
   tagLine: string
   className?: string
+  children?: JSX.Element[] | JSX.Element;
 }
 
-function TitlePicture({ tagLine, className }) {
-  const classes = className
-    ? styles.container + " " + className
-    : styles.container
+function TitlePicture({ id, tagLine, className, children }: TitlePictureProps) {
+
   return (
-    <div className={classes}>
+    <div id={id} className={clsx(styles.container, className)}>
       <InViewModifier
         className={styles.tagLineContainer}
         inViewClassName={styles.tagLineVisible}
-        sticky={true}
-      >
-        <h3 className={styles.tagLine}>{tagLine}</h3>
+        sticky={true}>
+        <h1 className={styles.tagLine}>{tagLine}</h1>
       </InViewModifier>
+      <div className={styles.children}>
+      {children}
+      </div>
     </div>
   )
 }

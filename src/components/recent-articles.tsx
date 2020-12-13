@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import styles from "./recent-articles.module.css"
+import MuiLink from "@material-ui/core/Link";
 
 export interface Article {
   title: string
@@ -14,9 +15,9 @@ class RecentArticles extends React.Component<{ articles: Article[] }> {
   renderArticle(a: Article) {
     return (
       <div className={"recent-article " + styles.article} key={a.url}>
-        <Link to={a.url}>
+        <MuiLink component={Link} to={a.url} color="secondary">
           <h3>{a.title}</h3>
-        </Link>
+        </MuiLink>
         <p>{a.excerpt}</p>
         <div>
           {a.date} | approximately {a.readTime} minutes to read
