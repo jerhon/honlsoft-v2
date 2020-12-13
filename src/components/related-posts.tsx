@@ -1,4 +1,6 @@
 import React from "react"
+import { Link } from "gatsby"
+import MuiLink from "@material-ui/core/Link"
 
 export interface props {
   links: {
@@ -11,7 +13,7 @@ function RelatedPosts(props: props) {
   if (props.links.length) {
     let links = props.links.map(n => (
       <li>
-        <a href={n.url}>{n.title}</a>
+        <MuiLink component={Link} to={n.url}>{n.title}</MuiLink>
       </li>
     ))
 

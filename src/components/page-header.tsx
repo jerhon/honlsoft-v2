@@ -1,6 +1,7 @@
 import React from "react"
 import Breadcrumb, { BreadcrumbInfo } from "./breadcrumb"
 import { Container, createStyles, makeStyles } from "@material-ui/core"
+import { linkStyles } from "../styles"
 
 export interface Props {
   title: string
@@ -12,18 +13,7 @@ const useStyles = makeStyles((theme) => createStyles({
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.primary.contrastText,
     paddingBottom: '8px',
-
-    '& a': {
-      color: theme.palette.primary.contrastText,
-      textDecoration: 'none',
-
-      '&:hover': {
-        textDecoration: 'underline'
-      },
-      '&:visited': {
-        color: theme.palette.primary.contrastText,
-      }
-    }
+    ...linkStyles(theme.palette.primary.contrastText)
   }
 }));
 

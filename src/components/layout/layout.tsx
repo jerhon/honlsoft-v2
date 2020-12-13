@@ -16,6 +16,13 @@ const theme = createMuiTheme({
   },
   typography: {
     fontSize: 16
+  },
+  overrides: {
+    MuiLink: {
+      root: {
+        color: red[900]
+      }
+    }
   }
 })
 

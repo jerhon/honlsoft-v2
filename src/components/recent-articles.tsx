@@ -15,7 +15,7 @@ class RecentArticles extends React.Component<{ articles: Article[] }> {
   renderArticle(a: Article) {
     return (
       <div className={"recent-article " + styles.article} key={a.url}>
-        <MuiLink component={Link} to={a.url} color="secondary">
+        <MuiLink component={Link} to={a.url}>
           <h3>{a.title}</h3>
         </MuiLink>
         <p>{a.excerpt}</p>
