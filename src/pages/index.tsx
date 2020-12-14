@@ -5,7 +5,6 @@ import TitlePicture from "../components/title-picture"
 import LinkCard, { Orientation } from "../components/link-card"
 import RecentArticles from "../components/recent-articles"
 import { Link } from "gatsby"
-import stylesM from "./index.module.scss"
 import MuiLink from "@material-ui/core/Link"
 
 import "intersection-observer"
@@ -30,6 +29,9 @@ const useStyles = makeStyles({
   },
   linkCard: {
     maxHeight: '500px'
+  },
+  mountainsBackground: {
+    backgroundImage: 'url(\'/img/mountains-dark-2.jpg\')'
   }
 })
 
@@ -40,7 +42,7 @@ export function IndexPage() {
     <Layout>
       <SEO title="Home" description="A personal website containing my musings on software development." />
       <TitlePicture
-        className={stylesM.mountainsBackground}
+        className={styles.mountainsBackground}
         tagLine="Building software shouldn't feel like climbing a mountain.">
         <NextPageButton id="nav" />
       </TitlePicture>
