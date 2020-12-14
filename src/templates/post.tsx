@@ -1,17 +1,28 @@
 import { graphql } from "gatsby"
 import React from "react"
 
-import Layout from "../components/layout"
+import Layout from "../components/layout/layout"
 import PageHeader from "../components/page-header"
 import RelatedPosts from "../components/related-posts"
 import SEO from "../components/seo"
 import { getPostBreadcrumbs, getPostUrl } from "../utils"
+import { Container, createStyles, makeStyles } from "@material-ui/core"
+import { linkStyles } from "../styles"
+
+
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    post: {
+      ...linkStyles(theme.palette.secondary.dark)
+    }
+  }))
 
 const PostTemplate = ({ data: { post, relatedPosts } }) => {
   const title = post.frontmatter.title
   const date = post.frontmatter.date
   const description = post.frontmatter.description ?? post.description;
   const html = post.html
+  const styles = useStyles();
 
   let links = []
   if (relatedPosts && relatedPosts.edges && relatedPosts.edges.length) {
@@ -27,11 +38,10 @@ const PostTemplate = ({ data: { post, relatedPosts } }) => {
     <Layout>
       <SEO title={title} description={description} />
       <PageHeader title={title} breadcrumbs={breadcrumbs} />
-
-      <div className="page-width">
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+      <Container>
+        <div className={styles.post} dangerouslySetInnerHTML={{ __html: html }} />
         <RelatedPosts links={links} />
-      </div>
+      </Container>
     </Layout>
   )
 }

@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
+import MuiLink from "@material-ui/core/Link";
+import { Breadcrumbs, createStyles, makeStyles } from "@material-ui/core"
 
 export interface BreadcrumbInfo {
   title: string
@@ -9,21 +11,26 @@ export interface BreadcrumbProps {
   links: BreadcrumbInfo[]
 }
 
+const useStyles = makeStyles((theme) => createStyles({
+  root: {
+    color: theme.palette.primary.contrastText
+  }
+}))
+
 function Breadcrumb({ links }: BreadcrumbProps) {
+  let styles = useStyles();
   let ret: JSX.Element[] = []
   if (links.length > 0) {
     let linksArray = links.map(l => (
-      <Link key={l.title} to={l.url}>
+      <MuiLink key={l.title} to={l.url} component={Link}>
         {l.title}
-      </Link>
+      </MuiLink>
     ))
     for (let link of linksArray) {
       ret.push(link)
-      ret.push(<span key={link.key + " span"}> &gt; </span>)
     }
-    ret.pop()
   }
-  return <div>{ret}</div>
+  return <Breadcrumbs className={styles.root}>{ret}</Breadcrumbs>
 }
 
 export default Breadcrumb

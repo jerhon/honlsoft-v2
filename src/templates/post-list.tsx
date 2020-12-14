@@ -1,12 +1,25 @@
 import { graphql, Link } from "gatsby"
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/layout/layout"
 import PageHeader from "../components/page-header"
 import Pager from "../components/pager"
 import SEO from "../components/seo"
 import { capitalize, getPostUrl, singular } from "../utils"
+import { Container, createStyles, makeStyles } from "@material-ui/core"
+import { linkStyles } from "../styles"
+
+
+let useStyles = makeStyles((theme) => createStyles({
+  content: {
+    ...linkStyles(theme.palette.secondary.main)
+  },
+  tiny: {
+    fontSize: '0.8rem'
+  }
+}));
 
 const PostList = ({ data, location }) => {
+  let styles = useStyles();
   let posts = data.allMarkdownRemark.edges.map(n => ({
     excerpt: n.node.excerpt,
     timeToRead: n.node.timeToRead,
@@ -23,7 +36,7 @@ const PostList = ({ data, location }) => {
         <h3>{a.title}</h3>
       </Link>
       <p>{a.excerpt}</p>
-      <div>
+      <div className={styles.tiny}>
         {a.date} | approximately {a.timeToRead} minutes to read
       </div>
       <br />
@@ -66,10 +79,10 @@ const PostList = ({ data, location }) => {
     <Layout>
       <SEO title={title} />
       <PageHeader title={title} breadcrumbs={breadCrumbs} />
-      <div className="page-width">{postLayout}</div>
-      <div className="page-width">
+      <Container className={styles.content}>
+        {postLayout}
         <Pager backUrl={backUrl} forwardUrl={forwardUrl} />
-      </div>
+      </Container>
     </Layout>
   )
 }
@@ -84,7 +97,7 @@ export const postQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 240)
+          excerpt(pruneLength: 480)
           timeToRead
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
