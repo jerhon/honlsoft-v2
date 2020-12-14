@@ -1,7 +1,17 @@
-import React from "react"
-import { AiFillGithub, AiFillLinkedin } from "react-icons/all"
-import { AppBar, createStyles, IconButton, makeStyles, Toolbar, Typography } from "@material-ui/core"
+import React, { useState } from "react"
+import { AiFillGithub, AiFillLinkedin, FiMenu, GoBook, GoFile, GoQuestion } from "react-icons/all"
+import {
+  AppBar,
+  createStyles, Divider,
+  Drawer,
+  IconButton, List, ListItem,
+  ListItemIcon, ListItemText,
+  makeStyles,
+  Toolbar,
+  Typography
+} from "@material-ui/core"
 import { Link } from "gatsby"
+import MuiLink from "@material-ui/core/Link"
 
 const useStyles = makeStyles((theme) => createStyles({
   title: {
@@ -17,33 +27,63 @@ const useStyles = makeStyles((theme) => createStyles({
     }
   },
   icon: {
-    color: theme.palette.primary.contrastText
+    color: theme.palette.primary.contrastText,
+    padding: '12px 4px'
   },
   appBar: {
     backgroundColor: theme.palette.primary.dark
+  },
+  list: {
+    width: '250px'
+  },
+  drawerTitle: {
+    padding: '2px 16px'
   }
 }));
 
 const SiteHeader = () => {
+  const [isOpen, setOpen] = useState(false);
   const styles = useStyles();
 
   return (
-    <AppBar position={"static"} elevation={3} className={styles.appBar}  >
-      <Toolbar>
-
-          <Typography variant="h3" className={styles.title}>
+    <React.Fragment>
+      <AppBar position={"static"} elevation={3} className={styles.appBar}  >
+        <Toolbar>
+          <IconButton edge="start" color="inherit" aria-label="menu" onClick={() => setOpen(!isOpen)} >
+            <FiMenu />
+          </IconButton>
+          <Typography variant="h4" className={styles.title}>
             <Link to="/">
-            HONLSOFT
+              HONLSOFT
             </Link>
           </Typography>
-        <IconButton href="https://github.com/jerhon" className={styles.icon}>
-          <AiFillGithub size={40} />
-        </IconButton>
-        <IconButton href="https://www.linkedin.com/in/jhonl/" className={styles.icon}>
-          <AiFillLinkedin size={40} />
-        </IconButton>
-      </Toolbar>
-    </AppBar>)
+          <IconButton href="https://github.com/jerhon" className={styles.icon}>
+            <AiFillGithub size={40} />
+          </IconButton>
+          <IconButton href="https://www.linkedin.com/in/jhonl/" className={styles.icon}>
+            <AiFillLinkedin size={40} />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+      <Drawer open={isOpen} onClose={() => setOpen(false)}>
+        <MuiLink component={Link} to="/"><h3 className={styles.drawerTitle}>HONLSOFT</h3></MuiLink>
+        <Divider />
+        <List className={styles.list}>
+          <ListItem component={Link} to="/blog" button>
+            <ListItemIcon><GoBook size={28} /></ListItemIcon>
+            <ListItemText>Blog</ListItemText>
+          </ListItem>
+          <ListItem component={Link} to="/projects" button>
+            <ListItemIcon><GoFile size={28} /></ListItemIcon>
+            <ListItemText>Projects</ListItemText>
+          </ListItem>
+          <ListItem component={Link} to="/about" button>
+            <ListItemIcon><GoQuestion size={28} /></ListItemIcon>
+            <ListItemText>About</ListItemText>
+          </ListItem>
+        </List>
+      </Drawer>
+    </React.Fragment>);
 }
 
 export default SiteHeader

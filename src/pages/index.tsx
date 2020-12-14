@@ -38,7 +38,7 @@ export function IndexPage() {
 
   return (
     <Layout>
-      <SEO title="Honlsoft" description="A personal website containing musings on software development" />
+      <SEO title="Home" description="A personal website containing my musings on software development." />
       <TitlePicture
         className={stylesM.mountainsBackground}
         tagLine="Building software shouldn't feel like climbing a mountain.">
