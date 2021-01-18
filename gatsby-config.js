@@ -3,7 +3,7 @@ module.exports = {
     title: `Honlsoft`,
     description: `A personal and software development blog.`,
     author: `@gatsbyjs`,
-    image: '/static/img/honlsoft-thumbnail.jpg'
+    image: '/img/honlsoft-thumbnail.jpg'
   },
   plugins: [
     'gatsby-plugin-material-ui',
