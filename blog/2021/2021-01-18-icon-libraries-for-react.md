@@ -17,8 +17,7 @@ If you're using React, there is an AWESOME NPM package that combines these to pr
 
 This is a great package as it allows picking icons from a particular icon library without having to bring them all in.
 I can take a "pick the best of the best" approach and combine multiple icons from different icon sets.
-Since it also provides a NPM single package for many icon sets.
-I don't have to go hunting for them. For example: how does material import vs how does react-bootstrap? 
+Since it also provides a NPM single package for many icon sets, I don't have to go hunting for them. For example: how does material import vs how does react-bootstrap? 
 
 If you're using a bundler like Webpack that supports tree shaking, only the icons you use get bundled with the application.
 This can reduce the overall size of your website.
