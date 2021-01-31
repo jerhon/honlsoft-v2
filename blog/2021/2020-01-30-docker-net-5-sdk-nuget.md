@@ -26,7 +26,7 @@ In short, I was relying on `mcr.microsoft.com/dotnet/sdk:5.0` as a base image in
 My understanding is the .NET image relies on another layer that doesn't contain some necessary updates to trust some old certificates in NuGet being utilized.
 Seems like an unfortunate timing/update issue.
 The .NET folks have made some pre-release images as a temporary way to solve this until an "official" image is released.
-I did what they suggested and switched to `mcr.microsoft.com/dotnet/sdk:5.0.102-ca-patch-buster-slim` and it the build was fixed.
+I did what they suggested and switched to `mcr.microsoft.com/dotnet/sdk:5.0.102-ca-patch-buster-slim` and the build was fixed.
 
 Here is an example of the update I made to my Dockerfile in [this GitHub commit.](https://github.com/jerhon/covid-19-stats-v3/commit/1e01e1910eefbb5df241f43e156f3eb9ed591e15)
 
