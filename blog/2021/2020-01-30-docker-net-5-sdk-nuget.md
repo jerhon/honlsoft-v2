@@ -16,7 +16,7 @@ error NU3037: Package 'Microsoft.NET.Test.Sdk 16.5.0' from source 'https://api.n
 error NU3028: Package 'Microsoft.NET.Test.Sdk 16.5.0' from source 'https://api.nuget.org/v3/index.json': The repository countersignature's timestamp found a chain building issue: UntrustedRoot: self signed certificate in certificate chain [/app/Honlsoft.CovidApp.sln]
 ```
 
-Certification issues are not fun in Docker.
+Certificate issues are not fun in Docker.
 Thankfully, there are a few open issues on GitHub describing the problem and some potential resolutions for it.
 
 * https://github.com/NuGet/Home/issues/10491#issuecomment-768377395
