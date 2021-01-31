@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { AiFillGithub, AiFillLinkedin, FiMenu, GoBook, GoFile, GoQuestion } from "react-icons/all"
+import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle, FiMenu, GoBook, GoFile, GoQuestion } from "react-icons/all"
 import {
   AppBar,
   createStyles, Divider,
@@ -57,6 +57,9 @@ const SiteHeader = () => {
               HONLSOFT
             </Link>
           </Typography>
+          <IconButton href="https://twitter.com/honlsoft" className={styles.icon}>
+            <AiFillTwitterCircle size={40} />
+          </IconButton>
           <IconButton href="https://github.com/jerhon" className={styles.icon}>
             <AiFillGithub size={40} />
           </IconButton>
