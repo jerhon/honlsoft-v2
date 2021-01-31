@@ -23,7 +23,8 @@ Thankfully, there are a few open issues on GitHub describing the problem and som
 * https://github.com/NuGet/Announcements/issues/49
 
 In short, I was relying on `mcr.microsoft.com/dotnet/sdk:5.0` as a base image in a multistage docker file.
-The base image doesn't contain some necessary updates to trust some new certificates in NuGet Microsoft is using.
+My understanding is the .NET image relies on another layer that doesn't contain some necessary updates to trust some old certificates in NuGet being utilized.
+Seems like an unfortunate timing/update issue.
 The .NET folks have made some pre-release images as a temporary way to solve this until an "official" image is released.
 I did what they suggested and switched to `mcr.microsoft.com/dotnet/sdk:5.0.102-ca-patch-buster-slim` and it the build was fixed.
 
