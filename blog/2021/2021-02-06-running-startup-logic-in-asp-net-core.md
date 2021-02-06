@@ -1,9 +1,9 @@
 ---
 date: "2021-02-06"
-title: "Running Background Processes in .NET Applications"
+title: "Running Startup Logic in ASP.Net Core Applications"
 tags: ["dotnet", "asp-net-core", "web-development", "covid-dot-net-core"]
 type: "blog"
-description: "Shows how to run background services in an ASP.Net Core application."
+description: "Shows how to run startup logic in an ASP.Net Core application."
 ---
 
 In web applications, it can be necessary to have tasks that run on start up of an application.
