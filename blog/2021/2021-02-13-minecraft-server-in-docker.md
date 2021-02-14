@@ -46,7 +46,7 @@ Finally, it runs the minecraft server.
 
 Simple, right?
 
-The final piece of this is mounting the /app/minecraft directory to a local directory on the machine.
+Other considerations include mounting the /app/minecraft directory to a local directory on the machine.
 This avoids having to download the minecraft server on every single run of the application.
 An alternative is to create a docker volume.
 However, this isn't entirely required, just a runtime optimization that can be done.
