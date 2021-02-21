@@ -9,7 +9,7 @@ description: "Running a Minecraft Server in a Docker Container"
 I've been playing Minecraft for years with my kids.
 I don't know if we will ever stop.
 We have routine "family Minecraft" sessions where we will sit down and all of us will play together in a world.
-It's a great way to all play a game together.
+It's a great way for all of us to play a game together.
 Minecraft is also one of those unique games that you can play across tablet, PC, and console.
 It also is a great game for different age ranges too.
 My youngest kids love it right along with my older kids.
