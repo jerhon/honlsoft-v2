@@ -7,8 +7,6 @@ type: "blog"
 
 After publishing my original application, I decided to add a few graphs to it to show daily test results and a few other trends. This is a short post to describe the changes.
 
-See the full application here: [COVID-19 Statistics Web Application](https://hs-covid-19-stats.netlify.app/map).
-
 ![New COVID-19 Graphs](../images/covid-19-stats-new-graphs.jpg)
 
 ## Charting in Angular

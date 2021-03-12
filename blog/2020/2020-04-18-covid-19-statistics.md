@@ -11,8 +11,6 @@ One of these that's always intrigued me has been the [Clarity Design](https://cl
 
 The application I'm building is a COVID-19 dashboard. It uses open APIs from [The COVID Tracking Project](https://covidtracking.com/) to retrieve some simple data and present it for U.S. cases of COVID-19.
 
-The project is available to view via a continuous deployment powered by Netlify, [COVID-19 Statistics Application](https://hs-covid-19-stats.netlify.app/).
-
 Here's a screenshot of the interactive map:
 
 ![COVID-19 Statistics](../images/covid-19-stats.jpg)
