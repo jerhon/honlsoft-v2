@@ -1,6 +1,6 @@
 ---
 date: "2021-03-12"
-title: "COVID Statistics Web Application: The End"
+title: "COVID-19 Statistics Web Application: The End"
 tags:  ["covid-19-statistics-application", "covid-19-statistics-application-v3"]
 type: "blog"
 description: "I've shut down my application that displays numbers from the COVID Tracking Project."
