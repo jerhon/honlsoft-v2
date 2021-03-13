@@ -5,7 +5,7 @@ date: "2019-05-11"
 page: "about"
 ---
 
-This website is my personal musings in software development. Typically articles and opinions written here are from projects I've been working on at work or home for fun.
+This website is my personal musings in software development. All opinions are my own. I write about things I've been learning about or have learned in the past.
 
 # About Me
 
@@ -25,4 +25,4 @@ After high school, I went to college for computer science. Most of the coursewor
 
 Programming and building software was something I really enjoyed growing up, and now that I am older have turned that passion into a career.
 
-I hope you find this blog and site useful. If so, please reach out and connect on Linked In!
+I hope you find this blog and site useful. If so, please reach out and connect on [LinkedIn](https://www.linkedin.com/in/jhonl/) or [Twitter](https://twitter.com/honlsoft).
