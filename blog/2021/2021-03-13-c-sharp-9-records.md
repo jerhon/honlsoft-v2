@@ -39,7 +39,7 @@ Here's a very simple example:
 public record Person(string FirstName, string LastName);
 ```
 
-That is all I need to recreate the Person class earlier!
+That is all I need to create the Person class from earlier!
 
 The ```record``` keyword adds a lot of extra niceties on top of this.
 The class has an Equals() implementation that performs comparison on the fields similar to a struct rather than a class-- including all the other necessary plumbing to get it done such as the GetHashCode implementation.
