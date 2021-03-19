@@ -39,7 +39,7 @@ Here's a very simple example:
 public record Person(string FirstName, string LastName);
 ```
 
-That is all I need to create the Person class from earlier!
+That is all I need to create the Person class from earlier.
 
 The ```record``` keyword adds a lot of extra niceties on top of this.
 The class has an Equals() implementation that performs comparison on the fields similar to a struct rather than a class-- including all the other necessary plumbing to get it done such as the GetHashCode implementation.
@@ -47,7 +47,7 @@ It provides a ToString() implementation that prints properties.
 It implements the Deconstruct method for easily using it with Tuples.
 Records are also immutable-- the properties cannot be set after the object has been instantiated.
 
-I'm not even including all the benefits here!
+I'm not even including all the benefits here.
 This would all be code that typically someone would have to manually write.
 While the savings may seem small for an individual class, remember these are used everywhere.
 The time saved is easily compounded.
@@ -56,6 +56,6 @@ The time saved is easily compounded.
 
 While C#9 has introduced quite a few new great features, the ```record``` keyword  is by far my favorite.
 It greatly reduces the number of lines of codes I need to write and maintain.
-This gives me more time to focus on business logic instead of needless plumbing!
+This gives me more time to focus on business logic instead of needless plumbing.
 
-I love these types of efficiencies in newer versions of the C# language!
+I love these types of efficiencies in newer versions of the C# language.
