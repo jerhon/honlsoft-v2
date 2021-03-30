@@ -1,12 +1,14 @@
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/layout/layout"
 import PageHeader from "../components/page-header"
 import Pager from "../components/pager"
 import SEO from "../components/seo"
 import { capitalize, getPostUrl, singular } from "../utils"
-import { Container, createStyles, makeStyles } from "@material-ui/core"
+import { Container, createStyles, Divider, makeStyles } from "@material-ui/core"
 import { linkStyles } from "../styles"
+import { PostCard } from "../components/post-card"
+import { PageLength } from "../const"
 
 
 let useStyles = makeStyles((theme) => createStyles({
@@ -18,45 +20,9 @@ let useStyles = makeStyles((theme) => createStyles({
   }
 }));
 
-const PostList = ({ data, location }) => {
-  let styles = useStyles();
-  let posts = data.allMarkdownRemark.edges.map(n => ({
-    excerpt: n.node.excerpt,
-    timeToRead: n.node.timeToRead,
-    title: n.node.frontmatter.title,
-    date: n.node.frontmatter.date,
-    url: getPostUrl(n.node),
-  }))
 
-  let type: string = data.allMarkdownRemark.edges[0].node.frontmatter.type
-
-  let postLayout = posts.map(a => (
-    <div key={a.url}>
-      <Link to={a.url}>
-        <h3>{a.title}</h3>
-      </Link>
-      <p>{a.excerpt}</p>
-      <div className={styles.tiny}>
-        {a.date} | approximately {a.timeToRead} minutes to read
-      </div>
-      <br />
-      <hr />
-    </div>
-  ))
-
-  let breadCrumbs = [
-    { title: "Home", url: "/" },
-    { title: capitalize(type), url: "/" + type },
-  ]
-
-  let titleType = singular(capitalize(type))
-  let title = titleType + " Posts"
-
-  // todo: split this all out into seperate logic
-
-  let url: string = location.pathname
-  let idx = +url.substring(url.lastIndexOf("/") + 1)
-  let baseUrl = "/" + type + "/"
+function getUrls(idx: number, count: number, postType: string) {
+  let baseUrl = "/" + postType + "/"
 
   let backUrl: string | undefined
   let forwardUrl: string | undefined
@@ -71,9 +37,49 @@ const PostList = ({ data, location }) => {
   if (!idx) {
     idx = 0
   }
-  if (posts.length > 10) {
+  if (count > PageLength) {
     forwardUrl = baseUrl + (idx + 1)
   }
+
+  return {
+    forwardUrl,
+    backUrl
+  }
+}
+
+function PostList({ data, location }) {
+  let styles = useStyles();
+  let posts = data.allMarkdownRemark.edges.map(n => ({
+    excerpt: n.node.excerpt,
+    timeToRead: n.node.timeToRead,
+    title: n.node.frontmatter.title,
+    date: n.node.frontmatter.date,
+    url: getPostUrl(n.node),
+  }))
+
+  let type: string = data.allMarkdownRemark.edges[0].node.frontmatter.type
+
+  let postLayout = posts
+    .slice(0, Math.min(posts.length, PageLength))
+    .map((a) =>
+      <>
+        <PostCard key={a.url} {...a} />
+        <br/>
+        <Divider />
+      </>
+    )
+
+  let breadCrumbs = [
+    { title: "Home", url: "/" },
+    { title: capitalize(type), url: "/" + type },
+  ]
+
+  let titleType = singular(capitalize(type))
+  let title = titleType + " Posts"
+  let url: string = location.pathname
+  let idx = +url.substring(url.lastIndexOf("/") + 1)
+
+  let { backUrl, forwardUrl } = getUrls(idx, posts.length, type)
 
   return (
     <Layout>
