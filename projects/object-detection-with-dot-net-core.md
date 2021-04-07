@@ -2,7 +2,6 @@
 date: "2021-04-06"
 title: "Raspberry PI Based Camera, Machine Learning, and Object Detection with .NET Core"
 type: "projects"
-image: "images/raspberry-pi-object-detection.jpg"
 project: "object-detection-with-dot-net-core"
 ---
 
