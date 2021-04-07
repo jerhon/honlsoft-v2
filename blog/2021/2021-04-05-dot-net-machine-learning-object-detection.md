@@ -150,7 +150,7 @@ That contains the location of the object found in the image, the type of object 
 # Wrapping Up
 
 Overall, I was surprised at the things the model could detect.
-It's really fun is having it take random pictures and to see what it finds.
+It's really fun to take random pictures and to see what it finds.
 
 However, running the model with ML.Net was difficult to piece together at first.
 I had to rely heavily on other projects other folks had built in order to figure out how to piece it all together.
