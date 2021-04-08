@@ -14,8 +14,8 @@ Over the weekend, I decided to give a try setting up a camera on my Raspberry Pi
 
 It consisted of two projects I built.
 
-1. A microservice that runs on my Raspberry Pi for capturing images in real time and last image via HTTP.
-2. A microservice that runs on my laptop which performs object detection in real time.
+1. A microservice that runs on my Raspberry Pi for capturing images in real time and serve the latest image via HTTP.
+2. A microservice that runs on my laptop which performs object detection in real time from the latest image.
 
 The end result is this:
 
@@ -23,11 +23,12 @@ The end result is this:
 
 I can hit the endpoint for the object detection microservice, and get the latest image capture from the raspberry pi with object boundaries and object labels.
 I was very surprised at how well it detected the objects in the images.
-The image above was kind of an accident.
+The image above was an accident.
 I was just holding up a book, and you can see the camera slipped and got my desk into view.
 It successfully detected my mouse, keyboard, and a cup.
 
-I'll be posting a few more articles talking about the architecture of the applications.  In the meantime, the code for the two applications are on GitHub:
+I'll be posting a few more articles talking about the architecture of the applications.
+In the meantime, the code for the two applications are on GitHub:
 
 * [Github - Raspberry Pi Camera Service](https://github.com/jerhon/hs-pi-camera-service)
 * [Github - Object Detection Service](https://github.com/jerhon/hs-object-dectection-service)
