@@ -66,7 +66,7 @@ module.exports = {
           `Oswald`,
           `Open Sans`, // you can also specify font weights and styles
         ],
-        display: "swap",
+        display: "block"
       },
     },
     {
