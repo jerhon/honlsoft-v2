@@ -1,6 +1,6 @@
 import React from "react"
 import { scrollToElement } from "../utils"
-import { FaRegArrowAltCircleDown } from "react-icons/all"
+import { FaRegArrowAltCircleDown } from "react-icons/fa"
 import clsx from "clsx"
 import { createStyles, makeStyles } from "@material-ui/core"
 

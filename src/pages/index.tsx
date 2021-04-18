@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import TitlePicture from "../components/title-picture"
-import LinkCard, { Orientation } from "../components/link-card"
+import LinkCard from "../components/link-card"
 import RecentArticles from "../components/recent-articles"
 import { Link } from "gatsby"
 import MuiLink from "@material-ui/core/Link"
@@ -10,9 +10,9 @@ import MuiLink from "@material-ui/core/Link"
 import "intersection-observer"
 import {
   GoBook, GoFile, GoQuestion
-} from "react-icons/all"
+} from "react-icons/go"
 import { NextPageButton } from "../components/next-button"
-import { Container, Fab, Grid, makeStyles, Typography } from "@material-ui/core"
+import { Container, Grid, makeStyles, Typography } from "@material-ui/core"
 import { grey } from "@material-ui/core/colors"
 
 const useStyles = makeStyles({

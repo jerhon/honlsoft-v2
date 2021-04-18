@@ -1,6 +1,6 @@
 import React from "react"
-import styles from "./pager.module.css"
-import { BiChevronLeft, BiChevronRight } from "react-icons/all"
+import * as styles from "./pager.module.css"
+import { BiChevronLeft, BiChevronRight } from "react-icons/bi"
 import MuiLink from "@material-ui/core/Link"
 import { Link } from "gatsby"
 

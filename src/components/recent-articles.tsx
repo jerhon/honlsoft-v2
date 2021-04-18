@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import styles from "./recent-articles.module.css"
+import * as styles from "./recent-articles.module.css"
 import MuiLink from "@material-ui/core/Link";
 
 export interface Article {
@@ -104,7 +104,7 @@ const PostLookup = () => {
     url: "/blog/" + d.node.parent.name,
   }))
 
-  return <RecentArticles articles={articleData}></RecentArticles>
+  return <RecentArticles articles={articleData} />
 }
 
 export default PostLookup
