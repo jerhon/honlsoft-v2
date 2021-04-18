@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./title-picture.module.css"
+import * as styles from "./title-picture.module.css"
 import { InViewModifier } from "./in-view-modifier"
 import clsx from "clsx"
 

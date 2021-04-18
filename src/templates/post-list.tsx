@@ -61,12 +61,12 @@ function PostList({ data, location }) {
 
   let postLayout = posts
     .slice(0, Math.min(posts.length, PageLength))
-    .map((a) =>
-      <>
+    .map((a,idx) =>
+      <div key={idx}>
         <PostCard key={a.url} {...a} />
         <br/>
         <Divider />
-      </>
+      </div>
     )
 
   let breadCrumbs = [

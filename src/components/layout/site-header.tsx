@@ -1,5 +1,8 @@
 import React, { useState } from "react"
-import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle, FiMenu, GoBook, GoFile, GoQuestion } from "react-icons/all"
+import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle } from "react-icons/ai"
+import { FiMenu } from "react-icons/fi"
+import { GoBook, GoFile, GoQuestion } from "react-icons/go"
+
 import {
   AppBar,
   createStyles, Divider,
