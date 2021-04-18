@@ -11,7 +11,7 @@ import "intersection-observer"
 import {
   GoBook, GoFile, GoQuestion
 } from "react-icons/go"
-import { NextPageButton } from "../components/next-button"
+import { AutoScrollDown } from "../components/autoscroll-down-button"
 import { Container, Grid, makeStyles, Typography } from "@material-ui/core"
 import { grey } from "@material-ui/core/colors"
 
@@ -44,7 +44,7 @@ export function IndexPage() {
       <TitlePicture
         className={styles.mountainsBackground}
         tagLine="Building software shouldn't feel like climbing a mountain.">
-        <NextPageButton id="nav" />
+        <AutoScrollDown id="nav" />
       </TitlePicture>
       <Container id="nav" >
         <Grid container className={styles.linksPage} direction="column" justify="space-evenly" alignItems="center">
@@ -80,7 +80,7 @@ export function IndexPage() {
             </Grid>
           </Grid>
           <Grid>
-            <NextPageButton id="recentPosts" style="dark" />
+            <AutoScrollDown id="recentPosts" style="dark" />
           </Grid>
         </Grid>
         <Typography variant="h3" align="center" id="recentPosts">

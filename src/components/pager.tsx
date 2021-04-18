@@ -10,21 +10,15 @@ export interface PagerProps {
 }
 
 function Pager({ backUrl, forwardUrl }: PagerProps) {
-  let left = backUrl ? (
+  let left = backUrl &&
     <MuiLink to={backUrl} component={Link}>
       <BiChevronLeft /> Previous
     </MuiLink>
-  ) : (
-    <></>
-  )
-  let right = forwardUrl ? (
+
+  let right = forwardUrl &&
     <MuiLink to={forwardUrl} component={Link}>
-      Next
-      <BiChevronRight />
+      Next <BiChevronRight />
     </MuiLink>
-  ) : (
-    <></>
-  )
 
   return (
     <div className={styles.pager}>

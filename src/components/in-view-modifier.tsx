@@ -38,6 +38,7 @@ export function InViewModifier({
     if (ref.current) {
       observer.observe(ref.current)
     }
+    return () => observer.disconnect()
   }, [ref.current])
 
   return (

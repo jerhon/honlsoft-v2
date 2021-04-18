@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => createStyles({
   }
 }))
 
-export function NextPageButton({ id, style, className }: NextPageButtonProps) {
+export function AutoScrollDown({ id, style, className }: NextPageButtonProps) {
   const styles = useStyles();
 
   const classes =  {
