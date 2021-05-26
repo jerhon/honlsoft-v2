@@ -48,7 +48,7 @@ module.exports = {
         background_color: `#005eb8`,
         theme_color: `#005eb8`,
         display: `minimal-ui`,
-        icon: `src/images/honl-soft-logo.png`, // This path is relative to the root of the site.
+        icon: `src/images/honlsoft.svg`, // This path is relative to the root of the site.
       },
     },
     {
