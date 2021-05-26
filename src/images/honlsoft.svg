@@ -7,39 +7,12 @@
    viewBox="0 0 13.758333 13.758333"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-   sodipodi:docname="honlsoft.svg"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview7"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="true"
-     inkscape:document-units="px"
-     showgrid="false"
-     units="px"
-     width="52px"
-     inkscape:zoom="7.7788462"
-     inkscape:cx="39.273177"
-     inkscape:cy="45.058096"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer1"
-     showguides="false" />
   <defs
      id="defs2">
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient27792">
       <stop
          style="stop-color:#000000;stop-opacity:1"
@@ -51,7 +24,6 @@
          id="stop27790" />
     </linearGradient>
     <linearGradient
-       inkscape:collect="always"
        xlink:href="#linearGradient27792"
        id="linearGradient27794"
        x1="66.590858"
@@ -61,8 +33,6 @@
        gradientUnits="userSpaceOnUse" />
   </defs>
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
      id="layer1">
     <rect
        style="fill:#01579b;fill-opacity:1;stroke-width:0.264583"
