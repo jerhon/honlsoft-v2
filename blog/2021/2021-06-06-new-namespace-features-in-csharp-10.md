@@ -11,9 +11,9 @@ With most new .NET versions come new features added to the C# language.
 
 As part of this article, I'm going to pick out a few of my favorites being introduced in C# 10 related to namespaces that I'll use often.
 
-Keep in mind, .NET 6 is still in preview, so these may not make the final cut.
-Also, they are subject to change in the final release.
-However, I seriously hope these features make it!
+Keep in mind, .NET 6 is still in preview, so it's always possible they could get cut or changed in the final release.
+However, I've seen them demoed by various folks at Microsoft.
+So, I would be shocked if they don't make the final cut.
 
 # File Scoped Namespace
 
