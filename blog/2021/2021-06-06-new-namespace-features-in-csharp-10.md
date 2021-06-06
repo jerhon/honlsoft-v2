@@ -23,7 +23,7 @@ Here's a simple example.
 ```csharp
 namespace Honlsoft
 {
-    class ClassIsScopedInANamespace {
+    public class ClassIsScopedInANamespace {
       // ... Some class implementation
     }
 }
@@ -49,7 +49,7 @@ It becomes similar to package definition syntax in Java.
 ```csharp
 namespace Honlsoft;
 
-class ClassIsScopedInANamespace {
+public class ClassIsScopedInANamespace {
     // ... Some class implementation.
 }
 ```
