@@ -41,7 +41,9 @@ await app.RunAsync();
 record GreetingDto(string Greeting);
 ```
 
-This really is just a simpler and less verbose way to write an API in .NET 6.
+That's it!
+
+This is a less verbose way to write an API in .NET 6.
 While I haven't measured the performance personally, the .NET team is claiming building a simple API through this mechanism achieves better API throughput.
 
 The thing I really like about the above example is it feels more straight forward how and what is being called to configure the web application.
