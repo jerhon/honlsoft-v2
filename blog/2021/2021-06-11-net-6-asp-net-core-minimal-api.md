@@ -70,3 +70,5 @@ The ability to take a simple idea and write a simple .NET program without all th
 The pattern will be optimized further in future previews of .NET 6 as well.
 The .NET team has indicated one of the language features will be reducing the need to cast delegates such as the `Func<string>` in the code above.
 The lambda can be specified, and the compiler will be able to infer its type.
+
+The full project source is [on GitHub](https://github.com/jerhon/hs-dot-net-6-minimal-api/tree/main/hs-small-api-demo).
