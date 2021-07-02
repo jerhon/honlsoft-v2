@@ -23,7 +23,7 @@ interface LinkCardProps {
   url: string
 }
 
-const useStyles = makeStyles(() => createStyles({
+const useStyles = makeStyles((theme) => createStyles({
   text: {
     wordWrap: 'break-word'
   },
@@ -48,6 +48,10 @@ const useStyles = makeStyles(() => createStyles({
   },
   content: {
     flexGrow: 1
+  },
+  title: {
+    backgroundColor: theme.palette.primary.dark,
+    color: theme.palette.primary.contrastText
   }
 }));
 
@@ -56,7 +60,7 @@ function LinkCard({ title, description, image, url }: LinkCardProps) {
 
   return (
     <Card elevation={8} className={styles.card} onClick={() => navigate(url) }>
-      <CardHeader title={title} />
+      <CardHeader title={title} className={styles.title} />
       <CardMedia className={styles.media} image={image} title={title} />
       <CardContent className={styles.content}>
           {description}
