@@ -59,7 +59,7 @@ export function IndexPage() {
               <LinkCard
                 title="Blog"
                 image={books}
-                description="I write various articles about technical and personal projects that intrigue me.  Check out what I've been learning about lately."
+                description="Take a look at what I've been learning about lately.  I blog about technical topics that intrigue me."
                 url="/blog"
               />
             </Grid>
@@ -67,7 +67,7 @@ export function IndexPage() {
               <LinkCard
                 title="Projects"
                 image={code}
-                description="Learn about personal projects I have worked on in the past.  All of these were &quot;just for fun&quot; outside of my normal day job."
+                description="Learn about personal projects I have worked on in the past.  These are small projects I'm working on &quot;just for fun&quot; outside of my day job."
                 url="/projects"
               />
             </Grid>
@@ -75,7 +75,7 @@ export function IndexPage() {
               <LinkCard
                 title="About Me"
                 image={about}
-                description="My personal profile.  Learn all about how I started coding, and what I'm doing now."
+                description="Learn all about how I started coding, and what I'm doing now."
                 url="/about"
               />
             </Grid>
