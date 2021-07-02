@@ -7,10 +7,11 @@ import RecentArticles from "../components/recent-articles"
 import { Link } from "gatsby"
 import MuiLink from "@material-ui/core/Link"
 
+import books from "./images/books.jpg"
+import code from "./images/code.jpg"
+import about from "./images/about.jpg"
+
 import "intersection-observer"
-import {
-  GoBook, GoFile, GoQuestion
-} from "react-icons/go"
 import { AutoScrollDown } from "../components/autoscroll-down-button"
 import { Container, Grid, makeStyles, Typography } from "@material-ui/core"
 import { grey } from "@material-ui/core/colors"
@@ -57,7 +58,7 @@ export function IndexPage() {
             <Grid item className={styles.linkCard} xs={12} md={4} >
               <LinkCard
                 title="Blog"
-                icon={<GoBook size={100} />}
+                image={books}
                 description="I write various articles about technical and personal projects that intrigue me.  Check out what I've been learning about lately."
                 url="/blog"
               />
@@ -65,15 +66,15 @@ export function IndexPage() {
             <Grid item className={styles.linkCard} xs={12} md={4}>
               <LinkCard
                 title="Projects"
-                icon={<GoFile size={100} />}
-                description="See the past personal projects I have worked on."
+                image={code}
+                description="Learn about personal projects I have worked on in the past.  All of these were &quot;just for fun&quot; outside of my normal day job."
                 url="/projects"
               />
             </Grid>
             <Grid item className={styles.linkCard} xs={12} md={4}>
               <LinkCard
                 title="About Me"
-                icon={<GoQuestion size={100} />}
+                image={about}
                 description="My personal profile.  Learn all about how I started coding, and what I'm doing now."
                 url="/about"
               />

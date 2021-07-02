@@ -13,3 +13,10 @@ declare module "*.scss" {
   const classNames: IClassNames
   export = classNames
 }
+
+
+declare module "*.jpg" {
+  const url: string
+  export = classNames
+}
+

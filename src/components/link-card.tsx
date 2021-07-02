@@ -1,9 +1,9 @@
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import React from "react"
+
 import {
   Button,
   Card,
-  CardActionArea,
   CardActions,
   CardContent,
   CardHeader,
@@ -19,24 +19,27 @@ export enum Orientation {
 interface LinkCardProps {
   title: string
   description: string
-  icon: JSX.Element
+  image: string
   url: string
 }
 
-const useStyles = makeStyles((theme) => createStyles({
-  title: {
-    textAlign: 'center',
-    backgroundColor: theme.palette.secondary.light,
-    color: theme.palette.secondary.contrastText
-  },
+const useStyles = makeStyles(() => createStyles({
   text: {
     wordWrap: 'break-word'
   },
+  media: {
+    height: "200px"
+  },
   card: {
-    padding: '8px',
     height: '100%',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    transition: 'transform 250ms ease-in-out',
+    cursor: 'pointer',
+    '&:hover': {
+      'transform': 'scale(1.075)',
+
+    }
   },
   icon: {
     width: '100px',
@@ -48,24 +51,19 @@ const useStyles = makeStyles((theme) => createStyles({
   }
 }));
 
-function LinkCard({ title, description, icon, url }: LinkCardProps) {
+function LinkCard({ title, description, image, url }: LinkCardProps) {
   const styles = useStyles();
 
   return (
-    <Card elevation={1} variant="outlined" className={styles.card}>
-      <CardHeader title={title} className={styles.title} />
-      <Divider />
-      <CardMedia>
-        <div className={styles.icon}>{icon}</div>
-      </CardMedia>
+    <Card elevation={8} className={styles.card} onClick={() => navigate(url) }>
+      <CardHeader title={title} />
+      <CardMedia className={styles.media} image={image} title={title} />
       <CardContent className={styles.content}>
-        <div >
           {description}
-        </div>
       </CardContent>
-
       <Divider />
       <CardActions>
+        {/* The button isn't really needed since the whole card links to the page, but I figure this will help gatsby with it's prefetching. */}
         <Button component={Link} to={url} size="medium" color={"secondary"}>Learn more...</Button>
       </CardActions>
     </Card>
