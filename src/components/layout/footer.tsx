@@ -1,5 +1,6 @@
 import React from "react"
 import { Container, makeStyles } from "@material-ui/core"
+import MuiLink from "@material-ui/core/Link"
 
 const useStyles = makeStyles({
   footer: {
@@ -12,16 +13,11 @@ const useStyles = makeStyles({
 function Footer() {
   const styles = useStyles();
 
-  return (
-    <footer className={styles.footer}>
+  return <footer className={styles.footer}>
       <Container>
-        © {new Date().getFullYear()} Jeremy Honl, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>. Images are from{" "}
-        <a href="https://www.unsplash.com">Unsplash</a>
+        © {new Date().getFullYear()} - Built and designed by Jeremy Honl with <MuiLink href="https://www.gatsbyjs.org">Gatsby</MuiLink>. Images are from <MuiLink href="https://www.unsplash.com">Unsplash</MuiLink>
       </Container>
     </footer>
-  )
 }
 
 export default Footer

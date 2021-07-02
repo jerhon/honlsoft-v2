@@ -42,8 +42,7 @@ function Layout({ children }) {
 
   const styles = useStyles();
 
-  return (
-    <MuiThemeProvider theme={theme}>
+  return <MuiThemeProvider theme={theme}>
       <CssBaseline />
       <div className={styles.container}>
         <SiteHeader />
@@ -53,7 +52,6 @@ function Layout({ children }) {
         <Footer />
       </div>
     </MuiThemeProvider>
-  )
 }
 
 export default Layout
