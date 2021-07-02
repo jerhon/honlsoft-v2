@@ -11,13 +11,13 @@ export interface PostMetadata {
   }
 }
 
-export function capitalize(word: String) {
+export function capitalize(word: string) {
   return word.substr(0, 1).toUpperCase() + word.substring(1)
 }
-export function singular(word: String) {
+export function singular(word: string) {
   return word.endsWith("s") ? word.substring(0, word.length - 1) : word
 }
-export function plural(word: String) {
+export function plural(word: string) {
   return word.endsWith("s") ? word : word + "s"
 }
 

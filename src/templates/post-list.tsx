@@ -74,8 +74,7 @@ function PostList({ data, location }) {
     { title: capitalize(type), url: "/" + type },
   ]
 
-  let titleType = singular(capitalize(type))
-  let title = titleType + " Posts"
+  let title = capitalize(type)
   let url: string = location.pathname
   let idx = +url.substring(url.lastIndexOf("/") + 1)
 
