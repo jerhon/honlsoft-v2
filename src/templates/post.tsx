@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) =>
   }))
 
 const PostTemplate = ({ data: { post, relatedPosts } }) => {
+  const image = post.frontmatter?.image?.publicURL
   const title = post.frontmatter.title
   const date = post.frontmatter.date
   const description = post.frontmatter.description ?? post.description;
@@ -36,7 +37,7 @@ const PostTemplate = ({ data: { post, relatedPosts } }) => {
 
   return (
     <Layout>
-      <SEO title={title} description={description} />
+      <SEO title={title} description={description} image={image} />
       <PageHeader title={title} breadcrumbs={breadcrumbs} />
       <Container>
         <div className={styles.post} dangerouslySetInnerHTML={{ __html: html }} />
@@ -59,6 +60,9 @@ export const postQuery = graphql`
         tags
         page
         description
+        image {
+          publicURL
+        }
       }
       parent {
         id

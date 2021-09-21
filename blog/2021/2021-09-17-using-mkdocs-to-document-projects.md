@@ -4,27 +4,28 @@ title: "Using Material for MkDocs for Project Documentation"
 tags: ["documentation", "MkDocs"]
 type: "blog"
 description: "How to generate great looking project documentation utilizing Material for MkDocs."
+image: "images/mkdocs-document-generation.jpg"
 ---
 
 Many software projects enlist the amount of complexity that requires documentation.
 The primary reason for the documentation to either aid external users on how to use the project, or to document the internal complexities of the software for other developers.
 While commenting code and public interfaces can help, it's sometimes helpful to include extra details about how an application is built for other maintainers.
 
-While there are many tools to write documents, keeping the application and the documentation can often be a challenge.
+There are many tools to write documentation, keeping the application and the documentation together in sync often be a challenge.
 Additionally, based on the tools being used, the discoverability of documentation can also be difficult.
 Sharepoint sites are notoriously bad and end up becoming a graveyard of documents from years past.
 
 One solution that's been employed by the open source community is to use the same software development tools to keep and version the documentation.
 This means- keeping the documentation in GIT alongside the project.
 Naturally, if I can find the code, I can then also find the documentation.
-Typically, this is done through Markdown or a similar markdown language such as AsciiDoc.
+Typically, this is done through Markdown or a similar Markdown language such as AsciiDoc.
 
 However, just keeping documents in source control isn't a solution for everyone involved in software development.
 Business minded team members may not be familiar with the tools developers use.
 Also, reading text from plain text files works but does not lend to niceties such as document navigation.
 
 In this case, a simple solution is to run a documentation site generator over the documentation to generate a web page which can be easier to read and use.
-In this post, I will be discussing how to build a simple documentation site using a tool named [MkDocs](https://www.mkdocs.org/) themed with [mkdocs-material](https://squidfunk.github.io/mkdocs-material/).
+In this post, I will be discussing how to build a simple documentation site using a tool named [MkDocs](https://www.mkdocs.org/) themed with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 
 Here's a screenshot of the output of the generation:
 
@@ -114,5 +115,5 @@ The build command is `mkdocs build` and the publish directory is `site`.
 ## Wrapping Up
 
 I hope you found this useful.
-MkDocs and the Material theme are an easy way to produce high quality and consumable documentation.
+MkDocs and the Material for MkDocs theme are an easy way to produce high quality and consumable documentation.
 The source code for a full example can be found on [GitHub](https://github.com/jerhon/honlsoft-notes/) and the running site is hosted on [Netlify](https://hs-developer-notes.netlify.app/).
