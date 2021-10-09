@@ -96,7 +96,13 @@ It's not just limited to the task bar either, I feel like I'm finding more and m
 
 Overall, I'm impressed with the speed of the desktop.
 A lot of the new settings and configuration screens come up rather quickly.
+
+After reading a few articles internet, changes were made to prioritize foreground tasks.
+For example, say the CPU is hammered at 90% by various processes and you open up Microsoft Word.
+Windows 11 will re-prioritize Word as being higher priority it's a "foreground process".
+
 I can tell there was obvious focus put into it.
+I can really feel the responsiveness as I'm working.
 
 ### The Sounds are Different
 
