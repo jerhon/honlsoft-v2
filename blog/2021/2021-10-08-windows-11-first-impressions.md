@@ -1,7 +1,7 @@
 ---
 date: "2021-10-08"
 title: "Windows 11 First Impressions"
-tags: ["documentation", "MkDocs"]
+tags: ["windows11", "first-impressions"]
 type: "blog"
 description: "First Impressions With Windows 11"
 ---
@@ -37,6 +37,13 @@ It's nice that it's now become a section in File Explorer.
 Yes, this screenshot is File Explorer, and the ribbon has been replaced with a much less crowded toolbar.
 
 ![Browsing WSL](./images/windows11-browsing-wsl.jpg)
+
+### It's Free
+
+Ok, I got through my first three, and I just had to add one more!
+I've just become so accustom to Windows upgrades being free.
+It's almost hard to remember that these upgrades used to cost a lot of money.
+It's quite a testament to Microsoft's business model and strategy to offer significant upgrades for free.
 
 ## Three Things I Don't Like
 
@@ -106,7 +113,9 @@ If they can manage to continue down this path they've started and modernize more
 However, for now, Windows still feels like a hodgepodge of old and new.
 
 With all that said, I like being an early adopter.
-I don't regret the upgrade, and there are a lot of new things I'm going to use and will probably miss on Windows 10 systems I use that won't get updated for years yet.
+I don't regret the upgrade, and there are a lot of new things I'm going to use.
+On existing Windows 10 systems that likely won't be upgraded for years, I will miss some of these new features.
 
 If you like your PC / Laptop the way it is, take you're time, and do research.
-Windows 10 will be supported for quite some time, and it may be a while before Windows 11 is made available through Windows Update to more systems.
+Windows 10 will be supported for quite some time, and it may be a while before Windows 11 is made available through  Windows Update to more systems.
+Even if you do want to upgrade, many systems will no longer be supported due to the more stringent system requirements.
