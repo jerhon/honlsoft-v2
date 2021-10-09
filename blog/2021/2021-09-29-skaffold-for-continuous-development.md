@@ -35,7 +35,7 @@ Theres so much else it can do such as setting up port forwarding, or providing a
 
 While there are a lot of things Skaffold can do, I'm just going to focus on my main use case.
 
-A few weeks ago, I wrote a blog article on using [MkDocs for Material](./2021-09-17-using-mkdocs-to-document-projects.md).
+A few weeks ago, I wrote a blog article on using [MkDocs for Material](./2021-09-17-using-mkdocs-to-document-projects).
 As my first exercise of using Skaffold, I decided this would be a good project to try it out on.
 Overall, I just want to containerize the application and get the experience of having Skaffold build and deploy the container update automatically for me to my local development kubernetes cluster.
 
