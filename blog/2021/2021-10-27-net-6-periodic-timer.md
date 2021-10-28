@@ -36,7 +36,6 @@ I'll also add a 500 millisecond delay in the loop.
 This is there to show that the loop still runs once every second ( as opposed to every second + 500 millseconds ).
 
 ```C#
-// See https://aka.ms/new-console-template for more information
 using System.Diagnostics;
 
 using var timer = new PeriodicTimer(TimeSpan.FromSeconds(1));
