@@ -136,6 +136,6 @@ I encourage anyone who is in a role that requires estimations of any sort, but p
 There's a lot more to it than what I put in this post.
 It definitely made me re-think a few things about software estimations and how team structures affect software estimates.
 
-As a full disclosure, I have typically had bad luck in environments that estimate, measure work, and project schedules solely on time.
+As a full disclosure, while I can work in both, I have typically had bad luck in environments that estimate, measure work, and project schedules solely on time.
 I have had much more positive interactions in environments where dates are projected based on past accomplishments of a team and the complexity of the project, than on estimated person-months.
 When it comes to development processes, I strongly prefer environments that have a collaborative team atmosphere and estimate in story points.
