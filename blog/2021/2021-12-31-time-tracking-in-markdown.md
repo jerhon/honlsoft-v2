@@ -65,8 +65,7 @@ That was something I had to go back and deduce at the end of the day or at some 
 For the past year and a half I've worked at a company that has very rigorous time tracking requirements.
 Every minute of my work day (except for a 30 minute bucket we just get as "break time") needs to be logged specifically to some piece of work in the time tracking system.
 The current time entry system just lets me add a total time behind each task for a day.
-It makes it tough to enter time, especially on days with lots of meetings when I need to context switch a lot.
-The end of the day I'm looking at my calendar what and adding up time.
+It makes it tough to enter time-- especially on days with lots of meetings when I need to context switch a lot.
 
 I just needed a better way to deal with it.
 
