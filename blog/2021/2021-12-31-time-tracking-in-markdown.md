@@ -8,7 +8,7 @@ description: "My Engineering Daybook: Tracking Time in Markdown"
 
 Over the New Years break, I built a little console app to help with my new practice of engineering daybook.
 Engineering daybooks are the practice of documenting what happened in a work day.
-If you have read the [Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X) the practice is discussed in Topic 22.
+If you have read the [Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X), the practice is discussed in Topic 22.
 
 It has also be an very long time since I've just written a simple console application, so I wanted to see what's available in the latest version of .NET and NuGet libraries.
 
@@ -94,6 +94,7 @@ docker run -it --rm -v ${PWD}:/app/logs ghcr.io/jerhon/markdown-timelog logs sum
 ```
 
 Since I don't include a date, it uses today's date, and scans for markdown files prefixed with it.
+I'm having the docker command mount to the current working directory, and the shell I'm using is PowerShell for formatting.
 After it scans the markdown file, it will group the items by the task identifier and add up the time for me.
 This is what the output looks like on the command line.
 
