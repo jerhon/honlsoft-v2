@@ -10,6 +10,8 @@ Over the New Years break, I built a little console app to help with my new pract
 Engineering daybooks are the practice of documenting what happened in a work day.
 If you have read the [Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X) the practice is discussed in Topic 22.
 
+It has also be an very long time since I've just written a simple console application, so I wanted to see what's available in the latest version of .NET and NuGet libraries.
+
 ## Engineering Daybook
 
 I started keeping an engineering daybook about a month ago, but haven't been too consistent yet.
@@ -27,18 +29,6 @@ The practice of writing it down helps my memory, and also gives me a place to lo
 I'm not a pro at it by any means at keeping my daybook, but progress requires starting followed by practice.
 This is me starting.
 
-## Time Tracking at Work
-
-For the past year and a half I've worked at a company that has very rigorous time tracking.
-Basically every minute of my work day (except for a 30 minute bucket we just get as "break time") needs to be logged specifically to some piece of work in the time tracking system.
-Even meetings need to be logged to specific tasks and projects.
-The current time entry system just lets me add a total time behind each task for a day.
-It makes it tough to enter time, especially on days with lots of meetings when I need to context switch a lot.
-
-I just needed a better way to deal with it.
-
-I had thought about installing more full-featured time tracking software on my machine in a Docker container, but it seemed like overkill.
-All I need to do is just keep a list of what I did for a day.
 
 ## Time Tracking in my Engineering Day Book
 
@@ -69,6 +59,21 @@ At the end of the day, I need to total up the work and log each of these to spec
 When I had originally started my day log, I hadn't really kept an idea of a task identifier on each time log.
 That was something I had to go back and deduce at the end of the day or at some point of the day when I picked them up.
 
+
+## Time Tracking at Work
+
+For the past year and a half I've worked at a company that has very rigorous time tracking requirements.
+Every minute of my work day (except for a 30 minute bucket we just get as "break time") needs to be logged specifically to some piece of work in the time tracking system.
+The current time entry system just lets me add a total time behind each task for a day.
+It makes it tough to enter time, especially on days with lots of meetings when I need to context switch a lot.
+The end of the day I'm looking at my calendar what and adding up time.
+
+I just needed a better way to deal with it.
+
+I had thought about installing more full-featured time tracking software on my machine in a Docker container, but it seemed like overkill.
+All I need to do is just keep a list of what I did for a day.
+
+
 ## The Command Line Application
 
 I built a simple command line application which looks for these records and tallies them up.
@@ -85,10 +90,10 @@ Each day log I prefix with the date, 2021-12-31.md for example.
 I run the command:
 
 ```
-hs-time-log logs summary
+docker run -it --rm -v ${PWD}:/app/logs ghcr.io/jerhon/markdown-timelog logs summary
 ```
 
-Since I don't include a date, it uses today's date, and scans for files prefixed with it.
+Since I don't include a date, it uses today's date, and scans for markdown files prefixed with it.
 After it scans the markdown file, it will group the items by the task identifier and add up the time for me.
 This is what the output looks like on the command line.
 
@@ -120,7 +125,11 @@ team ceremonies  0.25
 └──────────┴─────────────────┴─────────────────────────────────────────────────┘
 ```
 
-If I want to provide a specific date I can use the --date argument: `hs-time-log logs summary --date 2021-12-31`.
+If I want to provide a specific date I can use the --date argument: `... logs summary --date 2021-12-31`.
+
+The application is packaged in Docker.
+This allows me to use the tool on any machine that has docker installed without having to worry about other development dependencies.
+The docker command can be shortened, but for the sake of this blog post I just wanted to be transparent about the command.
 
 ## System.CommandLine and Spectre.Console NuGet Packages
 
@@ -169,7 +178,7 @@ Commands:
 
 It's a pretty simple little utility.
 The source is here: https://github.com/jerhon/markdown-timelogger
-It's a work in progress and based on some pretty strict formatting rules, so don't expect it to work flawlessly if you clone and try to use it.
+It's a work in progress and based on some pretty strict formatting rules, so don't expect it to work flawlessly.
 I've added some unit tests, but plan on adding a few more.
 
-I plan on posting a few more articles on the various NuGet packages and the Clean Architecture principles I was able to apply in the application.
+I also plan on posting a few more articles on the various NuGet packages and the Clean Architecture principles I was able to apply in the application.
