@@ -1,4 +1,3 @@
-
 ---
 date: "2022-01-18"
 title: "Dockerfile Tips and Tricks for .NET"
