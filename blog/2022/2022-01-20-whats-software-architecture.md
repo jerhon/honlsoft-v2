@@ -60,22 +60,20 @@ In the second situation, an HSM would likely be overboard, though I would secure
 
 Software Architecture will not to come up with a perfect system.
 There will always be one more bug to find, and competing concerns.
-Software Architecture decisions strive to find a balance between these competing concerns and meet a customers expectations.
+Software Architecture decisions strive to find a balance between these competing concerns and meet a customer's expectations the best it can.
 
 ## Good Architecture
-
-Software architecture takes these concerns into consideration.
 
 I am not advocating that all software stop and no progress made until all architectural decisions are made.
 No, good architecture also should be adaptable, and part of that is being able to delay decisions.
 This was one of the key tenants of Clean Architecture.
 
-These characteristics and concerns are not static.
+Software architecture takes these concerns into consideration, and these characteristics and concerns are not static.
 Customers will change their mind.
 Business systems will be updated to newer more modern software.
 Teams will have people come and go.
 Software frameworks will become obsolete.
-Even in the middle of a new green-field project.
+All this can happen in the middle of a new green-field project.
 
 Being able to delay decisions is a key hallmark of good architecture.
 It's ok to have a plan and to think ahead.  Experience is important and being able to anticipate what needs to be done is very valuable.
@@ -97,7 +95,7 @@ Good software is software that is structured to meet architectural consideration
 
 ## Bad Architecture
 
-At the end of the day, why do I need GOOD architecture and think about it often?
+So Why do I need GOOD architecture and think about it often?
 Often I think of past projects and what could have been done differently to prevent scenarios like these.
 
 1. Systems when a change is made, completely unrelated systems break (even when they don't change).
@@ -107,7 +105,15 @@ Often I think of past projects and what could have been done differently to prev
 5. Systems that suffer from resource exhaustion.
 6. Systems that are hard to develop because they do not adhere to modern software engineering patterns and practices.
 
-These are all simple examples of software that failed to live up to its potential.  
+These are all simple examples of software that failed to live up to its potential.
+Without adequate decisions given to the architectural considerations for the software, it can be very easy to miss the mark.
+All that time spent on building a solution can easily go out the door.
+
+This can mean loss of business EX: poorly performing software.
+Loss of reputation for the business EX: critical security breaches.
+Loss of capital for the business EX: resolving lawsuits or security mitigation features.
+
+There are more consequences, but those are just the easy examples.
 
 ## Wrapping Up
 
