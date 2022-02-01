@@ -6,8 +6,7 @@ module.exports = {
     image: 'https://www.honlsoft.com/img/honlsoft-thumbnail.jpg'
   },
   plugins: [
-    'gatsby-plugin-material-ui',
-    'gatsby-plugin-sass',
+    'gatsby-plugin-postcss',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -55,8 +54,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Oswald`,
-          `Open Sans`, // you can also specify font weights and styles
+          'Lato',
+          'Montserrat'
         ],
         display: "block"
       },

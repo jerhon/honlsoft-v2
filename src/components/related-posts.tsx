@@ -1,19 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
-import MuiLink from "@material-ui/core/Link"
 
-export interface props {
+export interface RelatedPostProps {
   links: {
     title: string
     url: string
   }[]
 }
 
-function RelatedPosts(props: props) {
+function RelatedPosts(props: RelatedPostProps) {
   if (props.links.length) {
     let links = props.links.map(n => (
       <li>
-        <MuiLink component={Link} to={n.url}>{n.title}</MuiLink>
+        <Link to={n.url}>{n.title}</Link>
       </li>
     ))
 
