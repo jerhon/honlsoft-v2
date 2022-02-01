@@ -4,6 +4,10 @@ import AppBar from "./app-bar"
 import { Sidebar } from "./sidebar"
 
 
+// contains all the tailwind styles
+import "../../shared.css";
+
+
 
 function Layout({ children }: { children: React.ReactNode }) {
 

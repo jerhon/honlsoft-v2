@@ -14,7 +14,7 @@ interface PostLink {
 }
 
 
-interface Post {
+interface PostProps {
   imageUrl?: string,
   title: string,
   date: string,
@@ -25,7 +25,7 @@ interface Post {
   relatedPosts?: PostLink[]
 }
 
-function Post(post: Post) {
+function Post(post: PostProps) {
   return <Layout>
     <SEO title={post.title} description={post.description} image={post?.imageUrl} />
     <article>

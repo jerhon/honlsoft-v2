@@ -4,7 +4,6 @@ import SEO from "../components/layout/seo"
 
 import "intersection-observer"
 
-import "../shared.css";
 import RecentPostsSection from "../components/index/recent-posts-section"
 import { TitleSection } from "../components/index/title-section"
 import { NavigationSection } from "../components/index/navigation-section"
