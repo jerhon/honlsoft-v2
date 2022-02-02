@@ -7,7 +7,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        title: ['Lato'],
+        title: ['Oswald'],
         sans: ['Montserrat']
       },
       colors: {

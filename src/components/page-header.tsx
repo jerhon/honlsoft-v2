@@ -10,7 +10,7 @@ export interface Props {
 function PageHeader({ title, breadcrumbs }: Props) {
 
   return (
-    <div className="bg-blue-800 text-white">
+    <div className="bg-blue-800 text-white mb-4 pb-4">
       <Container>
         <h1 style={{ padding: "50px 0px", margin: 0 }}>{title}</h1>
 

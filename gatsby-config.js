@@ -54,7 +54,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          'Lato',
+          'Oswald',
           'Montserrat'
         ],
         display: "block"

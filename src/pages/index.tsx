@@ -12,8 +12,10 @@ export function IndexPage() {
   return (
     <Layout>
       <SEO title="Home" description="A personal website containing my musings on software development." />
-      <TitleSection />
-      <NavigationSection />
+      <div className="flex flex-col bg-slate-100">
+        <TitleSection />
+        <NavigationSection />
+      </div>
       <RecentPostsSection />
     </Layout>
   )

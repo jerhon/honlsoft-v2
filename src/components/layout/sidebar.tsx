@@ -38,7 +38,7 @@ function SidebarLinks() {
 export function Sidebar({ visible, onClose } : SidebarProps)
 {
   return <>
-    <div hidden={!visible} onClick={onClose} className={clsx("fixed w-full h-full top-0 left-0 opacity-0 bg-white blur-lg transition-opacity duration-300", visible && "opacity-40")} />
+    <div hidden={!visible} onClick={onClose} className={clsx("fixed w-full h-full top-0 left-0 opacity-0 bg-slate-500 blur-lg transition-opacity duration-300", visible && "opacity-40")} />
     <div onClick={onClose} className={clsx("fixed top-16 left-0 border-r-2 bottom-0 max-w-screen-laptop w-fit bg-white transition-transform duration-300", !visible && "-translate-x-full")} >
       <SidebarLinks />
     </div>

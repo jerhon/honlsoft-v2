@@ -8,9 +8,9 @@ export interface SectionProps {
 
 export function Section(props: SectionProps) {
 
-  return <div className="flex-col">
+  return <div className="flex-col mt-8">
     <Container>
-      <h2 className="py-4">{props.title}</h2>
+      <h2 className="py-4 text-3xl">{props.title}</h2>
       <div>
         {props.children}
       </div>
