@@ -3,22 +3,12 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import PageHeader from "../components/page-header"
 import Pager from "../components/pager"
-import SEO from "../components/seo"
-import { capitalize, getPostUrl, singular } from "../utils"
-import { Container, createStyles, Divider, makeStyles } from "@material-ui/core"
-import { linkStyles } from "../styles"
-import { PostCard } from "../components/post-card"
+import SEO from "../components/layout/seo"
+import { capitalize, getPostUrl } from "../utils"
 import { PageLength } from "../const"
-
-
-let useStyles = makeStyles((theme) => createStyles({
-  content: {
-    ...linkStyles(theme.palette.secondary.main)
-  },
-  tiny: {
-    fontSize: '0.8rem'
-  }
-}));
+import { PostItem, PostItemProps } from "../components/post-item"
+import { Container } from "../components/container"
+import { BreadcrumbInfo } from "../components/breadcrumb"
 
 
 function getUrls(idx: number, count: number, postType: string) {
@@ -47,49 +37,55 @@ function getUrls(idx: number, count: number, postType: string) {
   }
 }
 
-function PostList({ data, location }) {
-  let styles = useStyles();
-  let posts = data.allMarkdownRemark.edges.map(n => ({
+interface PostListPageProps {
+  posts: PostItemProps[]
+  backUrl?: string
+  forwardUrl?: string
+  title: string
+  breadcrumbs: BreadcrumbInfo[]
+}
+
+function PostListPage(props: PostListPageProps) {
+
+
+  let postLayout = props.posts
+    .slice(0, Math.min(props.posts.length, PageLength))
+    .map((a) =>
+      <PostItem key={a.url} {...a} />
+    )
+
+  return (
+    <Layout>
+      <SEO title={props.title} />
+      <PageHeader title={props.title} breadcrumbs={props.breadcrumbs} />
+      <Container>
+        {postLayout}
+        <Pager backUrl={props.backUrl} forwardUrl={props.forwardUrl} />
+      </Container>
+    </Layout>
+  )
+}
+
+function PostList({ data, location } : {data: any, location: any}) {
+  let posts : PostItemProps[] = data.allMarkdownRemark.edges.map((n:any) => ({
     excerpt: n.node.excerpt,
-    timeToRead: n.node.timeToRead,
+    readTime: n.node.timeToRead,
     title: n.node.frontmatter.title,
     date: n.node.frontmatter.date,
     url: getPostUrl(n.node),
   }))
 
   let type: string = data.allMarkdownRemark.edges[0].node.frontmatter.type
-
-  let postLayout = posts
-    .slice(0, Math.min(posts.length, PageLength))
-    .map((a,idx) =>
-      <div key={idx}>
-        <PostCard key={a.url} {...a} />
-        <br/>
-        <Divider />
-      </div>
-    )
-
-  let breadCrumbs = [
+  let breadcrumbs = [
     { title: "Home", url: "/" },
     { title: capitalize(type), url: "/" + type },
   ]
-
   let title = capitalize(type)
   let url: string = location.pathname
   let idx = +url.substring(url.lastIndexOf("/") + 1)
-
   let { backUrl, forwardUrl } = getUrls(idx, posts.length, type)
 
-  return (
-    <Layout>
-      <SEO title={title} />
-      <PageHeader title={title} breadcrumbs={breadCrumbs} />
-      <Container className={styles.content}>
-        {postLayout}
-        <Pager backUrl={backUrl} forwardUrl={forwardUrl} />
-      </Container>
-    </Layout>
-  )
+  return <PostListPage posts={posts} title={title} breadcrumbs={breadcrumbs} backUrl={backUrl} forwardUrl={forwardUrl} />
 }
 
 export const postQuery = graphql`

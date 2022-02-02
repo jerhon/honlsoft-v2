@@ -1,35 +1,48 @@
-import React, { useEffect, useRef } from "react"
+import React, { RefObject, useEffect } from "react"
 
-export interface InViewModifierProperties {
-  children?: JSX.Element | JSX.Element[]
-  className?: string
-  inViewClassName: string
+export interface InViewOptions {
+  classesToAdd?: string[]
+  classesToRemove?: string[]
   sticky?: boolean
 }
 
-export function InViewModifier({
-  children,
-  className,
-  inViewClassName,
-  sticky,
-}: InViewModifierProperties) {
-  let ref = useRef<HTMLDivElement>(null)
+function addClasses(element: HTMLElement, classes?: string[])
+{
+  if (classes) {
+    for (let c of classes) {
+      if (!element.classList.contains(c)) {
+        element.classList.add(c);
+      }
+    }
+  }
+}
+
+function removeClasses(element: HTMLElement, classes?: string[])
+{
+  if (classes) {
+    for (let c of classes) {
+      if (element.classList.contains(c)) {
+        element.classList.remove(c);
+      }
+    }
+  }
+}
+
+export function useInView<T>(ref: RefObject<HTMLElement>, options: InViewOptions) {
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (ref.current && e.target.isSameNode(ref.current)) {
           if (e.isIntersecting) {
-            if (!ref.current.classList.contains(inViewClassName)) {
-              ref.current.classList.add(inViewClassName)
-              if (sticky) {
-                observer.unobserve(e.target)
-              }
+            addClasses(ref.current, options.classesToAdd)
+            removeClasses(ref.current, options.classesToRemove)
+            if (options.sticky) {
+              observer.unobserve(e.target)
             }
           } else {
-            if (ref.current.classList.contains(inViewClassName)) {
-              if (!sticky) {
-                ref.current.classList.remove(inViewClassName)
-              }
+            if (!options.sticky) {
+              addClasses(ref.current, options.classesToRemove)
+              removeClasses(ref.current, options.classesToAdd)
             }
           }
         }
@@ -40,10 +53,4 @@ export function InViewModifier({
     }
     return () => observer.disconnect()
   }, [ref.current])
-
-  return (
-    <div className={className} ref={ref}>
-      {children}
-    </div>
-  )
 }

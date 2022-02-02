@@ -1,57 +1,33 @@
-import React from "react"
-import SiteHeader from "./site-header"
+import React, { useCallback, useState } from "react"
 import Footer from "./footer"
-import { createMuiTheme, CssBaseline, makeStyles, MuiThemeProvider } from "@material-ui/core"
-import { blue, red } from "@material-ui/core/colors"
+import AppBar from "./app-bar"
+import { Sidebar } from "./sidebar"
 
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: blue[900]
-    },
-    secondary: {
-      main: red[800]
-    }
-  },
-  typography: {
-    fontSize: 16
-  },
-  overrides: {
-    MuiLink: {
-      root: {
-        color: red[900]
-      }
-    }
-  }
-})
+// contains all the tailwind styles
+import "../../shared.css";
 
-const useStyles = makeStyles({
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: '100%',
-    minHeight: '100vh'
-  },
-  main: {
-    flex: '1 0 auto',
-  }
-});
 
-function Layout({ children }) {
 
-  const styles = useStyles();
+function Layout({ children }: { children: React.ReactNode }) {
 
-  return <MuiThemeProvider theme={theme}>
-      <CssBaseline />
-      <div className={styles.container}>
-        <SiteHeader />
-        <main className={styles.main} style={{ height: "100%" }}>
+  const [sidebarVisible, setSidebarVisible] = useState(false);
+
+  const toggleSidebar = useCallback(() => {
+    setSidebarVisible((vis) => !vis);
+  }, [setSidebarVisible]);
+  const closeSidebar = useCallback(() => {
+    setSidebarVisible(false);
+  }, [setSidebarVisible])
+
+  return <div className="flex flex-col p-0 m-0 font-sans min-h-screen">
+        <AppBar onSidebarToggle={toggleSidebar} />
+        <main className="flex-grow">
           {children}
         </main>
         <Footer />
-      </div>
-    </MuiThemeProvider>
+        <Sidebar visible={sidebarVisible} onClose={closeSidebar} />
+  </div>
 }
 
 export default Layout

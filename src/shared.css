@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-size: 16px;
+    }
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+    a {
+        @apply text-red-600 hover:underline;
+    }
+
+    /** Heading Styles */
+    h1 {
+        @apply text-3xl;
+    }
+
+    h2 {
+        @apply text-2xl;
+    }
+
+    h3 {
+        @apply text-xl;
+    }
+    h4,h5,h6 {
+        @apply text-lg;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-title;
+    }
+
+    /** Article Specific Styles */
+    article p {
+        @apply my-2;
+    }
+    article :is(h1,h2,h3,h4,h5,h6) {
+        @apply mt-8;
+    }
+    article pre {
+        @apply border-2 rounded-md bg-gray-50 min-w-full text-sm my-2;
+    }
+
+    /** List Styles */
+    article ul {
+        @apply list-disc ml-10;
+    }
+    article ol {
+        @apply list-decimal ml-10;
+    }
+    article code {
+        font-size: 14px;
+    }
+
+
+    .m-h-100vh {
+        min-height: 100vh;
+    }
+}

@@ -1,21 +1,11 @@
 import React from "react"
-import { Container, makeStyles } from "@material-ui/core"
-import MuiLink from "@material-ui/core/Link"
-
-const useStyles = makeStyles({
-  footer: {
-    backgroundColor: '#eee',
-    padding: '16px 0',
-    marginTop: '16px'
-  }
-})
+import { Container } from "../container";
 
 function Footer() {
-  const styles = useStyles();
 
-  return <footer className={styles.footer}>
+  return <footer className="bg-slate-100 py-2 text-sm mt-4">
       <Container>
-        © {new Date().getFullYear()} - Built and designed by Jeremy Honl with <MuiLink href="https://www.gatsbyjs.org">Gatsby</MuiLink>. Images are from <MuiLink href="https://www.unsplash.com">Unsplash</MuiLink>
+        © {new Date().getFullYear()} - Built and designed by Jeremy Honl with <a href="https://www.gatsbyjs.org">Gatsby</a>. Images are from <a href="https://www.unsplash.com">Unsplash</a>
       </Container>
     </footer>
 }

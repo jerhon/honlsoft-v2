@@ -1,7 +1,6 @@
 import React from "react"
 import * as styles from "./pager.module.css"
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi"
-import MuiLink from "@material-ui/core/Link"
 import { Link } from "gatsby"
 
 export interface PagerProps {
@@ -11,14 +10,14 @@ export interface PagerProps {
 
 function Pager({ backUrl, forwardUrl }: PagerProps) {
   let left = backUrl &&
-    <MuiLink to={backUrl} component={Link}>
+    <Link to={backUrl}>
       <BiChevronLeft /> Previous
-    </MuiLink>
+    </Link>
 
   let right = forwardUrl &&
-    <MuiLink to={forwardUrl} component={Link}>
+    <Link to={forwardUrl}>
       Next <BiChevronRight />
-    </MuiLink>
+    </Link>
 
   return (
     <div className={styles.pager}>
