@@ -95,7 +95,7 @@ Good software is software that is structured to meet architectural consideration
 
 ## Bad Architecture
 
-So Why do I need GOOD architecture and think about it often?
+Why do I need GOOD architecture and think about it often?
 Often I think of past projects and what could have been done differently to prevent scenarios like these.
 
 1. Systems when a change is made, completely unrelated systems break (even when they don't change).

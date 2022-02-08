@@ -77,6 +77,9 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-copy-linked-files`
+          },
+          {
             resolve: `gatsby-remark-vscode`,
             options: {
               theme: "Light+ (default light)", // Or install your favorite theme from GitHub

@@ -23,7 +23,7 @@ function NavigationCard(card: NavigationCardProps) {
       {card.description}
     </div>
     <div className="p-4">
-      <a href="/blog">Learn more...</a>
+      <div className="text-secondary">Learn more...</div>
     </div>
   </Link>
 }

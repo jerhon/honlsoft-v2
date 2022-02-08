@@ -1,7 +1,7 @@
 ---
 date: "2021-12-03"
 title: "Thoughts on Estimating in Hours vs Complexity"
-tags: ["csharp10", "dotnet6", "PeriodicTimer"]
+tags: ["estimations", "software-process"]
 type: "blog"
 description: "These are some of my personal thoughts on estimating in hours vs complexity"
 ---

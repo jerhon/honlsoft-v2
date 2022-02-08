@@ -1,6 +1,6 @@
 ---
 date: "2022-02-01"
-title: "Using Github Actions to Build Docker Images"
+title: "Using GitHub Actions to Build Docker Images"
 tags: ["github", "docker"]
 type: "blog"
 description: "Utilizing GitHub Actions to Build Docker Images"
@@ -17,9 +17,10 @@ It is extremely easy to automate through GitHub Actions.
 All the build tools and runners are there just sitting waiting to pick up a build to run.
 I don't have to spend hours / days setting up machines with build agents and the perfect build configuration on them.
 
-While I am using Docker, there are plenty of other container runtimes to use as well such as containerd and podman.
+While I am using Docker, there are plenty of other container runtimes to use as well such as Containerd and Podman.
 The image specification to build a container has been standardized as the [OCI Image Format](https://github.com/opencontainers/image-spec).
-However, Docker is one of the most popular and has excellent cross-platform support, so that's what I typically use as its a gentler introduction to containers for those without experience.
+However, Docker is one of the most popular and has excellent cross-platform support, so that's what I typically use.
+It's easier to use, which helps when I want to introduce others to containers.
 
 In this post, I'll be referencing [my project around building a Markdown Time Logger](../2021/2021-12-31-time-tracking-in-markdown.md).
 
@@ -31,7 +32,7 @@ There are all kinds of examples over the web on this.
 I'm not going to go in depth in this article on building a container.
 
 In short the Dockerfile contains the instructions to build an image from my source code.
-Since it's a multistage Dockerfile the image will be built in Docker and everything will be output as an Docker image.
+Since it's a multistage Dockerfile the image will be built in Docker and everything will be output as a Docker image.
 After building a docker image, it will store locally, and it needs to be pushed out to a registry.
 I'll be pushing my image into GitHub Container Registry, which currently is free for public repositories / images.
 
@@ -42,7 +43,7 @@ A Dockerfile at a 10,000, foot view is a set of instructions to build my applica
 GitHub Actions takes the same stances as most major build automation tools do today.
 A file defines the actions to take for the build.
 The file is defined in Yaml, and stored alongside the source of the repository.
-All workflows are defined under the .github/workflows.
+All workflows are defined under the `.github/workflows` directory.
 Create a yaml file with the proper schema for a GitHub Action workflow and store it under that directory.
 GitHub will automatically pick it up.
 
@@ -57,7 +58,7 @@ There are a host of things that can be used as a trigger for a GitHub Actions wo
 One of the very powerful things about this, is that the actions really allow automation of all aspects of working with GitHub.
 It is not just a tool to automate application builds.
 
-I could set up a trigger to deploy a latest build when a github issue is closed.
+I could set up a trigger to deploy the latest build when a github issue is closed.
 I could create a branch in the git repository when an issue is opened.
 And of course, I can trigger my application to build when a branch or tag is pushed.
 
@@ -78,7 +79,7 @@ on:
 ## Defining Extra Variables
 
 When I built this workflow, I was comparing other starter workflows with GitHub and one of the useful things they did was set up variables for common values.
-This is not an every day occurrence for me so referencing these, and the github actions documentation is a must.
+This is not an everyday occurrence for me so referencing these, and the github actions documentation is a must.
 It helps me to build best practices into my workflows, and learn from others as I do it.
 
 Here's a few great links:
@@ -106,7 +107,7 @@ Many of these steps are familiar for any Docker build.
 * Login to the ghcr.io container registry. 
 * Setup Docker
 * Get metadata for use later in Docker.  This avoids having to do manual work to set up the tags and labels for the Docker images.
-* Finally build the image and push it.  The build and push has two steps, but I'll explain that after the YAML file.
+* Finally, build the image and push it.  The build and push has two steps, but I'll explain that after the YAML file.
 
 ```yaml
 jobs:
@@ -184,8 +185,8 @@ This is helpful in cases when a network administrator changes or requests the de
 ## Wrapping Up
 
 So far I've enjoyed getting to use GitHub Container Registry and GitHub Actions.
-It's nice to have a full featured container registry available for public projects, especially after Docker's changes to it's licensing terms last year.
+It's nice to have a full-featured container registry available for public projects, especially after Docker's recent changes to it's licensing terms.
 
 While this post is very specific to GitHub Actions, many of the top DevOps products(like GitLab, Azure DevOps) today have something similar.
-I plan on taking this workflow and generalizing it into a workflow repository so I can re-use it when appropriate in my GitHub docker applications.
+I plan on taking this workflow and generalizing it into a workflow repository to re-use it when appropriate in my GitHub docker applications.
 
