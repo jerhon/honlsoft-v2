@@ -118,7 +118,7 @@ The typical example would be in a code review, "Why is this code directly queryi
 Another common example, "Why is this business rule in the database?"
 
 Monoliths provide less control for deployments.
-As the code bas is entirely built together, it often also needs to be deployed together to maintain consistency of the system.
+As the code base is entirely built together, it often also needs to be deployed together to maintain consistency of the system.
 This means small changes can trigger huge waves of change throughout an application.
 
 For example, a change in accounting business logic would trigger a full build and deployment of the entire application.
@@ -190,10 +190,9 @@ For example, two products shared the same code base just because they are produc
 There are ways to re-use code without having to build everything together.
 
 This is a very dangerous place as it makes deployments very difficult for an organization.
-If many teams and products in an organization are dependent on the same code base, deployments become very difficult.
 A change to one application may affect another.
 It becomes difficult to test the effects of a change on the software because it's impossible to test all affected areas.
-This also makes it hard for individual teams to innovate as they are tied to code base of a much larger organization rather than just their team.
+This also makes it hard for individual software teams to innovate as they are tied to code base of a much larger organization rather than just their team.
 
 ## Wrapping Up
 
