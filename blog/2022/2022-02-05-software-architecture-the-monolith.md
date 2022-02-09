@@ -1,6 +1,6 @@
 ---
 date: "2022-02-08"
-title: "Software Architecture: The Monolith"
+title: "Software Architecture: The Monolithic Application"
 tags: ["architecture", "monolith"]
 type: "blog"
 description: "Software Architecture - What's a Monolith"
@@ -24,7 +24,9 @@ To do this, a monolith is divided into layers and components.
 The terms component and layer contextually can mean different things.
 In the context of this discussion, I am referring component typically is a package or library depending on the technology of choice.
 This may be akin to an assembly in .NET or a JAR in Java.
-The layers are a conceptual boundary typically used to define what components can interact with each other and to narrow down the purposes of the components.
+The layers are a conceptual boundary typically used to define what components can interact with each other and to narrow down the purpose of components within the layer.
+
+There are many approaches to internally layering and breaking down software, but these are a few examples.
 
 ### The n-tier Architecture
 
@@ -61,7 +63,7 @@ Interactions between domains have a more rigid formalized interface as they esca
 Or stated another way, n-tier architecture views technology as a cross-cutting concern.  Domain driven architecture views the business domain as the central piece of the application.
 A particular domain can be implemented as a mini n-tier architecture, but the main idea is that the domain and it's decisions around persistence and business logic are isolated from other business domains in the application.
 
-Domain driven architecture is not limited to the monolithic architecture, however when it is in a monolithic architecture there are certain constraints over it that are imposed.
+Domain driven architecture is not limited to the monolithic application, however when it is in a monolithic architecture there are certain constraints over it that are imposed.
 
 It may be that all the domains reside in the same database, or share a similar method of data access.
 Perhaps they have their business logic structured differently.
@@ -94,20 +96,20 @@ However, the key is that clear guidelines are established for the Monolith to av
 
 The main pro of a monolith is that it's conceptually simple and easy to make.
 All code is in a single place.
-This is only true on smaller codebases with good organizational structure.
+For small applications, it makes a lot of sense.
 
-This is also a familiar architecture for a lot of software developers.
+This is also a familiar architecture for many software developers.
 I remember it being very heavily being favored and taught while I was in college and early in my development career.
 
 Transactions are simpler.
-Unlike other architectures such a microservice architectures or event driven architectures, since code is run in the same process different systems within the monolith can enlist in the same transactions.
+Unlike other architectures such a microservice architectures or event driven architectures, code is run in the same process and different systems within the monolith can enlist in the same transactions.
 
 Debugging can be easier at times, but also more difficult in other circumstances.
-Debugging can be simplified because the code base is all together, there is no tracing changes across multiple code bases.
+Debugging can be simplified because the code base is all together, there is no need to trace changes across multiple code bases.
 
 ### What are the Costs of a Monolith
 
-Monoliths without proper architectural control can quickly become a "big ball of mud".
+Monoliths without proper architectural boundaries can quickly become a "big ball of mud".
 This is due to the lack of separation in the application itself.
 If an application is built as one cohesive piece, the internal barriers between components in the application can quickly break down.
 Without a clear structure, the application becomes harder to maintain over time.
@@ -117,7 +119,7 @@ Another common example, "Why is this business rule in the database?"
 
 Monoliths provide less control for deployments.
 As the code bas is entirely built together, it often also needs to be deployed together to maintain consistency of the system.
-This means small changes can trigger huge waves throughout an application.
+This means small changes can trigger huge waves of change throughout an application.
 
 For example, a change in accounting business logic would trigger a full build and deployment of the entire application.
 This would include deploying things even though they didn't change maybe such as ordering or warehousing logic.
@@ -152,11 +154,13 @@ The new technology needs to be able to integrate with older pieces of the system
 
 When the pattern is misapplied, software development can easily go wrong.
 
-### The Big Ball of Mud
+### The "Big Ball of Mud"
 
-This is when software breaks down and has no decipherable structure to it.
-Or - the code is so difficult to change, a change cannot be made to it without affecting many
-This is especially dangerous in monoliths.
+This is when software breaks down and has no notion of a structure to it.
+Or - the code is so difficult to change, a change cannot be made to it without affecting many other parts of the system.
+This is especially dangerous in monoliths since the code base is so large. 
+
+"Big Ball of Mud" is a common phrase that comes up frequently when discussing monolithic architecture.
 
 ### Just Another Layer
 
@@ -168,6 +172,10 @@ Too few layers increases the coupling in code and also makes changes hard.
 Layers and components need a specific justification to exist.
 
 ### The Ultralith
+
+Usually an application is architected by itself, and boundaries to other systems have a formal interface such as an API or messaging system.
+This is when the code base of an enterprise has become intertwined even at the application level.
+Many applications have a singular code base and have to be deployed at the same time to work. 
 
 I struggle to find a word to describe this.
 Sometimes I call this the Mega-Monolith or Megalith.
@@ -193,3 +201,7 @@ The point of this article was not to say monolithic architecture is good or bad.
 It has tradeoffs and monolithic architecture is an approach that should be considered when developing an application.
 It needs to fit the application and the business in order for it to be successful.
 Taking any pattern or architecture and prescribing it as the cure to all software development's woes will cause tremendous pain in a development organization when the architecture does not fit.
+
+Thanks for taking the time to read my post.
+While I could likely write more on this topic, these are just a few of my thoughts as of late.
+I just wanted to jot them down as an exercise to advance my knowledge.
