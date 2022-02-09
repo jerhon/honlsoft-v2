@@ -76,19 +76,18 @@ The different domains may need to stay current on the same external dependencies
 Clean architecture is a newer architectural pattern similar to the Hexagonal or Ports and Adapters Architecture, but it is much to large a topic for this post.
 The main point is it's there, and there are a number of other architectures that can be considered for a monolithic application.
 
-I plan on doing an entire post on clean architecture sometime in the future.
+I plan on writing an entire post on clean architecture sometime in the future.
 
 ### The Combination Architecture
 
-Sometimes a monolith may not be one or the other, it can have elements of several other architectural styles
-However, they are two of the major architectures to consider.
+Sometimes a monolith may not be one or the other, it can have elements of several other architectural styles.
 
 Perhaps the application is implemented with a domain driven architecture for everything except the presentation layer.
 The presentation layer sits on top of each domain driven layer.
 Or, a domain driven architecture is used, but a shared persistence layer underpins it.
 
 The techniques can be matched.
-However, the key is that clear guidelines are established for the Monolith to avoid it becoming a jumbled mess of code.
+However, the key is that clear guidelines are established for the monolith to avoid it becoming a jumbled mess of code.
 
 ## Evaluating the Monolith
 
@@ -173,10 +172,8 @@ Layers and components need a specific justification to exist.
 
 ### The Ultralith
 
-Usually an application is architected by itself, and boundaries to other systems have a formal interface such as an API or messaging system.
 This is when the code base of an enterprise has become intertwined even at the application level.
 Many applications have a singular code base and have to be deployed at the same time to work. 
-
 I struggle to find a word to describe this.
 Sometimes I call this the Mega-Monolith or Megalith.
 
