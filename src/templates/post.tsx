@@ -1,5 +1,5 @@
 import { graphql } from "gatsby"
-import React from "react"
+import React, { useLayoutEffect} from "react"
 
 import Layout from "../components/layout/layout"
 import PageHeader from "../components/page-header"
@@ -7,6 +7,7 @@ import RelatedPosts from "../components/related-posts"
 import SEO from "../components/layout/seo"
 import { getPostBreadcrumbs, getPostUrl } from "../utils"
 import { Container } from "../components/container"
+import mermaid from "mermaid";
 
 interface PostLink {
   title: string,
@@ -26,6 +27,14 @@ interface PostProps {
 }
 
 function Post(post: PostProps) {
+  useLayoutEffect(() => {
+    mermaid.initialize({ });
+  }, []);
+
+  useLayoutEffect(() => {
+    mermaid.contentLoaded();
+  });
+
   return <Layout>
     <SEO title={post.title} description={post.description} image={post?.imageUrl} />
     <article>
