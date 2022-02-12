@@ -9,7 +9,7 @@ description: "Utilizing dependency inversion to control the relationship between
 Dependency inversion is a practice to help decouple code from its implementation.
 Specifically, it helps to control the flow of dependencies from one component to another.
 
-It's a crucial technique to have in a Software Architect's tool chest as it can help to craft the dependency chain in an application and enforce architectural boundaries.
+It's a crucial technique to have in a software developer's tool chest as it can help to craft the dependency chain in an application and enforce architectural boundaries.
 By being able to control the direction of dependencies in an application we can control where change needs to occur for an application and what layers it affects.
 
 ## The Code Sample
