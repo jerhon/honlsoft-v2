@@ -163,7 +163,7 @@ Just using the plugin name in the resolve, Gatsby was able to resolve it to the 
 }
 ```
 
-### Hooking up Mermaid in my Posts page
+### Hooking up Mermaid in my Posts Page
 
 Now, I avoided adding a script in my plugin.
 I may do that eventually, but for now, I just wanted to  have pages initialize mermaid themselves.
