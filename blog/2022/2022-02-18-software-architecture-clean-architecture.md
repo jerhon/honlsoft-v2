@@ -12,16 +12,14 @@ This is a post to summarize my thoughts after reading the book last year.
 
 It is an architectural pattern used to structure software.
 It's based on the premise that Use Cases and the Business Domain are central to the software.
-In other words, I can use an Oracle client library, but it should not be central to the software I'm building.
-
-
+In other words, I can use an database client library, but it should not be central to the software I'm building.
 
 ## n-Tier Architecture
 
 Many applications use an N-Tier architecture where the database sits at the center of the application's layers.
 This is not clean architecture, but I'm talking about it as a reference point.
 
-A database underpins the architecture and used to store data related to the application.
+In an n-tier architecture, a database underpins the architecture and used to store data related to the application.
 Business logic builds off this and implements business specific rules on top of the database.
 The Presentation layer sits as the top layer and controls the user interface, APIs, or whatever external interface the software has.
 
@@ -38,7 +36,7 @@ If the database needs to change, it potentially affects all layers above it as t
 This means the business logic ends up being coupled to the database.
 
 This is a bit of funny business.
-I've rarely had someone on the business team request that I make changes to a database.
+I've rarely had someone on a business team request that I make changes to a database.
 Instead, it's I want a form to collect a user's information, be able to view it after it's entered, edit it, etc.
 
 Don't get me wrong, I'm not saying throw out the database.
@@ -58,14 +56,16 @@ Is that part of "Persistence"?
 Maybe it is?
 The pieces interacting with the library to actually doing the communication with the infrastructure, probably not.
 
-So, the business logic ends up getting intermingled with other outlying concerns as there is no clear place to put it.
+The business logic ends up getting intermingled with other outlying concerns as there is no clear place to put it.
 
 ## The Clean Architecture
 
 Clean architecture is different in that it puts domain logic and customer use cases at the center of the application.
 This relies very much on dependency inversion for it to work.
+Please take a look at my previous blog post on [Dependency Inversion](./2022-02-11-software-architecture-dependency-inversion)
 
 Here's a diagram where each box represents a layer of the architecture.
+The names I use for the layers may deviate slightly from the book.
 
 ```mermaid
 flowchart TD
@@ -82,11 +82,14 @@ Let's say this system is meant to deal with user accounts.
 There may be a class UserPreferences that represents the preferences of the user in the system.
 
 Typically this layer is pretty clean, but a lot of care needs to be taken to ensure that they are core domain classes.
+It's easy for other layers such as the use cases to creep into this.
+For example, if I am working with UserPreferences, what are the things that can be done to user preferences.
+Other concerns such as saving the preferences to the database, or sending an e-mail have no business being here.
+Those are things that should be done when we go through the process of updating user preferences, but they aren't core to the user preferences themselves.
 
 ## The Use Case Layer
 
 On top of the domain layer we have a use case layer.
-This fits really well in to a CQRS pattern, or similar to a command pattern.
 Each use case gets a class, and the class has a method that carries out the business logic of the use case.
 
 Perhaps the use case is simply that a user can update their preferences.
@@ -124,14 +127,13 @@ public class UpdateUserPreferences
 What I've done is implemented the core use case in code.
 I can look at that code and understand exactly what the business was asking me to do.
 I want to update the users preferences and send a notification.
-This is obviously oversimplified - there would likely be more logic in here, such as validation of the domain objects, but the idea here is to lay out the pattern, not everything that goes into a use case.
+This is obviously oversimplified - there would be more logic in here, such as validation of the domain objects, but the idea here is to lay out the pattern and not everything that goes into a use case.
 
-Now, there may be some more technical details here.
+There may be some more technical details to think through here as well.
 Questions like: If I'm using two systems, how do I ensure that after I update the user preferences that I get the notification to always be sent when they are updated?
 That's a technical issue at this point.
 It can that can be remedied with a Outbox pattern, or if the business process is asynchronous and repeatable on error.
 I'm not going to go into that here, it could be a whole post by itself.
-
 
 ## The Infrastructure Layer
 
@@ -143,7 +145,8 @@ Or, if it's a closed layer, there would have to be yet another representation of
 
 It's complicated.
 
-In clean architecture, it becomes much easier.
+In clean architecture, it becomes much more simple.
+The infrastructure layer implements the interfaces a use case need to do it's job.
 
 Here's a set of classes in their application layer or component.
 Arrows point towards dependencies.
@@ -182,8 +185,10 @@ flowchart TD
 
 I already detailed the use case layer which left us two interfaces to implement required for the use case.
 Components to implement those interfaces live in this layer.
+In this instance I would be implementing the persistence store and the notification service for the user domain.
 It's possible these could be in the same component, the component boundaries will form around the decisions of what technologies the components and class implementations depend on.
 
+Notice the direction of the dependencies.
 The UpdateUserPreferences use case does not change because of the database nor the notification system.
 Instead, the database and notification system change when the business logic changes.
 If a change needs to occur to the database or notification system, for example, notification system X is obsolete and we need to implement notification system Y, only the "Notification Library" would need to change.
@@ -196,16 +201,15 @@ It's up to the persistence mechanism to decide the details.
 That's really the key to all this.
 Clean architecture decouples business logic from it's infrastructure.
 
-This also makes the code a lot easier to understand in some cases.
+This can also makes the code a lot easier to understand.
 In applications where there is no database, it is clear where the business entities should go and where they should be modeled.
 
 ### The Infrastructure is a Series of Adapter Patterns
 
 One key point is that the infrastructure layer ends up relying highly on the Adapter pattern.
-Clean Architecture is very similar to the Ports and Adapters pattern, or Hexagonal Architecture.
 Components in the infrastructure layer typically have some external system they are dependent on.
 Things like a database, file access, or a notification system.
-This will naturally be a dependency on these components.
+This will naturally be a dependency of these components.
 
 So, much of the code in the infrastructure layer can be thought of as an adapter.
 It's implementing the interfaces defined by the business domain using the specific database, file access, or notification system.  I did not show those in my diagrams above, but the typical adapter pattern looks something like this.
@@ -222,6 +226,9 @@ flowchart LR
 
 In this way the infrastructure components depend on the Domain Types and they depend on something such as a persistence library.
 I'm able to keep dependencies on technology out of our domain and use technology libraries without it becoming central to the business logic.
+
+Another way to look at it, if my persistence library changes, that doesn't change the domain logic, it changes the infrastructure, and the domain logic should behave the same.
+
 ## Application Layer
 
 The application layer is really the starting point of the application.
@@ -233,7 +240,7 @@ If it's a UI, the application layer may contain the MVVM logic to consume the un
 
 ## Cross Cutting Concerns
 
-Now there are a few things that may need to make it up to the domain logic.
+Now there are a few things that may needed to make it up to the domain logic.
 Typically these are primitives such as collection types, perhaps implementation of a mediator will be needed for use cases to decouple execution of the use cases from their concrete types.
 Those types of things are out of scope of this discussion.
 
@@ -243,10 +250,13 @@ However, dependencies implementing specific technologies such as databases, file
 
 For example, I would probably reference the MeditR library at the use case layer of my application.
 It is a very good implementation of the Mediator pattern in .NET.
-This way each use case can be implemented as a request in the mediator pattern, and I no longer have to worry about the details of constructing and calling it.
+This way each use case can be implemented as a request in the mediator pattern, and I no longer have to worry about the details of constructing and calling the use cases.
 It provides a singular point of entry to access the use cases.
 
 ## The Benefits and Costs
+
+Like every architecture there are benefits to using it, and also costs.
+There is no one size fits all architecture.
 
 This architecture decouples business logic from its underlying infrastructure.
 
@@ -269,14 +279,14 @@ The domain itself never relies on the outside infrastructure.
 
 ## Wrapping Up
 
-This is a simplified example of what a clean architecture would look like.
+This blog post is a simplified example of what a clean architecture would look like.
 However, I hope it was enough to help understand the benefits of it.
 
 Clean architecture is one of my favorite things I've learned about in the past year when it comes to pure coding.
 Even when I'm not using it, it shifts how I think about implementing code, abstractions, and adapters- where dependencies sit, etc.
 Even how I go about translating business logic into code such as having a representation of the use cases as a first class citizen of the code.
 
-Even with that glowing review, with my architecture posts, my point isn't to say every application should use a clean architecture.
+Even with that glowing review, my point isn't to say every application should use a clean architecture.
 While I think it's a very good architecture and should be considered when building new applications, saying all applications should be built using Clean Architecture would be very bad.
 An architecture needs to fit the application and the business to be appropriate.
 
