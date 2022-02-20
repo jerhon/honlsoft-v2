@@ -7,7 +7,7 @@ description: "A brief overview of clean architecture."
 ---
 
 Clean Architecture is a pattern set out by Robert Martin, also known as "Uncle Bob" in the software industry.
-It can read about in his book [Clean Architecture: A Craftsman's Guide to Software Structure and Design](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164)
+It can read about in his book [Clean Architecture: A Craftsman's Guide to Software Structure and Design](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164).
 This is a post to summarize my thoughts after reading the book last year.
 
 It is an architectural pattern used to structure software.
@@ -137,16 +137,16 @@ I'm not going to go into that here, it could be a whole post by itself.
 
 ## The Infrastructure Layer
 
-The Infrastructure Layer is where things like the database and user notifications sit.
+The Infrastructure Layer is where implementations for things like the database and user notifications sit.
+
 Going back to the n-tier architecture, this would have one or the other be the odd man out.
 In the persistence layer if I had the database be central, it may know nothing about notifications.
 The notifications would have to have knowledge of the database to use it's entities and depended on it.
 Or, if it's a closed layer, there would have to be yet another representation of a UserPreferences in the Notification System and the business logic would have to sort out the two representations.
-
 It's complicated.
 
 In clean architecture, it becomes much more simple.
-The infrastructure layer implements the interfaces a use case need to do it's job.
+The infrastructure layer implements the interfaces the use cases need to do their work.
 
 Here's a set of classes in their application layer or component.
 Arrows point towards dependencies.
@@ -224,10 +224,10 @@ flowchart LR
     Infrastructure-- Uses -->Persistence
 ```
 
-In this way the infrastructure components depend on the Domain Types and they depend on something such as a persistence library.
+In this way the infrastructure components depend on the use cases / domain types and they depend on something such as a persistence library.
 I'm able to keep dependencies on technology out of our domain and use technology libraries without it becoming central to the business logic.
 
-Another way to look at it, if my persistence library changes, that doesn't change the domain logic, it changes the infrastructure, and the domain logic should behave the same.
+Another way to look at it, if the persistence library changes, that doesn't change the domain logic, it changes the infrastructure, and the domain logic should behave the same.
 
 ## Application Layer
 
