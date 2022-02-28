@@ -1,5 +1,5 @@
 import React from "React";
-import { AiOutlineArrowDown, CgArrowDown, FaArrowCircleDown, FiArrowDownCircle } from "react-icons/all"
+import {  FiArrowDownCircle } from "react-icons/fi"
 import { useRef } from "react"
 
 

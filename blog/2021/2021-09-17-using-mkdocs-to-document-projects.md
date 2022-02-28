@@ -4,7 +4,7 @@ title: "Using Material for MkDocs for Project Documentation"
 tags: ["documentation", "MkDocs"]
 type: "blog"
 description: "How to generate great looking project documentation utilizing Material for MkDocs."
-image: "images/mkdocs-document-generation.jpg"
+image: "./images/mkdocs-document-generation.jpg"
 ---
 
 Many software projects enlist the amount of complexity that requires documentation.

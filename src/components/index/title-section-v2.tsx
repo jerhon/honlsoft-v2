@@ -2,11 +2,7 @@ import React from "react";
 import * as styles from "./title-section-v2.module.css";
 import { NextPageButton } from "../next-page-button"
 
-export interface TitleSectionV2Props {
-  children?: React.ReactNode;
-}
-
-export function TitleSectionV2(props: TitleSectionV2Props) {
+export function TitleSectionV2() {
   return <div className={styles.background}>
     <div className="flex flex-col h-screen flex text-white justify-center align-middle items-center">
       <div className="flex-grow align-middle flex">

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react"
+import React, { useCallback, useState } from "react"
 import Footer from "./footer"
 import AppBar from "./app-bar"
 import { Sidebar } from "./sidebar"

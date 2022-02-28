@@ -1,6 +1,6 @@
 import { FiMenu } from "react-icons/fi"
 import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle } from "react-icons/ai"
-import React, { useEffect, useRef } from "react"
+import React from "react"
 import * as styles from "./app-bar.module.css";
 import clsx from "clsx"
 

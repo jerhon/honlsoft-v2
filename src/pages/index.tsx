@@ -5,7 +5,6 @@ import SEO from "../components/layout/seo"
 import "intersection-observer"
 
 import RecentPostsSection from "../components/index/recent-posts-section"
-import { TitleSection } from "../components/index/title-section"
 import { NavigationSection } from "../components/index/navigation-section"
 import { TitleSectionV2 } from "../components/index/title-section-v2"
 
@@ -17,7 +16,6 @@ export function IndexPage() {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       if (entries.length >= 1) {
-        console.log("docked: " + entries[0].isIntersecting)
         setIsDocked(!entries[0].isIntersecting);
       }
     }, { threshold: 0.2 });
