@@ -1,0 +1,7 @@
+.base {
+    @apply text-4xl p-2 text-white fixed top-0 left-0 right-0 h-16 z-30 items-center shadow-md select-none bg-transparent flex;
+}
+
+.docked {
+    @apply bg-blue-900;
+}

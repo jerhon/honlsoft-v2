@@ -8,7 +8,7 @@ export function TitleSection() {
   useInView(ref, { classesToAdd: ["opacity-100"], classesToRemove: ["opacity-0"], sticky: true })
 
   return <div className={styles.container}>
-    <div className="flex-grow m-auto text-3xl bold font-title flex opacity-0 transition-opacity duration-[3s]" ref={ref}>
+    <div className="flex-grow m-auto text-3xl bold font-title flex opacity-0 transition-opacity duration-[3s] mx-8" ref={ref}>
       <span className="m-auto justify-center align-center opacity-90">Building software shouldn't feel like climbing a mountain.</span>
     </div>
     <div className="flex-grow" />

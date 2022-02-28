@@ -55,7 +55,7 @@ function PostListPage(props: PostListPageProps) {
     )
 
   return (
-    <Layout>
+    <Layout isDocked={true}>
       <SEO title={props.title} />
       <PageHeader title={props.title} breadcrumbs={props.breadcrumbs} />
       <Container>
