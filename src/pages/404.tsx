@@ -5,7 +5,7 @@ import SEO from "../components/layout/seo"
 import PageHeader from "../components/page-header"
 
 const NotFoundPage = () => (
-  <Layout>
+  <Layout isDocked>
     <SEO title="404: Not found" />
     <PageHeader title="NOT FOUND" breadcrumbs={undefined} />
     <br />
