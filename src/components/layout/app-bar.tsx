@@ -1,14 +1,18 @@
 import { FiMenu } from "react-icons/fi"
 import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle } from "react-icons/ai"
 import React from "react"
+import * as styles from "./app-bar.module.css";
+import clsx from "clsx"
 
 interface AppBarProps {
+  isDocked: boolean;
   onSidebarToggle: () => void
 }
 
-export default function AppBar({ onSidebarToggle } : AppBarProps) {
+export default function AppBar({ onSidebarToggle, isDocked } : AppBarProps) {
+
   return <>
-    <nav className="flex text-4xl p-2 bg-blue-900 text-white fixed top-0 left-0 right-0 h-16 z-30 items-center shadow-md select-none">
+    <nav className={clsx(styles.base, isDocked && styles.docked)}>
       <button className="bg-transparent px-4" onClick={onSidebarToggle} ><FiMenu /></button>
       <div className="font-bold text-white font-title cursor-default">HONLSOFT</div>
       <div className="flex-grow" />
@@ -19,6 +23,5 @@ export default function AppBar({ onSidebarToggle } : AppBarProps) {
       </div>
     </nav>
     {/* This acts as a spacer for the fixed header. */}
-    <div className="h-16" />
   </>
 }

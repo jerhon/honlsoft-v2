@@ -37,7 +37,7 @@ function Post(post: PostProps) {
     mermaid.contentLoaded();
   });
 
-  return <Layout>
+  return <Layout isDocked={true}>
     <SEO title={post.title} description={post.description} image={post?.imageUrl} />
     <article>
       <PageHeader title={post.title} breadcrumbs={post.breadcrumbs} />
