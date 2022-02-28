@@ -1,6 +1,5 @@
-import React from "React";
 import {  FiArrowDownCircle } from "react-icons/fi"
-import { useRef } from "react"
+import React, { useRef } from "react"
 
 
 export interface NextPageButtonProps {
