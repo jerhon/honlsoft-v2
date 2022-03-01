@@ -18,7 +18,7 @@ export function IndexPage() {
       if (entries.length >= 1) {
         setIsDocked(!entries[0].isIntersecting);
       }
-    }, { threshold: 0.2 });
+    }, { threshold: 0.7 });
 
     if (ref.current) {
       observer.observe(ref.current)
