@@ -34,7 +34,7 @@ export function NavigationSection() {
 
   return <div className="min-h-screen flex flex-col justify-center pt-16">
     <div className="flex-grow flex flex-col  ">
-      <nav className="desktop:grid desktop:auto-rows-max grid-cols-3 gap-8 overflow-clip my-auto mx-4">
+      <nav className="desktop:grid desktop:auto-rows-max grid-cols-3 gap-8 overflow-clip my-auto px-8">
         <NavigationCard title="Blog" linkUrl="/blog" imageUrl={books} description="Take a look at what I've been learning about lately.  I blog about tehcnical topics that intrigue me." />
         <NavigationCard title="Projects" linkUrl="/projects" imageUrl={code} description="Learn about personal projects I have worked on in the past. These are small projects I'm working on 'just for fun' outside of my day job." />
         <NavigationCard title="About Me" linkUrl="/about" imageUrl={about} description="Learn all about how I started coding, and what I'm doing now." />
