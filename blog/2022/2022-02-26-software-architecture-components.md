@@ -6,7 +6,7 @@ type: "blog"
 description: "A brief introduction to software components."
 ---
 
-For most of my posts, I've been talking about defining boundaries and layering software to build a piece of software.
+For most of my posts in my software architecture series, I've been talking about defining boundaries and layering software to build a piece of software.
 In this post, I want to talk about dividing layers up even further into software components.
 
 ## What's a Software Component
@@ -14,8 +14,8 @@ In this post, I want to talk about dividing layers up even further into software
 A software component is a set of code that is typically built and deployed together and cannot be broken apart from that deployment unit.
 In .NET this would be an assembly.
 In java this would be a jar.
-In interpreted languages the lines get fuzzier when there are not clear outputs, in python I would say this is a  module, but could argue it's a Python package.
-Regardless of the mechanism - a software component is a way to bundle a set of code together into a cohesive unit that can't be broken apart.
+In interpreted languages the lines get fuzzier when there are not clear outputs, in Python I would say this is a  module, but could argue it's a Python package.
+Regardless of the mechanism, a software component is a way to bundle a set of code together into a cohesive unit that can't be broken apart.
 
 Components is an ambiguous term, and could mean other things at different levels of a software system.
 In this instance, I am referring to dividing up the internal structure of a piece of software.
@@ -32,8 +32,9 @@ Both revolve around re-use, but typically internal re-use vs external re-use.
 
 Using software components internally in an application can help promote organization and determine where changes should occur.
 
-For example, I may have an Accounting Application, if I keep all my accounting domain logic together, I can create a single component containing the domain logic.
-I should never reuse that component anywhere else other than within that application as it is application logic, but the component principles outlined earlier make my system easier to change as I have a single place where my domain logic resides and where I need to change it.
+For example, I may have an accounting application, if I keep all my accounting domain logic together, I can create a single component containing the domain logic.
+I should never reuse that component anywhere else other than within that application as it is application logic, but following good component principles outlined later in this post make my system easier to change.
+I have a single place where my domain logic resides and where I need to change it.
 
 This is the most common way I use software components.
 
@@ -42,12 +43,11 @@ This is the most common way I use software components.
 When I have an application and I need to use the same code across multiple applications, creating a software component and packaging it via a package manager makes sense.
 However, when the component can be released independently, other concerns come into play such as versioning, package repositories, and so on.
 
-I'll have two separate applications that want to rely on the same code, but keep their application logic separate of each other.
+This enables me to have two separate applications that want to rely on the same code, but keep their application logic separate of each other.
 
 With open source, this has become just a daily reality for most software developers.
-It seems like there is an open source to perform most tasks.
+It seems like there is an open source library to perform most tasks.
 We really are living in an age of software reuse.
-There are considerations that should be taken when using external libraries.
 
 ## Principles of Software Components
 
@@ -67,7 +67,7 @@ A binary, a set of source code, etc.
 That binary needs to clearly have been assembled together so that other systems can use it.
 I cannot remove one class from it, they are essentially a unit.
 
-Most modern languages and tooling support this through various mechanisms today so we don't even really need to think about it, but it isn't always the case.
+Most modern languages and tooling support this through various mechanisms today so we don't even really need to think about it, but this isn't always the case.
 
 ### The Common Closure Principle
 
@@ -75,6 +75,7 @@ Most modern languages and tooling support this through various mechanisms today 
 
 When I group code in a software component, there should be a laser focus on, what is this for?
 An alternate way to think about this, is what causes it to change?
+
 For example, if I build a library to deal with parsing markdown into an abstract syntax tree, it has a clear purpose and cause for change.
 If I need to change the way markdown is parsed, I alter that software component.
 
@@ -87,6 +88,7 @@ However, if the component parsed markdown and also stored the markdown in a data
 2. The database persistence needs to change
 
 These dual purposes introduce coupling, and too much coupling increases the difficulty of change within a software system.
+I would no longer be able to seperate the dependency on parsing the markdown from the storage in the database.
 
 ### The Common Reuse Principle
 
@@ -94,18 +96,19 @@ These dual purposes introduce coupling, and too much coupling increases the diff
 
 This is very similar to the Common Closure Principle.
 I would summarize this to limit dependencies.
-If I am building a markdown parsing library, but I don't want the user to have to bring in dependencies for a database.
+
+Going back to the example of a markdown parsing library, I don't want the user to have to bring in dependencies for a database.
 For example, I'm using a SQL server library just because the application will use SQL server, but it has nothing to do with markdown parsing.
 
 If I have an application which relies on this library, but only uses the markdown processing, anytime some database logic were to change, that would potentially impact the application as well.
-This guards against those scenarios.
+This principle guards against those scenarios.
 
 ## Versioning Components
 
 Over time, a software component gets built multiple times and new functionality is added, removed, modified, etc.
 Each of these different revisions of a software component are typically referenced via a version or version number.
 
-Versioning is a way to identify an instance of a software component as it was built and isolate changes between other software components or applications.
+Versioning is a way to identify an instance of a software component as it was built and isolate changes in dependent software components or applications.
 
 ### Without Version Numbers
 
@@ -151,11 +154,12 @@ That's a wealth of information just from a single version number!
 The version number is really meant for the consumers of an application.
 It is a means of communication.
 For example, if I am using version 4.0.0 of a library, and a new version 4.0.1 is release,and it adheres to semantic versioning.
-Most of the time, I can be confident that I can take the new change without impacting the new software component.
+Most of the time, I can be confident that I can take the new change without impacting my application.
 In fact - it's probably best if I do to take it immediately as there are bug fixes.
 
-If a new minor version is released I would be more suspicious.
-What are the features, and what are the features for, but I can be relatively OK with taking the new changes?
+If a new minor version is released, I would be more suspicious.
+What are the features, and what are the features for? 
+I can be relatively OK with taking the new changes?
 
 Finally, the major update.
 This should be avoided until I have time to put work into transitioning my application to the new version as I will likely have to change my code.
@@ -201,10 +205,11 @@ When I build the monolith what style am I using?
 * Is this a clean architecture, what are my use cases and what integrating systems do they need?
 
 Without clear layers the architecture just evolves into a big ball of mud by creating software components and making interdependencies between them.
-Software components end up competing and trying to become the architecture.
+Software components end up competing and try to become the missing architecture.
 
 ## Wrapping Up
 
 This can be a huge topic, and I only scratched the surface.
+
 Software components are a crucial piece to building larger pieces of robust software.
 By grouping software into smaller pieces it's possible to promote the reuse of code, isolate changes, and reuse them across applications.
