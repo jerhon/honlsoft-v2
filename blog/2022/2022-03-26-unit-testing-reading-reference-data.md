@@ -7,14 +7,14 @@ description: "A quick trick on how to easily read reference data for a test."
 ---
 
 When I'm unit testing in .NET many times I need a very large string or set of data to provide as input to a test case or as a final insertion.
-I like to use XUnit, but there aren't a lot of clear options to do this.
+I like to use XUnit, but there aren't a lot of clear options to do this in any unit testing framework.
 
 One way to do this is to just store the large amount of data in a file somewhere near the test it's self.
 Common options to reference this file are around finding the test assembly DLL, making sure the files are copied to the output.
 Or another common scenario is to embed test files in the assemblies themselves as resources.
 While both are functional, they present challenges in certain situations and can be tricky to set up properly.
 
-I've recently devised a little trick around some compiler generated attributes to make this easier.
+I've recently devised a little trick around some compiler related attributes to make this easier.
 This has been so useful to me I wanted to share it on my blog.
 
 ## Locating Test Data Using the CallerFilePathAttribute
