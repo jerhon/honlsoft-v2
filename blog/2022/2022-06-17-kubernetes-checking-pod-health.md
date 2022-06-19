@@ -1,5 +1,5 @@
 ---
-date: "2022-06-03"
+date: "2022-06-17"
 title: "Kubernetes: Checking Pod Health"
 tags: ["containers", "kubernetes", "docker-desktop"]
 type: "blog"
@@ -164,7 +164,7 @@ It had 3 events, and is no longer logging new ones.
 The pod is now in a Ready state.
 The startup probe did its job.
 
-```yaml
+```
 Name:         busybox-startup-exec-probe
 Containers:
   busybox-startup-exec-probe:
