@@ -7,7 +7,7 @@ description: "A brief introduction to building and running containers in Kuberne
 ---
 
 In my [previous post on Pods](2022-06-03-kubernetes-running-containers-in-pods), I gave a simple example running a container in Kubernetes.
-In this post, I will be discussing Pod lifecycles and how to check Pod health and keep them running.
+In this post, I will be discussing how to check pod health and keep them running with probes.
 
 ## Probes on Pods
 
@@ -15,7 +15,7 @@ Even the best software fails from time to time.
 Be it networking issues, a software bug, or unrelated 3rd party dependencies.
 Being able to react to these failures and ensure the appropriate action occurs is critical to maintaining an overall healthy software system.
 
-Kubernetes has probes to inspect a Pod to ensure it is up, running, and healthy.
+Kubernetes has probes to inspect a pod to ensure it is up, running, and healthy.
 Depending on the type of probe, it may stop directing traffic to the pod or terminate the pod.
 
 There are three main probes on the Pods: 
@@ -65,11 +65,12 @@ The probes can consist of one of the following:
 * A TCP port check
 * A [GRPC health check](https://github.com/grpc/grpc/blob/master/doc/health-checking.md)
 
+It's up to a container to implement some mechanism from the above list for kubernetes to check its health.
 I can set a startup probe which will wait for the Pod to become available until a TCP port is available.
 Another example would be a liveness probe including an HTTP endpoint on my application which indicates the Pod is healthy.
 The liveness probe could continue to run and check the endpoint through an HTTP GET request.
 
-Other options include but aren't limited to.
+There are other options including but not limited to:
 * How often the probe runs.
 * How many times the probe needs to fail.
 * How many times it needs to succeed to have traffic routed to it again (for a readiness probe).
@@ -273,5 +274,5 @@ It also makes it very easy to configure.
 I've started a GitHub repository with various examples as I write more blogs about Kubernetes.
 [The YAML files for my examples from above can be found here.](https://github.com/jerhon/kubernetes-examples/tree/main/probes)
 
-I hope you enjoyed this post, and it will encourage you to configure some probes on the next Kubernetes pod you create!
+I hope you enjoyed this post, and it will encourage you to configure some probes on the next Kubernetes pod you create.
 
