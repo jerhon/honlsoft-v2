@@ -2,7 +2,6 @@
 date: "2020-04-21"
 title: "COVID-19 Statistics Web Application"
 type: "projects"
-image: "./images/covid-19-stats.jpg"
 project: "covid-19-statistics-application"
 ---
 

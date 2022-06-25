@@ -2,7 +2,6 @@
 date: "2021-01-30"
 title: "COVID-19 Web Application with Heatmaps"
 type: "projects"
-image: "./images/covid-19-app-v3.jpg"
 project: "covid-19-statistics-application-v3"
 ---
 
