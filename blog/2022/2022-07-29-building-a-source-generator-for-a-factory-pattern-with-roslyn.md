@@ -27,7 +27,7 @@ In other cases, it may be implemented as a class.
 For the sake of our example, I will be building a factory through a class.
 It should look something like this when it is complete:
 
-```
+```csharp
 public interface IInstanceClassFactory {
 	InstanceClass Create(string  regularParameter);
 }
@@ -109,7 +109,7 @@ This is hooked up during the `Initialize` method.
 In the `Execute` method, it looks for the implemented SyntaxReceiver and then loops through any constructor info that was found and generates the source.
 The `Sourcify` calls just build the source code.  The .AddSource method adds it to the source collection for the compiler to evaluate.
 
-```
+```csharp
 
 [Generator]
 public class FactoryGenerator : ISourceGenerator {
