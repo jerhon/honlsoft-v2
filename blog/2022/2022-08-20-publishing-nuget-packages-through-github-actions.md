@@ -159,3 +159,5 @@ Likewise, I can easily see the differences between versions by diffing the tags.
 Using GitHub Actions to publish a NuGet package makes this as easy as tagging a commit and pushing it to a repository.
 While this process was written specifically for a GitHub Actions workflow, the same idea can be recycled in Azure DevOps, or GitLab.
 I will be extending it in the future for a few additional use cases with the tags, but for now it is working fine for my purposes.
+
+See the full workflow in the [GitHub repository](https://github.com/jerhon/hs-dependency-injection-source-generators/blob/main/.github/workflows/dotnet.yml).
