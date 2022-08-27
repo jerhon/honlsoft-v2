@@ -18,7 +18,7 @@ function NavigationCard(card: NavigationCardProps) {
     <div className="overflow-clip h-[250px]">
       <img src={card.imageUrl} className="w-full" alt="picture" />
     </div>
-    <div className="p-2">
+    <div className="p-2 flex flex-col flex-grow">
       <div className="p-4 m-0 text-lg">{card.title}</div>
       <div className="p-4 border-b-1 flex-grow text-slate-700">
         {card.description}
