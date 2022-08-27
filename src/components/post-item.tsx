@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import { FiCalendar, FiClock } from "react-icons/fi"
 
 
 export interface PostItemProps {
@@ -12,13 +13,20 @@ export interface PostItemProps {
 
 export function PostItem(article: PostItemProps) {
   return (
-    <div className="py-2">
-      <Link to={article.url}>
-        <h3>{article.title}</h3>
-      </Link>
-      <p className="py-2">{article.excerpt}</p>
-      <div className="opacity-80 text-sm">
-        {article.date} | approximately {article.readTime} minutes to read
-      </div>
-    </div>)
+
+      <div className="py-2 mb-6">
+        <Link to={article.url} className="w-full">
+        <div className="font-bold text-red-600 w-full">
+          {article.title}
+        </div>
+        </Link>
+        <p className="py-4">{article.excerpt}</p>
+        <div className="text-slate-600 text-sm flex space-x-2">
+          <div><FiCalendar /></div>
+          <div>{article.date}</div>
+          <div>|</div>
+          <div><FiClock /></div>
+          <div>approximately {article.readTime} minutes to read</div>
+        </div>
+      </div>)
 }
