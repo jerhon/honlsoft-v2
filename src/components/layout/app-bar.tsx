@@ -14,7 +14,7 @@ export default function AppBar({ onSidebarToggle, isDocked } : AppBarProps) {
   return <>
     <nav className={clsx(styles.base, isDocked && styles.docked)}>
       <button className="bg-transparent px-4" onClick={onSidebarToggle} ><FiMenu /></button>
-      <div className="font-bold text-white font-title cursor-default">HONLSOFT</div>
+      <div className="font-logo font-bold text-white font-title cursor-default">HONLSOFT</div>
       <div className="flex-grow" />
       <div className="flex">
         <a href="https://www.twitter.com/honlsoft" className="p-1 text-white"><AiFillTwitterCircle /></a>

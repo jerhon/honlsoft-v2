@@ -7,8 +7,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        title: ['Oswald'],
-        sans: ['Montserrat']
+        title: ['Lato', 'sans-serif'],
+        sans: ['Montserrat', 'sans-serif'],
+        logo: ['Oswald']
       },
       colors: {
         white: '#ffffff',

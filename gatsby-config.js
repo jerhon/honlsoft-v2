@@ -55,7 +55,8 @@ module.exports = {
       options: {
         fonts: [
           'Oswald',
-          'Montserrat'
+          'Montserrat',
+          'Lato'
         ],
         display: "block"
       },
