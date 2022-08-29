@@ -4,7 +4,7 @@ import code from "./images/code.jpg"
 import about from "./images/about.jpg"
 import { Link } from "gatsby"
 import { NextPageButton } from "../next-page-button"
-import { FiChevronsRight } from "react-icons/all"
+import { FiChevronsRight } from "react-icons/fi"
 
 interface NavigationCardProps {
   title: string,

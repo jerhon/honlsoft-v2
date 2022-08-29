@@ -3,12 +3,18 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+import { CreatePagesArgs, GatsbyNode } from "gatsby"
+import { tagToUrl } from "./src/tags"
+
+
+type actionsType = CreatePagesArgs["actions"]
+type graphQueryType = CreatePagesArgs["graphql"]
 
 // You can delete this file if you're not using it
 
 const path = require("path")
 
-async function createBlogArticles(actions, graphql, reporter) {
+async function createBlogArticles(actions: actionsType, graphql: graphQueryType, reporter: any) {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(`src/templates/post.tsx`)
   const result = await graphql(`
@@ -38,7 +44,7 @@ async function createBlogArticles(actions, graphql, reporter) {
         }
       }
     }
-  `)
+  `) as any
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
@@ -62,8 +68,10 @@ async function createBlogArticles(actions, graphql, reporter) {
   })
 }
 
-async function createTypePagination(actions, graphql, type) {
+
+async function createPaginatedForType(actions: actionsType, graphql: graphQueryType, type: string) {
   let { createPage } = actions
+
   const result = await graphql(
     `
       {
@@ -92,7 +100,8 @@ async function createTypePagination(actions, graphql, type) {
         }
       }
     `
-  )
+  ) as any
+
 
   let totalBlogs = result.data.allMarkdownRemark.edges.length
   const pageSize = 10
@@ -111,14 +120,71 @@ async function createTypePagination(actions, graphql, type) {
       context: {
         type: type,
         limit: pageSize + 1,
-        skip: i * pageSize,
+        skip: i * pageSize
       }, // additional data can be passed via context
     })
   }
 }
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
+
+async function createTagPages(actions:actionsType, graphql:graphQueryType, reporter: any) {
+  const result = await graphql(`{
+    allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "blog" } } } ) 
+    {
+      group(field: frontmatter___tags) {
+        tag: fieldValue,
+        totalCount
+      }
+    }
+  }`) as any;
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+
+  const tagListTemplate = path.resolve(`src/templates/tag-list.tsx`)
+  const tagList = result.data.allMarkdownRemark.group
+
+  console.log(tagList)
+
+  tagList.forEach((tagData) => {
+    console.log(tagData)
+    let tagUrl = tagToUrl(tagData.tag)
+    const tagName = tagData.tag
+    const tagCount = tagData.totalCount
+    const pageSize = 10;
+
+
+    for (let i = 0; i < Math.ceil(tagData.totalCount / 10); i++) {
+
+      const sharedArgs ={
+        component: tagListTemplate,
+        context: {
+          tag: tagName,
+          type: "blog",
+          limit: pageSize + 1,
+          skip: i * pageSize,
+        } // additional data can be passed via context
+      }
+
+      if (i == 0)
+      {
+        actions.createPage({ path: tagUrl, ...sharedArgs })
+      }
+
+      actions.createPage({
+        path: tagUrl  + "/" + i,
+        ...sharedArgs
+      })
+    }
+  })
+}
+
+
+export const createPages : GatsbyNode["createPages"] = async ({ actions, graphql, reporter }) => {
   await createBlogArticles(actions, graphql, reporter)
-  await createTypePagination(actions, graphql, "blog")
-  await createTypePagination(actions, graphql, "projects")
+  await createPaginatedForType( actions, graphql, "blog")
+  await createPaginatedForType(actions, graphql, "projects")
+  await createTagPages(actions, graphql, reporter)
 }

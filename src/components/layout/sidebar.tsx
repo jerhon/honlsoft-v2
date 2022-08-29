@@ -17,7 +17,7 @@ interface LinkProps {
 function SidebarLink({ title, icon, href }: LinkProps)
 {
   return <Link to={href} className="flex text-menu hover:bg-highlight items-center text-xl hover:no-underline p-2 px-6">
-    <div className="pr-4 opacity-70">
+    <div className="pr-4 text-slate-600">
       {icon}
     </div>
     <div className="pr-4">

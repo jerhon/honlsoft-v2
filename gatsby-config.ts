@@ -1,4 +1,6 @@
-module.exports = {
+import { GatsbyConfig } from "gatsby"
+
+const config : GatsbyConfig = {
   siteMetadata: {
     title: `Honlsoft`,
     description: `A personal and software development blog.`,
@@ -102,4 +104,5 @@ module.exports = {
   ],
 }
 
-require("ts-node").register()
+
+export default config

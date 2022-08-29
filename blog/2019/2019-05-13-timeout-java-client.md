@@ -1,7 +1,7 @@
 ---
 date: "2019-05-13"
 title: "Setting Receive Timeouts on a Web Service Client in Spring Framework"
-tags: ["java", "spring-framework", "soap"]
+tags: ["Java", "Spring Framework", "SOAP"]
 type: "blog"
 ---
 
