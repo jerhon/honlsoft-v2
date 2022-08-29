@@ -1,7 +1,7 @@
 ---
 date: "2019-12-01"
 title: "Apache Nifi: Reading a File Into an Attribute."
-tags: ["nifi", "groovy"]
+tags: ["NiFi", "Groovy"]
 type: "blog"
 ---
 

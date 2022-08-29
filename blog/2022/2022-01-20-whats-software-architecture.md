@@ -1,7 +1,7 @@
 ---
 date: "2022-01-21"
 title: "Software Architecture"
-tags: ["software-architecture"]
+tags: ["Software Architecture"]
 type: "blog"
 description: "Reflections from 'The Fundamentals of Software Architecture."
 ---

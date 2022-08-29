@@ -1,7 +1,7 @@
 ---
 date: "2022-02-08"
 title: "Software Architecture: The Monolithic Application"
-tags: ["architecture", "monolith"]
+tags: ["Software Architecture", "Monolith"]
 type: "blog"
 description: "Software Architecture - What's a Monolith"
 ---

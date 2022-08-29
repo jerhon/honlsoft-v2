@@ -1,7 +1,7 @@
 ---
 date: "2020-09-19"
 title: "Sprucing up honlsoft.com with CSS Transitions"
-tags: ["web-development", "css", "css-transitions"]
+tags: ["Web Development", "CSS"]
 type: "blog"
 ---
 

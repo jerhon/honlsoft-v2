@@ -1,7 +1,7 @@
 ---
 date: "2020-04-21"
 title: "COVID-19 Statistics Web Application - Additional Graphs"
-tags: ["angular", "covid-19-statistics-application"]
+tags: ["Angular", "COVID-19", "COVID-19 Statistics Application"]
 type: "blog"
 ---
 

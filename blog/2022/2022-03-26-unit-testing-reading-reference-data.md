@@ -1,7 +1,7 @@
 ---
 date: "2022-03-26"
 title: "Reading Reference Data in .NET Unit Tests"
-tags: ["unit-testing"]
+tags: ["Unit Tests", ".NET"]
 type: "blog"
 description: "A quick trick on how to easily read reference data for a test."
 ---

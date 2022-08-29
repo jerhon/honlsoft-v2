@@ -1,7 +1,7 @@
 ---
 date: "2020-10-14"
 title: "Pi-hole caught my smart TV tracking me"
-tags: ["pi-hole"]
+tags: ["Pi-hole"]
 type: "blog"
 description: "Pi-hole caught my smart TV tracking me"
 ---

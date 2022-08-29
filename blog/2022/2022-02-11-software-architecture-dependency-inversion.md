@@ -1,7 +1,7 @@
 ---
 date: "2022-02-11"
 title: "Software Architecture: Dependency Inversion"
-tags: ["software", "architecture", "dependency-inversion"]
+tags: ["Software Architecture", "Dependency Inversion"]
 type: "blog"
 description: "Utilizing dependency inversion to control the relationship between software components."
 ---

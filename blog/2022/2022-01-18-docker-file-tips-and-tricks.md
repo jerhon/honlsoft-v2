@@ -1,7 +1,7 @@
 ---
 date: "2022-01-18"
 title: "Dockerfile Tips and Tricks for .NET"
-tags: ["dotnet6", "docker"]
+tags: [".NET", "Docker"]
 type: "blog"
 description: "A few of my tips and tricks for docker files."
 ---

@@ -1,7 +1,7 @@
 ---
 date: "2020-02-06"
 title: "Java Generics"
-tags: ["java", "generics"]
+tags: ["Java"]
 type: "blog"
 ---
 

@@ -1,7 +1,7 @@
 ---
 date: "2022-07-29"
 title: "Metaprogramming in .NET: Building a Source Generator for a Factory Pattern with Roslyn"
-tags: [".NET"]
+tags: [".NET", "Roslyn"]
 type: "blog"
 description: "Talks about the process I went through to build a source generator to automatically build a factory from code."
 ---

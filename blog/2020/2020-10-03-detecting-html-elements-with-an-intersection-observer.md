@@ -1,7 +1,7 @@
 ---
 date: "2020-10-03"
 title: "Detecting HTML Elements with an Intersection Observer"
-tags: ["web-development", "css", "css-transitions"]
+tags: ["Web Development", "CSS"]
 type: "blog"
 description: "A basic example and description of using an intersection observer in a web page."
 ---
