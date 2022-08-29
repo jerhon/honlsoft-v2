@@ -1,7 +1,7 @@
 ---
 date: "2021-02-06"
 title: "Running Startup Logic in ASP.Net Core Applications"
-tags: [".NET", "ASP.Net", "Web Development", "COVID-19 Statistics Application"]
+tags: [".NET", "ASP.Net", "Web Development", "COVID-19 Statistics Application v2"]
 type: "blog"
 description: "Shows how to run startup logic in an ASP.Net Core application."
 ---

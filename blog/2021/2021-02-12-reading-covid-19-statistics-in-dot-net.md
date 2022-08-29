@@ -1,7 +1,7 @@
 ---
 date: "2021-02-12"
 title: "Reading COVID-19 Statistics in .NET"
-tags: [".NET", "ASP.Net", "Web Development", "COVID-19 Statistics Application"]
+tags: [".NET", "ASP.Net", "Web Development", "COVID-19 Statistics Application v2"]
 type: "blog"
 description: "Importing and Reading COVID-19 Statistics in .NET"
 ---
