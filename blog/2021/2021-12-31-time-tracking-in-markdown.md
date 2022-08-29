@@ -1,7 +1,7 @@
 ---
 date: "2021-12-31"
 title: "Tracking Time in Markdown"
-tags: ["dotnet6", "console", "engineering-day-book"]
+tags: [".NET", "Practices"]
 type: "blog"
 description: "My Engineering Daybook: Tracking Time in Markdown"
 ---

@@ -1,7 +1,7 @@
 ---
 date: "2021-04-17"
 title: "Raspberry Pi Camera: 3D Printing a Pan / Tilt Arm"
-tags: ["raspberry-pi", "dotnet", "object-detection-with-dot-net-core"]
+tags: ["Raspberry Pi", ".NET", "Object Detection"]
 type: "blog"
 description: "Describes in brief the idea of dependency injection."
 ---

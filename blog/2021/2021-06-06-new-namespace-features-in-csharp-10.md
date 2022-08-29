@@ -1,7 +1,7 @@
 ---
 date: "2021-06-06"
 title: "New Namespace Features in C# 10"
-tags: ["csharp10", "dotnet6"]
+tags: ["C#", ".NET"]
 type: "blog"
 description: "Describes a few of the new changes in C# 10 related to namespaces."
 ---

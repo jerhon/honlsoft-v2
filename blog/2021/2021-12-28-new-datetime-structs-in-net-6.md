@@ -1,7 +1,7 @@
 ---
 date: "2021-12-28"
 title: "New DateOnly and TimeOnly Types in .NET 6"
-tags: ["dotnet6", "DateOnly", "TimeOnly"]
+tags: [".NET", "DateOnly", "TimeOnly"]
 type: "blog"
 description: "Using the new DateOnly and TimeOnly structs in C#"
 ---

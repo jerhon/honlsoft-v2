@@ -1,7 +1,7 @@
 ---
 date: "2021-09-17"
 title: "Using Material for MkDocs for Project Documentation"
-tags: ["documentation", "MkDocs"]
+tags: ["Documentation", "MkDocs"]
 type: "blog"
 description: "How to generate great looking project documentation utilizing Material for MkDocs."
 image: "./images/mkdocs-document-generation.jpg"

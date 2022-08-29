@@ -1,7 +1,7 @@
 ---
 date: "2021-07-20"
 title: "Typescript Tips: null(and undefined) Checking"
-tags: ["typescript", "tips"]
+tags: ["Typescript"]
 type: "blog"
 description: "Various operators for dealing with null in Typescript."
 ---

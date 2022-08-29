@@ -1,7 +1,7 @@
 ---
 date: "2021-04-10"
 title: "Design Patterns: Dependency Injection"
-tags: ["dotnet", "dependency-injection", "patterns"]
+tags: [".NET", "Dependency Injection", "Design Patterns"]
 type: "blog"
 description: "Describes in brief the idea of dependency injection."
 ---
