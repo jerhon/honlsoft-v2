@@ -1,7 +1,7 @@
 ---
 date: "2020-06-06"
 title: "Calendar Application - Another Raspberry Pi Project"
-tags: ["pi-calendar", "raspberry-pi", "web-development"]
+tags: ["Pi Calendar", "Raspberry Pi", "Web Development"]
 type: "blog"
 ---
 

@@ -1,7 +1,7 @@
 ---
 date: "2021-12-03"
 title: "Thoughts on Estimating in Hours vs Complexity"
-tags: ["estimations", "software-process"]
+tags: ["Estimations", "Software Process"]
 type: "blog"
 description: "These are some of my personal thoughts on estimating in hours vs complexity"
 ---

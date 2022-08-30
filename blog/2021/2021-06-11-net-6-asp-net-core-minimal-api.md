@@ -1,7 +1,7 @@
 ---
 date: "2021-06-11"
 title: "Minimal APIs in .NET Core 6"
-tags: ["csharp10", "dotnet6", "aspnetcore"]
+tags: ["C#", ".NET", "ASP.Net"]
 type: "blog"
 description: "The Minimal API Scaffolding in ASP.Net Core 6"
 ---

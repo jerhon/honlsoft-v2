@@ -1,7 +1,7 @@
 ---
 date: "2020-05-12"
 title: "Netlify: Hosting Static Websites"
-tags: ["netlify", "web-development"]
+tags: ["netlify", "Web Development"]
 type: "blog"
 ---
 

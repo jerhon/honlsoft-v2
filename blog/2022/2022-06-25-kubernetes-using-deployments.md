@@ -1,7 +1,7 @@
 ---
 date: "2022-06-25"
 title: "Kubernetes: Deployments"
-tags: ["containers", "kubernetes", "docker-desktop"]
+tags: ["Containers", "Kubernetes", "Docker"]
 type: "blog"
 description: "Using deployments to scale workloads in Kubernetes.."
 ---

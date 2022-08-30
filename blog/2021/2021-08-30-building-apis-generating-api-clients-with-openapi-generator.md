@@ -1,7 +1,7 @@
 ---
 date: "2021-08-30"
 title: "Building APIs: Generating API Clients with OpenAPI Generator"
-tags: ["api", "dotnet", "openapi", "csharp", "typescript"]
+tags: [".NET", "OpenAPI", "C#", "Typescript"]
 type: "blog"
 description: "How to automate generation of an API client from an OpenAPI specification."
 ---

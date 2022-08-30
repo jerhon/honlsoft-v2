@@ -1,7 +1,7 @@
 ---
 date: "2022-02-01"
 title: "Using GitHub Actions to Build Docker Images"
-tags: ["github", "docker"]
+tags: ["GitHub", "Docker"]
 type: "blog"
 description: "Utilizing GitHub Actions to Build Docker Images"
 ---

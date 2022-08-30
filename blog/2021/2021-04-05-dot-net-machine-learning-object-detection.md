@@ -1,7 +1,7 @@
 ---
 date: "2021-04-05"
 title: "Object Detection with ML.Net"
-tags: ["raspberry-pi", "machine-learning", "dotnet", "object-detection-with-dot-net-core"]
+tags: ["Raspberry Pi", "Machine Learning", ".NET", "Object Detection"]
 type: "blog"
 description: "A small project creating a service producing images from a Raspberry PI and object detection through machine learning."
 ---

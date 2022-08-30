@@ -1,7 +1,7 @@
 ---
 date: "2022-02-18"
 title: "Software Architecture: Clean Architecture"
-tags: ["software-architecture", "clean-architecture"]
+tags: ["Software Architecture", "Clean Architecture"]
 type: "blog"
 description: "A brief overview of clean architecture."
 ---

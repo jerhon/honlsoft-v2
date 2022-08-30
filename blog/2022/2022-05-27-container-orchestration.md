@@ -1,7 +1,7 @@
 ---
 date: "2022-05-27"
 title: "Container Orchestration"
-tags: ["containers", "kubernetes"]
+tags: ["Containers", "Kubernetes"]
 type: "blog"
 description: "A brief introduction to container orchestration."
 ---

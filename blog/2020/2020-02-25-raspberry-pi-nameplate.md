@@ -1,7 +1,7 @@
 ---
 date: "2020-02-25"
 title: "The Pi-plate: An Interactive Raspberry Pi Driven Nameplate"
-tags: ["pi-plate", "raspberry-pi"]
+tags: ["Pi Plate", "Raspberry Pi"]
 type: "blog"
 ---
 

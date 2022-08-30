@@ -1,7 +1,7 @@
 ---
 date: "2022-02-26"
 title: "Software Architecture: Components"
-tags: ["software-architecture", "clean-architecture", "components"]
+tags: ["Software Architecture", "Clean Architecture"]
 type: "blog"
 description: "A brief introduction to software components."
 ---

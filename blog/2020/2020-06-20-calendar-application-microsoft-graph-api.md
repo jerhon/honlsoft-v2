@@ -1,7 +1,7 @@
 ---
 date: "2020-06-20"
 title: "Calendar Application - Accessing the Microsoft Graph API"
-tags: ["pi-calendar", "raspberry-pi", "web-development"]
+tags: ["Pi Calendar", "Angular", "Raspberry Pi", "Web Development"]
 type: "blog"
 ---
 

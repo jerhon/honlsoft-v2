@@ -1,7 +1,7 @@
 ---
 date: "2021-01-18"
 title: "Icon Libraries in React"
-tags: ["react", "web-development"]
+tags: ["React", "Web Development"]
 type: "blog"
 description: "Using react-icons as an Icon Library for React"
 ---

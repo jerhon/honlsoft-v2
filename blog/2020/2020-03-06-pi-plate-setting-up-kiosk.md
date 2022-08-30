@@ -1,7 +1,7 @@
 ---
 date: "2020-03-06"
 title: "The Pi-plate: Setting up a Raspberry Pi Kiosk"
-tags: ["pi-plate", "raspberry-pi", "linux"]
+tags: ["Pi Plate", "Raspberry Pi", "Linux"]
 type: "blog"
 ---
 

@@ -1,7 +1,7 @@
 ---
 date: "2020-04-27"
 title: "COVID-19 Statistics Web Application - Progressive Web Applications with Angular"
-tags: ["angular", "covid-19-statistics-application", "pwa"]
+tags: ["Angular", "COVID-19", "COVID-19 Statistics Application", "Progressive Web Application"]
 type: "blog"
 ---
 

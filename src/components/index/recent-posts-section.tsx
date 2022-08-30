@@ -19,12 +19,7 @@ const PostLookup = () => {
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
               title
-            }
-            internal {
-              content
-              description
-              ignoreType
-              mediaType
+              tags
             }
             parent {
               id
@@ -46,6 +41,7 @@ const PostLookup = () => {
     excerpt: d.node.excerpt,
     readTime: d.node.timeToRead,
     url: "/blog/" + d.node.parent.name,
+    tags: d.node.frontmatter.tags
   }))
 
   return <Section title="Recent Articles">

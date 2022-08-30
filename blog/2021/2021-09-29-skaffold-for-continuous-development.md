@@ -1,7 +1,7 @@
 ---
 date: "2021-09-29"
 title: "Using Skaffold for Local Kubernetes Development"
-tags: ["documentation", "Skaffold", "k8s", "kubernetes", "MiniKube"]
+tags: ["Documentation", "Skaffold", "Kubernetes", "MiniKube"]
 type: "blog"
 description: "How to use Skaffold for Local Kubernetes Development."
 ---

@@ -1,7 +1,7 @@
 ---
 date: "2021-05-23"
 title: "Creating a Web Hook for SmartThings via Azure Functions"
-tags: ["smartthings", "azure", "azure-functions"]
+tags: ["Smart Things", "Azure", "Azure Functions"]
 type: "blog"
 description: "Describes creating a SmartApp for SmartThings via an Azure Function."
 ---

@@ -1,7 +1,7 @@
 ---
 date: "2021-02-13"
 title: "Running a Minecraft Server in Docker"
-tags: ["docker", "minecraft", "minecraft-server"]
+tags: ["Docker", "Minecraft"]
 type: "blog"
 description: "Running a Minecraft Server in a Docker Container"
 ---

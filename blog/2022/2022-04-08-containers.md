@@ -1,7 +1,7 @@
 ---
 date: "2022-04-08"
 title: "Software Architecture: Containers"
-tags: ["containers"]
+tags: ["Containers"]
 type: "blog"
 description: "A brief introduction to containers."
 ---

@@ -1,7 +1,7 @@
 ---
 date: "2020-01-26"
 title: "Arduino Obstacle Avoiding Car Bot"
-tags: ["arduino", "robotics", "threading", "protothreads"]
+tags: ["Arduino", "Robotics", "Threading", "Protothreads"]
 type: "blog"
 ---
 

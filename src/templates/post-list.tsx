@@ -1,14 +1,9 @@
 import { graphql } from "gatsby"
 import React from "react"
-import Layout from "../components/layout/layout"
-import PageHeader from "../components/page-header"
-import Pager from "../components/pager"
-import SEO from "../components/layout/seo"
 import { capitalize, getPostUrl } from "../utils"
 import { PageLength } from "../const"
-import { PostItem, PostItemProps } from "../components/post-item"
-import { Container } from "../components/container"
-import { BreadcrumbInfo } from "../components/breadcrumb"
+import { PostItemProps } from "../components/post-item"
+import { PostListPage } from "../components/post-list"
 
 
 function getUrls(idx: number, count: number, postType: string) {
@@ -37,42 +32,15 @@ function getUrls(idx: number, count: number, postType: string) {
   }
 }
 
-interface PostListPageProps {
-  posts: PostItemProps[]
-  backUrl?: string
-  forwardUrl?: string
-  title: string
-  breadcrumbs: BreadcrumbInfo[]
-}
 
-function PostListPage(props: PostListPageProps) {
-
-
-  let postLayout = props.posts
-    .slice(0, Math.min(props.posts.length, PageLength))
-    .map((a) =>
-      <PostItem key={a.url} {...a} />
-    )
-
-  return (
-    <Layout isDocked={true}>
-      <SEO title={props.title} />
-      <PageHeader title={props.title} breadcrumbs={props.breadcrumbs} />
-      <Container>
-        {postLayout}
-        <Pager backUrl={props.backUrl} forwardUrl={props.forwardUrl} />
-      </Container>
-    </Layout>
-  )
-}
-
-function PostList({ data, location } : {data: any, location: any}) {
+export function markdownToPageListPage(data: any, path: string) {
   let posts : PostItemProps[] = data.allMarkdownRemark.edges.map((n:any) => ({
     excerpt: n.node.excerpt,
     readTime: n.node.timeToRead,
     title: n.node.frontmatter.title,
     date: n.node.frontmatter.date,
     url: getPostUrl(n.node),
+    tags: n.node.frontmatter.tags
   }))
 
   let type: string = data.allMarkdownRemark.edges[0].node.frontmatter.type
@@ -81,14 +49,30 @@ function PostList({ data, location } : {data: any, location: any}) {
     { title: capitalize(type), url: "/" + type },
   ]
   let title = capitalize(type)
-  let url: string = location.pathname
-  let idx = +url.substring(url.lastIndexOf("/") + 1)
+  let url: string = path
+  let idx = 0
+  if (url && url.lastIndexOf("/") >= 0) {
+    idx = +url.substring(url.lastIndexOf("/") + 1)
+  }
   let { backUrl, forwardUrl } = getUrls(idx, posts.length, type)
 
-  return <PostListPage posts={posts} title={title} breadcrumbs={breadcrumbs} backUrl={backUrl} forwardUrl={forwardUrl} />
+  return {
+    posts,
+    title,
+    breadcrumbs,
+    backUrl,
+    forwardUrl
+  }
 }
 
-export const postQuery = graphql`
+
+function PostList({ data, pageContext } : {data: any, pageContext: any}) {
+  const postListOptions = markdownToPageListPage(data, pageContext.path);
+
+  return <PostListPage {...postListOptions} />
+}
+
+export const postListQuery = graphql`
   query blogListQuery($limit: Int!, $skip: Int!, $type: String!) {
     allMarkdownRemark(
       filter: { frontmatter: { type: { eq: $type } } }
@@ -105,12 +89,7 @@ export const postQuery = graphql`
             title
             type
             page
-          }
-          internal {
-            content
-            description
-            ignoreType
-            mediaType
+            tags
           }
           parent {
             id

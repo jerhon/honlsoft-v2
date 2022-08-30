@@ -1,7 +1,7 @@
 ---
 date: "2022-06-17"
 title: "Kubernetes: Checking Pod Health"
-tags: ["containers", "kubernetes", "docker-desktop"]
+tags: ["Containers", "Kubernetes", "Docker"]
 type: "blog"
 description: "A brief introduction to building and running containers in Kubernetes with Docker Desktop."
 ---

@@ -1,7 +1,7 @@
 ---
 date: "2022-02-12"
 title: "Building a Gatsby Plugin to Render Mermaid Diagrams"
-tags: ["gatsby", "mermaid"]
+tags: ["Gatsby", "Mermaid"]
 type: "blog"
 description: "Goes through the process of creating a customer remark plugin for gatsby to render mermaid diagrams."
 ---

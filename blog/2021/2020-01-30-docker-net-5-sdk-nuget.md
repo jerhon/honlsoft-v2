@@ -1,7 +1,7 @@
 ---
 date: "2021-01-30"
 title: "NuGet Certificate Issues in Docker Builds"
-tags: ["react", "web-development"]
+tags: ["NuGet"]
 type: "blog"
 description: "NuGet Certificate Issues in Docker Builds"
 ---

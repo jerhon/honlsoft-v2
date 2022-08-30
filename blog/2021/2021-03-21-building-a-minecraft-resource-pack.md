@@ -1,7 +1,7 @@
 ---
 date: "2021-03-21"
 title: "Building a Minecraft Resource Pack"
-tags: ["minecraft", "fun"]
+tags: ["Minecraft"]
 type: "blog"
 description: "How to create a custom Minecraft resource pack and change the textures on Minecraft mobs."
 ---

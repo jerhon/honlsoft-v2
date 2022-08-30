@@ -1,7 +1,7 @@
 ---
 date: "2021-07-09"
 title: "Typescript Tips: Destructuring Assignments"
-tags: ["typescript", "tips"]
+tags: ["Typescript"]
 type: "blog"
 description: "Destructuring objects in typescript."
 ---

@@ -1,7 +1,7 @@
 ---
 date: "2020-04-04"
 title: "My Unconventional Monitor Setup"
-tags: ["remote-work", "monitors", "home-office"]
+tags: ["Remote Work", "Home Office"]
 type: "blog"
 ---
 

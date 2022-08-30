@@ -1,7 +1,7 @@
 ---
 date: "2020-01-02"
 title: "Arduino Dancing Car Bot"
-tags: ["arduino", "robotics"]
+tags: ["Arduino", "Robotics"]
 type: "blog"
 ---
 

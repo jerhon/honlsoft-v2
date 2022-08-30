@@ -1,7 +1,7 @@
 ---
 date: "2020-06-12"
 title: "Calendar Application - Authenticating with MSAL"
-tags: ["pi-calendar", "raspberry-pi", "web-development"]
+tags: ["Pi Calendar", "Raspberry Pi", "Web Development"]
 type: "blog"
 ---
 

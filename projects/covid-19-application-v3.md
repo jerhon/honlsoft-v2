@@ -2,7 +2,7 @@
 date: "2021-01-30"
 title: "COVID-19 Web Application with Heatmaps"
 type: "projects"
-project: "covid-19-statistics-application-v3"
+project: "COVID-19 Statistics Application v2"
 ---
 
 I wrote another COVID-19 app.
@@ -32,6 +32,6 @@ If you want to give it a try, and have docker installed here's the command line 
 
 Navigate to http://localhost:8080 to see the application.
 
-![COVID-19 Statistics Web Application](images/covid-19-app-v3.jpg)
+![COVID-19 Statistics Web Application](./images/covid-19-app-v3.jpg)
 
 The source code is available [on GitHub.](https://github.com/jerhon/covid-19-stats-v3)

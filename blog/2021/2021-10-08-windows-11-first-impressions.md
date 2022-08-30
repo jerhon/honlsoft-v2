@@ -1,7 +1,7 @@
 ---
 date: "2021-10-08"
 title: "Windows 11 First Impressions"
-tags: ["windows11", "first-impressions"]
+tags: ["Windows 11"]
 type: "blog"
 description: "First Impressions With Windows 11"
 ---

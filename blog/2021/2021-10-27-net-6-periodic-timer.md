@@ -1,7 +1,7 @@
 ---
 date: "2021-10-27"
 title: "New Periodic Timer API in .NET 6"
-tags: ["csharp10", "dotnet6", "PeriodicTimer"]
+tags: ["C#", ".NET"]
 type: "blog"
 description: "Using the new Timer API in .NET 6"
 ---
