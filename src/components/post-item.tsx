@@ -34,7 +34,7 @@ export function PostItem(article: PostItemProps) {
         </div>
 
         <div className="space-x-0.5 my-2">
-          {article.tags?.map((t) => <Tag name={t} url={tagToUrl(t)} /> )}
+          {article.tags?.sort((a, b) => a.localeCompare(b)).map((t) => <Tag name={t} url={tagToUrl(t)} /> )}
         </div>
 
       </div>)
