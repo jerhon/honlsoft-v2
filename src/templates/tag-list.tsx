@@ -5,7 +5,7 @@ import { markdownToPageListPage } from "./post-list"
 
 
 function TagList({ data, pageContext } : {data: any, pageContext: any}) {
-  const postListOptions = { ...markdownToPageListPage(data), title: "Blog Posts with Tag " + pageContext.tag };
+  const postListOptions = { ...markdownToPageListPage(data, pageContext.path), title: "Blog Posts with Tag " + pageContext.tag };
 
   return <PostListPage {...postListOptions} />
 }

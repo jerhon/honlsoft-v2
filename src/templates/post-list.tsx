@@ -33,7 +33,7 @@ function getUrls(idx: number, count: number, postType: string) {
 }
 
 
-export function markdownToPageListPage(data: any) {
+export function markdownToPageListPage(data: any, path: string) {
   let posts : PostItemProps[] = data.allMarkdownRemark.edges.map((n:any) => ({
     excerpt: n.node.excerpt,
     readTime: n.node.timeToRead,
@@ -49,8 +49,11 @@ export function markdownToPageListPage(data: any) {
     { title: capitalize(type), url: "/" + type },
   ]
   let title = capitalize(type)
-  let url: string = location.pathname
-  let idx = +url.substring(url.lastIndexOf("/") + 1)
+  let url: string = path
+  let idx = 0
+  if (url && url.lastIndexOf("/") >= 0) {
+    idx = +url.substring(url.lastIndexOf("/") + 1)
+  }
   let { backUrl, forwardUrl } = getUrls(idx, posts.length, type)
 
   return {
@@ -63,8 +66,8 @@ export function markdownToPageListPage(data: any) {
 }
 
 
-function PostList({ data, location } : {data: any, location: any}) {
-  const postListOptions = markdownToPageListPage(data);
+function PostList({ data, pageContext } : {data: any, pageContext: any}) {
+  const postListOptions = markdownToPageListPage(data, pageContext.path);
 
   return <PostListPage {...postListOptions} />
 }

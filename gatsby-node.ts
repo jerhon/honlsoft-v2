@@ -114,13 +114,16 @@ async function createPaginatedForType(actions: actionsType, graphql: graphQueryT
       url = "/" + i.toString()
     }
 
+    const path = type + url
+
     createPage({
-      path: type + url,
+      path,
       component: blogListTemplate,
       context: {
         type: type,
         limit: pageSize + 1,
-        skip: i * pageSize
+        skip: i * pageSize,
+        path
       }, // additional data can be passed via context
     })
   }
@@ -158,24 +161,35 @@ async function createTagPages(actions:actionsType, graphql:graphQueryType, repor
 
     for (let i = 0; i < Math.ceil(tagData.totalCount / 10); i++) {
 
-      const sharedArgs ={
-        component: tagListTemplate,
-        context: {
+      const contextArgs ={
           tag: tagName,
           type: "blog",
           limit: pageSize + 1,
           skip: i * pageSize,
         } // additional data can be passed via context
-      }
+
 
       if (i == 0)
       {
-        actions.createPage({ path: tagUrl, ...sharedArgs })
+        const args = {
+          path: tagUrl,
+          component: tagListTemplate,
+          context: {
+            ...contextArgs,
+            path: tagUrl
+          }
+        }
+
+        actions.createPage(args)
       }
 
       actions.createPage({
         path: tagUrl  + "/" + i,
-        ...sharedArgs
+        component: tagListTemplate,
+        context: {
+          ...contextArgs,
+          path: tagUrl + "/" + i
+        }
       })
     }
   })
