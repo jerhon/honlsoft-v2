@@ -149,10 +149,7 @@ async function createTagPages(actions:actionsType, graphql:graphQueryType, repor
   const tagListTemplate = path.resolve(`src/templates/tag-list.tsx`)
   const tagList = result.data.allMarkdownRemark.group
 
-  console.log(tagList)
-
   tagList.forEach((tagData) => {
-    console.log(tagData)
     let tagUrl = tagToUrl(tagData.tag)
     const tagName = tagData.tag
     const tagCount = tagData.totalCount
