@@ -6,22 +6,40 @@ import { PostItemProps } from "../components/post-item"
 import { PostListPage } from "../components/post-list"
 
 
-function getUrls(idx: number, count: number, postType: string) {
-  let baseUrl = "/" + postType + "/"
-
-  let backUrl: string | undefined
-  let forwardUrl: string | undefined
-
-  if (idx) {
-    if (idx > 1) {
-      backUrl = baseUrl + (idx - 1).toString()
-    } else if (idx == 1) {
-      backUrl = baseUrl
+function parseUrl(url: string) {
+  let idx = 0
+  let baseUrl = url
+  if (url && url.lastIndexOf("/") > 0) {
+    idx = +url.substring(url.lastIndexOf("/") + 1)
+    if (!isNaN(idx))
+    {
+      baseUrl  = url.substring(0, url.lastIndexOf("/"))
     }
   }
-  if (!idx) {
-    idx = 0
+  if (!baseUrl.endsWith("/"))
+  {
+    baseUrl += "/"
   }
+  if (!idx) {
+    idx = 0;
+  }
+
+  return { idx, baseUrl }
+}
+
+function getPagingUrls(url: string, count: number) {
+
+  let {idx, baseUrl} = parseUrl(url);
+
+  let backUrl :string | undefined
+  let forwardUrl :string | undefined
+
+  if (idx === 1) {
+    backUrl = baseUrl
+  } else if (idx > 1) {
+    backUrl = baseUrl + (idx - 1).toString()
+  }
+
   if (count > PageLength) {
     forwardUrl = baseUrl + (idx + 1)
   }
@@ -49,12 +67,9 @@ export function markdownToPageListPage(data: any, path: string) {
     { title: capitalize(type), url: "/" + type },
   ]
   let title = capitalize(type)
-  let url: string = path
-  let idx = 0
-  if (url && url.lastIndexOf("/") >= 0) {
-    idx = +url.substring(url.lastIndexOf("/") + 1)
-  }
-  let { backUrl, forwardUrl } = getUrls(idx, posts.length, type)
+
+
+  let { backUrl, forwardUrl } = getPagingUrls(path, posts.length)
 
   return {
     posts,
@@ -67,7 +82,7 @@ export function markdownToPageListPage(data: any, path: string) {
 
 
 function PostList({ data, pageContext } : {data: any, pageContext: any}) {
-  const postListOptions = markdownToPageListPage(data, pageContext.path);
+  const postListOptions = markdownToPageListPage(data, pageContext.pagePath);
 
   return <PostListPage {...postListOptions} />
 }
@@ -106,3 +121,4 @@ export const postListQuery = graphql`
 `
 
 export default PostList
+

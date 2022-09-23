@@ -49,7 +49,7 @@ async function createBlogArticles(actions: actionsType, graphql: graphQueryType,
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allMarkdownRemark.edges.forEach(({ node } : any) => {
     let url = ""
     if (node.frontmatter.page) {
       url = node.frontmatter.page
@@ -63,6 +63,7 @@ async function createBlogArticles(actions: actionsType, graphql: graphQueryType,
       context: {
         id: node.id,
         project: node.frontmatter.project ?? "no-project",
+        pagePath: "/" + url
       }, // additional data can be passed via context
     })
   })
@@ -123,7 +124,7 @@ async function createPaginatedForType(actions: actionsType, graphql: graphQueryT
         type: type,
         limit: pageSize + 1,
         skip: i * pageSize,
-        path
+        pagePath: "/" + path
       }, // additional data can be passed via context
     })
   }
@@ -149,7 +150,7 @@ async function createTagPages(actions:actionsType, graphql:graphQueryType, repor
   const tagListTemplate = path.resolve(`src/templates/tag-list.tsx`)
   const tagList = result.data.allMarkdownRemark.group
 
-  tagList.forEach((tagData) => {
+  tagList.forEach((tagData : any) => {
     let tagUrl = tagToUrl(tagData.tag)
     const tagName = tagData.tag
     const tagCount = tagData.totalCount
@@ -173,7 +174,7 @@ async function createTagPages(actions:actionsType, graphql:graphQueryType, repor
           component: tagListTemplate,
           context: {
             ...contextArgs,
-            path: tagUrl
+            pagePath: tagUrl
           }
         }
 
@@ -185,7 +186,7 @@ async function createTagPages(actions:actionsType, graphql:graphQueryType, repor
         component: tagListTemplate,
         context: {
           ...contextArgs,
-          path: tagUrl + "/" + i
+          pagePath: tagUrl + "/" + i
         }
       })
     }
