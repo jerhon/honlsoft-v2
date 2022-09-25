@@ -1,6 +1,6 @@
 ---
 date: "2022-09-24"
-title: Output Caching in .NET 7 with ASP.Net Core"
+title: "Output Caching in .NET 7 with ASP.Net Core"
 tags: [".NET", "ASP.Net Core", "Output Caching", ".NET 7"]
 type: "blog"
 description: "Simple examples around output caching in .NET 7 with ASP.Net Core."
