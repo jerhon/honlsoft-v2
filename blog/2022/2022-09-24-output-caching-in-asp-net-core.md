@@ -304,7 +304,7 @@ There are other considerations to take into account as well, but for basic use c
 
 ## Wrapping Up
 
-These were some very basic use cases for the Output Cache, but just enough to get me started to think about what's available.
+These were some very basic use cases for output caching, but just enough to get me started to think about what's available.
 I can already think of use cases I've had in the recent past that the output cache would greatly improve end user performance.
 
 Again, with a new version of .NET, there's a lot of great new functionality.
