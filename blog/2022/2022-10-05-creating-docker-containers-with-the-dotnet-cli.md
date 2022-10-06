@@ -1,7 +1,7 @@
 ---
 date: "2022-10-05"
 title: "Build a .NET Container with .NET 7"
-tags: [".NET", "Containers".NET 7"]
+tags: [".NET", "Containers", ".NET 7"]
 type: "blog"
 description: "How to Easily Build a .NET Container in .NET 7"
 ---
