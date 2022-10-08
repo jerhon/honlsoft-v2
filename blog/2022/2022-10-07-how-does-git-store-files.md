@@ -1,7 +1,7 @@
 ---
 date: "2022-10-07"
 title: "Demystifying GIT: An Overview of How Git Stores Files"
-tags: [".NET", "Containers", ".NET 7"]
+tags: ["GIT"]
 type: "blog"
 description: "How to Easily Build a .NET Container in .NET 7"
 ---
