@@ -3,7 +3,7 @@ date: "2022-10-07"
 title: "Demystifying GIT: An Overview of How Git Stores Files"
 tags: ["GIT"]
 type: "blog"
-description: "How to Easily Build a .NET Container in .NET 7"
+description: "An overview of how GIT stores files."
 ---
 
 I really like GIT.
