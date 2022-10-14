@@ -307,7 +307,7 @@ af5626b4a114abcb82d63db7c8082c3c4756e51b Greeting.txt
 78ab9cd46fce653c6d9f67555dca8028bc34f50e
 ```
 
-Again, we'll start at the commit, and work through it's references.
+Again, we'll start at the commit, and work through its references.
 
 ```
 > git cat-file -p 4445d480ee211862eb2ab9b8683d93d1f0ef47ed
@@ -397,7 +397,7 @@ flowchart TB
 ```
 
 
-### Packfiles
+### Pack Files
 
 One thing I have left out is the concept of pack files.
 Git can store its objects in a more efficient format called a pack file.
@@ -408,7 +408,7 @@ It's just important to know it's there as a way to optimize the object storage i
 ## Wrapping Up
 
 GIT has a very interesting system for storing files and keeping tracking of commits in a repository.
-Through it's three basic objects it can take a snapshot of all the files in a git repository with minmal costs.
+Through it's three basic objects it can take a snapshot of all the files in a git repository with minimal costs.
 
 I hope a few of these examples in action has demystified the internals of how GIT stores things.
 If you want to learn more about how GIT stores files, [check this page in the GIT documentation](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects).
