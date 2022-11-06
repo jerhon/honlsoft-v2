@@ -1,7 +1,7 @@
 import clsx from "clsx"
 import React, { ReactNode } from "react"
 import { Link } from "gatsby"
-import { GoBook, GoHome, GoQuestion } from "react-icons/go"
+import { GoBook, GoHome, GoLocation, GoQuestion } from "react-icons/go"
 
 interface SidebarProps {
   visible: boolean;
@@ -31,6 +31,7 @@ function SidebarLinks() {
     <SidebarLink title="Home" icon={<GoHome />} href="/" />
     <SidebarLink title="Blog" icon={<GoBook />} href="/blog" />
     <SidebarLink title="Projects" icon={<GoBook />} href="/projects" />
+    <SidebarLink title="Links" icon={<GoLocation />} href="/links" />
     <SidebarLink title="About Me" icon={<GoQuestion />} href="/about" />
   </div>
 }
