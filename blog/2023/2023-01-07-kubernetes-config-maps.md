@@ -18,9 +18,9 @@ ConfigMaps are resources in Kubernetes.
 So, to use a configmap, it needs to be created through its API.
 As I have shown in previous examples with Kubernetes there are two primary ways to create resources and both work here with ConfigMaps.
 
-First is imperatively through the CLI with the `kubectl create configmap` command, and the second is declartively through a YAML resource definition.
+First is imperatively through the CLI with the `kubectl create configmap` command, and the second is declarative through a YAML resource definition.
 
-Let's start with the imperative commands.
+In this post I'll be using the imperative commands, and showing the corresponding resources which could be used to create the same resources.
 
 ## ConfigMaps from the CommandLine
 
@@ -43,7 +43,7 @@ kubectl create configmap literal-cfg --from-literal=name=Jeremy --from-literal=h
 ```
 
 Let's output the ConfigMap as a resource to see what it contains.
-The coresponding resource for the ConfigMap looks like this:
+The corresponding resource for the ConfigMap looks like this:
 
 ```
 apiVersion: v1
@@ -199,7 +199,7 @@ spec:
   restartPolicy: Never
 ```
 
-After running a kubectrl apply, and grabbing the logs, this was the output.
+After running a `kubectl apply`, and grabbing the logs, this was the output.
 
 ```
 > k logs pod/config-map-vol-pod --namespace=config-map-example-ns
