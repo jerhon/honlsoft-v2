@@ -20,14 +20,18 @@ Now, for any given branching strategy you can find posts of people who dislike i
 However, I'm more pragmatic in my approach.
 This is really just a story of what I've used in the past and an index of what's out there.
 
-There are several great branching models out there, as I urge teams when embarking on a new project or moving to Git, rely on the experience of those who have been there before.
+There are several great branching models out there, as I urge teams when embarking on a new project or moving to GIT, rely on the experience of those who have been there before.
 GIT is a very powerful tool with many capabilities.
 Using them appropriately based on experience is crucial to have a healthy development workflow.
 
 # What is Branching
 
-Branching is really about isolating changes until such a point as they can be integrated with others.
+Branching is really about isolating changes until they are ready to be integrated with other changes.
 As we saw in my [previous post on branching](../2022/2022-10-13-branching-in-git.md), in GIT branching is super lightweight and so branches can be used for even the smallest changes.
+
+Branching is really powerful, but has the downside of increasing difficulty of integrating with the rest of the code base if the branch is long-lived.
+Managing it effectively is key to keeping software teams running effectively.
+The rest of this post focuses on a few of these key branching strategies.
 
 ## Feature Branching and GitHub Flow
 
