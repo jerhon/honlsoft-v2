@@ -115,6 +115,14 @@ Since the changes cannot be merged, often will fall back to strategies such as c
 
 This is one of those things, it sounds great in theory, and GIT has some very powerful tools at its disposal that can enable this, but in practice it falls apart pretty fast.
 
+### Why
+
+This branching model gives a lot of flexibility to move changes from environment to environment.
+In certain situations, it can be useful.
+In cases like GitOps or where environment configuration is stored in source control.
+
+So, this model is really better suited in cases in situations where deployment configuration is stored.
+
 ### Why Not
 
 There are so many downsides to this branching model for an organization that lead to some very nasty side effects.
