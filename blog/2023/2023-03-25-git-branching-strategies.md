@@ -27,7 +27,7 @@ Using them appropriately based on experience is crucial to have a healthy develo
 # What is Branching
 
 Branching is really about isolating changes until they are ready to be integrated with other changes.
-As we saw in my [previous post on branching](../2022/2022-10-13-branching-in-git.md), in GIT branching is super lightweight and so branches can be used for even the smallest changes.
+In [previous post on branching](../2022/2022-10-13-branching-in-git.md), I discussed how GIT branching is super lightweight and so branches can be used for even the smallest changes.
 
 Branching is really powerful, but has the downside of increasing difficulty of integrating with the rest of the code base if the branch is long-lived.
 Managing it effectively is key to keeping software teams running effectively.
@@ -49,7 +49,8 @@ Or - you can find this branching strategy hidden inside.
 
 This works extremely well when an organization is able to have ephemeral environments and especially during container development.
 If an environment can be stood up for a branch very quickly, each branch can be tested individually either automatically or manually.
-There is a branching model that is very similar to Feature Branching named [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow)
+There is a branching model that is very similar to Feature Branching named [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow).
+This is similar but releases changes directly from the feature branch.
 
 I've had a lot of success using just feature branching for small projects with a few developers.
 It's really straight forward and easy to collaborate without having any big merge messes in the future.
@@ -121,7 +122,10 @@ This branching model gives a lot of flexibility to move changes from environment
 In certain situations, it can be useful.
 In cases like GitOps or where environment configuration is stored in source control.
 
-So, this model is really better suited in cases in situations where deployment configuration is stored.
+So, this model is really better suited in cases in situations dealing with deployments.
+
+The other reason this branching model is so popular is because of it's perceived flexibility.
+When resorting to rebasing or cherry-picking, individual work items can be approved and moved from one environment to another at any given moment.
 
 ### Why Not
 
@@ -137,9 +141,9 @@ However, when it comes to taking an individual change moving it out of the branc
 
 This is really due to the dependencies a work item incurs when it is integrated into a branch.
 For example, when I check into the Dev branch, my work can potentially be dependent on any work prior to mine.
-The natural tendency is to want to deploy my change as soon as it is ready.
 
-This leads to the unfortunate situation where other work in the Dev branch may be ready, but mine is not.
+The natural tendency is to want to deploy my change as soon as it is ready.
+This leads to the unfortunate situation where other work in the Dev branch may be ready, but mine is not or vice versa.
 My work may be dependent on those.
 
 With this branching strategy, this is an incredibly hard problem to solve especially in very large repositories such as mono-repos with larger development teams.
