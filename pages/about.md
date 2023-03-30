@@ -8,44 +8,17 @@ page: "about"
 This website is my personal musings in software development. All opinions are my own.
 
 # About Me
+As an accomplished software developer, I possess over 14 years of extensive experience in the field of professional software development, augmented by 20 years of programming experience. My passion lies in creating software and tackling the complex technical challenges that arise during its development. In particular, I take pleasure in leading teams towards successful software implementations and delivering projects to completion.
 
-I'm a software developer with over 14 years of professional software development experience and 20 years of programming experience.
-I enjoy building software, and the technical challenges that rise from building it. Particularly, I enjoy bringing projects to completion and leading teams to successful software implementations.
-
-I'm currently Senior Application Developer primarily focused on full-stack web development.
-
-I have been involved in development for a wide range of projects ranging from integrations, web development, and light mobile development.
-This has been in a variety of different technology stacks such as .NET Core, .NET Framework, Java, Spring Framework, AngularJS / Angular, Apache Cordova, C/C++, and others.
+Presently, I hold the position of Senior Application Developer and specialize in full-stack web development. Over the years, I have been involved in a diverse range of projects that encompassed integrations, web development, and light mobile development. I have leveraged a variety of technology stacks such as .NET Core, .NET Framework, Java, Spring Framework, AngularJS / Angular, Apache Cordova, C/C++, and numerous others.
 
 ## My Software Journey
+My journey in software development began in middle school when I learned BASIC and started exploring the intricacies of cryptography. My father helped me write my first program, and I fondly remember poring over the code in an attempt to comprehend its meaning. This early exposure sparked my passion for coding, and I quickly progressed to Visual Basic, QBasic, and eventually C++ / C. One of my favorite projects during high school involved writing a boot loader, which I proudly showcased to my peers.
 
-I started writing software in middle school and started out learning BASIC.
-My first experience coding was from a book on cryptography for kids on "making your own secret codes". There was a BASIC program in the back of the book, and I asked my dad to write it for me.
-I remember reading through the code trying to understand what it meant.
+After graduating high school, I enrolled in college for computer science, where I honed my skills in various programming languages, including Java, and secured my first professional programming gig as an intern with IBM.
 
-After that first program, I began my journey in coding.
-I started learning Visual Basic, and QBasic.
-Eventually, I moved on to C++ / C.
-Perhaps my favorite accomplishment in high school was writing a boot loader, and putting it on a floppy disk.
-It was fun programming various hardware, bringing it in to school and showing it off to other students.
+Over the years, I have worked for several companies in Fargo, including a Smart Metering company where I spent around a decade building backend software and creating libraries to interface with specific protocols to the devices. I also had the opportunity to lead a small team in React development. At an industrial supply distribution company, I wrote various software to support business operations, including building internal integrations and leading a team to create a web application that streamlined workflow processes. Additionally, I spent several years in the crop insurance industry, where I performed conversions on legacy applications to the newer technology stacks such as React and .NET Core.
 
-After high school, I went to college for computer science.
-Most of the coursework was in Java, but I continued worked in various other languages as well.
-I was an intern with IBM for approximately a year and a half while I was going to school, which was my first time programming professionally.
-
-I've been working at various companies in Fargo.
-I spent approximately 10 years working on backend software for a Smart Metering company. 
-Some of my favorite projects there were writing the libraries to interface with specific protocols to the devices.
-By the end of my time there I had a chance to lead a small team in React development.
-
-I spent approximately two years at an industrial supply distribution company writing various software to accomplish their business needs.
-This included building several internal integrations connecting together various software systems.
-It also included leading a team of individuals to build a web application that helped business automate their work with us through a simple web application.
-
-I've spent approximately two years in the crop insurance industry as well.
-My first experience was many years ago performing conversions from Visual Basic 6 to Windows Forms in .NET.
-Currently, I'm working in the crop insurance industry mainly focused on full stack development for both internal and customer facing web applications.
-
-Programming and building software was something I really enjoyed growing up, and now that I am older I have turned that passion into a career.
+Programming has been a lifelong passion for me, and I have been fortunate enough to transform that passion into a rewarding career.
 
 I hope you find this blog and site useful. If so, please follow me on [LinkedIn](https://www.linkedin.com/in/jhonl/) and / or [Twitter](https://twitter.com/honlsoft).
