@@ -86,7 +86,7 @@ var chessGame = new ChessGame(rule);
 ## Why?
 
 With a [trunk branching strategy](https://trunkbaseddevelopment.com/), the code can be committed and routinely pushed to the development trunk through pull requests.
-Intermediate project changes are safe to deploy with the current version of the application as it doesn't affect the current usage.
+Intermediate project changes are safe to deploy with the current version of the application as it doesn't affect the current behavior.
 
 To ensure untested code doesn't reach production, it's important to add unit tests to ensure the behavior works as expected.
 
