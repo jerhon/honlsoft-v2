@@ -1,9 +1,9 @@
 ---
-date: "2023-04-05"
+date: "2023-04-07"
 title: "GIT Branching: Branch by Abstraction"
 tags: ["GIT", "Branching"]
 type: "blog"
-description: "A quick synopsis of how to incorporate longer running changes in a trunk based branch strategy."
+description: "A quick synopsis of branching by abstraction."
 ---
 
 Many branching strategies work to split up work into smaller pieces that are regularly integrated into a mainline branch.
@@ -13,9 +13,10 @@ I want to highlight a common software development strategy used to overcome this
 
 ## What is Branching by Abstraction?
 
-When modifying an area of the system, this introduces a contract which encapsulates the public interface of that functionality.
+When modifying an area of the system, a contract is introduced which encapsulates the public interface of some functionality to change.
 Once the contract is in place, an alternate implementation is created.
 This alternate implementation can be worked on in parallel with the existing implementation.
+Once the alternate implementation it can be swapped with the previous implementation.
 
 ## A Simple Example: A Chess Game
 
@@ -24,7 +25,9 @@ As part of the game there is a rule for determining how pawn pieces can move.
 In my code I have decided to divide the rules into individual classes to adhere to SOLID design practices.
 However, we want to add more rules that define how pieces can move.
 
-IMPORTANT: This example is reduced to a simple use case, and obviously the code for a Chess Game would have more nuances to it.  This example is to introduce the concept of branching by abstraction.
+This example is a simple use case.
+The complete code for a Chess Game would have much more to it.
+This example is just to introduce the concept of branching by abstraction.
 
 In this instance I have a ChessGame, and it depends on a PawnMoveRule to validate whether a particular pawn can move.
 The rule is passed in through the constructor.
@@ -49,6 +52,7 @@ flowchart TD
 ```
 
 This merely changes the structure of the code, and no functionality.
+Rather than this step waiting until the feature is done, it is merged into the trunk.
 
 ### Step #2: Create the New Functionality
 
@@ -66,9 +70,9 @@ flowchart TD
 The old implementation and the new implementation can be used interchangeably by the ChessGame.
 I can continue to work on the code for my PawnMoveBackwardRule without affecting the existing code.
 
-### Don't Forget
-
-Write unit tests!
+As I work on the code, I routinely commit it and merge back to the trunk.
+This will go hand in hand with unit testing.
+I only want to push to trunk when my unit tests pass for the new functionality and old functionality.
 
 ### Step #3: Migrate to the New Rule
 
@@ -81,9 +85,8 @@ var chessGame = new ChessGame(rule);
 
 ## Why?
 
-With a [trunk branching strategy](https://trunkbaseddevelopment.com/), the code be committed and routinely commit the progress to the development trunk.
-These changes are also safe to deploy with the current version of my application.
-Since the code references the abstraction and not the direct implementation.
+With a [trunk branching strategy](https://trunkbaseddevelopment.com/), the code can be committed and routinely pushed to the development trunk through pull requests.
+Intermediate project changes are safe to deploy with the current version of the application as it doesn't affect the current usage.
 
 To ensure untested code doesn't reach production, it's important to add unit tests to ensure the behavior works as expected.
 
@@ -129,7 +132,7 @@ This was a very simple example of utilizing branching by abstraction to introduc
 This pattern allows us to use continuous integration to introduce changes without needing to have complex branching strategies.
 
 There are many other articles on this.
-Here are a few good ones if you want more information:
+Here are a few links for more information:
 
 * [Martin Fowler - Branch by Abstraction](https://www.martinfowler.com/bliki/BranchByAbstraction.html)
 * [Trunk Based Development - Branch by Abstraction](https://trunkbaseddevelopment.com/branch-by-abstraction/)
