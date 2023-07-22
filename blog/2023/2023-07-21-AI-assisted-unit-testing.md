@@ -1,6 +1,6 @@
 ---
 date: "2023-07-21"
-title: "Jetbrains 2023.2 EAP and AI Assisted Unit Testing"
+title: "Jetbrains Rider 2023.2 EAP and AI Assisted Unit Testing"
 tags: ["Rider", "AI", "Unit Testing"]
 type: "blog"
 description: "A quick synopsis of branching by abstraction."
@@ -57,10 +57,9 @@ In this case the response wasn't quite on par, but it was still very useful.
 
 Overall, I was very impressed with what it came up with even if it had a few flaws.
 The concepts and test cases it came up with were useful.
-However, it had some minor issues in the code it came up with.
 
 I think if the AI were given more context about my project and the APIs, I think it would have been able to overcome these.
-However, this is my first attempt.
+However, this is my first attempt at asking it to write a few unit tests for me.
 I was very excited about how well it did.
 
 ## Wrong Assertion
