@@ -126,3 +126,5 @@ There are so many use cases from integration testing, to various CI processes li
 
 In the past I had tried to run unit tests in  a container or as part of a docker compose definition.
 However, Testcontainers makes it much easier.
+
+I hope this simple example will show you how easy this is and get you started!
