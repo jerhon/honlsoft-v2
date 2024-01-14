@@ -24,7 +24,7 @@ Now that I accomplished my goals there, I'm planning to get into some blogging a
 
 # Project Graph Traversal with the MS Build SDK
 
-A tidbit I learned this past week was a very convienent way to traverse MS Build projects.
+A tidbit I learned this past week was a very convenient way to traverse MS Build projects.
 The MS Build SDK has tons of gems when needing to work with .csproj or solution files.
 
 It really makes sense to use it too.
@@ -52,7 +52,7 @@ There is an `Microsoft.Build.Locator` package which is needed to load the MSBuil
 It does this from a local installation on a machine.
 The details of this are documented here. [MSBuild Locator Setup](https://learn.microsoft.com/en-us/visualstudio/msbuild/find-and-use-msbuild-versions)
 
-This must be done before any code is referenced from the MSBuild SDK, and outside of any methods that reference the SDK.
+This must be done before any code is referenced from the MSBuild SDK, and outside any methods that reference the SDK.
 In my program, this ends up being a few extra statements in my Program.cs
 
 ```csharp
@@ -84,7 +84,7 @@ That's it.
 
 # Running the Console Application
 
-I tucked this away in a little console application and pointed it at a project file from the Chess project I've been writting off and on over the past half year or so.
+I tucked this away in a little console application and pointed it at a project file from the Chess project I've been writing off and on over the past half year or so.
 
 Here is the output
 
@@ -100,7 +100,7 @@ It outputs the SDK version it's using, and then the list of projects in the grap
 
 # Wrapping Up
 
-[The full sample is availalble on GitHub.](https://github.com/jerhon/hs-sample-projecttraversal)
+[The full sample is available on GitHub.](https://github.com/jerhon/hs-sample-projecttraversal)
 
 I hope this helps someone else out there looking to do some graph traversal with MSBuild projects.
 
