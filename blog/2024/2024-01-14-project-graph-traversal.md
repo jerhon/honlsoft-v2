@@ -70,7 +70,7 @@ ProjectGraph projectGraph = new ProjectGraph(args);
 
 Finally, I'm going to obtain a list of all the unique projects found in the project graph:
 
-```
+```csharp
 // Get the unique projects in the graph
 var uniqueProjects = projectGraph.ProjectNodes.Select((p) => p.ProjectInstance.FullPath).Distinct().ToArray();
 
