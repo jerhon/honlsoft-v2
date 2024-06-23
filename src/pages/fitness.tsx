@@ -51,7 +51,7 @@ function Fitness() {
          <li>Weigh under 200 lbs.</li>
          <li>Run a 5k.</li>
          <li>Perform 5 consecutive pull ups.</li>
-         <li>Perform 20 consecutive push-ups.</li>
+         <li>Perform 20 consecutive push ups.</li>
        </ul>
      </section>
 
