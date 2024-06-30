@@ -44,6 +44,7 @@ function Fitness() {
          <li>Get across the monkey bars in the gym.</li>
          <li>Run a mile without stopping.</li>
          <li>Run two miles without stopping.</li>
+         <li>Run three miles without stopping.</li>
        </ul>
 
        <h2>Current Goals</h2>

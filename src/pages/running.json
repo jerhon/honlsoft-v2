@@ -32,13 +32,25 @@
       "startDate": "2024-06-17",
       "total": 7.91,
       "average": 1.58,
-      "runningTotal": 23.51,
+      "runningTotal": 23.5,
       "days": [
         1.51,
         2.08,
         1.33,
         1.76,
         1.23
+      ]
+    },
+    {
+      "startDate": "2024-06-24",
+      "total": 9.82,
+      "average": 2.45,
+      "runningTotal": 33.3,
+      "days": [
+        2.51,
+        2.51,
+        1.79,
+        3.01
       ]
     }
   ]
