@@ -38,9 +38,9 @@ function Fitness() {
       </section>
 
      <section>
-       <h2>Accomplished Goals</h2>
+       <h2>Accomplishments</h2>
        <ul>
-         <li>Perform a single pull-up.</li>
+         <li>Perform a single pull up.</li>
          <li>Get across the monkey bars in the gym.</li>
          <li>Run a mile without stopping.</li>
          <li>Run two miles without stopping.</li>
