@@ -65,14 +65,15 @@
     },
     {
       "startDate": "2024-07-08",
-      "total": 9.28,
-      "average": 2.32,
-      "runningTotal": 48.7,
+      "total": 12.04,
+      "average": 2.4,
+      "runningTotal": 51.4,
       "days": [
         2.49,
         1.76,
         2.03,
-        3.00
+        3.00,
+        2.76
       ]
     }
   ]
