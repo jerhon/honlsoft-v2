@@ -48,15 +48,15 @@ function Fitness() {
          <li>Run a mile in under 10 minutes.</li>
          <li>Weigh under 200 lbs.</li>
          <li>Run a 5k.</li>
+         <li>Run a 10k.</li>
+         <li>Run 2 miles in under 20 minutes.</li>
        </ul>
 
        <h2>Current Goals</h2>
        <ul>
          <li>Perform 5 consecutive pull ups.</li>
          <li>Perform 20 consecutive push ups.</li>
-         <li>Run 2 miles in under 20 minutes.</li>
          <li>Weigh under 190 lbs.</li>
-         <li>Run a 10k.</li>
        </ul>
      </section>
 
