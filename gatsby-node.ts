@@ -17,6 +17,7 @@ const path = require("path")
 async function createBlogArticles(actions: actionsType, graphql: graphQueryType, reporter: any) {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(`src/templates/post.tsx`)
+  const scientificPostTemplate = path.resolve(`src/templates/scientific-post.tsx`)
   const result = await graphql(`
     {
       allMarkdownRemark(
@@ -31,6 +32,7 @@ async function createBlogArticles(actions: actionsType, graphql: graphQueryType,
               type
               project
               page
+              template
             }
             parent {
               id
@@ -57,9 +59,12 @@ async function createBlogArticles(actions: actionsType, graphql: graphQueryType,
       url = node.frontmatter.type + "/" + node.parent.name
     }
 
+    // Use the scientific template if specified in frontmatter, otherwise use the default blog post template
+    const template = node.frontmatter.template === 'scientific' ? scientificPostTemplate : blogPostTemplate;
+
     createPage({
       path: url,
-      component: blogPostTemplate,
+      component: template,
       context: {
         id: node.id,
         project: node.frontmatter.project ?? "no-project",

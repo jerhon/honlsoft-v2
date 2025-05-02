@@ -1,0 +1,155 @@
+/* LaTeX-like styling for scientific articles */
+
+.scientific-article {
+  background-color: #fff;
+  color: #222;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.5;
+}
+
+.scientific-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.scientific-header {
+  margin-bottom: 2rem;
+  padding: 4rem 1rem 2rem 1rem;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.scientific-header h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.scientific-abstract {
+  margin-bottom: 2rem;
+  font-style: italic;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+.scientific-abstract h2 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.scientific-content {
+  font-size: 1.1rem;
+}
+
+/* LaTeX-like typography */
+.scientific-content h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  counter-increment: section;
+}
+
+.scientific-content h2::before {
+  content: counter(section) ". ";
+}
+
+.scientific-content h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  counter-increment: subsection;
+}
+
+.scientific-content h3::before {
+  content: counter(section) "." counter(subsection) " ";
+}
+
+.scientific-content p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.scientific-content pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+}
+
+.scientific-content code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f5f5f5;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+.scientific-content blockquote {
+  border-left: 3px solid #ddd;
+  padding-left: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+}
+
+.scientific-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  display: block;
+}
+
+.scientific-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.scientific-content th, 
+.scientific-content td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+.scientific-content th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.scientific-content ul, 
+.scientific-content ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.scientific-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* References/Related Works section */
+.scientific-related {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.scientific-related h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
