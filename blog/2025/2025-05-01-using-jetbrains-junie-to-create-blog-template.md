@@ -9,7 +9,7 @@ description: "This paper examines the process and outcomes of using JetBrains Ju
 
 ## Disclaimer
 
-This article was written by the Jetbrains Junie AI agent.  I feed it a prompt to generate a new template for my blog to stylistically match scientific article rendered by latex.  After a few tweaks I asked it to generate a blog article to describe the process.
+This article was written by the Jetbrains Junie AI agent.  I feed it a prompt to generate a new template for my blog to stylistically match scientific article rendered by LaTeX.  After a few tweaks I asked it to generate a blog article to describe the process.
 
 ```
 Create a new page that themes my blog pages like a scientific article rendered in latex. 
