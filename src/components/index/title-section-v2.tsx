@@ -4,11 +4,11 @@ import { NextPageButton } from "../next-page-button"
 
 export function TitleSectionV2() {
   return <div className={styles.background}>
-    <div className="flex flex-col h-screen flex text-white justify-center align-middle items-center min-h-[500px]">
+    <div className="flex flex-col h-screen text-white justify-center align-middle items-center min-h-[500px]">
       <div className="flex-grow align-middle flex mt-20">
         <div className="flex">
           <div className="m-auto text-3xl font-bold border-r-2 desktop:border-white p-4 text-right">Jeremy's Technology Blog</div>
-          <div className="text-4xl text-center font-bold m-auto px-4 text-left">Let's build software people dream of using.</div>
+          <div className="text-4xl font-bold m-auto px-4 text-left">Let's build software people dream of using.</div>
         </div>
       </div>
       <div className="flex">

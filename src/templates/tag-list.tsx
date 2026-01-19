@@ -14,7 +14,7 @@ export const tagListQuery = graphql`
   query tagListQuery($limit: Int!, $skip: Int!, $type: String!, $tag: String!) {
     allMarkdownRemark(
       filter: { frontmatter: { type: { eq: $type }, tags: { in: [$tag] } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { frontmatter: { date: DESC } }
       limit: $limit
       skip: $skip
     ) {

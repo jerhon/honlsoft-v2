@@ -3,7 +3,7 @@ date: "2023-01-07"
 title: "Kubernetes: Using ConfigMaps to Manage Application Configuration"
 tags: ["Containers", "Kubernetes", "ConfigMap"]
 type: "blog"
-description: "Using ConfigMaps to store application configuration in Kubernetes."
+description: "This blog post explores how to use Kubernetes ConfigMaps to manage application configuration. It covers creating ConfigMaps using imperative commands and YAML definitions, and demonstrates their usage in Pods. Examples include setting environment variables and mounting ConfigMaps as files."
 ---
 
 Most applications contain settings which differ from environment to environment, or just need to be able to have behavior changed without making changes to the code.

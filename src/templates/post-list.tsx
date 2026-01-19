@@ -91,7 +91,7 @@ export const postListQuery = graphql`
   query blogListQuery($limit: Int!, $skip: Int!, $type: String!) {
     allMarkdownRemark(
       filter: { frontmatter: { type: { eq: $type } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { frontmatter: { date: DESC } }
       limit: $limit
       skip: $skip
     ) {

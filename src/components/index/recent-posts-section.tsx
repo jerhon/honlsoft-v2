@@ -8,7 +8,7 @@ const PostLookup = () => {
   let data = useStaticQuery(graphql`
     {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
+        sort: { frontmatter: { date: DESC } }
         limit: 10
         filter: { frontmatter: { type: { eq: "blog" } } }
       ) {

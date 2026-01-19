@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useState } from "react"
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
 
-import "intersection-observer"
-
 import RecentPostsSection from "../components/index/recent-posts-section"
 import { NavigationSection } from "../components/index/navigation-section"
 import { TitleSectionV2 } from "../components/index/title-section-v2"
