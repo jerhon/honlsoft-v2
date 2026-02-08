@@ -12,7 +12,7 @@ function PageHeader({ title, breadcrumbs }: Props) {
   return (
     <div className="bg-blue-800 text-white mb-4 pb-4 pt-12">
       <Container>
-        <h1 style={{ padding: "50px 0px", margin: 0 }}>{title}</h1>
+        <h1 style={{ padding: "50px 0px", margin: 0, fontSize: '2.25rem', fontWeight: 700 }}>{title}</h1>
 
         {breadcrumbs ? (
           <div>

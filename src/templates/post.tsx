@@ -9,6 +9,7 @@ import { getPostBreadcrumbs, getPostUrl } from "../utils"
 import { Container } from "../components/container"
 import mermaid from "mermaid";
 import { LinkedInShareLink, TwitterShareLink } from "../components/share-link"
+import "../styles/technical-article.css"
 
 interface PostLink {
   title: string,
@@ -39,10 +40,10 @@ function Post(post: PostProps) {
 
   return <Layout isDocked={true}>
     <SEO title={post.title} description={post.description} image={post?.imageUrl} />
-    <article>
+    <article className="technical-article">
       <PageHeader title={post.title} breadcrumbs={post.breadcrumbs} />
       <Container>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="technical-content" dangerouslySetInnerHTML={{ __html: post.html }} />
         {post.relatedPosts && <RelatedPosts links={post.relatedPosts} />}
         <div className="desktop:sticky desktop:bottom-[0px]   -mb-4 flex">
           <div className="flex text-xl space-x-2 ml-auto bg-slate-100 p-2 border-t-2 border-x-2 border-gray-100 rounded-t-lg items-end ">
