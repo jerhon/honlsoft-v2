@@ -4,22 +4,23 @@ import { NextPageButton } from "../next-page-button"
 
 export function TitleSectionV2() {
   return <div className={styles.background}>
-    <div className="flex flex-col h-screen text-white justify-center align-middle items-center min-h-[500px]">
-      <div className="flex-grow align-middle flex mt-20">
-        <div className="flex">
-          <div className="m-auto text-3xl font-bold border-r-2 desktop:border-white p-4 text-right">Jeremy's Technology Blog</div>
-          <div className="text-4xl font-bold m-auto px-4 text-left">Let's build software people dream of using.</div>
+    <div className="flex flex-col h-screen text-white justify-center align-middle items-center min-h-[500px] relative">
+      <div className="flex-grow align-middle flex mt-20 z-10">
+        <div className="flex flex-col desktop:flex-row max-w-6xl mx-auto px-6">
+          <div className="m-auto text-2xl desktop:text-4xl font-bold desktop:border-r-2 desktop:border-white/30 desktop:pr-8 desktop:mr-8 mb-6 desktop:mb-0 text-center desktop:text-right">
+            <div className={styles.fadeInUp}>Jeremy's</div>
+            <div className={`${styles.fadeInUp} ${styles.delay1}`}>Technology Blog</div>
+          </div>
+          <div className="text-3xl desktop:text-5xl font-bold m-auto text-center desktop:text-left desktop:pl-8 leading-tight">
+            <div className={`${styles.fadeInUp} ${styles.delay2}`}>Let's build software</div>
+            <div className={`${styles.fadeInUp} ${styles.delay3}`}>people <span className={styles.highlight}>dream</span> of using.</div>
+          </div>
         </div>
       </div>
-      <div className="flex">
+      <div className={`flex z-10 ${styles.fadeInUp} ${styles.delay4}`}>
         <div className="flex-grow" />
         <NextPageButton />
-
       </div>
-    </div>
-
-    <div className="text-sm opacity-70 self-center flex-grow absolute desktop:bottom-4 right-4 text-white bottom-24">
-      Photo by <a href="https://unsplash.com/@grakozy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Greg Rakozy</a> on <a href="https://unsplash.com/s/photos/space?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
     </div>
   </div>
 }
