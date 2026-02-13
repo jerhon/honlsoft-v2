@@ -10,17 +10,24 @@ High-level architecture
   - `src/templates/` contains page templates: `post.tsx`, `scientific-post.tsx`, `post-list.tsx`, `tag-list.tsx`.
 
 Content/data flows & patterns
-- Blog content: Markdown files live under `blog/YYYY/` with frontmatter. Templates in `src/templates/` render posts and lists.
-- Images & static assets: place public-facing assets in `static/` or `public/` (public is generated). `static/img/` and `public/img/` are used.
+- Content is Markdown-first: posts under `blog/YYYY/`, standalone pages under `pages/`, and project entries under `projects/`.
+- Routing comes from frontmatter + `gatsby-node.ts`:
+  - `type: "blog"` / `type: "projects"` produce list + detail pages.
+  - `type: "page"` with `page: "slug"` creates a custom page path (example: `pages/about.md`).
+- Images & static assets:
+  - Use `static/` for direct public files (for example `static/img/...`).
+  - Use relative images in Markdown when appropriate (for example project-local `./images/...`).
+  - Do not hand-edit `public/`; it is generated output.
 - Plugins: custom remark/mermaid helper exists under `plugins/gatsby-remark-mermaid/` — follow its style when adding local plugins.
 
 Developer workflows (commands)
-- Install deps: run `npm install` (repo uses npm). Node version is not pinned in repo — prefer a modern Node compatible with Gatsby v5.
+- Install deps: run `npm install` (repo uses npm).
+- Node runtime is pinned in `.node-version` (`20`).
 - Local dev: `npm run develop` (runs `gatsby develop`).
 - Build: `npm run build` (runs `gatsby build`).
 - Serve built site locally: `npm run serve` (runs `gatsby serve`).
 - Clean cache/build artifacts: `npm run clean` (runs `gatsby clean`).
-- Format code: `npm run format` (uses Prettier over js/ts/json/md files).
+- Format code: `npm run format` (uses Prettier over `js`, `jsx`, `ts`, `tsx`, `json`, and `md`).
 - Tests: `npm test` is a placeholder that exits with error — there are no unit tests committed.
 
 Project-specific conventions
@@ -35,7 +42,8 @@ Integration points & external deps
 
 What to edit for common tasks (examples)
 - Add a new blog post: create `blog/YYYY/YYYY-MM-DD-title.md` with frontmatter; the `post.tsx` template will render it.
-- Add a page: create a React page under `src/pages/` (follow existing pages like `about.md`).
+- Add a markdown page: create `pages/<name>.md` with frontmatter including `type: "page"` and `page: "<slug>"`.
+- Add a React page: create a page component under `src/pages/` for framework-routed pages.
 - Change site metadata: edit `gatsby-config.ts`.
 - Add a component: place presentational components in `src/components/` and import them in templates/pages.
 
