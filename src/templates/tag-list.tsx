@@ -1,6 +1,6 @@
 import { graphql } from "gatsby"
 import React from "react"
-import { PostListPage } from "../components/post-list"
+import { PostListPage } from "../components/blog/post-list"
 import { markdownToPageListPage } from "./post-list"
 
 

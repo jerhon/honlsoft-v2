@@ -1,6 +1,6 @@
 import React from "react";
 import * as styles from "./title-section-v2.module.css";
-import { NextPageButton } from "../next-page-button"
+import { NextPageButton } from "../navigation/next-page-button"
 
 export function TitleSectionV2() {
   return <div className={styles.background}>

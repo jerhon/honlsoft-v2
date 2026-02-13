@@ -2,13 +2,13 @@ import { graphql } from "gatsby"
 import React, { useLayoutEffect} from "react"
 
 import Layout from "../components/layout/layout"
-import PageHeader from "../components/page-header"
-import RelatedPosts from "../components/related-posts"
+import PageHeader from "../components/layout/page-header"
+import RelatedPosts from "../components/blog/related-posts"
 import SEO from "../components/layout/seo"
 import { getPostBreadcrumbs, getPostUrl } from "../utils"
-import { Container } from "../components/container"
+import { Container } from "../components/ui/container"
 import mermaid from "mermaid";
-import { LinkedInShareLink, TwitterShareLink } from "../components/share-link"
+import { LinkedInShareLink, TwitterShareLink } from "../components/blog/share-link"
 import "../styles/technical-article.css"
 
 interface PostLink {

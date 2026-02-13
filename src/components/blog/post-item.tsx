@@ -1,8 +1,8 @@
 import { Link } from "gatsby"
 import React from "react"
 import { FiCalendar, FiClock } from "react-icons/fi"
-import { tagToUrl } from "../tags"
-import { ScrollReveal } from "./scroll-reveal"
+import { tagToUrl } from "../../tags"
+import { ScrollReveal } from "../ui/scroll-reveal"
 
 
 export interface PostItemProps {

@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from "react"
 import Layout from "../components/layout/layout"
 import Running from "./running.json"
 import Chart from "chart.js/auto"
-import { Container } from "../components/container"
-import PageHeader from "../components/page-header"
-import { BreadcrumbInfo } from "../components/breadcrumb"
+import { Container } from "../components/ui/container"
+import PageHeader from "../components/layout/page-header"
+import { BreadcrumbInfo } from "../components/navigation/breadcrumb"
 
 const breadcrumbs : BreadcrumbInfo[] = [
   {

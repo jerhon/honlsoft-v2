@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from "react"
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
 
-import RecentPostsSection from "../components/index/recent-posts-section"
-import { NavigationSection } from "../components/index/navigation-section"
-import { TitleSectionV2 } from "../components/index/title-section-v2"
-import { WaveDivider } from "../components/wave-divider"
-import { ScrollReveal } from "../components/scroll-reveal"
+import RecentPostsSection from "../components/home/recent-posts-section"
+import { NavigationSection } from "../components/home/navigation-section"
+import { TitleSectionV2 } from "../components/home/title-section-v2"
+import { WaveDivider } from "../components/ui/wave-divider"
+import { ScrollReveal } from "../components/ui/scroll-reveal"
 
 export function IndexPage() {
 

@@ -1,6 +1,6 @@
 import React from "react"
-import Breadcrumb, { BreadcrumbInfo } from "./breadcrumb"
-import { Container } from "./container"
+import Breadcrumb, { BreadcrumbInfo } from "../navigation/breadcrumb"
+import { Container } from "../ui/container"
 
 export interface Props {
   title: string

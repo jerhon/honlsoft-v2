@@ -3,9 +3,9 @@ import books from "./images/books.jpg"
 import code from "./images/code.jpg"
 import about from "./images/about.jpg"
 import { Link } from "gatsby"
-import { NextPageButton } from "../next-page-button"
+import { NextPageButton } from "../navigation/next-page-button"
 import { FiChevronsRight } from "react-icons/fi"
-import { ScrollReveal } from "../scroll-reveal"
+import { ScrollReveal } from "../ui/scroll-reveal"
 
 interface NavigationCardProps {
   title: string,

@@ -2,8 +2,8 @@ import { graphql } from "gatsby"
 import React from "react"
 import { capitalize, getPostUrl } from "../utils"
 import { PageLength } from "../const"
-import { PostItemProps } from "../components/post-item"
-import { PostListPage } from "../components/post-list"
+import { PostItemProps } from "../components/blog/post-item"
+import { PostListPage } from "../components/blog/post-list"
 
 
 function parseUrl(url: string) {

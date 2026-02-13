@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
-import { Container } from "../container"
-import { ScrollReveal } from "../scroll-reveal"
+import { Container } from "../ui/container"
+import { ScrollReveal } from "../ui/scroll-reveal"
 
 export interface SectionProps {
   title: string;

@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Section } from "./section"
-import { PostItem, PostItemProps } from "../post-item"
+import { PostItem, PostItemProps } from "../blog/post-item"
 
 
 const PostLookup = () => {

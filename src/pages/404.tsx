@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
-import PageHeader from "../components/page-header"
+import PageHeader from "../components/layout/page-header"
 
 const NotFoundPage = () => (
   <Layout isDocked>

@@ -3,12 +3,12 @@ import React, { useLayoutEffect } from "react"
 
 import Layout from "../components/layout/layout"
 import "../styles/scientific-article.css"
-import PageHeader from "../components/page-header"
-import RelatedPosts from "../components/related-posts"
+import PageHeader from "../components/layout/page-header"
+import RelatedPosts from "../components/blog/related-posts"
 import SEO from "../components/layout/seo"
 import { getPostBreadcrumbs, getPostUrl } from "../utils"
 import mermaid from "mermaid";
-import { LinkedInShareLink, TwitterShareLink } from "../components/share-link"
+import { LinkedInShareLink, TwitterShareLink } from "../components/blog/share-link"
 
 interface PostLink {
   title: string,
