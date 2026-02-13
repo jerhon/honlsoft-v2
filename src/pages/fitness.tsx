@@ -5,6 +5,7 @@ import Chart from "chart.js/auto"
 import { Container } from "../components/ui/container"
 import PageHeader from "../components/layout/page-header"
 import { BreadcrumbInfo } from "../components/navigation/breadcrumb"
+import "../styles/technical-article.css"
 
 const breadcrumbs : BreadcrumbInfo[] = [
   {
@@ -29,7 +30,8 @@ function Fitness() {
   return <Layout isDocked={true}>
     <PageHeader title="Fitness Goals" breadcrumbs={breadcrumbs} />
     <Container>
-    <article className="m-4">
+    <article className="technical-article m-4">
+      <div className="technical-content">
       <section>
         Over 2023 and 2024 I decided to try get more in shape before I hit a milestone birthday.
         In order to accomplish this, I've been setting obtainable goals for my fitness journey.
@@ -68,6 +70,7 @@ function Fitness() {
       </p>
 
       <canvas id="running-chart" ref={canvas}></canvas>
+      </div>
 
     </article>
     </Container>

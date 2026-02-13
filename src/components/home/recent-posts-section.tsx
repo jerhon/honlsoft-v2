@@ -2,6 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Section } from "./section"
 import { PostItem, PostItemProps } from "../blog/post-item"
+import { Container } from "../ui/container"
+import { ScrollReveal } from "../ui/scroll-reveal"
 
 
 const PostLookup = () => {
@@ -44,9 +46,16 @@ const PostLookup = () => {
     tags: d.node.frontmatter.tags
   }))
 
-  return <Section title="Recent Articles">
-    {articleData.map((a: any) => <PostItem key={a.url} {...a} />)}
-  </Section>
+  return <div className="flex-col mt-16 mx-4">
+    <Container>
+      <ScrollReveal animation="fade-up">
+        <h2 className="py-4 text-3xl font-bold">Recent Articles</h2>
+      </ScrollReveal>
+      <div>
+        {articleData.map((a: any) => <PostItem key={a.url} {...a} />)}
+      </div>
+    </Container>
+  </div>
 }
 
 export default PostLookup

@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./title-section-v2.module.css";
+import * as styles from "./hero-section.module.css";
 import { NextPageButton } from "../navigation/next-page-button"
 
 export function TitleSectionV2() {
