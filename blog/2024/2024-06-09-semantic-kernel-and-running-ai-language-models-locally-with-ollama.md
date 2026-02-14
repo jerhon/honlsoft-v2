@@ -7,7 +7,7 @@ description: ""
 ---
 
 Generative AI is taking the world by storm.
-As a developer I'm generally intreguied with what I will be able to build with it.
+As a developer I'm generally intrigued with what I will be able to build with it.
 
 However, when researching I generally find pages with a lot of setup to run models locally.
 While using SAAS AI services such as Open AI or Azure AI bridge this gap and make it easier, I've really wished there was a simple solution to run models locally. 
