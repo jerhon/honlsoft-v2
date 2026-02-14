@@ -84,7 +84,7 @@ Of course iteration is needed beyond the first draft, but it’s a great way to 
 
 Once the profile is available, pick it from the Copilot agent dropdown and use it for the narrow task it was designed for.
 
-Using an agent, this adds more information to my prompt which helps make a prompt more specific to the task at hand.  It avoids me having to repeat myself in a prompt.  I can tell it what my conventions are for writing blog article, and then it uses that information to create a blog article for me based on a topic and references I provid.
+Using an agent, this adds more information to my prompt which helps make a prompt more specific to the task at hand.  It avoids me having to repeat myself in a prompt.  I can tell it what my conventions are for writing blog article, and then it uses that information to create a blog article for me based on a topic and references I provide.
 
 For example, I can ask the `Blog Author` agent:
 
