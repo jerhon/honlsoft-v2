@@ -1,7 +1,8 @@
 import { Link } from "gatsby"
 import React from "react"
 import { FiCalendar, FiClock } from "react-icons/fi"
-import { tagToUrl } from "../tags"
+import { tagToUrl } from "../../tags"
+import { ScrollReveal } from "../ui/scroll-reveal"
 
 
 export interface PostItemProps {
@@ -15,15 +16,15 @@ export interface PostItemProps {
 
 export function PostItem(article: PostItemProps) {
   return (
-
-      <div className="my-2 mb-6">
+    <ScrollReveal animation="fade-up">
+      <div className="my-2 mb-6 p-4 rounded-lg hover:bg-slate-50 transition-colors">
         <Link to={article.url} className="w-full">
-          <div className="font-bold text-red-600 w-full">
+          <div className="font-bold text-red-600 w-full hover:text-red-700 text-lg">
             {article.title}
           </div>
         </Link>
 
-        <p className="my-2">{article.excerpt}</p>
+        <p className="my-2 text-slate-700">{article.excerpt}</p>
 
         <div className="text-slate-600 text-sm flex space-x-2 my-2 items-center">
           <div><FiCalendar /></div>
@@ -34,10 +35,12 @@ export function PostItem(article: PostItemProps) {
         </div>
 
         <div className="space-x-0.5 my-2">
-          {article.tags?.sort((a, b) => a.localeCompare(b))?.map((t) => <Tag name={t} url={tagToUrl(t)} /> )}
+          {article.tags?.sort((a, b) => a.localeCompare(b))?.map((t) => <Tag key={t} name={t} url={tagToUrl(t)} /> )}
         </div>
 
-      </div>)
+      </div>
+    </ScrollReveal>
+  )
 }
 
 

@@ -1,6 +1,6 @@
 import { graphql } from "gatsby"
 import React from "react"
-import { PostListPage } from "../components/post-list"
+import { PostListPage } from "../components/blog/post-list"
 import { markdownToPageListPage } from "./post-list"
 
 
@@ -14,7 +14,7 @@ export const tagListQuery = graphql`
   query tagListQuery($limit: Int!, $skip: Int!, $type: String!, $tag: String!) {
     allMarkdownRemark(
       filter: { frontmatter: { type: { eq: $type }, tags: { in: [$tag] } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { frontmatter: { date: DESC } }
       limit: $limit
       skip: $skip
     ) {

@@ -1,4 +1,4 @@
-import { BreadcrumbInfo } from "./components/breadcrumb"
+import { BreadcrumbInfo } from "./components/navigation/breadcrumb"
 
 export interface PostMetadata {
   frontmatter: {

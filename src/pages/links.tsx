@@ -1,8 +1,8 @@
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
 import React from "react"
-import PageHeader from "../components/page-header"
-import { Container } from "../components/container"
+import PageHeader from "../components/layout/page-header"
+import { Container } from "../components/ui/container"
 
 const dotNetLinks = {
   title: ".NET",

@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from "react"
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
 
-import "intersection-observer"
-
-import RecentPostsSection from "../components/index/recent-posts-section"
-import { NavigationSection } from "../components/index/navigation-section"
-import { TitleSectionV2 } from "../components/index/title-section-v2"
+import RecentPostsSection from "../components/home/recent-posts-section"
+import { NavigationSection } from "../components/home/navigation-section"
+import { TitleSectionV2 } from "../components/home/hero-section"
+import { WaveDivider } from "../components/ui/wave-divider"
+import { ScrollReveal } from "../components/ui/scroll-reveal"
 
 export function IndexPage() {
 
@@ -33,10 +33,15 @@ export function IndexPage() {
       <div ref={ref}>
         <TitleSectionV2 />
       </div>
-      <div  className="flex flex-col bg-slate-100">
+      
+      
+      <div className="flex flex-col bg-slate-100 -mt-1">
         <NavigationSection />
       </div>
-      <RecentPostsSection />
+      
+      <div className="bg-white -mt-1">
+        <RecentPostsSection />
+      </div>
     </Layout>
   )
 }

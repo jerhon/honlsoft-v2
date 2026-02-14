@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@layer theme, base, components, utilities; 
+
+@source "../src/**/*.{js,jsx,ts,tsx}";
+@source "../blog/**/*.{md,mdx}";
+@source "../pages/**/*.{md,mdx}";
+@source "../projects/**/*.{md,mdx}";
+
+@theme {
+    --font-title: 'Lato', 'sans-serif';
+    --font-sans: 'Montserrat', 'sans-serif';
+    --font-logo: 'Oswald';
+
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-primary: #0d47a1;
+    --color-secondary: #b71c1c;
+    --color-menu: #000000de;
+    --color-highlight: #e8e8e0;
+
+    --breakpoint-laptop: 1024px;
+    --breakpoint-desktop: 1280px;
+}

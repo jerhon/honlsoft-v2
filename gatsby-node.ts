@@ -21,7 +21,7 @@ async function createBlogArticles(actions: actionsType, graphql: graphQueryType,
   const result = await graphql(`
     {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
+        sort: { frontmatter: { date: DESC } }
         limit: 1000
       ) {
         edges {
@@ -85,7 +85,7 @@ async function createPaginatedForType(actions: actionsType, graphql: graphQueryT
           filter: {frontmatter: {type: {eq: "` +
       type +
       `"}}}
-          sort: { order: DESC, fields: [frontmatter___date] }
+          sort: { frontmatter: { date: DESC } }
           limit: 1000
         ) {
           edges {
