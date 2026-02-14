@@ -21,7 +21,7 @@ export function PostItem(article: PostItemProps) {
   return (
     <ScrollReveal animation="fade-up">
       <div
-        className="group relative my-2 mb-6 p-4 pr-24 rounded-2xl hover:bg-slate-50 transition-colors cursor-pointer"
+        className="group relative my-2 mb-6 p-4 rounded-2xl hover:bg-slate-50 transition-colors cursor-pointer"
         onClick={goToPost}
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") {
@@ -37,7 +37,7 @@ export function PostItem(article: PostItemProps) {
           {article.title}
         </div>
 
-        <div className="absolute right-4 top-1/2 -translate-y-1/2 text-red-600 opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">
+        <div className="absolute right-4 bottom-4 text-red-600 opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">
           <FiArrowRightCircle size="60px" />
         </div>
 

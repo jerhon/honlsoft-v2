@@ -9,6 +9,7 @@ import { getPostBreadcrumbs, getPostUrl } from "../utils"
 import { Container } from "../components/ui/container"
 import mermaid from "mermaid";
 import { LinkedInShareLink, TwitterShareLink } from "../components/blog/share-link"
+import { ScrollReveal } from "../components/ui/scroll-reveal"
 import "../styles/technical-article.css"
 
 interface PostLink {
@@ -40,20 +41,22 @@ function Post(post: PostProps) {
 
   return <Layout isDocked={true}>
     <SEO title={post.title} description={post.description} image={post?.imageUrl} />
-    <article className="technical-article">
-      <PageHeader title={post.title} breadcrumbs={post.breadcrumbs} />
-      <Container>
-        <div className="technical-content" dangerouslySetInnerHTML={{ __html: post.html }} />
-        {post.relatedPosts && <RelatedPosts links={post.relatedPosts} />}
-        <div className="desktop:sticky desktop:bottom-[0px]   -mb-4 flex">
-          <div className="flex text-xl space-x-2 ml-auto bg-slate-100 p-2 border-t-2 border-x-2 border-gray-100 rounded-t-lg items-end ">
-            <div className="text-sm">Share this post: </div>
-            <LinkedInShareLink url={post.url} />
-            <TwitterShareLink url={post.url} title={post.title} />
+    <ScrollReveal animation="slide-left">
+      <article className="technical-article">
+        <PageHeader title={post.title} breadcrumbs={post.breadcrumbs} />
+        <Container>
+          <div className="technical-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+          {post.relatedPosts && <RelatedPosts links={post.relatedPosts} />}
+          <div className="desktop:sticky desktop:bottom-[0px]   -mb-4 flex">
+            <div className="flex text-xl space-x-2 ml-auto bg-slate-100 p-2 border-t-2 border-x-2 border-gray-100 rounded-t-lg items-end ">
+              <div className="text-sm">Share this post: </div>
+              <LinkedInShareLink url={post.url} />
+              <TwitterShareLink url={post.url} title={post.title} />
+            </div>
           </div>
-        </div>
-      </Container>
-    </article>
+        </Container>
+      </article>
+    </ScrollReveal>
   </Layout>
 }
 

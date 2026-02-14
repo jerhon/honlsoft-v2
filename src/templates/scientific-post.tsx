@@ -9,6 +9,7 @@ import SEO from "../components/layout/seo"
 import { getPostBreadcrumbs, getPostUrl } from "../utils"
 import mermaid from "mermaid";
 import { LinkedInShareLink, TwitterShareLink } from "../components/blog/share-link"
+import { ScrollReveal } from "../components/ui/scroll-reveal"
 
 interface PostLink {
   title: string,
@@ -38,30 +39,32 @@ function ScientificPost(post: PostProps) {
 
   return <Layout isDocked={true}>
     <SEO title={post.title} description={post.description} image={post?.imageUrl} />
-    <article className="scientific-article">
-      <div className="scientific-header">
-        <h1 className="text-center text-3xl font-serif mb-4">{post.title}</h1>
-        <div className="text-center text-gray-600 mb-8 font-serif">{post.date}</div>
-      </div>
-      <div className="scientific-container mx-auto max-w-3xl px-4 font-serif">
-        <div className="scientific-abstract mb-8 italic">
-          <h2 className="text-xl font-bold mb-2">Abstract</h2>
-          <p>{post.description}</p>
+    <ScrollReveal animation="slide-left">
+      <article className="scientific-article">
+        <div className="scientific-header">
+          <h1 className="text-center text-3xl font-serif mb-4">{post.title}</h1>
+          <div className="text-center text-gray-600 mb-8 font-serif">{post.date}</div>
         </div>
-        <div className="scientific-content" dangerouslySetInnerHTML={{ __html: post.html }} />
-        {post.relatedPosts && <div className="scientific-related mt-12 pt-8 border-t border-gray-300">
-          <h2 className="text-xl font-bold mb-4">Related Works</h2>
-          <RelatedPosts links={post.relatedPosts} />
-        </div>}
-        <div className="scientific-share mt-8 flex">
-          <div className="flex text-xl space-x-2 ml-auto bg-gray-100 p-2 border border-gray-200 rounded-lg items-end">
-            <div className="text-sm">Share this article: </div>
-            <LinkedInShareLink url={post.url} />
-            <TwitterShareLink url={post.url} title={post.title} />
+        <div className="scientific-container mx-auto max-w-3xl px-4 font-serif">
+          <div className="scientific-abstract mb-8 italic">
+            <h2 className="text-xl font-bold mb-2">Abstract</h2>
+            <p>{post.description}</p>
+          </div>
+          <div className="scientific-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+          {post.relatedPosts && <div className="scientific-related mt-12 pt-8 border-t border-gray-300">
+            <h2 className="text-xl font-bold mb-4">Related Works</h2>
+            <RelatedPosts links={post.relatedPosts} />
+          </div>}
+          <div className="scientific-share mt-8 flex">
+            <div className="flex text-xl space-x-2 ml-auto bg-gray-100 p-2 border border-gray-200 rounded-lg items-end">
+              <div className="text-sm">Share this article: </div>
+              <LinkedInShareLink url={post.url} />
+              <TwitterShareLink url={post.url} title={post.title} />
+            </div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </ScrollReveal>
   </Layout>
 }
 
