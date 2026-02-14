@@ -29,7 +29,7 @@ export function IndexPage() {
 
   return (
     <Layout isDocked={isDocked}>
-      <SEO title="Home" description="A personal website containing my musings on software development." />
+      <SEO description="A personal website containing my musings on software development." />
       <div ref={ref}>
         <TitleSectionV2 />
       </div>
