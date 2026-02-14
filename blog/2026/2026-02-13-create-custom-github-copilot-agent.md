@@ -20,7 +20,7 @@ Was CoPilot able to write this entire article?  Of course not, but it did help m
 The default coding agent is broad by design.
 That’s great for general use, but it’s even better when you can give it specific knowledge.
 
-Prompts effect an individual request and ask what yoou want an agent to do in a moment.
+Prompts effect an individual request and ask what you want an agent to do in a moment.
 
 Instructions define rules related to files or a repository.
 
