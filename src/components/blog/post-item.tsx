@@ -1,5 +1,6 @@
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import React from "react"
+import { FiArrowRightCircle } from "react-icons/fi"
 import { FiCalendar, FiClock } from "react-icons/fi"
 import { tagToUrl } from "../../tags"
 import { ScrollReveal } from "../ui/scroll-reveal"
@@ -15,14 +16,30 @@ export interface PostItemProps {
 }
 
 export function PostItem(article: PostItemProps) {
+  const goToPost = () => navigate(article.url)
+
   return (
     <ScrollReveal animation="fade-up">
-      <div className="my-2 mb-6 p-4 rounded-lg hover:bg-slate-50 transition-colors">
-        <Link to={article.url} className="w-full">
-          <div className="font-bold text-red-600 w-full hover:text-red-700 text-lg">
-            {article.title}
-          </div>
-        </Link>
+      <div
+        className="group relative my-2 mb-6 p-4 pr-24 rounded-2xl hover:bg-slate-50 transition-colors cursor-pointer"
+        onClick={goToPost}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault()
+            goToPost()
+          }
+        }}
+        tabIndex={0}
+        role="link"
+        aria-label={`Open post ${article.title}`}
+      >
+        <div className="font-bold text-red-600 w-full hover:text-red-700 text-lg">
+          {article.title}
+        </div>
+
+        <div className="absolute right-4 top-1/2 -translate-y-1/2 text-red-600 opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">
+          <FiArrowRightCircle size="60px" />
+        </div>
 
         <p className="my-2 text-slate-700">{article.excerpt}</p>
 
