@@ -9,7 +9,7 @@ description: "A practical walkthrough for creating a custom GitHub Copilot agent
 I’ve been trying to use Copilot more for focused workflows lately, and one of the best upgrades is creating custom agents for specific tasks.
 Instead of re-explaining context in every prompt, I can encode behavior once in an agent profile and reuse it.
 
-In this article, I'll share how I created a custom Copilot agent for authoring blog post which actually helped my with the rough draft of this blog article.
+In this article, I'll share how I created a custom Copilot agent for authoring blog post which actually helped me with the rough draft of this blog article.
 
 While this seems a bit like cheating, I often find looking up information via GitHub copilot and grounding it with references is a great way to learn a new topic. Writing blog articles is largely the same experience.  Use experience and web references to create an article.
 
@@ -24,7 +24,7 @@ Prompts effect an individual request and ask what you want an agent to do in a m
 
 Instructions define rules related to files or a repository.
 
-Agents give you the abillity to encode behavior once and reuse it across sessions and tasks.
+Agents give you the ability to encode behavior once and reuse it across sessions and tasks.
 
 ## Where the agent file lives
 
