@@ -24,7 +24,7 @@ Prompts effect an individual request and ask what you want an agent to do in a m
 
 Instructions define rules related to files or a repository.
 
-Agents give you the abillity to encode behavior once and reuse it across sessions and tasks.
+Agents give you the ability to encode behavior once and reuse it across sessions and tasks.
 
 ## Where the agent file lives
 
