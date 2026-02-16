@@ -32,7 +32,8 @@ function SidebarLinks() {
     <SidebarLink title="Home" icon={<GoHome />} href="/" />
     <SidebarLink title="Blog" icon={<GoBook />} href="/blog" />
     <SidebarLink title="Projects" icon={<GoBook />} href="/projects" />
-    <SidebarLink title="Fitness" icon={<IoFitnessOutline />} href="/fitness" />
+    <SidebarLink title="Fitness 2025" icon={<IoFitnessOutline />} href="/fitness-2025" />
+    <SidebarLink title="Fitness 2024" icon={<IoFitnessOutline />} href="/fitness-2024" />
     <SidebarLink title="Links" icon={<GoLocation />} href="/links" />
 
     <SidebarLink title="About Me" icon={<GoQuestion />} href="/about" />
