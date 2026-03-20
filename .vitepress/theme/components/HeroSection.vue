@@ -9,7 +9,7 @@
     <div class="hero-grid absolute inset-0 opacity-30"></div>
 
     <div
-      class="hs-page-width relative z-10 flex min-h-[min(100vh,920px)] items-center px-6 py-24 sm:px-8 lg:px-12"
+      class="hero-shell__content hs-page-width relative z-10 flex items-center px-6 py-24 sm:px-8 lg:px-12"
     >
       <div class="grid w-full gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
         <div class="space-y-8">
@@ -40,8 +40,7 @@
           </div>
 
           <p
-            class="hero-fade-up hero-delay-4 max-w-3xl text-lg leading-8 text-blue-50/85 sm:text-xl"
-          >
+            class="hero-fade-up hero-delay-4 max-w-3xl text-lg leading-8 text-blue-50/85 sm:text-xl py-8">
             Practical notes on software architecture, .NET, containers, AI-assisted
             development, and the side projects that keep engineering fun.
           </p>
@@ -77,9 +76,6 @@
             <div class="relative space-y-6">
               <div class="flex items-center justify-between">
                 <div>
-                  <p class="hs-meta-label text-blue-200/75">
-                    Builder's dashboard
-                  </p>
                   <p class="mt-2 font-title text-2xl font-bold text-white">
                     What you'll find here
                   </p>
@@ -131,9 +127,14 @@
 
 <style scoped>
 .hero-shell {
+  min-height: calc(100svh - var(--vp-nav-height) - var(--vp-layout-top-height, 0px));
   background:
     radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 32%),
     radial-gradient(circle at 80% 18%, rgba(239, 68, 68, 0.18), transparent 24%);
+}
+
+.hero-shell__content {
+  min-height: inherit;
 }
 
 .hero-grid {
