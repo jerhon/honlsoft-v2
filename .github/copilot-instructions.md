@@ -45,7 +45,7 @@ Project-specific conventions
 - If you add interactive UI, put Vue components in `.vitepress/theme/components/`.
 - If you need build-time content indexes or derived metadata, use VitePress data loaders in `.vitepress/theme/data/`.
 - Mermaid diagrams are supported through the Markdown fence override in `.vitepress/config.mts` and client-side initialization in `.vitepress/theme/Layout.vue`.
-- The site currently uses plain custom CSS in `.vitepress/theme/custom.css`; do not assume Tailwind or Gatsby-era styling remains in use.
+- Tailwind CSS is available in the theme through `.vitepress/theme/tailwind.css`, and repo-specific styling still lives in `.vitepress/theme/custom.css`.
 
 Integration points & external deps
 

@@ -1,3 +1,4 @@
+import tailwindcss from "@tailwindcss/vite"
 import { defineConfig } from "vitepress"
 
 export default defineConfig({
@@ -5,6 +6,7 @@ export default defineConfig({
   title: "Honlsoft",
   titleTemplate: ":title | Honlsoft",
   description: "A personal and software development blog.",
+  appearance: false,
   cleanUrls: true,
   outDir: "public",
   srcDir: "content",
@@ -70,6 +72,7 @@ export default defineConfig({
     },
   },
   vite: {
+    plugins: [tailwindcss()],
     publicDir: "static",
   },
 })
