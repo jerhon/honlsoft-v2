@@ -13,15 +13,6 @@
     >
       <div class="grid w-full gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
         <div class="space-y-8">
-          <div
-            class="hero-badge inline-flex w-fit items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.32em] text-blue-100 backdrop-blur"
-          >
-            <span
-              class="inline-block h-2.5 w-2.5 rounded-full bg-red-400 shadow-[0_0_18px_rgba(248,113,113,0.95)]"
-            ></span>
-            Honlsoft
-          </div>
-
           <div class="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-center">
             <div
               class="hero-kicker hero-fade-up border-white/20 text-center lg:border-r lg:pr-8 lg:text-right"
