@@ -1,0 +1,66 @@
+<script setup lang="ts">
+import { computed } from "vue"
+import { useData } from "vitepress"
+
+import { data as posts } from "../data/posts.data"
+import { tagToSlug } from "../lib/content"
+
+const { frontmatter, page } = useData()
+
+const currentSlug = computed(
+  () => page.value.relativePath.replace(/\.md$/, "").split("/").pop() ?? "",
+)
+
+const related = computed(() => {
+  const tags = new Set(
+    Array.isArray(frontmatter.value.tags)
+      ? frontmatter.value.tags.map(String)
+      : [],
+  )
+
+  const ranked = posts
+    .filter(post => post.slug !== currentSlug.value)
+    .map(post => ({
+      post,
+      sharedTags: post.tags.filter(tag => tags.has(tag)),
+    }))
+    .filter(entry => entry.sharedTags.length > 0)
+    .sort((left, right) => right.sharedTags.length - left.sharedTags.length)
+    .slice(0, 3)
+
+  return ranked
+})
+</script>
+
+<template>
+  <section v-if="related.length" class="related-posts">
+    <h2>Related posts</h2>
+
+    <div class="related-posts__grid">
+      <article
+        v-for="entry in related"
+        :key="entry.post.url"
+        class="archive-card"
+      >
+        <h3 class="archive-card__title">
+          <a class="archive-card__link" :href="entry.post.url">{{
+            entry.post.title
+          }}</a>
+        </h3>
+
+        <p class="archive-card__excerpt">{{ entry.post.excerpt }}</p>
+
+        <div class="archive-card__tags">
+          <a
+            v-for="tag in entry.sharedTags"
+            :key="tag"
+            class="tag-pill"
+            :href="`/tag/${tagToSlug(tag)}`"
+          >
+            {{ tag }}
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+</template>
