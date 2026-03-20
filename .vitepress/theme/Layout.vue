@@ -10,14 +10,22 @@ import RelatedPosts from "./components/RelatedPosts.vue"
 const { page, frontmatter } = useData()
 
 const showPageMeta = computed(() => {
-  if (page.value.isNotFound || frontmatter.value.layout === "home") {
+  if (
+    page.value.isNotFound ||
+    frontmatter.value.layout === "home" ||
+    frontmatter.value.layout === "BlogArticleLayout"
+  ) {
     return false
   }
 
   return Boolean(frontmatter.value.type)
 })
 
-const showRelatedPosts = computed(() => frontmatter.value.type === "blog")
+const showRelatedPosts = computed(
+  () =>
+    frontmatter.value.type === "blog" &&
+    frontmatter.value.layout !== "BlogArticleLayout",
+)
 
 mermaid.initialize({
   startOnLoad: false,

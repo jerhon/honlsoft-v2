@@ -15,6 +15,19 @@ export default defineConfig({
   rewrites(id) {
     return id.replace(/^blog\/[^/]+\//, "blog/")
   },
+  transformPageData(pageData) {
+    if (
+      pageData.frontmatter.type === "blog" &&
+      pageData.frontmatter.layout == null
+    ) {
+      return {
+        frontmatter: {
+          ...pageData.frontmatter,
+          layout: "BlogArticleLayout",
+        },
+      }
+    }
+  },
   head: [
     ["link", { rel: "icon", href: "/img/honlsoft.svg", type: "image/svg+xml" }],
     ["meta", { property: "og:title", content: "Honlsoft" }],

@@ -23,7 +23,7 @@
   --vp-home-hero-image-filter: blur(54px);
   --vp-font-family-base: "Montserrat", sans-serif;
   --vp-font-family-mono: "Consolas", "Courier New", monospace;
-  --vp-layout-max-width: 1440px;
+  --vp-layout-max-width: 100%;
 }
 
 .VPNavBarTitle .title {
@@ -150,9 +150,15 @@
 }
 
 .VPDoc .container,
+.VPDoc.has-aside .container,
+.VPDoc:not(.has-sidebar) .container,
+.VPDoc .content,
+.VPDoc.has-aside .content,
+.VPDoc:not(.has-sidebar) .content,
 .VPDoc .content-container,
 .VPDoc.has-aside .content-container {
-  max-width: 1180px;
+  max-width: none;
+  width: 100%;
 }
 
 .VPDoc .container {

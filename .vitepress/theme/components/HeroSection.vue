@@ -9,7 +9,7 @@
     <div class="hero-grid absolute inset-0 opacity-30"></div>
 
     <div
-      class="relative z-10 mx-auto flex min-h-[min(100vh,920px)] max-w-7xl items-center px-6 py-24 sm:px-8 lg:px-12"
+      class="hs-page-width relative z-10 flex min-h-[min(100vh,920px)] items-center px-6 py-24 sm:px-8 lg:px-12"
     >
       <div class="grid w-full gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
         <div class="space-y-8">
@@ -27,12 +27,12 @@
 
             <div class="space-y-4 text-center lg:text-left">
               <h1
-                class="hero-fade-up hero-delay-2 font-title text-5xl font-bold leading-none sm:text-6xl lg:text-7xl"
+                class="hero-fade-up hero-delay-2 font-title text-6xl font-bold leading-none sm:text-7xl lg:text-[5.5rem]"
               >
                 Let's build software
               </h1>
               <p
-                class="hero-fade-up hero-delay-3 font-title text-4xl font-bold leading-tight text-blue-50 sm:text-5xl lg:text-6xl"
+                class="hero-fade-up hero-delay-3 font-title text-5xl font-bold leading-none text-blue-50 sm:text-6xl lg:text-7xl"
               >
                 people <span class="hero-highlight">dream</span> of using.
               </p>
@@ -49,22 +49,13 @@
           <div
             class="hero-fade-up hero-delay-5 flex flex-col gap-4 sm:flex-row sm:flex-wrap"
           >
-            <a
-              href="/blog/"
-              class="inline-flex items-center justify-center rounded-xl bg-red-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-red-950/40 transition hover:-translate-y-0.5 hover:bg-red-500 hover:no-underline"
-            >
+            <a href="/blog/" class="hs-btn hs-btn-primary">
               Read the blog
             </a>
-            <a
-              href="/projects/"
-              class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/15 hover:no-underline"
-            >
+            <a href="/projects/" class="hs-btn hs-btn-secondary">
               View projects
             </a>
-            <a
-              href="/about"
-              class="inline-flex items-center justify-center rounded-xl border border-blue-300/25 px-6 py-3 text-base font-semibold text-blue-50 transition hover:-translate-y-0.5 hover:border-blue-200/45 hover:bg-blue-300/10 hover:no-underline"
-            >
+            <a href="/about" class="hs-btn hs-btn-subtle">
               About me
             </a>
           </div>
@@ -72,31 +63,21 @@
           <div
             class="hero-fade-up hero-delay-6 flex flex-wrap gap-3 pt-2 text-sm text-blue-100/80"
           >
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5"
-              >Software Architecture</span
-            >
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5"
-              >.NET &amp; APIs</span
-            >
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5"
-              >AI Tooling</span
-            >
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5"
-              >Side Projects</span
-            >
+            <span class="hs-chip">Software Architecture</span>
+            <span class="hs-chip">.NET &amp; APIs</span>
+            <span class="hs-chip">AI Tooling</span>
+            <span class="hs-chip">Side Projects</span>
           </div>
         </div>
 
         <div class="hero-fade-up hero-delay-4 relative">
-          <div
-            class="hero-panel relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/45 p-6 shadow-2xl shadow-blue-950/50 backdrop-blur-xl"
-          >
+          <div class="hero-panel hs-panel p-6">
             <div class="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-blue-300/10"></div>
 
             <div class="relative space-y-6">
               <div class="flex items-center justify-between">
                 <div>
-                  <p class="text-sm font-semibold uppercase tracking-[0.28em] text-blue-200/75">
+                  <p class="hs-meta-label text-blue-200/75">
                     Builder's dashboard
                   </p>
                   <p class="mt-2 font-title text-2xl font-bold text-white">
@@ -104,15 +85,15 @@
                   </p>
                 </div>
 
-                <div class="rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-center">
-                  <p class="text-xs uppercase tracking-[0.25em] text-blue-100/70">Focus</p>
+                <div class="hs-card bg-white/10 px-4 py-3 text-center">
+                  <p class="hs-meta-label text-blue-100/70">Focus</p>
                   <p class="mt-1 font-title text-xl font-bold text-white">Practical DX</p>
                 </div>
               </div>
 
               <div class="space-y-4">
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p class="text-xs uppercase tracking-[0.25em] text-blue-200/70">Recently</p>
+                <div class="hs-card p-4">
+                  <p class="hs-meta-label text-blue-200/70">Recently</p>
                   <p class="mt-2 font-title text-xl font-bold text-white">
                     AI workflows and developer productivity
                   </p>
@@ -123,16 +104,16 @@
                 </div>
 
                 <div class="grid gap-4 sm:grid-cols-2">
-                  <div class="rounded-2xl border border-white/10 bg-blue-400/10 p-4">
-                    <p class="text-xs uppercase tracking-[0.25em] text-blue-200/70">Topics</p>
+                  <div class="hs-card-blue p-4">
+                    <p class="hs-meta-label text-blue-200/70">Topics</p>
                     <p class="mt-2 text-3xl font-bold text-white">4+</p>
                     <p class="mt-1 text-sm text-blue-50/75">
                       architecture, containers, AI, and projects
                     </p>
                   </div>
 
-                  <div class="rounded-2xl border border-white/10 bg-red-500/10 p-4">
-                    <p class="text-xs uppercase tracking-[0.25em] text-red-200/70">Style</p>
+                  <div class="hs-card-red p-4">
+                    <p class="hs-meta-label text-red-200/70">Style</p>
                     <p class="mt-2 text-3xl font-bold text-white">Hands-on</p>
                     <p class="mt-1 text-sm text-blue-50/75">
                       implementation-first writeups with concrete examples

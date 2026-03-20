@@ -5,6 +5,7 @@ import Layout from "./Layout.vue"
 import "./tailwind.css"
 import "./custom.css"
 
+import BlogArticleLayout from "./components/BlogArticleLayout.vue"
 import BlogArchive from "./components/BlogArchive.vue"
 import FitnessLinks from "./components/FitnessLinks.vue"
 import HeroSection from "./components/HeroSection.vue"
@@ -18,6 +19,7 @@ const theme: Theme = {
   extends: DefaultTheme,
   Layout,
   enhanceApp({ app }) {
+    app.component("BlogArticleLayout", BlogArticleLayout)
     app.component("BlogArchive", BlogArchive)
     app.component("FitnessLinks", FitnessLinks)
     app.component("HeroSection", HeroSection)
