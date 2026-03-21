@@ -60,22 +60,16 @@ function scrollToPosts() {
             </div>
 
             <div class="space-y-4 text-center lg:text-left">
-              <h1
-                :class="[
-                  styles.fadeUp,
-                  styles.delay2,
-                  'font-title text-6xl font-bold leading-none sm:text-7xl lg:text-[5.5rem]',
-                ]"
-              >
-                Let's build software
-              </h1>
               <p
                 :class="[
                   styles.fadeUp,
                   styles.delay3,
-                  'font-title text-5xl font-bold leading-none text-blue-50 sm:text-6xl lg:text-7xl',
+                  'font-title text-4xl font-bold leading-none text-blue-50 sm:text-4xl lg:text-4xl',
+
                 ]"
               >
+
+                Let's build software
                 people <span :class="styles.heroHighlight">dream</span> of using.
               </p>
             </div>
@@ -165,7 +159,6 @@ function scrollToPosts() {
                       architecture, containers, AI, and projects
                     </p>
                   </div>
-
                   <div class="hs-card-red p-4">
                     <p class="hs-meta-label text-red-200/70">Style</p>
                     <p class="mt-2 text-3xl font-bold text-white">Hands-on</p>
