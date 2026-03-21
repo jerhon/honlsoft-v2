@@ -1,8 +1,15 @@
 ---
 date: "2021-04-06"
 title: "Raspberry PI Based Camera, Machine Learning, and Object Detection with .NET Core"
+description: >-
+  This project explores real-time object detection using a Raspberry Pi camera
+  and .NET based services. One service captures the latest image on the Pi while
+  another service running on a laptop applies ML.NET object detection to that
+  image. The result is a practical machine learning experiment that can identify
+  everyday objects from the live camera feed.
 type: "projects"
 project: "Object Detection"
+image: "./images/raspberry-pi-object-detection.jpg"
 ---
 
 For a while I've been interested in building a project dealing with machine learning.

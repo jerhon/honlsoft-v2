@@ -60,11 +60,16 @@ onMounted(() => {
   <div :class="styles.postList">
     <article v-for="post in props.posts" :key="post.url" :class="styles.postItem">
       <a
-        :class="[styles.postLink, !post.date && styles.postLinkNoMeta]"
+        :class="[styles.postLink, !post.date && !post.image && styles.postLinkNoMeta]"
         :href="post.url"
         @click="markVisited(post.url)"
       >
-        <div v-if="post.date" :class="styles.postMeta">{{ formatDate(post.date) }}</div>
+        <div v-if="post.date || post.image" :class="styles.postMetaColumn">
+          <div v-if="post.date" :class="styles.postMeta">{{ formatDate(post.date) }}</div>
+          <div v-if="post.image" :class="styles.postThumbFrame">
+            <img :src="post.image" :alt="`${post.title} thumbnail`" :class="styles.postThumb" />
+          </div>
+        </div>
         <div :class="styles.postBody">
           <h3 :class="styles.postTitle">
             <span>{{ post.title }}</span>

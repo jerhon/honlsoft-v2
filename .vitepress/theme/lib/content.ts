@@ -2,6 +2,7 @@ export interface ContentCard {
   title: string
   description: string
   date?: string
+  image?: string
   excerpt: string
   tags: string[]
   url: string
@@ -12,6 +13,8 @@ export interface ContentCard {
 export interface ProjectCard {
   title: string
   description: string
+  date?: string
+  image?: string
   excerpt: string
   url: string
   slug: string

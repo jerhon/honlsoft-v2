@@ -9,11 +9,12 @@ const projectPosts = computed<ContentCard[]>(() => {
   return projects.map(project => ({
     title: project.title,
     description: project.description,
-    excerpt: project.excerpt,
+    excerpt: project.description,
     tags: [],
     url: project.url,
     slug: project.slug,
-    date: "",
+    date: project.date,
+    image: project.image,
   }))
 })
 </script>

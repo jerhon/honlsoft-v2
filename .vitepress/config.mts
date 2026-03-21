@@ -24,8 +24,7 @@ export default defineConfig({
         frontmatter: {
           ...pageData.frontmatter,
           layout: "BlogArticleLayout",
-        },
-      }
+        }
     }
     else
     {
@@ -33,7 +32,7 @@ export default defineConfig({
         frontmatter: {
           ...pageData.frontmatter,
           layout: pageData.frontmatter.layout ?? "PageLayout",
-        },
+        }
       }
     }
   },

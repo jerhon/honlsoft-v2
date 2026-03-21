@@ -1,8 +1,15 @@
 ---
 date: "2021-01-30"
 title: "COVID-19 Web Application with Heatmaps"
+description: >-
+  This second COVID-19 application combines a .NET 5 API, EF Core, and a React
+  Redux frontend to explore pandemic data in more flexible ways. By importing
+  data from The COVID Tracking Project, it can transform and visualize trends
+  that were harder to show in the original app. The project emphasizes heatmap
+  views of case waves and can be run locally as a Docker container.
 type: "projects"
 project: "COVID-19 Statistics Application v2"
+image: "./images/covid-19-app-v3.jpg"
 ---
 
 I wrote another COVID-19 app.
