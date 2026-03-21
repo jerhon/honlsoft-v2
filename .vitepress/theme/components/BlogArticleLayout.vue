@@ -9,6 +9,7 @@ import styles from "./BlogArticleLayout.module.css"
 const { frontmatter, page } = useData()
 const contentRef = ref<HTMLElement | null>(null)
 const activeLink = ref("")
+const overviewLink = "#article-overview"
 let outlineHeadingNodes: HTMLHeadingElement[] = []
 let scrollFrame = 0
 
@@ -52,7 +53,7 @@ const tags = computed(() => {
 type HeaderItem = {
   title: string
   link: string
-  level: 2 | 3
+  level: 1 | 2 | 3
 }
 
 const headers = ref<HeaderItem[]>([])
@@ -79,7 +80,7 @@ async function syncOutline() {
   }
 
   const headingNodes = Array.from(
-    contentRoot.querySelectorAll<HTMLHeadingElement>("h2, h3"),
+    contentRoot.querySelectorAll<HTMLHeadingElement>("h1, h2, h3"),
   )
 
   outlineHeadingNodes = headingNodes
@@ -98,27 +99,28 @@ async function syncOutline() {
       return {
         title: headingTitle,
         link: `#${node.id}`,
-        level: node.tagName === "H3" ? 3 : 2,
+        level: node.tagName === "H1" ? 1 : node.tagName === "H2" ? 2 : 3,
       } satisfies HeaderItem
     })
     .filter((item): item is HeaderItem => item !== null)
 
   if (!headers.value.length) {
-    activeLink.value = headers.value[0]?.link ?? ""
+    activeLink.value = overviewLink
     return
   }
 
-  activeLink.value = headers.value[0]?.link ?? ""
+  activeLink.value = overviewLink
   updateActiveHeading()
 }
 
 function updateActiveHeading() {
   if (typeof window === "undefined" || !outlineHeadingNodes.length) {
+    activeLink.value = overviewLink
     return
   }
 
   const offset = window.innerHeight * 0.22
-  let currentLink = headers.value[0]?.link ?? ""
+  let currentLink = overviewLink
 
   for (const node of outlineHeadingNodes) {
     const top = node.getBoundingClientRect().top
@@ -174,7 +176,10 @@ watch(
 
 <template>
   <div :class="styles.root">
-    <section :class="[styles.hero, 'hs-page-width px-6 sm:px-8 lg:px-12']">
+    <section
+      id="article-overview"
+      :class="[styles.hero, 'hs-page-width px-6 sm:px-8 lg:px-12']"
+    >
       <nav :class="styles.breadcrumbs" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span>/</span>
@@ -205,7 +210,13 @@ watch(
 
     </section>
 
-    <div :class="[styles.body, 'hs-page-width px-4 ']">
+    <div
+      :class="[
+        styles.body,
+        !headers.length && styles.bodyNoAside,
+        headers.length ? 'hs-page-width px-4' : 'px-4',
+      ]"
+    >
       <div :class="styles.main">
         <article class="hs-content-shell">
           <div ref="contentRef">
@@ -221,6 +232,18 @@ watch(
           <p :class="styles.asideTitle">On this page</p>
 
           <ul :class="styles.outline">
+            <li>
+              <a
+                :class="[
+                  styles.outlineLink,
+                  'hs-outline-link',
+                  activeLink === overviewLink && styles.outlineLinkActive,
+                ]"
+                :href="overviewLink"
+              >
+                Overview
+              </a>
+            </li>
             <li v-for="header in headers" :key="header.link">
               <a
                 :class="[

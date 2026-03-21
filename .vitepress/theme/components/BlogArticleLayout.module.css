@@ -75,6 +75,10 @@
   margin: 0 auto;
 }
 
+.bodyNoAside {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .main {
   min-width: 0;
 }
