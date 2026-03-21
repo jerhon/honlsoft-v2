@@ -179,11 +179,7 @@ watch(
         <a href="/">Home</a>
         <span>/</span>
         <a href="/blog/">Blog</a>
-        <span>/</span>
-        <span>{{ title }}</span>
       </nav>
-
-      <p :class="[styles.eyebrow, 'hs-eyebrow']">Article</p>
       <h1 :class="styles.title">{{ title }}</h1>
       <p v-if="description" :class="styles.description">
         {{ description }}
@@ -206,6 +202,7 @@ watch(
           {{ tag }}
         </a>
       </div>
+
     </section>
 
     <div :class="[styles.body, 'hs-page-width']">
