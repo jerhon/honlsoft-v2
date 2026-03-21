@@ -41,8 +41,14 @@ const related = computed(() => {
       <article
         v-for="entry in related"
         :key="entry.post.url"
-        class="archive-card"
+        :class="['archive-card', styles.card]"
       >
+        <a
+          :class="styles.cardLink"
+          :href="entry.post.url"
+          :aria-label="`Read related post: ${entry.post.title}`"
+        ></a>
+
         <h3 class="archive-card__title">
           <a class="archive-card__link" :href="entry.post.url">{{
             entry.post.title
@@ -51,7 +57,7 @@ const related = computed(() => {
 
         <p class="archive-card__excerpt">{{ entry.post.excerpt }}</p>
 
-        <div class="archive-card__tags">
+        <div :class="['archive-card__tags', styles.tags]">
           <a
             v-for="tag in entry.sharedTags"
             :key="tag"

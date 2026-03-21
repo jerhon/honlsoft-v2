@@ -9,3 +9,27 @@
   color: #fff;
   font-family: "Lato", sans-serif;
 }
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardLink {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+}
+
+.cardLink:focus-visible {
+  outline: 2px solid rgba(147, 197, 253, 0.9);
+  outline-offset: 2px;
+}
+
+.tags {
+  position: relative;
+  z-index: 3;
+  margin-top: auto;
+}
