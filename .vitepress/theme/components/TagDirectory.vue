@@ -3,6 +3,7 @@ import { computed } from "vue"
 
 import { data as posts } from "../data/posts.data"
 import { tagToSlug } from "../lib/content"
+import styles from "./TagDirectory.module.css"
 
 const tags = computed(() => {
   const counts = new Map<string, number>()
@@ -24,15 +25,15 @@ const tags = computed(() => {
 </script>
 
 <template>
-  <div class="tag-directory__grid">
+  <div :class="styles.grid">
     <a
       v-for="tag in tags"
       :key="tag.tag"
-      class="tag-directory__item"
+      :class="styles.item"
       :href="tag.url"
     >
       <span>{{ tag.tag }}</span>
-      <span class="tag-directory__count">{{ tag.count }}</span>
+      <span :class="styles.count">{{ tag.count }}</span>
     </a>
   </div>
 </template>

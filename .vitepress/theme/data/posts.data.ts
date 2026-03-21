@@ -16,7 +16,7 @@ export default createContentLoader("blog/**/*.md", {
           title: String(page.frontmatter.title ?? slug),
           description: String(page.frontmatter.description ?? ""),
           date: String(page.frontmatter.date ?? ""),
-          excerpt: stripHtml(page.excerpt ?? ""),
+          excerpt: String(page.frontmatter.description ?? ""),
           tags: Array.isArray(page.frontmatter.tags)
             ? page.frontmatter.tags.map(String)
             : [],

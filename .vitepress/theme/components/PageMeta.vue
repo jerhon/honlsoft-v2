@@ -3,6 +3,7 @@ import { computed } from "vue"
 import { useData } from "vitepress"
 
 import { formatDate, titleFromSlug, tagToSlug } from "../lib/content"
+import styles from "./PageMeta.module.css"
 
 const { frontmatter, page } = useData()
 
@@ -59,8 +60,8 @@ const publishedOn = computed(() =>
 </script>
 
 <template>
-  <div class="page-meta">
-    <nav class="page-meta__breadcrumbs" aria-label="Breadcrumb">
+  <div :class="styles.pageMeta">
+    <nav :class="styles.pageMetaBreadcrumbs" aria-label="Breadcrumb">
       <template v-for="(item, idx) in breadcrumbs" :key="`${item.text}-${idx}`">
         <a v-if="item.url" :href="item.url">{{ item.text }}</a>
         <span v-else>{{ item.text }}</span>
@@ -68,13 +69,13 @@ const publishedOn = computed(() =>
       </template>
     </nav>
 
-    <div class="page-meta__details">
+    <div :class="styles.pageMetaDetails">
       <span v-if="publishedOn">Published {{ publishedOn }}</span>
       <span v-if="frontmatter.template === 'scientific'"
         >Scientific article layout</span
       >
 
-      <div v-if="tags.length" class="page-meta__tags">
+      <div v-if="tags.length" :class="styles.pageMetaTags">
         <a
           v-for="tag in tags"
           :key="tag"

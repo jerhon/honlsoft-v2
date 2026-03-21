@@ -4,6 +4,7 @@ import { useData } from "vitepress"
 
 import { data as posts } from "../data/posts.data"
 import { formatDate, tagToSlug } from "../lib/content"
+import styles from "./TagArchive.module.css"
 
 const props = defineProps<{ tag?: string }>()
 const { params } = useData()
@@ -20,7 +21,7 @@ const filteredPosts = computed(() => {
 
 <template>
   <div v-if="tagName">
-    <p class="home-section__lead">
+    <p :class="styles.lead">
       {{ filteredPosts.length }} post<span v-if="filteredPosts.length !== 1"
         >s</span
       >

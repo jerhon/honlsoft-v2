@@ -1,0 +1,178 @@
+.heroShell {
+  min-height: calc(100svh - var(--vp-nav-height) - var(--vp-layout-top-height, 0px));
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 32%),
+    radial-gradient(circle at 80% 18%, rgba(239, 68, 68, 0.18), transparent 24%);
+}
+
+.heroShellContent {
+  min-height: inherit;
+}
+
+.heroGrid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-position: center;
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent 82%);
+}
+
+.heroAurora {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: 0.65;
+}
+
+.heroAuroraLeft {
+  left: -10rem;
+  top: 4rem;
+  height: 24rem;
+  width: 24rem;
+  background: rgba(59, 130, 246, 0.28);
+  animation: driftLeft 18s ease-in-out infinite;
+}
+
+.heroAuroraRight {
+  right: -6rem;
+  bottom: 2rem;
+  height: 22rem;
+  width: 22rem;
+  background: rgba(239, 68, 68, 0.24);
+  animation: driftRight 16s ease-in-out infinite;
+}
+
+.heroPanel {
+  transform: perspective(1400px) rotateY(-10deg) rotateX(4deg);
+}
+
+.heroKicker {
+  text-shadow: 0 8px 28px rgba(15, 23, 42, 0.45);
+}
+
+.heroHighlight {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(120deg, #f87171 0%, #ef4444 40%, #fca5a5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroHighlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.35rem;
+  height: 0.28rem;
+  border-radius: 9999px;
+  background: linear-gradient(120deg, #ef4444 0%, #fca5a5 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: underlineExpand 0.9s ease-out 1.2s forwards;
+}
+
+.fadeUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.delay1 { animation-delay: 0.15s; }
+.delay2 { animation-delay: 0.3s; }
+.delay3 { animation-delay: 0.45s; }
+.delay4 { animation-delay: 0.6s; }
+.delay5 { animation-delay: 0.75s; }
+.delay6 { animation-delay: 0.9s; }
+
+.scrollLink {
+  position: absolute;
+  left: 50%;
+  bottom: 1.5rem;
+  z-index: 20;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transform: translateX(-50%);
+  color: rgba(219, 234, 254, 0.92);
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.scrollLink:hover {
+  color: #fff;
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.scrollLabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.scrollIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.4);
+  box-shadow:
+    0 16px 32px rgba(2, 6, 23, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  animation: heroScrollPulse 2.2s ease-in-out infinite;
+}
+
+.scrollIcon svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes underlineExpand {
+  to { transform: scaleX(1); }
+}
+
+@keyframes driftLeft {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(2rem, 1.5rem, 0) scale(1.08); }
+}
+
+@keyframes driftRight {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-1.5rem, -2rem, 0) scale(1.06); }
+}
+
+@keyframes heroScrollPulse {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow:
+      0 16px 32px rgba(2, 6, 23, 0.32),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  50% {
+    transform: translateY(4px);
+    box-shadow:
+      0 22px 36px rgba(2, 6, 23, 0.36),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+}
+
+@media (max-width: 1023px) {
+  .heroPanel {
+    transform: none;
+  }
+}

@@ -4,6 +4,7 @@ import Chart from "chart.js/auto"
 
 import running2024 from "../data/running-2024.json"
 import running2025 from "../data/running-2025.json"
+import styles from "./RunningChart.module.css"
 
 const props = defineProps<{ year: "2024" | "2025" }>()
 
@@ -74,7 +75,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="chart-shell">
+  <div :class="styles.chartShell">
     <canvas ref="canvas" />
   </div>
 </template>

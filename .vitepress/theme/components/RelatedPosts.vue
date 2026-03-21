@@ -4,6 +4,7 @@ import { useData } from "vitepress"
 
 import { data as posts } from "../data/posts.data"
 import { tagToSlug } from "../lib/content"
+import styles from "./RelatedPosts.module.css"
 
 const { frontmatter, page } = useData()
 
@@ -33,10 +34,10 @@ const related = computed(() => {
 </script>
 
 <template>
-  <section v-if="related.length" class="related-posts">
-    <h2>Related posts</h2>
+  <section v-if="related.length" :class="styles.relatedPosts">
+    <h2 :class="styles.title">Related posts</h2>
 
-    <div class="related-posts__grid">
+    <div class="archive-grid">
       <article
         v-for="entry in related"
         :key="entry.post.url"
