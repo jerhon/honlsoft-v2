@@ -9,6 +9,10 @@ import RelatedPosts from "./components/RelatedPosts.vue"
 
 const { page, frontmatter } = useData()
 
+const layoutClass = computed(() => {
+  return frontmatter.value.unstyled === true ? "hs-layout-unstyled" : undefined
+})
+
 const showPageMeta = computed(() => {
   if (
     page.value.isNotFound ||
@@ -62,7 +66,7 @@ watch(
 </script>
 
 <template>
-  <DefaultTheme.Layout>
+  <DefaultTheme.Layout :class="layoutClass" >
     <template #doc-before>
       <PageMeta v-if="showPageMeta" />
     </template>

@@ -174,7 +174,7 @@ watch(
 
 <template>
   <div :class="styles.root">
-    <section :class="[styles.hero, 'hs-page-width']">
+    <section :class="[styles.hero, 'hs-page-width px-6 sm:px-8 lg:px-12']">
       <nav :class="styles.breadcrumbs" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span>/</span>
@@ -205,7 +205,7 @@ watch(
 
     </section>
 
-    <div :class="[styles.body, 'hs-page-width']">
+    <div :class="[styles.body, 'hs-page-width px-4 ']">
       <div :class="styles.main">
         <article class="hs-content-shell">
           <div ref="contentRef">

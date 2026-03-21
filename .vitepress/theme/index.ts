@@ -10,6 +10,7 @@ import BlogArchive from "./components/BlogArchive.vue"
 import FitnessLinks from "./components/FitnessLinks.vue"
 import HeroSection from "./components/HeroSection.vue"
 import HomeSections from "./components/HomeSections.vue"
+import PageLayout from "./components/PageLayout.vue"
 import ProjectArchive from "./components/ProjectArchive.vue"
 import RunningChart from "./components/RunningChart.vue"
 import TagArchive from "./components/TagArchive.vue"
@@ -24,6 +25,7 @@ const theme: Theme = {
     app.component("FitnessLinks", FitnessLinks)
     app.component("HeroSection", HeroSection)
     app.component("HomeSections", HomeSections)
+    app.component("PageLayout", PageLayout)
     app.component("ProjectArchive", ProjectArchive)
     app.component("RunningChart", RunningChart)
     app.component("TagArchive", TagArchive)

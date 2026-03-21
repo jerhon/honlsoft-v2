@@ -17,13 +17,22 @@ export default defineConfig({
   },
   transformPageData(pageData) {
     if (
-      pageData.frontmatter.type === "blog" &&
+      (pageData.frontmatter.type === "blog" || pageData.frontmatter.type === "page") &&
       pageData.frontmatter.layout == null
     ) {
       return {
         frontmatter: {
           ...pageData.frontmatter,
           layout: "BlogArticleLayout",
+        },
+      }
+    }
+    else
+    {
+      return {
+        frontmatter: {
+          ...pageData.frontmatter,
+          layout: pageData.frontmatter.layout ?? "PageLayout",
         },
       }
     }
