@@ -1,11 +1,10 @@
 ---
 date: "2022-02-26"
 title: "Software Architecture: Components"
+description: "For most of my posts in my software architecture series, I've been talking about defining boundaries and layering software to build a piece of software. In this post, I want to talk about dividing layers up even further into software components. A software component is a set of code that is typically built and deployed together and cannot be broken apart from that deployment unit."
 tags: ["Software Architecture", "Clean Architecture"]
 type: "blog"
-description: "A brief introduction to software components."
 ---
-
 For most of my posts in my software architecture series, I've been talking about defining boundaries and layering software to build a piece of software.
 In this post, I want to talk about dividing layers up even further into software components.
 

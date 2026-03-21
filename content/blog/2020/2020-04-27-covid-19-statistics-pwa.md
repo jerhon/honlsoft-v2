@@ -1,6 +1,7 @@
 ---
 date: "2020-04-27"
 title: "COVID-19 Statistics Web Application - Progressive Web Applications with Angular"
+description: "In this post, I'm going to be turning the COVID-19 statistics web application I've been building into a Progressive Web Application (PWA). PWAs are a modern way to provide an app like experience with a web application without having to build a native application or using a wrapper such as cordova to put it in the store. In short the main experience I'm looking for is the ability to install the web app as an application on a phone."
 tags:
   [
     "Angular",
@@ -10,7 +11,6 @@ tags:
   ]
 type: "blog"
 ---
-
 In this post, I'm going to be turning the COVID-19 statistics web application I've been building into a Progressive Web Application (PWA). PWAs are a modern way to provide an app like experience with a web application without having to build a native application or using a wrapper such as cordova to put it in the store.
 
 In short the main experience I'm looking for is the ability to install the web app as an application on a phone. Like many of the posts in this series, Angular makes converting a web application to a PWA incredibly easy. This will also work on the desktop for modern browsers and OSes that support PWAs.

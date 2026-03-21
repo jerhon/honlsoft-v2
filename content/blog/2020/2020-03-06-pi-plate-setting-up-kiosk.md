@@ -1,10 +1,10 @@
 ---
 date: "2020-03-06"
 title: "The Pi-plate: Setting up a Raspberry Pi Kiosk"
+description: "In my first post, I gave a brief introduction to the pi-plate. In this post, I want to talk about the work it took to get my Raspberry Pi to run as a kiosk. When I reference ‘running my Raspberry Pi as a kiosk’, I generally mean: I had to read a lot of blogs to put this all together."
 tags: ["Pi Plate", "Raspberry Pi", "Linux"]
 type: "blog"
 ---
-
 In my first post, I gave a brief introduction to the pi-plate. In this post, I want to talk about the work it took to get my Raspberry Pi to run as a kiosk.
 
 When I reference ‘running my Raspberry Pi as a kiosk’, I generally mean:

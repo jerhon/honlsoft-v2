@@ -1,11 +1,10 @@
 ---
 date: "2021-05-23"
 title: "Creating a Web Hook for SmartThings via Azure Functions"
+description: "A few years ago, I started placing SmartThings sensors around my home. Mainly, I have a few around doors around the house with contact sensors to know if they've been opened. I've wanted to integrate with them for some time to build various applications around them, or to be able to audit things in my house such as if I leave a door open for too long."
 tags: ["Smart Things", "Azure", "Azure Functions"]
 type: "blog"
-description: "Describes creating a SmartApp for SmartThings via an Azure Function."
 ---
-
 A few years ago, I started placing SmartThings sensors around my home.
 Mainly, I have a few around doors around the house with contact sensors to know if they've been opened.
 

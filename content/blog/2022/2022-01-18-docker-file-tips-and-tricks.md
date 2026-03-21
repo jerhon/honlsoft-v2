@@ -1,11 +1,10 @@
 ---
 date: "2022-01-18"
 title: "Dockerfile Tips and Tricks for .NET"
+description: "I've been working with Docker for close to 4 years now. My first project was a React application that I needed to deploy an on-premsis server. I was fairly new to containers, so I decided I'll just install it on a Linux server and see what the fuss is about."
 tags: [".NET", "Docker"]
 type: "blog"
-description: "A few of my tips and tricks for docker files."
 ---
-
 I've been working with Docker for close to 4 years now.
 My first project was a React application that I needed to deploy an on-premsis server.
 I was fairly new to containers, so I decided I'll just install it on a Linux server and see what the fuss is about.

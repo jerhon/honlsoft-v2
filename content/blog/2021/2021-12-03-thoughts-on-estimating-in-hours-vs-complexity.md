@@ -1,11 +1,10 @@
 ---
 date: "2021-12-03"
 title: "Thoughts on Estimating in Hours vs Complexity"
+description: "Why is estimating in hours so difficult? I often wondered this as I sit and am required to put hours on tasks. I had been formulating ideas on this, and these are the conclusions I've come to so far."
 tags: ["Estimations", "Software Process"]
 type: "blog"
-description: "These are some of my personal thoughts on estimating in hours vs complexity"
 ---
-
 Why is estimating in hours so difficult?
 I often wondered this as I sit and am required to put hours on tasks.
 I had been formulating ideas on this, and these are the conclusions I've come to so far.

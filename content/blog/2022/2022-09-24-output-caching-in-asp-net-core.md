@@ -1,11 +1,10 @@
 ---
 date: "2022-09-24"
 title: "Output Caching in .NET 7 with ASP.Net Core"
+description: "The release of .NET 7 is around the corner with it now in RC. There are several new features that have grabbed my attention that I decided to try out. The first of these is Output Caching in ASP.Net Core 7."
 tags: [".NET", "ASP.Net Core", "Output Caching", ".NET 7"]
 type: "blog"
-description: "Simple examples around output caching in .NET 7 with ASP.Net Core."
 ---
-
 The release of .NET 7 is around the corner with it now in RC.
 There are several new features that have grabbed my attention that I decided to try out.
 

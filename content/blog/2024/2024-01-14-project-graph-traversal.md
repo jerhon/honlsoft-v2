@@ -1,11 +1,10 @@
 ---
 date: "2024-01-14"
 title: "Project Graph Traversal with the MS Build SDK"
+description: "I've been taking a break for a while from my blog. I had been spending some extra time outside of work trying to push forward an initiative inside work to move my workplace forward on containers. It's just been one of those things I personally find important in technical leadership."
 tags: [".NET", "MSBuild SDK", ".NET 8"]
 type: "blog"
-description: "Project Traversal with The MS Build SDK"
 ---
-
 # Happy New Year!
 
 Happy New Year!

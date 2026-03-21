@@ -1,11 +1,10 @@
 ---
 date: "2022-03-26"
 title: "Reading Reference Data in .NET Unit Tests"
+description: "When I'm unit testing in .NET many times I need a very large string or set of data to provide as input to a test case or as a final insertion. I like to use XUnit, but there aren't a lot of clear options to do this in any unit testing framework. One way to do this is to just store the large amount of data in a file somewhere near the test it's self."
 tags: ["Unit Tests", ".NET"]
 type: "blog"
-description: "A quick trick on how to easily read reference data for a test."
 ---
-
 When I'm unit testing in .NET many times I need a very large string or set of data to provide as input to a test case or as a final insertion.
 I like to use XUnit, but there aren't a lot of clear options to do this in any unit testing framework.
 

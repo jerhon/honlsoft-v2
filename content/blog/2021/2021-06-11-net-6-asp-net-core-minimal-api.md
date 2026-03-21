@@ -1,11 +1,10 @@
 ---
 date: "2021-06-11"
 title: "Minimal APIs in .NET Core 6"
+description: "One thing I've been jealous of scripting languages over the years is how easily they can be used to build out small and simple applications. For example, Node.js has the express library whereby a complete API can be built out in a single file. While more complex projects necessitate more framework than that, the required scaffolding for a simple program is fairly low."
 tags: ["C#", ".NET", "ASP.Net"]
 type: "blog"
-description: "The Minimal API Scaffolding in ASP.Net Core 6"
 ---
-
 One thing I've been jealous of scripting languages over the years is how easily they can be used to build out small and simple applications.
 For example, Node.js has the express library whereby a complete API can be built out in a single file.
 While more complex projects necessitate more framework than that, the required scaffolding for a simple program is fairly low.

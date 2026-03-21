@@ -1,11 +1,10 @@
 ---
 date: "2021-12-28"
 title: "New DateOnly and TimeOnly Types in .NET 6"
+description: "I keep finding new little gems in .NET 6. The latest was the DateOnly and TimeOnly structs in .NET 6. Previous to .NET 6, time was typically represented as a DateTime, a DateTimeOffset, or sometimes a TimeSpan for intervals."
 tags: [".NET", "DateOnly", "TimeOnly"]
 type: "blog"
-description: "Using the new DateOnly and TimeOnly structs in C#"
 ---
-
 I keep finding new little gems in .NET 6.
 The latest was the DateOnly and TimeOnly structs in .NET 6.
 

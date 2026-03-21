@@ -1,11 +1,10 @@
 ---
 date: "2023-10-04"
 title: ".NET 8: My Favorite Feature"
+description: "It's getting close to November, and that means a new .NET release is about to be released. While there are a lot of features that deserve attention, there is one feature that is one of my favorites as it's going to reduce the amount of code I need to write. That feature is primary constructors."
 tags: [".NET 8", "Primary Constructors"]
 type: "blog"
-description: "Primary constructors in C# 12"
 ---
-
 It's getting close to November, and that means a new .NET release is about to be released.
 While there are a lot of features that deserve attention, there is one feature that is one of my favorites as it's going to reduce the amount of code I need to write.
 

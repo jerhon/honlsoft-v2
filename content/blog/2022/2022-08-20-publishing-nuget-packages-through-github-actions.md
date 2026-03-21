@@ -1,11 +1,10 @@
 ---
 date: "2022-08-20"
 title: "Publishing a NuGet Package Through GitHub Actions"
+description: "I've been working with Roslyn Source Generators and have gotten to the pointer where there are a few I would like to use for other projects. In order to share the code between these projects, I've decided to create a NuGet package. While I've used NuGet for years and occasionally have had to create a NuGet package here and there for work, I've never actually published one to the official public NuGet repository before."
 tags: [".NET", "GitHub Actions", "NuGet"]
 type: "blog"
-description: "How to publish a NuGet package through GitGub Actions."
 ---
-
 I've been working with Roslyn Source Generators and have gotten to the pointer where there are a few I would like to use for other projects.
 In order to share the code between these projects, I've decided to create a NuGet package.
 While I've used NuGet for years and occasionally have had to create a NuGet package here and there for work, I've never actually published one to the official public NuGet repository before.

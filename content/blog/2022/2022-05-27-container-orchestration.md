@@ -1,11 +1,10 @@
 ---
 date: "2022-05-27"
 title: "Container Orchestration"
+description: "In a previous post, I talked in brief about containers, and their benefits. In this post I want to talk in brief about container orchestration before I get into more in depth technical topics on Kubernetes. Container orchestration is a way to manage running containers and the resources necessary for the containers."
 tags: ["Containers", "Kubernetes"]
 type: "blog"
-description: "A brief introduction to container orchestration."
 ---
-
 In a [previous post](2022-04-08-containers), I talked in brief about containers, and their benefits.
 In this post I want to talk in brief about container orchestration before I get into more in depth technical topics on Kubernetes.
 

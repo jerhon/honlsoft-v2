@@ -1,11 +1,10 @@
 ---
 date: "2021-03-21"
 title: "Building a Minecraft Resource Pack"
+description: "Family Minecraft was recently taken to a new level in my household. We built our own family resource pack. I changed the faces of various mobs in Minecraft to be that of our family."
 tags: ["Minecraft"]
 type: "blog"
-description: "How to create a custom Minecraft resource pack and change the textures on Minecraft mobs."
 ---
-
 Family Minecraft was recently taken to a new level in my household.
 We built our own family resource pack.
 I changed the faces of various mobs in Minecraft to be that of our family.

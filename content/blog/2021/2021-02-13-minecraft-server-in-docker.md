@@ -1,11 +1,10 @@
 ---
 date: "2021-02-13"
 title: "Running a Minecraft Server in Docker"
+description: "I\\'ve been playing Minecraft for years with my kids. I don\\'t know if we will ever stop. We have routine \"family Minecraft\" sessions where we will sit down and all of us will play together in a world."
 tags: ["Docker", "Minecraft"]
 type: "blog"
-description: "Running a Minecraft Server in a Docker Container"
 ---
-
 I've been playing Minecraft for years with my kids.
 I don't know if we will ever stop.
 We have routine "family Minecraft" sessions where we will sit down and all of us will play together in a world.

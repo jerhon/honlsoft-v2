@@ -1,10 +1,10 @@
 ---
 date: "2020-06-20"
 title: "Calendar Application - Accessing the Microsoft Graph API"
+description: "In my previous post, I described setting up an Angular application for authentication to a Microsoft Account using Microsoft's MSAL library. In this post, I will describe connecting to a Microsoft Graph API utilizing the sign in from the MSAL library. Angular has a helper class that can be utilized to make API calls to external services."
 tags: ["Pi Calendar", "Angular", "Raspberry Pi", "Web Development"]
 type: "blog"
 ---
-
 In my previous post, I described setting up an Angular application for authentication to a Microsoft Account using Microsoft's MSAL library. In this post, I will describe connecting to a Microsoft Graph API utilizing the sign in from the MSAL library.
 
 ## Angular HttpClient

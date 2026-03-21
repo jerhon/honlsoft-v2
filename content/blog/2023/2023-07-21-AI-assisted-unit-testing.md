@@ -1,11 +1,10 @@
 ---
 date: "2023-07-21"
 title: "Jetbrains Rider 2023.2 EAP and AI Assisted Unit Testing"
+description: "In my pursuit of refining software development methodologies, I have put a few artificial intelligence (AI) assistants to the test. Initial experiences, were met with mixed results. However, they are continually making progress."
 tags: ["Rider", "AI", "Unit Testing"]
 type: "blog"
-description: "AI assisted unit testing in Rider."
 ---
-
 In my pursuit of refining software development methodologies, I have put a few artificial intelligence (AI) assistants to the test.
 Initial experiences, were met with mixed results.
 They just didn't work well for my personal coding flow.

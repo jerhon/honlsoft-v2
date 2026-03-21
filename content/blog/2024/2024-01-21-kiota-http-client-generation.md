@@ -1,11 +1,10 @@
 ---
 date: "2024-01-21"
 title: "Using Kiota to Generate an HTTP Client"
+description: "For years, I've been using open api generator or NSwag to generate HTTP clients for my projects. While this work well, there were edge cases I felt were hard to satisfy. Recently I learned about Kiota to generate API clients, and it takes a much different approach that I think is better."
 tags: [".NET", "Kiota", ".NET 8"]
 type: "blog"
-description: "Using Kiota to Generate an HTTP Client"
 ---
-
 For years, I've been using [open api generator](https://github.com/OpenAPITools/openapi-generator) or [NSwag](https://github.com/RicoSuter/NSwag) to generate HTTP clients for my projects.
 While this work well, there were edge cases I felt were hard to satisfy.
 Recently I learned about [Kiota](https://learn.microsoft.com/en-us/openapi/kiota/overview) to generate API clients, and it takes a much different approach that I think is better.

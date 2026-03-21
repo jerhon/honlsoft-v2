@@ -1,11 +1,10 @@
 ---
 date: "2021-07-20"
 title: "Typescript Tips: null(and undefined) Checking"
+description: "Null is often described as the million dollar problem or billion dollar mistake. There are so many times when a null check is needed in code that it can be easy to forget them. Javascript compounds this with the additional special case of undefined."
 tags: ["Typescript"]
 type: "blog"
-description: "Various operators for dealing with null in Typescript."
 ---
-
 Null is often described as the million dollar problem or billion dollar mistake.
 There are so many times when a null check is needed in code that it can be easy to forget them.
 Javascript compounds this with the additional special case of undefined.

@@ -1,10 +1,10 @@
 ---
 date: "2020-03-14"
 title: "The Pi-plate: The Nameplate Application"
+description: "In my previous posts, I've introduced my pi-plate project and described how I set up a Raspberry Pi to work as a kiosk. In this post, I will briefly describe the application I built. I put the application I wrote up on Netlify to see, and the source code for the application is on GitHub."
 tags: ["Pi Plate", "Angular"]
 type: "blog"
 ---
-
 In my previous posts, I've introduced my [pi-plate project](https://www.honlsoft.com/projects/pi-plate/) and described how I set up a Raspberry Pi to work as a kiosk. In this post, I will briefly describe the application I built.
 
 I put the application I wrote up on [Netlify](https://www.netlify.com) to see, and the source code for the application is on [GitHub](https://github.com/jerhon/pi-plate). [A link for the running application is here.](https://hs-pi-plate.netlify.com)

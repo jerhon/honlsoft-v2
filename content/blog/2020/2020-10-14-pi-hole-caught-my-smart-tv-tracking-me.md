@@ -1,11 +1,10 @@
 ---
 date: "2020-10-14"
 title: "Pi-hole caught my smart TV tracking me"
+description: "Recently, I updated pi-hole on my Raspberry Pi to version 5. It's been several months since I originally installed it on my Raspberry Pi. After some great results having it block ads, I decided it was time to have it act as the DHCP server for my home network too."
 tags: ["Pi-hole"]
 type: "blog"
-description: "Pi-hole caught my smart TV tracking me"
 ---
-
 Recently, I updated pi-hole on my Raspberry Pi to version 5.
 [It's been several months since I originally installed it on my Raspberry Pi.](./2020-02-11-pihole)
 After some great results having it block ads, I decided it was time to have it act as the DHCP server for my home network too.

@@ -1,11 +1,10 @@
 ---
 date: "2021-07-09"
 title: "Typescript Tips: Destructuring Assignments"
+description: "Typescript has become my favorite language to use during web development. Most of all, I love the type safety. However, there are so many features to the language it's easy for little useful tidbits to get forgotten about."
 tags: ["Typescript"]
 type: "blog"
-description: "Destructuring objects in typescript."
 ---
-
 Typescript has become my favorite language to use during web development.
 Most of all, I love the type safety.
 However, there are so many features to the language it's easy for little useful tidbits to get forgotten about.

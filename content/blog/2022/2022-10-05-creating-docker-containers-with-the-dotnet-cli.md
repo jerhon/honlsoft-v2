@@ -1,11 +1,10 @@
 ---
 date: "2022-10-05"
 title: "Creating Containers in .NET 7 with the .NET CLI"
+description: "One really handy feature with .NET 7 is the ability to create containers directly from the dotnet command line. This lowers the bar to entry with container development, and if you've got a standard ASP.Net application, it's easy to throw it in a container. I just want to put a disclaimer before I begin."
 tags: [".NET", "Containers", ".NET 7"]
 type: "blog"
-description: "How to Easily Build a .NET Container in .NET 7"
 ---
-
 One really handy feature with .NET 7 is the ability to create containers directly from the dotnet command line.
 This lowers the bar to entry with container development, and if you've got a standard ASP.Net application, it's easy to throw it in a container.
 

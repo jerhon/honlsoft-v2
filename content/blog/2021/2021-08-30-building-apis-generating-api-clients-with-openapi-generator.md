@@ -1,11 +1,10 @@
 ---
 date: "2021-08-30"
 title: "Building APIs: Generating API Clients with OpenAPI Generator"
+description: "APIs are one of the basic building blocks of modern software architectures. With the proliferation of HTTP based APIs, facilitating API consumption with minimal effort becomes crucial. The bridge between programming languages and APIs is to use a programmatic API specification that defines the contracts of the API."
 tags: [".NET", "OpenAPI", "C#", "Typescript"]
 type: "blog"
-description: "How to automate generation of an API client from an OpenAPI specification."
 ---
-
 APIs are everywhere!
 APIs are one of the basic building blocks of modern software architectures.
 With the proliferation of HTTP based APIs, facilitating API consumption with minimal effort becomes crucial.

@@ -1,11 +1,10 @@
 ---
 date: "2022-04-08"
 title: "Software Architecture: Containers"
+description: "Containers are a transformational technology that enables an enterprise to move faster by using automation and better hardware allocations. As I'm doing some learning around Kubernetes as one of my technical development goals this year, I've decided to switch gears from my pure Software Architecture blogs to focus more on containers and Kubernetes for a few months to support those personal learning goals. While containers in and of themselves have less to do about software architecture, their usage open up a lot of possibilities around software architecture."
 tags: ["Containers"]
 type: "blog"
-description: "A brief introduction to containers."
 ---
-
 Containers are a transformational technology that enables an enterprise to move faster by using automation and better hardware allocations.
 
 As I'm doing some learning around Kubernetes as one of my technical development goals this year, I've decided to switch gears from my pure Software Architecture blogs to focus more on containers and Kubernetes for a few months to support those personal learning goals.

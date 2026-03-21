@@ -1,12 +1,11 @@
 ---
 date: "2021-02-06"
 title: "Running Startup Logic in ASP.Net Core Applications"
+description: "In web applications, it can be necessary to have tasks that run on start up of an application. In older ASP.Net, this was not as clear cut how to accomplish. In ASP.Net Core there is a clear pattern established through the IHostedService interface to make this a breeze."
 tags:
   [".NET", "ASP.Net", "Web Development", "COVID-19 Statistics Application v2"]
 type: "blog"
-description: "Shows how to run startup logic in an ASP.Net Core application."
 ---
-
 In web applications, it can be necessary to have tasks that run on start up of an application.
 In older ASP.Net, this was not as clear cut how to accomplish.
 In ASP.Net Core there is a clear pattern established through the IHostedService interface to make this a breeze.

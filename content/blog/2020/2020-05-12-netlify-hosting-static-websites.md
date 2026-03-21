@@ -1,10 +1,10 @@
 ---
 date: "2020-05-12"
 title: "Netlify: Hosting Static Websites"
+description: "Over the past year, I've been experimenting with various technologies for building web applications. It is fun hosting them somewhere so other people can see them and writing blog articles about them. In the past web hosting cost money, not a lot of money, but enough to defer me from putting applications on the web."
 tags: ["netlify", "Web Development"]
 type: "blog"
 ---
-
 Over the past year, I've been experimenting with various technologies for building web applications. It is fun hosting them somewhere so other people can see them and writing blog articles about them.
 
 In the past web hosting cost money, not a lot of money, but enough to defer me from putting applications on the web. It also required a do-it-yourself approach to setting up the infrastructure, building the websites, uploading the website somewhere. If I wanted to make the site secure, the cost of TLS certificates was high enough just to prevent from using them on personal sites.

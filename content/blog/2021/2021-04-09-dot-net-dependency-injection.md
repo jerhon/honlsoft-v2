@@ -1,11 +1,10 @@
 ---
 date: "2021-04-10"
 title: "Design Patterns: Dependency Injection"
+description: "One of my favorite features of .NET Core / .NET 5+ is it's dependency injection (DI) framework. If you've been stuck in .NET Framework, or old ASP.Net, it is one of the biggest fundamental changes with how applications are pieced together. I had started using a now abandoned IoC container, Ninject close to ten years ago."
 tags: [".NET", "Dependency Injection", "Design Patterns"]
 type: "blog"
-description: "Describes in brief the idea of dependency injection."
 ---
-
 One of my favorite features of .NET Core / .NET 5+ is it's dependency injection (DI) framework.
 If you've been stuck in .NET Framework, or old ASP.Net, it is one of the biggest fundamental changes with how applications are pieced together.
 

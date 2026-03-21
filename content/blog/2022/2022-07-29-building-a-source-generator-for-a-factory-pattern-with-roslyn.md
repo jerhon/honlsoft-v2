@@ -1,11 +1,10 @@
 ---
 date: "2022-07-29"
 title: "Metaprogramming in .NET: Building a Source Generator for a Factory Pattern with Roslyn"
+description: "In every project there is boilerplate code. It is a particular evil more seen in statically typed languages with the need to express every object in a type safe way. In this post I'm going to be talking about building a Source Generator with Roslyn to auto generate some of this boilerplate."
 tags: [".NET", "Roslyn"]
 type: "blog"
-description: "Talks about the process I went through to build a source generator to automatically build a factory from code."
 ---
-
 In every project there is boilerplate code.
 It is a particular evil more seen in statically typed languages with the need to express every object in a type safe way.
 In this post I'm going to be talking about building a Source Generator with Roslyn to auto generate some of this boilerplate.

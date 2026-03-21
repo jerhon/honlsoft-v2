@@ -1,11 +1,10 @@
 ---
 date: "2022-02-11"
 title: "Software Architecture: Dependency Inversion"
+description: "Dependency inversion is a practice to help decouple code from its implementation. Specifically, it helps to control the flow of dependencies from one component to another. It's a crucial technique to have in a software developer's tool chest as it can help to craft the dependency chain in an application and enforce architectural boundaries."
 tags: ["Software Architecture", "Dependency Inversion"]
 type: "blog"
-description: "Utilizing dependency inversion to control the relationship between software components."
 ---
-
 Dependency inversion is a practice to help decouple code from its implementation.
 Specifically, it helps to control the flow of dependencies from one component to another.
 

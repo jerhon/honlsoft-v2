@@ -1,10 +1,10 @@
 ---
 date: "2020-09-19"
 title: "Sprucing up honlsoft.com with CSS Transitions"
+description: "I've been watching a few pluralsight courses on CSS transitions lately. I've been observing other sites and have noticed a lot of little transitions that improve the overall feel of the site. Things like rotating elements, fading in text, or motion to provide simple animations can add a new level interactivity."
 tags: ["Web Development", "CSS"]
 type: "blog"
 ---
-
 I've been watching a few pluralsight courses on CSS transitions lately.
 I've been observing other sites and have noticed a lot of little transitions that improve the overall feel of the site.
 Things like rotating elements, fading in text, or motion to provide simple animations can add a new level interactivity.

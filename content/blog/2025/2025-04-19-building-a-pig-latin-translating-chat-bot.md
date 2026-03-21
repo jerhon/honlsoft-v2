@@ -1,11 +1,10 @@
 ---
 date: "2025-04-19"
 title: "Building a Pig Latin Translating Chat Bot"
+description: "Generative AI is reshaping software development and becoming a tool that is rapidly expanding in capability. As such, I plan to spend more time on learning and implementing AI-related functionality over the coming year. I'm going to make an LLM that translates a statement to pig latin."
 tags: ["Python", "AI", "LangChain"]
 type: "blog"
-description: "Building a Pig Latin Translating Chat Bot"
 ---
-
 Generative AI is reshaping software development and becoming a tool that is rapidly expanding in capability.
 As such, I plan to spend more time on learning and implementing AI-related functionality over the coming year.
 

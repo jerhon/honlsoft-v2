@@ -1,10 +1,10 @@
 ---
 date: "2020-01-26"
 title: "Arduino Obstacle Avoiding Car Bot"
+description: "A few weeks ago I described my families new years celebration, building a arduino car bot that we used to have a family dance-off. We've been playing around with the arduino bot, and I decided to make it drive and avoid obstacles autonomously. The bot has a servo at the front, with a ultrasonic distance sensor attached to it."
 tags: ["Arduino", "Robotics", "Threading", "Protothreads"]
 type: "blog"
 ---
-
 A few weeks ago I described my families new years celebration, building a arduino car bot that we used to have a family dance-off. We've been playing around with the arduino bot, and I decided to make it drive and avoid obstacles autonomously.
 
 The bot has a servo at the front, with a ultrasonic distance sensor attached to it. The servo turns the sensor in 180 degrees to effectively from side to side. This gives the ability to roughly judge distance objects by the robot.

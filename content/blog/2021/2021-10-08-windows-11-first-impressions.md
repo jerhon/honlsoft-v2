@@ -1,11 +1,10 @@
 ---
 date: "2021-10-08"
 title: "Windows 11 First Impressions"
+description: "Today I updated to Windows 11 on my laptop. After an hour or two of use, this is a blog post on some first impressions of things I've noticed. There are a lot of new things in the OS, these were some initial things I just appreciated as I've been working on Windows 11."
 tags: ["Windows 11"]
 type: "blog"
-description: "First Impressions With Windows 11"
 ---
-
 Today I updated to Windows 11 on my laptop.
 After an hour or two of use, this is a blog post on some first impressions of things I've noticed.
 

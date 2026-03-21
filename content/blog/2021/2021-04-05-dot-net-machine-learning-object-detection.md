@@ -1,11 +1,10 @@
 ---
 date: "2021-04-05"
 title: "Object Detection with ML.Net"
+description: "I've always found machine learning interesting, but never taken the time to implement something. The best way to do that? Involve my Raspberry Pi of course."
 tags: ["Raspberry Pi", "Machine Learning", ".NET", "Object Detection"]
 type: "blog"
-description: "A small project creating a service producing images from a Raspberry PI and object detection through machine learning."
 ---
-
 I've always found machine learning interesting, but never taken the time to implement something.
 The best way to do that?
 Involve my Raspberry Pi of course.

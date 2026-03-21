@@ -1,10 +1,10 @@
 ---
 date: "2020-04-04"
 title: "My Unconventional Monitor Setup"
+description: "Last summer, my work place put into place a remote work policy. I jumped at the opportunity to work from home a few days a week, and overall it's been something I think is very positive for me personally and the company. One of the challenges to this was figuring out my setup regarding my monitors."
 tags: ["Remote Work", "Home Office"]
 type: "blog"
 ---
-
 Last summer, my work place put into place a remote work policy. I jumped at the opportunity to work from home a few days a week, and overall it's been something I think is very positive for me personally and the company.
 
 One of the challenges to this was figuring out my setup regarding my monitors. I previously had two smaller monitors I had used as a work station at home. They were typical 1080p monitors, but not very large. They worked ok, but I always wished I could fit more on them vertically. They were small, and investing in more 1080p monitors was just not something I wanted to do, nor would my systems have the capability to drive the amount of screen real estate I was looking for. Not to mention, the mounting options I would have to deal with to stack them with an ugly bezel in between.

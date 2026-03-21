@@ -1,11 +1,10 @@
 ---
 date: "2021-04-17"
 title: "Raspberry Pi Camera: 3D Printing a Pan / Tilt Arm"
+description: "In a previous post I introduced my project to take pictures with my Raspberry Pi. So far, this is a two part project. For the next part of my project, I wanted to mount my camera on my Raspberry Pi."
 tags: ["Raspberry Pi", ".NET", "Object Detection"]
 type: "blog"
-description: "Describes in brief the idea of dependency injection."
 ---
-
 In a previous post I introduced my project to take pictures with my Raspberry Pi.
 
 So far, this is a two part project.

@@ -1,11 +1,10 @@
 ---
 date: "2021-10-27"
 title: "New Periodic Timer API in .NET 6"
+description: "The GA of .NET 6 is right around the corner, I've posted some articles in the past about upcoming changes I'm looking forward to. While there are a lot of major improvements that get a lot of attention, many of the smaller improvements get pushed to the wayside. One small change that I really like is the new PeriodicTimer class."
 tags: ["C#", ".NET"]
 type: "blog"
-description: "Using the new Timer API in .NET 6"
 ---
-
 The GA of .NET 6 is right around the corner, I've posted some articles in the past about upcoming changes I'm looking forward to.
 While there are a lot of major improvements that get a lot of attention, many of the smaller improvements get pushed to the wayside.
 

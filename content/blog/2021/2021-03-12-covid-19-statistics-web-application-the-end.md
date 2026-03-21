@@ -1,11 +1,10 @@
 ---
 date: "2021-03-12"
 title: "COVID-19 Statistics Web Application: The End"
+description: "About a year ago, I wrote an application that displayed COVID-19 Statitics in a web application. It was a fun little practical Angular project to write. Last week, The COVID Tracking Project stopped collecting and reporting new data."
 tags: ["COVID-19 Statistics Application"]
 type: "blog"
-description: "I've shut down my application that displays numbers from the COVID Tracking Project."
 ---
-
 About a year ago, I wrote an application that displayed COVID-19 Statitics in a web application.
 It was a fun little practical Angular project to write.
 

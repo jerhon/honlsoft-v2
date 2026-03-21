@@ -1,11 +1,10 @@
 ---
 date: "2023-04-07"
 title: "GIT Branching: Branch by Abstraction"
+description: "Many branching strategies work to split up work into smaller pieces that are regularly integrated into a mainline branch. However, often time it is difficult to do this with much larger tasks. I want to highlight a common software development strategy used to overcome this: Branching by Abstraction."
 tags: ["GIT", "Branching"]
 type: "blog"
-description: "A quick synopsis of branching by abstraction."
 ---
-
 Many branching strategies work to split up work into smaller pieces that are regularly integrated into a mainline branch.
 However, often time it is difficult to do this with much larger tasks.
 

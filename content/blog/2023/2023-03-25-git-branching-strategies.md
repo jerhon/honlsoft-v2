@@ -1,11 +1,10 @@
 ---
 date: "2023-03-26"
 title: "GIT: Branching Strategies"
+description: "In the past, I have written several posts about GIT on my blog. Specifically, I want to reflect on the lessons I have learned while trying to determine the appropriate branching strategy for various projects. Over the years, I have had to make this decision numerous times and realized that documenting my experiences would help me better organize my thoughts."
 tags: ["GIT", "Branching"]
 type: "blog"
-description: "A quick reflection on a number of different branching strategies in GIT."
 ---
-
 In the past, I have written several [posts about GIT on my blog](https://www.honlsoft.com/tag/git).
 Specifically, I want to reflect on the lessons I have learned while trying to determine the appropriate branching strategy for various projects.
 

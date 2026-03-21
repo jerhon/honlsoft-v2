@@ -1,11 +1,10 @@
 ---
 date: "2021-06-06"
 title: "New Namespace Features in C# 10"
+description: "With .NET 6 arriving this fall, there are a wealth of new features being introduced that I'm really excited about. With most new .NET versions come new features added to the C# language. As part of this article, I'm going to pick out a few of my favorites being introduced in C# 10 related to namespaces that I'll use often."
 tags: ["C#", ".NET"]
 type: "blog"
-description: "Describes a few of the new changes in C# 10 related to namespaces."
 ---
-
 With .NET 6 arriving this fall, there are a wealth of new features being introduced that I'm really excited about.
 With most new .NET versions come new features added to the C# language.
 

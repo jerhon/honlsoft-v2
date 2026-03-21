@@ -1,11 +1,10 @@
 ---
 date: "2021-09-29"
 title: "Using Skaffold for Local Kubernetes Development"
+description: "I've been a fan of Docker Desktop for years. Docker compose was my go to for developing multi-container applications locally. However, while it was polished there was always a gap between building docker compose files and then running it in Kubernetes."
 tags: ["Documentation", "Skaffold", "Kubernetes", "MiniKube"]
 type: "blog"
-description: "How to use Skaffold for Local Kubernetes Development."
 ---
-
 I've been a fan of Docker Desktop for years.
 Docker compose was my go to for developing multi-container applications locally.
 However, while it was polished there was always a gap between building docker compose files and then running it in Kubernetes.

@@ -1,10 +1,10 @@
 ---
 date: "2020-01-02"
 title: "Arduino Dancing Car Bot"
+description: "My kids received a robotics kit for Christmas. It was a fun project to put together to explain some of the inner workings of robotics. My oldest has been working with scratch, so he really was interested in what 'real code' looks like."
 tags: ["Arduino", "Robotics"]
 type: "blog"
 ---
-
 My kids received a robotics kit for Christmas. [Here's an Amazon link to a similar car](https://www.amazon.com/LAFVIN-Include-Ultrasonic-Bluetooth-Tutorial/dp/B07JN46YSW). It was a fun project to put together to explain some of the inner workings of robotics. My oldest has been working with scratch, so he really was interested in what 'real code' looks like.
 
 It also gave me an excellent way to revisit C/C++ programming as it had been a while since I had done any projects in it.

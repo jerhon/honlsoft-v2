@@ -1,11 +1,10 @@
 ---
 date: "2022-02-12"
 title: "Building a Gatsby Plugin to Render Mermaid Diagrams"
+description: "A while ago, I decided to start using Gatsby to build my personal website (this site). I had been using the static site generator Hugo for a while, but the developer tooling wasn't that great. As I had been working on React pretty exclusively at work, I figured using React would be a better front end as the developer tooling is much better."
 tags: ["Gatsby", "Mermaid"]
 type: "blog"
-description: "Goes through the process of creating a customer remark plugin for gatsby to render mermaid diagrams."
 ---
-
 A while ago, I decided to start using Gatsby to build my personal website (this site).
 I had been using the static site generator Hugo for a while, but the developer tooling wasn't that great.
 As I had been working on React pretty exclusively at work, I figured using React would be a better front end as the developer tooling is much better.

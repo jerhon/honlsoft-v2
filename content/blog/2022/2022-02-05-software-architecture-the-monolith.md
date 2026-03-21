@@ -1,11 +1,10 @@
 ---
 date: "2022-02-08"
 title: "Software Architecture: The Monolithic Application"
+description: "This is the second article in my software architecture series. I'm going to be delving into monolithic software architectures. I will not hit all topics, but again this is just to organize my thoughts after recently reading several books related to software architecture over the past year."
 tags: ["Software Architecture", "Monolith"]
 type: "blog"
-description: "Software Architecture - What's a Monolith"
 ---
-
 This is the second article in my software architecture series.
 I'm going to be delving into monolithic software architectures.
 I will not hit all topics, but again this is just to organize my thoughts after recently reading several books related to software architecture over the past year.

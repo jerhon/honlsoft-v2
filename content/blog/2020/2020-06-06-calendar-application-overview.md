@@ -1,10 +1,10 @@
 ---
 date: "2020-06-06"
 title: "Calendar Application - Another Raspberry Pi Project"
+description: "A few months ago, I built a Raspberry Pi Kiosk that acted as a nameplate. Since then, a lot has changed in the world. I've been working from home full time, so COVID-19 has rendered my nameplate useless."
 tags: ["Pi Calendar", "Raspberry Pi", "Web Development"]
 type: "blog"
 ---
-
 A few months ago, I built a Raspberry Pi Kiosk that acted as a nameplate. Since then, a lot has changed in the world. I've been working from home full time, so COVID-19 has rendered my nameplate useless. Even when work returns to normal, the interactive portions of it don't seem appropriate anymore.
 
 [You can read more about the Raspberry Pi based nameplate I built here.](/projects/pi-plate)

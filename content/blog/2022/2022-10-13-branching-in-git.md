@@ -1,11 +1,10 @@
 ---
 date: "2022-10-13"
 title: "Demystifying GIT: Branching"
+description: "Branching in source control is crucial to building software, and understanding how branching works in GIT can make it much easier to use. Branching is a concept in GIT that differs drastically from traditional source control providers. In my previous post, I discussed the internal structure of GIT commits."
 tags: ["GIT"]
 type: "blog"
-description: "Branching in GIT"
 ---
-
 Branching in source control is crucial to building software, and understanding how branching works in GIT can make it much easier to use.
 Branching is a concept in GIT that differs drastically from traditional source control providers.
 [In my previous post](/blog/2022-10-07-how-does-git-store-files), I discussed the internal structure of GIT commits.

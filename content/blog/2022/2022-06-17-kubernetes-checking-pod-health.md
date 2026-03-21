@@ -1,11 +1,10 @@
 ---
 date: "2022-06-17"
 title: "Kubernetes: Checking Pod Health"
+description: "In my previous post on Pods, I gave a simple example running a container in Kubernetes. In this post, I will be discussing how to check pod health and keep them running with probes. Even the best software fails from time to time."
 tags: ["Containers", "Kubernetes", "Docker"]
 type: "blog"
-description: "A brief introduction to building and running containers in Kubernetes with Docker Desktop."
 ---
-
 In my [previous post on Pods](2022-06-03-kubernetes-running-containers-in-pods), I gave a simple example running a container in Kubernetes.
 In this post, I will be discussing how to check pod health and keep them running with probes.
 

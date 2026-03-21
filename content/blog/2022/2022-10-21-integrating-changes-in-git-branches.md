@@ -1,11 +1,10 @@
 ---
 date: "2022-10-21"
 title: "Demystifying GIT: Merge Commits as GIT Objects"
+description: "Up to this point, we've covered the internal object structure of GIT and the basics of how branches work and how GIT internally tracks branches. I wanted to highlight merging specifically to show how commit objects change based on the different merge types. Merging in GIT is the act of combining two or more commits together."
 tags: ["GIT"]
 type: "blog"
-description: "In this post I look at merge commits and what they look like in GIT's object store."
 ---
-
 Up to this point, we've covered the internal object structure of GIT and the basics of how branches work and how GIT internally tracks branches.
 I wanted to highlight merging specifically to show how commit objects change based on the different merge types.
 

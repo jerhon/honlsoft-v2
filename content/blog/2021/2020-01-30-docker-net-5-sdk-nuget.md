@@ -1,11 +1,10 @@
 ---
 date: "2021-01-30"
 title: "NuGet Certificate Issues in Docker Builds"
+description: "I was playing around with a Covid-19 visualization application trying to publish a container to Dockerhub this morning. The application is built in .NET 5 and React. The image builds ended up failing with some certificate issues."
 tags: ["NuGet"]
 type: "blog"
-description: "NuGet Certificate Issues in Docker Builds"
 ---
-
 I was playing around with a Covid-19 visualization application trying to publish a container to Dockerhub this morning.
 The application is built in .NET 5 and React.
 The image builds ended up failing with some certificate issues.

@@ -1,11 +1,10 @@
 ---
 date: "2022-06-03"
 title: "Kubernetes: Running Containers in Pods"
+description: "I've been working on gaining a deeper understanding of Kubernetes and refreshing my knowledge on the topic. I'll be writing several posts over the remainder of the year on Kubernetes. In my first post I'm going to talk about the basics of running a container in Kubernetes with Docker Desktop."
 tags: ["Containers", "Kubernetes", "Docker"]
 type: "blog"
-description: "A brief introduction to building and running containers in Kubernetes with Docker Desktop."
 ---
-
 I've been working on gaining a deeper understanding of Kubernetes and refreshing my knowledge on the topic.
 I'll be writing several posts over the remainder of the year on Kubernetes.
 In my first post I'm going to talk about the basics of running a container in Kubernetes with Docker Desktop.

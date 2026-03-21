@@ -1,11 +1,10 @@
 ---
 date: "2023-04-04"
 title: "Software Development Books"
+description: "Every year I try to pick up a few engineering books and read them. I decided to look through my bookshelf and compile a list of some of my favorites I've gone through in the past few years and record them in a blog post. Hopefully in a few more years, I will do this again."
 tags: ["Software Development", "Books"]
 type: "blog"
-description: "A few of my favorite software development books from the past few years.."
 ---
-
 Every year I try to pick up a few engineering books and read them.
 I decided to look through my bookshelf and compile a list of some of my favorites I've gone through in the past few years and record them in a blog post.
 Hopefully in a few more years, I will do this again.

@@ -1,10 +1,10 @@
 ---
 date: "2020-06-12"
 title: "Calendar Application - Authenticating with MSAL"
+description: "The first blog in this series is going to describe authenticating as a registered application in Azure Active Directory with Microsoft's MSAL package in Angular. To see all blogs related to my Raspberry Pi calendar application, check out the project page. There are a lot of great things about using an identity service: The application will be integrating with a specific identity provider (Azure Active Directory)."
 tags: ["Pi Calendar", "Raspberry Pi", "Web Development"]
 type: "blog"
 ---
-
 The first blog in this series is going to describe authenticating as a registered application in Azure Active Directory with Microsoft's MSAL package in Angular. To see all blogs related to my Raspberry Pi calendar application, [check out the project page](https://www.honlsoft.com/projects/pi-calendar/).
 
 There are a lot of great things about using an identity service:

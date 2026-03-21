@@ -1,10 +1,10 @@
 ---
 date: "2019-05-13"
 title: "Setting Receive Timeouts on a Web Service Client in Spring Framework"
+description: "I'm working on a project utilizing Java and Spring Framework. Recently, I had a situation where I was calling a SOAP web service was taking a very long time to complete. I just needed to increase the receive timeout."
 tags: ["Java", "Spring Framework", "SOAP"]
 type: "blog"
 ---
-
 I'm working on a project utilizing Java and Spring Framework. Recently, I had a situation where I was calling a SOAP web service was taking a very long time to complete. This is a simple problem to resolve. I just needed to increase the receive timeout. However, the actual code to fix this was not quite as straight forward.
 
 For my client code, I usually make a simple wrapper to make WebService calls by extending the WebServiceGatewaySupport class. From time to time, I consider using WebServiceTemplate as well, but extending WebServiceGatewaySupport provides me a bit more configurability.

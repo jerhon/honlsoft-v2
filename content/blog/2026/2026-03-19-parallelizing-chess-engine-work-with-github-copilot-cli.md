@@ -1,11 +1,10 @@
 ---
 date: "2026-03-19"
 title: "Parallelizing Chess Engine Work with GitHub Copilot CLI"
+description: "I had the day off for spring break to spend time with family, but everyone was still asleep and I had a quiet block of time in the morning. Instead of scrolling, I decided to use that time to level up my AI workflow. Over the last few weeks, GitHub Copilot has shifted for me from a tool that answers questions and occasionally completes code to something closer to an entry-level co-contributor."
 tags: ["GitHub Copilot", "AI", "CLI", "Go", "Developer Productivity"]
 type: "blog"
-description: "A practical experiment using GitHub Copilot and Copilot CLI to split chess engine fixes into multiple parallel AI-agent pull requests."
 ---
-
 I had the day off for spring break to spend time with family, but everyone was still asleep and I had a quiet block of time in the morning.
 Instead of scrolling, I decided to use that time to level up my AI workflow.
 

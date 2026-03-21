@@ -1,11 +1,10 @@
 ---
 date: "2021-01-18"
 title: "Icon Libraries in React"
+description: "Part of the look and feel of building a web application is determining what icons to use. There are so many great standalone icon libraries available today. Many design frameworks and languages offer their own icon libraries."
 tags: ["React", "Web Development"]
 type: "blog"
-description: "Using react-icons as an Icon Library for React"
 ---
-
 Part of the look and feel of building a web application is determining what icons to use.
 There are so many great standalone icon libraries available today.
 Many design frameworks and languages offer their own icon libraries.

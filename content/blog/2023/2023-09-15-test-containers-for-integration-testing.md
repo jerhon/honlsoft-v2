@@ -1,11 +1,10 @@
 ---
 date: "2023-09-15"
 title: "Utilizing Testcontainers for Integration Testing"
+description: "When writing automated tests, one of the hardest parts of is when integration testing and external dependencies are required-- like a database or external service. While running these things may not be hard an and of itself, maintaining consistency between the tests and the dependencies can be difficult. Recently, I've been working on a legacy data access library that needed some refactoring to get to .NET 6 from .NET 4.8."
 tags: ["containers", "docker", "integration-testing", "testing"]
 type: "blog"
-description: "Utilizing Testcontainers for integration testing."
 ---
-
 When writing automated tests, one of the hardest parts of is when integration testing and external dependencies are required-- like a database or external service.
 While running these things may not be hard an and of itself, maintaining consistency between the tests and the dependencies can be difficult.
 

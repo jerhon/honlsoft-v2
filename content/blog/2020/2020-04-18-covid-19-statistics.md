@@ -1,10 +1,10 @@
 ---
 date: "2020-04-18"
 title: "COVID-19 Statistics Web Application"
+description: "I've been working with Angular as my primary platform for building web applications for over a year now. I've typically used Angular Material as my UI component framework. However, there are several other good frameworks out there to build high quality applications."
 tags: ["Angular", "COVID-19", "COVID-19 Statistics Application"]
 type: "blog"
 ---
-
 I've been working with Angular as my primary platform for building web applications for over a year now. I love it. I've typically used [Angular Material](https://material.angular.io/) as my UI component framework. However, there are several other good frameworks out there to build high quality applications.
 
 One of these that's always intrigued me has been the [Clarity Design](https://clarity.design/). It's an open source framework that's supported by VMware. I finally decided to give it a try for a small web application.

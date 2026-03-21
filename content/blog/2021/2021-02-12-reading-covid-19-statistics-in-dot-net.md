@@ -1,12 +1,11 @@
 ---
 date: "2021-02-12"
 title: "Reading COVID-19 Statistics in .NET"
+description: "As part of my new COVID-19 application I've been writing, I had to import statistics from a data source. The COVID Tracking Project maintains daily records of various statistics regarding the pandemic for each state and at a nation level. It publishes this data as an API and also as a set of CSV files."
 tags:
   [".NET", "ASP.Net", "Web Development", "COVID-19 Statistics Application v2"]
 type: "blog"
-description: "Importing and Reading COVID-19 Statistics in .NET"
 ---
-
 As part of my new COVID-19 application I've been writing, I had to import statistics from a data source.
 [The COVID Tracking Project](https://covidtracking.com/) maintains daily records of various statistics regarding the pandemic for each state and at a nation level.
 It publishes this data as an API and also as a set of CSV files.

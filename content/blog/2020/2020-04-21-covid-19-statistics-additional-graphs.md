@@ -1,10 +1,10 @@
 ---
 date: "2020-04-21"
 title: "COVID-19 Statistics Web Application - Additional Graphs"
+description: "After publishing my original application, I decided to add a few graphs to it to show daily test results and a few other trends. This is a short post to describe the changes. There are several good charting libraries in Angular to use."
 tags: ["Angular", "COVID-19", "COVID-19 Statistics Application"]
 type: "blog"
 ---
-
 After publishing my original application, I decided to add a few graphs to it to show daily test results and a few other trends. This is a short post to describe the changes.
 
 ![New COVID-19 Graphs](../images/covid-19-stats-new-graphs.jpg)

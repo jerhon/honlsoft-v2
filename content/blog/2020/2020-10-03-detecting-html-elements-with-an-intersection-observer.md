@@ -1,11 +1,10 @@
 ---
 date: "2020-10-03"
 title: "Detecting HTML Elements with an Intersection Observer"
+description: "Ever wanted to animate an HTML element as it becomes visible on a webpage? Often, I've seen others make cool animations that trigger when scrolled into view on a website page. For example, sliding text in from the right when the page scrolls in, or making text fade in when it scrolls into view."
 tags: ["Web Development", "CSS"]
 type: "blog"
-description: "A basic example and description of using an intersection observer in a web page."
 ---
-
 Ever wanted to animate an HTML element as it becomes visible on a webpage?
 Me too.
 Often, I've seen others make cool animations that trigger when scrolled into view on a website page.

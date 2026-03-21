@@ -1,11 +1,10 @@
 ---
 date: "2022-02-18"
 title: "Software Architecture: Clean Architecture"
+description: "Clean Architecture is a pattern set out by Robert Martin, also known as \"Uncle Bob\" in the software industry. It can read about in his book Clean Architecture: A Craftsman\\'s Guide to Software Structure and Design. This is a post to summarize my thoughts after reading the book last year."
 tags: ["Software Architecture", "Clean Architecture"]
 type: "blog"
-description: "A brief overview of clean architecture."
 ---
-
 Clean Architecture is a pattern set out by Robert Martin, also known as "Uncle Bob" in the software industry.
 It can read about in his book [Clean Architecture: A Craftsman's Guide to Software Structure and Design](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164).
 This is a post to summarize my thoughts after reading the book last year.

@@ -1,12 +1,11 @@
 ---
 date: "2021-09-17"
 title: "Using Material for MkDocs for Project Documentation"
+description: "Many software projects enlist the amount of complexity that requires documentation. The primary reason for the documentation to either aid external users on how to use the project, or to document the internal complexities of the software for other developers. While commenting code and public interfaces can help, it's sometimes helpful to include extra details about how an application is built for other maintainers."
 tags: ["Documentation", "MkDocs"]
 type: "blog"
-description: "How to generate great looking project documentation utilizing Material for MkDocs."
 image: "./images/mkdocs-document-generation.jpg"
 ---
-
 Many software projects enlist the amount of complexity that requires documentation.
 The primary reason for the documentation to either aid external users on how to use the project, or to document the internal complexities of the software for other developers.
 While commenting code and public interfaces can help, it's sometimes helpful to include extra details about how an application is built for other maintainers.

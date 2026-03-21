@@ -1,10 +1,10 @@
 ---
 date: "2020-02-06"
 title: "Java Generics"
+description: "I've been working for about a year now building applications in Java with Spring Boot. Don't get me wrong, I think Java is capable, and Spring Boot is a great framework that has no comparison in .NET. However, in terms of being able to get things done C# and .NET are by far my favorite language/environment."
 tags: ["Java"]
 type: "blog"
 ---
-
 I've been working for about a year now building applications in Java with Spring Boot. Don't get me wrong, I think Java is capable, and Spring Boot is a great framework that has no comparison in .NET. However, in terms of being able to get things done C# and .NET are by far my favorite language/environment.
 
 One thing I recently ran into is the use of generics in Java. In particular, I have a set of APIs and I'm conveying their requests and responses with DTOs. I also have a database that's being developed via JPA entities. Many of the APIs are just wrappers around being able to do something against the database.

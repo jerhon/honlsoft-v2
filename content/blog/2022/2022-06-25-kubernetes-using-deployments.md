@@ -1,11 +1,10 @@
 ---
 date: "2022-06-25"
 title: "Kubernetes: Deployments"
+description: "In my previous posts regarding Kubernetes, I've written primarily about running containers in Pods on Kubernetes. Pods provide a basic building block in kubernetes that allows to execute containers within a Kubernetes cluster. In future posts, I'm going to move on to other concepts that can be built off of Pods within Kubernetes."
 tags: ["Containers", "Kubernetes", "Docker"]
 type: "blog"
-description: "Using deployments to scale workloads in Kubernetes.."
 ---
-
 In my previous posts regarding Kubernetes, I've written primarily about running containers in Pods on Kubernetes.
 Pods provide a basic building block in kubernetes that allows to execute containers within a Kubernetes cluster.
 In future posts, I'm going to move on to other concepts that can be built off of Pods within Kubernetes.

@@ -1,11 +1,10 @@
 ---
 date: "2026-02-13"
 title: "How to Create a Custom GitHub Copilot Agent"
+description: "I’ve been trying to use Copilot more for focused workflows lately, and one of the best upgrades is creating custom agents for specific tasks. Instead of re-explaining context in every prompt, I can encode behavior once in an agent profile and reuse it. In this article, I'll share how I created a custom Copilot agent for authoring blog post which actually helped me with the rough draft of this blog article."
 tags: ["GitHub Copilot", "AI", "VS Code", "Developer Tools"]
 type: "blog"
-description: "A practical walkthrough for creating a custom GitHub Copilot agent profile, configuring tools and prompts, and using it in day-to-day development."
 ---
-
 I’ve been trying to use Copilot more for focused workflows lately, and one of the best upgrades is creating custom agents for specific tasks.
 Instead of re-explaining context in every prompt, I can encode behavior once in an agent profile and reuse it.
 

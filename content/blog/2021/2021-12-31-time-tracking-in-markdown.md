@@ -1,11 +1,10 @@
 ---
 date: "2021-12-31"
 title: "Tracking Time in Markdown"
+description: "Over the New Years break, I built a little console app to help with my new practice of engineering daybook. Engineering daybooks are the practice of documenting what happened in a work day. If you have read the Pragmatic Programmer, the practice is discussed in Topic 22."
 tags: [".NET", "Practices"]
 type: "blog"
-description: "My Engineering Daybook: Tracking Time in Markdown"
 ---
-
 Over the New Years break, I built a little console app to help with my new practice of engineering daybook.
 Engineering daybooks are the practice of documenting what happened in a work day.
 If you have read the [Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X), the practice is discussed in Topic 22.

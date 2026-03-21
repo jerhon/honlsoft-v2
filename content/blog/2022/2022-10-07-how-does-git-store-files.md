@@ -1,11 +1,10 @@
 ---
 date: "2022-10-07"
 title: "Demystifying GIT: An Overview of How Git Stores Files"
+description: "I've been using it in some form for the past 10 years. First to keep personal projects, and later at work. In stack overflow surveys of developer, GIT it consistently ranks high in usage with 90%+ of surveyed developer utilization using it in the last survey."
 tags: ["GIT"]
 type: "blog"
-description: "An overview of how GIT stores files."
 ---
-
 I really like GIT.
 I've been using it in some form for the past 10 years.
 First to keep personal projects, and later at work.

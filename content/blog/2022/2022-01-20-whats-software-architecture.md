@@ -1,11 +1,10 @@
 ---
 date: "2022-01-21"
 title: "Software Architecture"
+description: "I picked up the book Fundamentals of Software Architecture and have been reading through it. I had also read Clean Architecture last year. So, thoughts about software architecture have been on my mind as of late."
 tags: ["Software Architecture"]
 type: "blog"
-description: "Reflections from 'The Fundamentals of Software Architecture."
 ---
-
 I picked up the book [Fundamentals of Software Architecture](https://www.amazon.com/Fundamentals-Software-Architecture-Comprehensive-Characteristics/dp/1492043451/) and have been reading through it.
 I had also read [Clean Architecture]() last year.
 So, thoughts about software architecture have been on my mind as of late.

@@ -1,11 +1,10 @@
 ---
 date: "2022-02-01"
 title: "Using GitHub Actions to Build Docker Images"
+description: "Docker is a great tool for deploying applications. One of these primary reasons is packaging up an application in an image which can easily be deployed across systems. The Docker image needs to be built and it needs to be pushed to a container registry."
 tags: ["GitHub", "Docker"]
 type: "blog"
-description: "Utilizing GitHub Actions to Build Docker Images"
 ---
-
 Docker is a great tool for deploying applications.
 One of these primary reasons is packaging up an application in an image which can easily be deployed across systems.
 The Docker image needs to be built and it needs to be pushed to a container registry.
