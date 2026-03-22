@@ -218,6 +218,7 @@
   color: #93c5fd;
 }
 
+.content :global(h1),
 .content :global(h2),
 .content :global(h3),
 .content :global(h4) {
@@ -225,6 +226,12 @@
   font-family: "Lato", sans-serif;
   line-height: 1.15;
   text-wrap: balance;
+}
+
+.content :global(h1) {
+  margin-top: 3.35rem;
+  margin-bottom: 1.1rem;
+  font-size: clamp(1.95rem, 2.8vw, 2.8rem);
 }
 
 .content :global(h2) {

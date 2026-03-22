@@ -3,6 +3,7 @@ title: Fitness Goals 2025
 description: Running and fitness notes for 2025.
 type: blog
 sidebar: false
+showDescription: false
 outline: [2, 2]
 ---
 

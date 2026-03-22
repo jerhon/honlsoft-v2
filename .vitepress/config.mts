@@ -8,11 +8,9 @@ export default defineConfig({
   description: "A personal and software development blog.",
   appearance: false,
   cleanUrls: true,
-  outDir: "public",
   srcDir: "content",
   ignoreDeadLinks: "localhostLinks",
   lastUpdated: true,
-  assetsDir: "static",
   rewrites(id) {
     return id.replace(/^blog\/[^/]+\//, "blog/")
   },
@@ -51,7 +49,7 @@ export default defineConfig({
     },
   },
   themeConfig: {
-    logo: "/img/honlsoft.svg",
+    logo: "/assets/img/honlsoft.svg",
     nav: [
       { text: "Blog", link: "/blog/" },
       { text: "Projects", link: "/projects/" },
@@ -59,24 +57,10 @@ export default defineConfig({
       { text: "Links", link: "/links" },
       { text: "Fitness", link: "/fitness-2025" },
     ],
-    search: {
-      provider: "local",
-    },
-    outline: {
-      level: [2, 3],
-    },
-    docFooter: {
-      prev: false,
-      next: false,
-    },
     socialLinks: [{ icon: "github", link: "https://github.com/jerhon/honlsoft-v2" }],
-    footer: {
-      message: "Built with VitePress and Markdown.",
-      copyright: "Copyright © Jeremy Honl",
-    },
   },
   vite: {
     plugins: [tailwindcss()],
-    publicDir: "static",
+    publicDir: "../assets",
   },
 })

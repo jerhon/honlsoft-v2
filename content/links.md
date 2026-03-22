@@ -3,9 +3,12 @@ title: Links
 description: A handful of useful software development and technology links.
 type: blog
 page: links
+showDescription: false
 sidebar: false
 outline: [2, 2]
 ---
+
+These are useful links I use for software development and technology news. I will update this page as I find new resources. If you have any suggestions, please let me know.
 
 ## .NET
 

@@ -32,6 +32,7 @@ export default createContentLoader("projects/*.md", {
             typeof page.frontmatter.project === "string"
               ? page.frontmatter.project
               : undefined,
+          frontmatter: page.frontmatter,
         }
       })
       .sort((left, right) => {

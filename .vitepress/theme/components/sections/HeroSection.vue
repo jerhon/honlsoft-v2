@@ -6,17 +6,6 @@ import { formatDate } from "../../lib/content"
 import styles from "./HeroSection.module.css"
 
 const latestPost = computed(() => posts[0] ?? null)
-
-function scrollToPosts() {
-  if (typeof document === "undefined") {
-    return
-  }
-
-  document.getElementById("recent-posts")?.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  })
-}
 </script>
 
 <template>
@@ -106,19 +95,6 @@ function scrollToPosts() {
               </a>
             </div>
           </section>
-
-          <div
-            :class="[
-              styles.fadeUp,
-              styles.delay6,
-              'flex flex-wrap gap-3 pt-2 text-sm text-blue-100/80',
-            ]"
-          >
-            <span class="hs-chip">Software Architecture</span>
-            <span class="hs-chip">.NET &amp; APIs</span>
-            <span class="hs-chip">AI Tooling</span>
-            <span class="hs-chip">Side Projects</span>
-          </div>
         </div>
 
         <div :class="[styles.fadeUp, styles.delay4, 'relative']">
@@ -174,24 +150,5 @@ function scrollToPosts() {
       </div>
     </div>
 
-    <button
-      type="button"
-      :class="styles.scrollLink"
-      aria-label="Scroll to recent posts"
-      @click="scrollToPosts"
-    >
-      <span :class="styles.scrollLabel">Recent posts</span>
-      <span :class="styles.scrollIcon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none">
-          <path
-            d="M12 6v12m0 0 4-4m-4 4-4-4"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.8"
-          />
-        </svg>
-      </span>
-    </button>
   </section>
 </template>

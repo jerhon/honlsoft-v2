@@ -29,7 +29,13 @@ export function useArticleLayout() {
     return titleFromSlug(relativePath.split("/").pop() ?? "article")
   })
 
+    const showDescription = computed(() => frontmatter.value.showDescription !== false)
+
   const description = computed(() => {
+      if (!showDescription.value) {
+        return ""
+      }
+
     if (
       typeof frontmatter.value.description === "string" &&
       frontmatter.value.description.length > 0

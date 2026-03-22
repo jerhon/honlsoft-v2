@@ -36,10 +36,6 @@
   width: 2.6rem;
   height: 2.6rem;
   flex: none;
-  border: 1px solid rgba(148, 163, 184, 0.16);
-  border-radius: 0;
-  padding: 0.38rem;
-  background: rgba(255, 255, 255, 0.03);
   box-shadow: none;
 }
 

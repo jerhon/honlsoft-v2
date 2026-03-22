@@ -14,7 +14,7 @@ const projectPosts = computed<ContentCard[]>(() => {
     url: project.url,
     slug: project.slug,
     date: project.date,
-    image: project.image,
+    image: project.image
   }))
 })
 </script>

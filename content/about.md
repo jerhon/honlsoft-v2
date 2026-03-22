@@ -3,6 +3,7 @@ title: About Me
 type: blog
 page: about
 sidebar: false
+showDescription: false
 outline: [2, 3]
 ---
 

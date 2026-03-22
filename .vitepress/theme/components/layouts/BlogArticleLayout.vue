@@ -25,7 +25,13 @@ const title = computed(() => {
   return titleFromSlug(relativePath.split("/").pop() ?? "article")
 })
 
+const showDescription = computed(() => frontmatter.value.showDescription !== false)
+
 const description = computed(() => {
+  if (!showDescription.value) {
+    return ""
+  }
+
   if (
     typeof frontmatter.value.description === "string" &&
     frontmatter.value.description.length > 0
@@ -45,6 +51,8 @@ const publishedOn = computed(() =>
 )
 
 const tags = computed(() => {
+
+
   return Array.isArray(frontmatter.value.tags)
     ? frontmatter.value.tags.map(String)
     : []
