@@ -24,7 +24,7 @@ function scrollToPosts() {
     :class="[styles.heroShell, 'relative isolate overflow-hidden text-white']"
     aria-label="Honlsoft introduction"
   >
-    <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-blue-900"></div>
+    <div class="absolute inset-0 bg-linear-to-br from-slate-950 via-blue-950 to-blue-900"></div>
     <div :class="[styles.heroAurora, styles.heroAuroraLeft]"></div>
     <div :class="[styles.heroAurora, styles.heroAuroraRight]"></div>
     <div :class="[styles.heroGrid, 'absolute inset-0 opacity-30']"></div>
@@ -123,7 +123,7 @@ function scrollToPosts() {
 
         <div :class="[styles.fadeUp, styles.delay4, 'relative']">
           <div :class="[styles.heroPanel, 'hs-panel p-6']">
-            <div class="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-blue-300/10"></div>
+            <div class="absolute inset-0 bg-linear-to-br from-white/10 via-transparent to-blue-300/10"></div>
 
             <div class="relative space-y-6">
               <div class="flex items-center justify-between">

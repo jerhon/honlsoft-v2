@@ -1,4 +1,3 @@
-import DefaultTheme from "vitepress/theme"
 import type { Theme } from "vitepress"
 
 import Layout from "./Layout.vue"
@@ -17,7 +16,6 @@ import TagArchive from "./components/TagArchive.vue"
 import TagDirectory from "./components/TagDirectory.vue"
 
 const theme: Theme = {
-  extends: DefaultTheme,
   Layout,
   enhanceApp({ app }) {
     app.component("BlogArticleLayout", BlogArticleLayout)

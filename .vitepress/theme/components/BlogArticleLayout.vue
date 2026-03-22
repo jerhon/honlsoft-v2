@@ -180,11 +180,6 @@ watch(
       id="article-overview"
       :class="[styles.hero, 'hs-page-width px-6 sm:px-8 lg:px-12']"
     >
-      <nav :class="styles.breadcrumbs" aria-label="Breadcrumb">
-        <a href="/">Home</a>
-        <span>/</span>
-        <a href="/blog/">Blog</a>
-      </nav>
       <h1 :class="styles.title">{{ title }}</h1>
       <p v-if="description" :class="styles.description">
         {{ description }}

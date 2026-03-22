@@ -47,6 +47,18 @@
   transform: perspective(1400px) rotateY(-10deg) rotateX(4deg);
 }
 
+.heroLogoWrap {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+}
+
+.heroLogo {
+  width: min(100%, 10rem);
+  height: auto;
+  filter: drop-shadow(0 20px 34px rgba(15, 23, 42, 0.32));
+}
+
 .heroKicker {
   text-shadow: 0 8px 28px rgba(15, 23, 42, 0.45);
 }
@@ -174,5 +186,9 @@
 @media (max-width: 1023px) {
   .heroPanel {
     transform: none;
+  }
+
+  .heroLogo {
+    width: min(100%, 8.5rem);
   }
 }
