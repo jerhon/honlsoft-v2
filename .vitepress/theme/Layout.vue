@@ -4,13 +4,13 @@ import { useData } from "vitepress"
 import mermaid from "mermaid"
 
 import BlogArticleLayout from "./components/layouts/BlogArticleLayout.vue"
+import EmptyViewLayout from "./components/layouts/EmptyViewLayout.vue"
 import PageLayout from "./components/layouts/PageLayout.vue"
-import SiteNavbar from "./components/SiteNavbar.vue"
+import SiteNavbar from "./components/sections/SiteNavbar.vue"
 
 const { page, frontmatter } = useData()
 
 function getLayoutComponent(): Component {
-  
   const pageType =
     typeof frontmatter.value.type === "string"
       ? frontmatter.value.type.toLowerCase()
@@ -20,8 +20,12 @@ function getLayoutComponent(): Component {
     return PageLayout
   }
 
-  if (pageType === "blog") {
+  if (pageType === "blog" || pageType === "project") {
     return BlogArticleLayout
+  }
+
+  if (pageType === "hero") {
+    return EmptyViewLayout
   }
 
   return PageLayout

@@ -2,7 +2,7 @@
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from "vue"
 import { useData } from "vitepress"
 
-import RelatedPosts from "../RelatedPosts.vue"
+import RelatedPosts from "../sections/RelatedPosts.vue"
 import { formatDate, tagToSlug, titleFromSlug } from "../../lib/content"
 import styles from "./BlogArticleLayout.module.css"
 
@@ -208,7 +208,7 @@ watch(
       :class="[
         styles.body,
         !headers.length && styles.bodyNoAside,
-        headers.length ? 'hs-page-width px-4' : 'px-4',
+        'hs-page-width px-4',
       ]"
     >
       <div :class="styles.main">

@@ -7,7 +7,7 @@ description: >-
   another service running on a laptop applies ML.NET object detection to that
   image. The result is a practical machine learning experiment that can identify
   everyday objects from the live camera feed.
-type: "projects"
+type: project
 project: "Object Detection"
 image: "./images/raspberry-pi-object-detection.jpg"
 ---

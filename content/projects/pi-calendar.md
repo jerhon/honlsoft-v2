@@ -6,7 +6,7 @@ description: >-
   appointments throughout the day. It integrates with a Microsoft account to
   bring calendar data onto a dedicated device. The result is a focused
   dashboard-style display built specifically for the Raspberry Pi.
-type: "projects"
+type: project
 project: "Pi Calendar"
 image: "./images/raspberry-pi-calendar.jpg"
 ---

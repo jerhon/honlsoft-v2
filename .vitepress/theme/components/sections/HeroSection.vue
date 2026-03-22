@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from "vue"
 
-import { data as posts } from "../data/posts.data"
-import { formatDate } from "../lib/content"
+import { data as posts } from "../../data/posts.data"
+import { formatDate } from "../../lib/content"
 import styles from "./HeroSection.module.css"
 
 const latestPost = computed(() => posts[0] ?? null)

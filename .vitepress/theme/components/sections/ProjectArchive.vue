@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed } from "vue"
 
-import { data as projects } from "../data/projects.data"
-import type { ContentCard } from "../lib/content"
-import PostList from "./PostList.vue"
+import { data as projects } from "../../data/projects.data"
+import type { ContentCard } from "../../lib/content"
+import PostList from "../PostList.vue"
 
 const projectPosts = computed<ContentCard[]>(() => {
   return projects.map(project => ({

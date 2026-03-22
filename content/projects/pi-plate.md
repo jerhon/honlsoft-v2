@@ -6,7 +6,7 @@ description: >-
   project. It turns a simple nameplate into a small custom hardware and software
   experiment. The related blog posts go deeper into how the project was put
   together.
-type: "projects"
+type: project
 project: "Pi Plate"
 image: "./images/pi-plate-nameplate.jpg"
 ---

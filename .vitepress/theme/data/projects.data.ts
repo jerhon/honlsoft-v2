@@ -9,7 +9,7 @@ export default createContentLoader("projects/*.md", {
   excerpt: true,
   transform(rawData): ProjectCard[] {
     return rawData
-      .filter(page => page.frontmatter.type === "projects")
+      .filter(page => page.frontmatter.type === "project")
       .map(page => {
         const slug = slugFromUrl(page.url)
         return {

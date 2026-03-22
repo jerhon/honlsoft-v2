@@ -88,7 +88,11 @@
 }
 
 .bodyNoAside {
-  grid-template-columns: minmax(0, 1fr);
+  justify-content: stretch;
+}
+
+.bodyNoAside .main {
+  grid-column: 1 / -1;
 }
 
 .main {

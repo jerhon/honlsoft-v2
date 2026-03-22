@@ -6,7 +6,7 @@ description: >-
   with the Clarity Design framework. It presents pandemic statistics in a simple
   web interface focused on making the data easy to browse. The project page
   links out to additional resources that go into more detail.
-type: "projects"
+type: project
 project: "COVID-19 Statistics Application"
 image: "./images/covid-19-stats.jpg"
 ---

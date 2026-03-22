@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed } from "vue"
 
-import { data as posts } from "../data/posts.data"
-import PostList from "./PostList.vue"
-import styles from "./HomeSections.module.css"
+import { data as posts } from "../../data/posts.data"
+import PostList from "../PostList.vue"
+import styles from "./RecentPosts.module.css"
 
 const recentPosts = computed(() => posts.slice(0, 10))
 </script>

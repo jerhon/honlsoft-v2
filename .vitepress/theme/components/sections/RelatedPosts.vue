@@ -2,8 +2,8 @@
 import { computed } from "vue"
 import { useData } from "vitepress"
 
-import { data as posts } from "../data/posts.data"
-import { tagToSlug } from "../lib/content"
+import { data as posts } from "../../data/posts.data"
+import { tagToSlug } from "../../lib/content"
 import styles from "./RelatedPosts.module.css"
 
 const { frontmatter, page } = useData()
