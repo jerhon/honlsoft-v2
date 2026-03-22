@@ -2,7 +2,6 @@
 title: Fitness Goals 2025
 description: Running and fitness notes for 2025.
 type: blog
-page: fitness-2025
 sidebar: false
 outline: [2, 2]
 ---
@@ -18,5 +17,3 @@ I started tracking my running workouts in Strava. That makes it much easier to e
 I was able to generate a dump of my exercise data in `.csv` format and use GitHub Copilot to write a script to format the data for me, a step I was previously doing manually with Samsung Health.
 
 <RunningChart year="2025" />
-
-<FitnessLinks />

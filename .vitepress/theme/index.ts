@@ -12,10 +12,12 @@ import ProjectArchive from "./components/sections/ProjectArchive.vue"
 import RunningChart from "./components/RunningChart.vue"
 import TagArchive from "./components/TagArchive.vue"
 import TagDirectory from "./components/TagDirectory.vue"
+import RelatedPosts from "./components/sections/RelatedPosts.vue"
 
 const theme: Theme = {
   Layout,
   enhanceApp({ app }) {
+    app.component("RelatedPosts", RelatedPosts) 
     app.component("BlogArchive", BlogArchive)
     app.component("FitnessLinks", FitnessLinks)
     app.component("HeroSection", HeroSection)
