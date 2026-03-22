@@ -215,7 +215,7 @@ watch(
       <div :class="styles.main">
         <article class="hs-content-shell">
           <div ref="contentRef">
-            <Content :class="['vp-doc', styles.content]" />
+            <Content :class="styles.content" />
           </div>
         </article>
 
