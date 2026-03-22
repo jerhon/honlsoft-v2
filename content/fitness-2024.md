@@ -1,7 +1,7 @@
 ---
 title: Fitness Goals 2024
 description: Running and fitness notes for 2024.
-type: page
+type: blog
 page: fitness-2024
 sidebar: false
 outline: [2, 2]

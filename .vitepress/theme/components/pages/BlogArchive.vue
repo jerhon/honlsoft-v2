@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from "vue"
 
-import { data as posts } from "../data/posts.data"
-import PostList from "./PostList.vue"
+import { data as posts } from "../../data/posts.data"
+import PostList from "../PostList.vue"
 
 const props = withDefaults(defineProps<{ limit?: number }>(), {
   limit: undefined,

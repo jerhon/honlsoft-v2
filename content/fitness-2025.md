@@ -1,7 +1,7 @@
 ---
 title: Fitness Goals 2025
 description: Running and fitness notes for 2025.
-type: page
+type: blog
 page: fitness-2025
 sidebar: false
 outline: [2, 2]

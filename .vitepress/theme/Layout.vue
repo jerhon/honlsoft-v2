@@ -5,21 +5,12 @@ import mermaid from "mermaid"
 
 import BlogArticleLayout from "./components/layouts/BlogArticleLayout.vue"
 import PageLayout from "./components/layouts/PageLayout.vue"
-import ScientificArticleLayout from "./components/layouts/ScientificArticleLayout.vue"
 import SiteNavbar from "./components/SiteNavbar.vue"
 
 const { page, frontmatter } = useData()
 
 function getLayoutComponent(): Component {
-  const template =
-    typeof frontmatter.value.template === "string"
-      ? frontmatter.value.template.toLowerCase()
-      : ""
-
-  if (template === "scientific") {
-    return ScientificArticleLayout
-  }
-
+  
   const pageType =
     typeof frontmatter.value.type === "string"
       ? frontmatter.value.type.toLowerCase()
@@ -30,10 +21,6 @@ function getLayoutComponent(): Component {
   }
 
   if (pageType === "blog") {
-    return BlogArticleLayout
-  }
-
-  if (page.value.relativePath.startsWith("blog/")) {
     return BlogArticleLayout
   }
 

@@ -290,7 +290,7 @@
 
 .aside {
   position: sticky;
-  top: calc(var(--vp-nav-height) + 2rem);
+  top: 4.1rem;
 }
 
 .asideCard {
@@ -372,6 +372,10 @@
 }
 
 @media (max-width: 767px) {
+  .aside {
+    top: 3.7rem;
+  }
+
   .hero {
     margin-bottom: 1.5rem;
   }

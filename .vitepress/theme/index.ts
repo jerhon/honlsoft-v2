@@ -4,7 +4,7 @@ import Layout from "./Layout.vue"
 import "./tailwind.css"
 import "./custom.css"
 
-import BlogArchive from "./components/BlogArchive.vue"
+import BlogArchive from "./components/pages/BlogArchive.vue"
 import FitnessLinks from "./components/FitnessLinks.vue"
 import HeroSection from "./components/HeroSection.vue"
 import HomeSections from "./components/HomeSections.vue"

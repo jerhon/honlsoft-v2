@@ -1,7 +1,6 @@
 ---
-title: About
-description: About Jeremy Honl and the Honlsoft website.
-type: page
+title: About Me
+type: blog
 page: about
 sidebar: false
 outline: [2, 3]

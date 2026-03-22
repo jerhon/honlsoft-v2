@@ -1,7 +1,7 @@
 ---
 title: Links
 description: A handful of useful software development and technology links.
-type: page
+type: blog
 page: links
 sidebar: false
 outline: [2, 2]
