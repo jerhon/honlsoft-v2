@@ -2,8 +2,8 @@
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from "vue"
 import { useData } from "vitepress"
 
-import RelatedPosts from "./RelatedPosts.vue"
-import { formatDate, tagToSlug, titleFromSlug } from "../lib/content"
+import RelatedPosts from "../RelatedPosts.vue"
+import { formatDate, tagToSlug, titleFromSlug } from "../../lib/content"
 import styles from "./BlogArticleLayout.module.css"
 
 const { frontmatter, page } = useData()
@@ -180,6 +180,13 @@ watch(
       id="article-overview"
       :class="[styles.hero, 'hs-page-width px-6 sm:px-8 lg:px-12']"
     >
+      <nav :class="styles.breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/blog/">Blog</a>
+      </nav>
+
+      <p :class="styles.kicker">Honlsoft blog</p>
       <h1 :class="styles.title">{{ title }}</h1>
       <p v-if="description" :class="styles.description">
         {{ description }}
@@ -196,13 +203,12 @@ watch(
         <a
           v-for="tag in tags"
           :key="tag"
-          class="tag-pill"
+          :class="styles.tag"
           :href="`/tag/${tagToSlug(tag)}`"
         >
           {{ tag }}
         </a>
       </div>
-
     </section>
 
     <div
@@ -213,9 +219,9 @@ watch(
       ]"
     >
       <div :class="styles.main">
-        <article class="hs-content-shell">
-          <div ref="contentRef">
-            <Content :class="styles.content" />
+        <article :class="styles.articleCard">
+          <div ref="contentRef" :class="[styles.content]">
+            <Content />
           </div>
         </article>
 
@@ -223,7 +229,7 @@ watch(
       </div>
 
       <aside v-if="headers.length" :class="styles.aside">
-        <div :class="[styles.asideCard, 'hs-aside-shell']">
+        <div :class="styles.asideCard">
           <p :class="styles.asideTitle">On this page</p>
 
           <ul :class="styles.outline">
@@ -231,7 +237,6 @@ watch(
               <a
                 :class="[
                   styles.outlineLink,
-                  'hs-outline-link',
                   activeLink === overviewLink && styles.outlineLinkActive,
                 ]"
                 :href="overviewLink"
@@ -243,7 +248,6 @@ watch(
               <a
                 :class="[
                   styles.outlineLink,
-                  'hs-outline-link',
                   activeLink === header.link && styles.outlineLinkActive,
                   header.level === 3 && styles.outlineLinkNested,
                 ]"

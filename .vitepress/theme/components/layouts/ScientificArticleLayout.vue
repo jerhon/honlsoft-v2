@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import RelatedPosts from "./RelatedPosts.vue"
-import { tagToSlug } from "../lib/content"
-import { useArticleLayout } from "../lib/useArticleLayout"
+import RelatedPosts from "../RelatedPosts.vue"
+import { tagToSlug } from "../../lib/content"
+import { useArticleLayout } from "../../lib/useArticleLayout"
 import styles from "./ScientificArticleLayout.module.css"
 
 const { activeLink, contentRef, description, headers, publishedOn, tags, title } =

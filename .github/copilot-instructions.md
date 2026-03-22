@@ -7,7 +7,7 @@ High-level architecture
 - This is a VitePress static site with a custom theme under `.vitepress/`.
 - Key runtime/config files:
   - `.vitepress/config.mts` — site configuration, routing rewrites, Markdown config, theme config, and Vite options.
-  - `.vitepress/theme/index.ts` — theme entry; extends the default VitePress theme, imports global styles, and registers custom Vue components.
+  - `.vitepress/theme/index.ts` — theme entry; imports global styles and registers custom Vue components.
   - `.vitepress/theme/Layout.vue` — top-level layout shell that renders the site navbar, page content, and Mermaid initialization.
   - `.vitepress/theme/` — shared CSS, Vue components, and data loaders.
   - `content/` — the VitePress source directory for site content.
@@ -24,6 +24,7 @@ Content/data flows & patterns
 - Projects render from `content/projects/*.md` and keep `/projects/<slug>` paths.
 - Tag pages are generated from `content/tag/[slug].md` + `content/tag/[slug].paths.ts`.
 - Shared content metadata is built through VitePress data loaders in `.vitepress/theme/data/`.
+- Article pages are rendered through custom Vue components registered globally in `.vitepress/theme/index.ts`, including standalone `BlogArticleLayout` and `ScientificArticleLayout` components.
 - Images and static assets:
   - Use `static/` for files that should be served directly from the site root (for example `static/img/...`).
   - The site logo lives at `static/img/honlsoft.svg` and is used in the navbar and homepage hero.
@@ -49,12 +50,12 @@ Project-specific conventions
 - Keep layout responsibilities separated:
   - `.vitepress/theme/Layout.vue` should stay thin.
   - Put navbar/header behavior in `.vitepress/theme/components/SiteNavbar.vue`.
-  - Put page- or article-specific presentation into dedicated components such as `HeroSection.vue` or `BlogArticleLayout.vue`.
+  - Put page- or article-specific presentation into dedicated components such as `HeroSection.vue`, `BlogArticleLayout.vue`, or `ScientificArticleLayout.vue`.
 - If you need build-time content indexes or derived metadata, use VitePress data loaders in `.vitepress/theme/data/`.
 - Mermaid diagrams are supported through the Markdown fence override in `.vitepress/config.mts` and client-side initialization in `.vitepress/theme/Layout.vue`.
 - Tailwind CSS is available in the theme through `.vitepress/theme/tailwind.css`, and repo-specific shared styling lives in `.vitepress/theme/custom.css`.
-- Prefer CSS modules for component-owned styling. Current examples include `HeroSection.module.css`, `BlogArticleLayout.module.css`, and `SiteNavbar.module.css`.
-- Preserve the `extends: DefaultTheme` setup in `.vitepress/theme/index.ts` unless the user explicitly wants to replace the default VitePress base styles and behavior.
+- Prefer CSS modules for component-owned styling. Current examples include `HeroSection.module.css`, `BlogArticleLayout.module.css`, `ScientificArticleLayout.module.css`, `SiteNavbar.module.css`, and `PageMeta.module.css`.
+- The theme currently does not inherit the default VitePress theme, so layout and article presentation need to be styled explicitly in the custom components.
 
 Integration points & external deps
 
@@ -72,13 +73,15 @@ What to edit for common tasks (examples)
 - Add or change navbar behavior or styling: edit `.vitepress/theme/components/SiteNavbar.vue` and `.vitepress/theme/components/SiteNavbar.module.css`.
 - Add or change homepage hero presentation: edit `.vitepress/theme/components/HeroSection.vue` and `HeroSection.module.css`.
 - Add or change blog article presentation defaults: edit `.vitepress/theme/components/BlogArticleLayout.vue` and `BlogArticleLayout.module.css`.
+- Add or change scientific article presentation defaults: edit `.vitepress/theme/components/ScientificArticleLayout.vue` and `ScientificArticleLayout.module.css`.
+- Add or change page metadata blocks: edit `.vitepress/theme/components/PageMeta.vue` and `PageMeta.module.css`.
 - Change routing or site metadata: edit `.vitepress/config.mts`.
 - Add a new tag-driven behavior: update `content/tag/[slug].paths.ts` and/or the theme data loaders/components.
 
 Quick debugging notes
 
 - Run `npm run develop` and open the local VitePress dev server URL shown in the terminal.
-- Run `npm run build` after routing, data-loader, layout, or asset-path changes to catch dead links and asset resolution issues.
+- Run `npm run build` after routing, data-loader, layout, article-component, or asset-path changes to catch dead links and asset resolution issues.
 - If relative links break after moving content, remember that links inside Markdown should match the final rewritten route structure when VitePress rewrites are in play.
 
 Where to look for examples
@@ -89,6 +92,8 @@ Where to look for examples
 - Site navbar and responsive overlay menu: `.vitepress/theme/components/SiteNavbar.vue`
 - Homepage hero styling and logo placement: `.vitepress/theme/components/HeroSection.vue`
 - Blog article layout and typography defaults: `.vitepress/theme/components/BlogArticleLayout.vue`
+- Scientific article layout and paper styling: `.vitepress/theme/components/ScientificArticleLayout.vue`
+- Shared page metadata component: `.vitepress/theme/components/PageMeta.vue`
 - Blog/project metadata loaders: `.vitepress/theme/data/posts.data.ts`, `.vitepress/theme/data/projects.data.ts`
 - Dynamic tag routing: `content/tag/[slug].md`, `content/tag/[slug].paths.ts`
 - Site config and rewrites: `.vitepress/config.mts`
@@ -98,4 +103,4 @@ If something in this file is unclear or you'd like more detail, tell me which ar
 CSS Styling
 
 - Tailwind CSS v4 is available for styling components and content. Use utility classes in Vue components or Markdown as needed.
-- Prefer CSS modules for component-specific styles in `.vitepress/theme/components/` when styles are complex or need to be scoped. For example, `HeroSection.vue` uses `HeroSection.module.css`
+- Prefer CSS modules for component-specific styles in `.vitepress/theme/components/` when styles are complex or need to be scoped. Current examples include `HeroSection.module.css`, `SiteNavbar.module.css`, `BlogArticleLayout.module.css`, and `ScientificArticleLayout.module.css`.

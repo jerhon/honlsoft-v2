@@ -1,24 +1,6 @@
 import tailwindcss from "@tailwindcss/vite"
 import { defineConfig } from "vitepress"
 
-const articleTypes = ["blog", "page", "projects"]
-
-function resolveLayout(frontmatter: Record<string, unknown>) {
-  if (typeof frontmatter.layout === "string" && frontmatter.layout.length > 0) {
-    return frontmatter.layout
-  }
-
-  if (frontmatter.template === "scientific") {
-    return "ScientificArticleLayout"
-  }
-
-  if (articleTypes.includes(String(frontmatter.type ?? ""))) {
-    return "BlogArticleLayout"
-  }
-
-  return "PageLayout"
-}
-
 export default defineConfig({
   lang: "en-US",
   title: "Honlsoft",
@@ -30,16 +12,12 @@ export default defineConfig({
   srcDir: "content",
   ignoreDeadLinks: "localhostLinks",
   lastUpdated: true,
+  assetsDir: "static",
   rewrites(id) {
     return id.replace(/^blog\/[^/]+\//, "blog/")
   },
   transformPageData(pageData) {
-    return {
-      frontmatter: {
-        ...pageData.frontmatter,
-        layout: resolveLayout(pageData.frontmatter),
-      },
-    }
+    return pageData 
   },
   head: [
     ["link", { rel: "icon", href: "/img/honlsoft.svg", type: "image/svg+xml" }],
