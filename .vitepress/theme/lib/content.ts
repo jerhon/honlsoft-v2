@@ -1,23 +1,12 @@
-export interface ContentCard {
+export interface Content {
   title: string
   description: string
   date?: string
   image?: string
-  excerpt: string
   tags: string[]
   url: string
   slug: string
-  template?: string
-}
-
-export interface ProjectCard {
-  title: string
-  description: string
-  date?: string
-  image?: string
-  excerpt: string
-  url: string
-  slug: string
+  type?: string
   project?: string
 }
 

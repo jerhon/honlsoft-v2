@@ -13,6 +13,17 @@ const currentSlug = computed(
 )
 
 const related = computed(() => {
+
+  /*
+  if (frontmatter.value.project) {
+    return posts
+      .filter(post => post.tags.includes(frontmatter.value.project) && post.slug !== currentSlug.value)
+      .map(post => ({
+        post,
+        sharedTags: []
+      }));
+  }
+*/
   const tags = new Set(
     Array.isArray(frontmatter.value.tags)
       ? frontmatter.value.tags.map(String)
@@ -55,7 +66,7 @@ const related = computed(() => {
           }}</a>
         </h3>
 
-        <p class="archive-card__excerpt">{{ entry.post.excerpt }}</p>
+        <p class="archive-card__excerpt">{{ entry.post.description }}</p>
 
         <div :class="['archive-card__tags', styles.tags]">
           <a

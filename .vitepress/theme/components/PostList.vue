@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from "vue"
 
-import { formatDate, type ContentCard } from "../lib/content"
+import { formatDate, type Content } from "../lib/content"
 import styles from "./PostList.module.css"
 
 const props = defineProps<{
-  posts: ContentCard[]
+  posts: Content[]
 }>()
 
 const pageSize = 20
@@ -172,7 +172,7 @@ watch(
               </svg>
             </span>
           </h3>
-          <p :class="styles.postExcerpt">{{ post.excerpt }}</p>
+          <p :class="styles.postExcerpt">{{ post.description }}</p>
         </div>
         <span :class="styles.postArrow" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none">
