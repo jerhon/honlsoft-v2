@@ -3,7 +3,7 @@ import { computed } from "vue"
 import { useData } from "vitepress"
 
 import { data as posts } from "../../data/posts.data"
-import { tagToSlug } from "../../lib/content"
+import PostList from "../PostList.vue"
 import styles from "./RelatedPosts.module.css"
 
 const { frontmatter, page } = useData()
@@ -48,37 +48,6 @@ const related = computed(() => {
   <section v-if="related.length" :class="styles.relatedPosts">
     <h2 :class="styles.title">Related posts</h2>
 
-    <div class="archive-grid">
-      <article
-        v-for="entry in related"
-        :key="entry.post.url"
-        :class="['archive-card', styles.card]"
-      >
-        <a
-          :class="styles.cardLink"
-          :href="entry.post.url"
-          :aria-label="`Read related post: ${entry.post.title}`"
-        ></a>
-
-        <h3 class="archive-card__title">
-          <a class="archive-card__link" :href="entry.post.url">{{
-            entry.post.title
-          }}</a>
-        </h3>
-
-        <p class="archive-card__excerpt">{{ entry.post.description }}</p>
-
-        <div :class="['archive-card__tags', styles.tags]">
-          <a
-            v-for="tag in entry.sharedTags"
-            :key="tag"
-            class="tag-pill"
-            :href="`/tag/${tagToSlug(tag)}`"
-          >
-            {{ tag }}
-          </a>
-        </div>
-      </article>
-    </div>
+    <PostList :posts="related.map(entry => entry.post)" />
   </section>
 </template>
