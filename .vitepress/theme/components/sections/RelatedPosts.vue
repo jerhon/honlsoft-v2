@@ -14,7 +14,7 @@ const currentSlug = computed(
 
 const related = computed(() => {
 
-  /*
+  
   if (frontmatter.value.project) {
     return posts
       .filter(post => post.tags.includes(frontmatter.value.project) && post.slug !== currentSlug.value)
@@ -23,7 +23,7 @@ const related = computed(() => {
         sharedTags: []
       }));
   }
-*/
+
   const tags = new Set(
     Array.isArray(frontmatter.value.tags)
       ? frontmatter.value.tags.map(String)

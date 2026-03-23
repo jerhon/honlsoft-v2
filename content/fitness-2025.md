@@ -18,3 +18,7 @@ I started tracking my running workouts in Strava. That makes it much easier to e
 I was able to generate a dump of my exercise data in `.csv` format and use GitHub Copilot to write a script to format the data for me, a step I was previously doing manually with Samsung Health.
 
 <RunningChart year="2025" />
+
+## Other Years
+
+- [Fitness Goals 2024](./fitness-2024.md)
