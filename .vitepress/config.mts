@@ -57,8 +57,7 @@ export default defineConfig({
       { text: "About", link: "/about" },
       { text: "Links", link: "/links" },
       { text: "Fitness", link: "/fitness-2025" },
-    ],
-    socialLinks: [{ icon: "github", link: "https://github.com/jerhon/honlsoft-v2" }],
+    ]
   },
   vite: {
     plugins: [tailwindcss()],
