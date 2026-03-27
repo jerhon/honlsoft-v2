@@ -8,7 +8,7 @@ description: >-
   links out to additional resources that go into more detail.
 type: project
 project: "COVID-19 Statistics Application"
-image: "./images/covid-19-stats.jpg"
+image: "/img/projects/covid-19-stats.jpg"
 ---
 
 The COVID-19 Statistics Web Application was an application I wrote to try out Clarity Design framework. It displays statistical information about the COVID-19 Pandemic.

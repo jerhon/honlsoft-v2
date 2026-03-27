@@ -9,7 +9,7 @@ description: >-
   everyday objects from the live camera feed.
 type: project
 project: "Object Detection"
-image: "./images/raspberry-pi-object-detection.jpg"
+image: "/img/projects/raspberry-pi-object-detection.jpg"
 ---
 
 For a while I've been interested in building a project dealing with machine learning.

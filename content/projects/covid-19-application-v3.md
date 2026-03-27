@@ -9,7 +9,7 @@ description: >-
   views of case waves and can be run locally as a Docker container.
 type: project
 project: "COVID-19 Statistics Application v2"
-image: "./images/covid-19-app-v3.jpg"
+image: "/img/projects/covid-19-app-v3.jpg"
 ---
 
 I wrote another COVID-19 app.

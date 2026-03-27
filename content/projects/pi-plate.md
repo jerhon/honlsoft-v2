@@ -8,7 +8,7 @@ description: >-
   together.
 type: project
 project: "Pi Plate"
-image: "./images/pi-plate-nameplate.jpg"
+image: "/img/projects/pi-plate-nameplate.jpg"
 ---
 
 The pi-plate was a project for fun. It is a Raspberry Pi driven interactive nameplate I built to put on my desk at work. The project is defined in more detail in my blog posts below.
