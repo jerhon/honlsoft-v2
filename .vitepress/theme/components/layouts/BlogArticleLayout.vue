@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from "vue"
+import { computed, nextTick, onMounted, ref, watch } from "vue"
 import { useData } from "vitepress"
 
 import RelatedPosts from "../sections/RelatedPosts.vue"
@@ -8,10 +8,7 @@ import styles from "./BlogArticleLayout.module.css"
 
 const { frontmatter, page } = useData()
 const contentRef = ref<HTMLElement | null>(null)
-const activeLink = ref("")
 const overviewLink = "#article-overview"
-let outlineHeadingNodes: HTMLHeadingElement[] = []
-let scrollFrame = 0
 
 const title = computed(() => {
   if (
@@ -91,8 +88,6 @@ async function syncOutline() {
     contentRoot.querySelectorAll<HTMLHeadingElement>("h1, h2, h3"),
   )
 
-  outlineHeadingNodes = headingNodes
-
   headers.value = headingNodes
     .map(node => {
       const headingTitle = node.textContent?.trim() ?? ""
@@ -112,66 +107,10 @@ async function syncOutline() {
     })
     .filter((item): item is HeaderItem => item !== null)
 
-  if (!headers.value.length) {
-    activeLink.value = overviewLink
-    return
-  }
-
-  activeLink.value = overviewLink
-  updateActiveHeading()
-}
-
-function updateActiveHeading() {
-  if (typeof window === "undefined" || !outlineHeadingNodes.length) {
-    activeLink.value = overviewLink
-    return
-  }
-
-  const offset = window.innerHeight * 0.22
-  let currentLink = overviewLink
-
-  for (const node of outlineHeadingNodes) {
-    const top = node.getBoundingClientRect().top
-    if (top - offset <= 0) {
-      currentLink = `#${node.id}`
-      continue
-    }
-
-    break
-  }
-
-  activeLink.value = currentLink
-}
-
-function handleScroll() {
-  if (typeof window === "undefined") {
-    return
-  }
-
-  if (scrollFrame) {
-    window.cancelAnimationFrame(scrollFrame)
-  }
-
-  scrollFrame = window.requestAnimationFrame(() => {
-    updateActiveHeading()
-    scrollFrame = 0
-  })
 }
 
 onMounted(() => {
   void syncOutline()
-  window.addEventListener("scroll", handleScroll, { passive: true })
-  window.addEventListener("resize", handleScroll)
-})
-
-onBeforeUnmount(() => {
-  if (typeof window !== "undefined") {
-    window.removeEventListener("scroll", handleScroll)
-    window.removeEventListener("resize", handleScroll)
-    if (scrollFrame) {
-      window.cancelAnimationFrame(scrollFrame)
-    }
-  }
 })
 
 watch(
@@ -236,10 +175,7 @@ watch(
           <ul :class="styles.outline">
             <li>
               <a
-                :class="[
-                  styles.outlineLink,
-                  activeLink === overviewLink && styles.outlineLinkActive,
-                ]"
+                :class="styles.outlineLink"
                 :href="overviewLink"
               >
                 Overview
@@ -249,7 +185,6 @@ watch(
               <a
                 :class="[
                   styles.outlineLink,
-                  activeLink === header.link && styles.outlineLinkActive,
                   header.level === 3 && styles.outlineLinkNested,
                 ]"
                 :href="header.link"

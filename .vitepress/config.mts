@@ -9,6 +9,7 @@ export default defineConfig({
   appearance: false,
   cleanUrls: true,
   srcDir: "content",
+  outDir: "public",
   ignoreDeadLinks: "localhostLinks",
   lastUpdated: true,
   rewrites(id) {
@@ -39,7 +40,7 @@ export default defineConfig({
       md.renderer.rules.fence = (tokens, idx, options, env, self) => {
         const token = tokens[idx]
         if (token.info.trim() === "mermaid") {
-          return `<div class="mermaid">${md.utils.escapeHtml(token.content)}</div>`
+          return `<pre class="mermaid">${md.utils.escapeHtml(token.content)}</pre>`
         }
 
         return defaultFence

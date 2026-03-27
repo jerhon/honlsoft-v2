@@ -40,7 +40,7 @@ const layoutClass = computed(() => {
 mermaid.initialize({
   startOnLoad: false,
   securityLevel: "loose",
-  theme: "neutral",
+  theme: "dark",
 })
 
 async function renderMermaid() {
