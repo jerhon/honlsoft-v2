@@ -1,0 +1,129 @@
+.heroShell {
+  min-height: 100vh;
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 32%),
+    radial-gradient(circle at 80% 18%, rgba(239, 68, 68, 0.18), transparent 24%);
+}
+
+.heroShellContent {
+  min-height: inherit;
+}
+
+.heroGrid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-position: center;
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent 82%);
+}
+
+.heroAurora {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: 0.65;
+}
+
+.heroAuroraLeft {
+  left: -10rem;
+  top: 4rem;
+  height: 24rem;
+  width: 24rem;
+  background: rgba(59, 130, 246, 0.28);
+  animation: driftLeft 18s ease-in-out infinite;
+}
+
+.heroAuroraRight {
+  right: -6rem;
+  bottom: 2rem;
+  height: 22rem;
+  width: 22rem;
+  background: rgba(239, 68, 68, 0.24);
+  animation: driftRight 16s ease-in-out infinite;
+}
+
+.heroPanel {
+  transform: perspective(1400px) rotateY(-10deg) rotateX(4deg);
+}
+
+.heroLogoWrap {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+}
+
+.heroLogo {
+  width: min(100%, 10rem);
+  height: auto;
+  filter: drop-shadow(0 20px 34px rgba(15, 23, 42, 0.32));
+}
+
+.heroKicker {
+  text-shadow: 0 8px 28px rgba(15, 23, 42, 0.45);
+}
+
+.heroHighlight {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(120deg, #f87171 0%, #ef4444 40%, #fca5a5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroHighlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.35rem;
+  height: 0.28rem;
+  border-radius: 9999px;
+  background: linear-gradient(120deg, #ef4444 0%, #fca5a5 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: underlineExpand 0.9s ease-out 1.2s forwards;
+}
+
+.fadeUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.delay1 { animation-delay: 0.15s; }
+.delay2 { animation-delay: 0.3s; }
+.delay3 { animation-delay: 0.45s; }
+.delay4 { animation-delay: 0.6s; }
+.delay5 { animation-delay: 0.75s; }
+.delay6 { animation-delay: 0.9s; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes underlineExpand {
+  to { transform: scaleX(1); }
+}
+
+@keyframes driftLeft {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(2rem, 1.5rem, 0) scale(1.08); }
+}
+
+@keyframes driftRight {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-1.5rem, -2rem, 0) scale(1.06); }
+}
+
+@media (max-width: 1023px) {
+  .heroPanel {
+    transform: none;
+  }
+
+  .heroLogo {
+    width: min(100%, 8.5rem);
+  }
+}

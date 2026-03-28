@@ -1,0 +1,201 @@
+---
+date: "2023-03-26"
+title: "GIT: Branching Strategies"
+description: "In the past, I have written several posts about GIT on my blog. Specifically, I want to reflect on the lessons I have learned while trying to determine the appropriate branching strategy for various projects. Over the years, I have had to make this decision numerous times and realized that documenting my experiences would help me better organize my thoughts."
+tags: ["GIT", "Branching"]
+type: "blog"
+---
+In the past, I have written several [posts about GIT on my blog](https://www.honlsoft.com/tag/git).
+Specifically, I want to reflect on the lessons I have learned while trying to determine the appropriate branching strategy for various projects.
+
+Over the years, I have had to make this decision numerous times and realized that documenting my experiences would help me better organize my thoughts. In this blog post, I plan to highlight a few of the main branching strategies I have utilized in the past, along with some popular ones that I have come across.
+
+While there may be criticisms of specific branching strategies, I approach the topic in a pragmatic manner.
+This is merely a compilation of my experiences and a reference for those seeking guidance on the topic.
+As I urge teams embarking on new projects or transitioning to GIT, it is crucial to rely on the experience of those who have gone before them.
+
+Ultimately, GIT is a robust tool with numerous capabilities.
+Utilizing them appropriately, based on experience, is crucial for establishing a healthy development workflow.
+
+# What is Branching
+
+Branching is a fundamental technique used in source control to isolate changes until they are ready to be integrated with other changes.
+In a previous post on branching, I discussed the superior lightweight nature of GIT branching, which enables the creation of branches even for the smallest changes.
+
+In [previous post on branching](/blog/2022-10-13-branching-in-git), I discussed how GIT branching is super lightweight and so branches can be used for even the smallest changes.
+
+While branching is a powerful tool, it can increase the difficulty of integrating with the rest of the code base if the branch is long-lived.
+Therefore, effective management of branching is crucial to ensure that software teams operate effectively.
+This post will focus on several key branching strategies to achieve this goal.
+
+## Feature Branching and GitHub Flow
+
+A widely used approach is to create a branch for a particular issue or task and then commit all the changes required for that task.
+Once the task is completed, a code review is conducted, and automated testing may be performed on the individual branch.
+After the branch passes the quality gates, it is merged into another branch that contains other developers' changes.
+
+This method is particularly effective for small projects and repositories, and it is generally my preferred strategy unless more stringent release practices are required.
+This pattern often serves as the foundation for more complex branching strategies, such as GitFlow and Trunk-based development, or it may be concealed within them.
+[Atlassian has a great resource describing feature branching and some other branching strategies.](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
+
+This works extremely well when an organization is able to have ephemeral environments and especially during container development.
+If an environment can be stood up for a branch very quickly, each branch can be tested individually either automatically or manually.
+There is a branching model that is very similar to Feature Branching named [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow).
+This is similar but releases changes directly from the feature branch.
+
+I've had a lot of success using just feature branching for small projects with a few developers.
+It's really straight forward and easy to collaborate without having any big merge messes in the future.
+
+## GitFlow Branching
+
+GitFlow is a strategy for dealing with complex versioning requirements in software systems.
+It allows for dealing with complex intricacies of developing software and determining releases.
+
+It involves several branches with a release branch and a main branch for the current code in production.
+
+Developers work in a development branch, and when they are ready to release the code is branched off to a release branch.
+The release branch is used to build the artifacts.
+Testing is done on the release branch until it is determined to be stable.
+Once that is done, the build artifact from that branch that was determined to be stable is moved to the higher environment.
+
+Developers can start development on the next release without impacting the release branch.
+
+In order to be able to release changes at times outside the main release cycle, the strategy includes hotfix branches.
+The hotfix branches are for changes that fall outside the normal release cycles.
+
+[Here is the main GitFlow documentation.](https://datasift.github.io/gitflow/IntroducingGitFlow.html)
+
+GitFlow can work great in organizations with a release cadence or defined releases.
+I've used this branching strategy for a few projects.
+It works well at what it sets out to accomplish, but can be a bit heavy-handed for smaller projects.
+GitFlow has a small twist in that releases are conducted from the feature branches.
+
+## Trunk Based Development
+
+[Trunk based development](https://trunkbaseddevelopment.com/) is a bit of a mix of Feature branching and GitFlow.
+
+It utilizes feature branching, but at a certain point it's decided to release the work that has gone on in the trunk
+At that point, a release branch is made to stabilize the branch until it's ready to release.
+
+This relies on several techniques to avoid long living branches.
+One example is branch by abstraction.
+If new functionality is to be introduced, the old functionality is abstracted first.
+After the abstraction has been created, a second implementation is made.
+Work continues on that second implementation in small increments until it is complete.
+Once it is complete, the second implementation is swapped for the first.
+
+Trunk based development is another great strategy for developers.
+I have lightly used this strategy with feature branching on projects.
+
+## Environment Based Branching
+
+This is a strategy that ties a deployment model with a source control system.
+For each environment, a branch is created.
+An example would be a branch for Dev, Test, Stage, and Production.
+
+Honestly, I hesitate to even write about this as it ends up becoming an enormous time sink for the development team.
+However, in organizations that develop internal software, this is an extremely common suggestion.
+
+Every time a change is made from one environment to the next, it must be integrated with the next branch in the chain.
+I'm in development I have a change, I move it to test, followed by, stage, followed by production.
+Typically, GIT uses merges to integrate branches together.
+
+However, in reality the business wants to release functionality more often than the branches can get to a stable state.
+Developers will keep checking into Development with no clear check-point in the future when the branch is stable and can be completely merged to test.
+However, since we just have a development branch, typically at no point is a lower branch such as Dev ready to be merged to Test.
+Since the changes cannot be merged, often will fall back to strategies such as cherry-picking or rebasing to move their changes from one environment to another.
+
+This is one of those things, it sounds great in theory, and GIT has some very powerful tools at its disposal that can enable this, but in practice it falls apart pretty fast.
+
+### Why
+
+This branching model gives a lot of flexibility to move changes from environment to environment.
+In certain situations, it can be useful.
+In cases like GitOps or where environment configuration is stored in source control.
+
+So, this model is really better suited in cases in situations dealing with deployments.
+
+The other reason this branching model is so popular is because of it's perceived flexibility.
+When resorting to rebasing or cherry-picking, individual work items can be approved and moved from one environment to another at any given moment.
+
+### Why Not
+
+There are so many downsides to this branching model for an organization that lead to some very nasty side effects.
+Again, I hesitate so much at even writing a blog post about this branching strategy as I don't want someone to read this and say, LET'S DO IT.
+However, I've seen it several times throughout my career now and just can't help but mention it.
+
+#### Increased Dependency Management
+
+One of the inherent difficulties of this model is that of pulling apart changes.
+Source control does a good job of creating the facilities to integrate changes into a branch.
+However, when it comes to taking an individual change moving it out of the branch and applying it to another it becomes very difficult.
+
+This is really due to the dependencies a work item incurs when it is integrated into a branch.
+For example, when I check into the Dev branch, my work can potentially be dependent on any work prior to mine.
+
+The natural tendency is to want to deploy my change as soon as it is ready.
+This leads to the unfortunate situation where other work in the Dev branch may be ready, but mine is not or vice versa.
+My work may be dependent on those.
+
+With this branching strategy, this is an incredibly hard problem to solve especially in very large repositories such as mono-repos with larger development teams.
+It's not easy to determine what depends on what without a lot of coordination, and often time people won't even know what others are working on until they go through the process of merging in their changes.
+This is all the more true when techniques such as rebasing and chery-picking are used to integrate changes.
+
+This leads to a huge amount of manual effort.
+
+#### Increased Project Management Cost
+
+The state of every change must be tracked with precision.
+Since changes are managed individually or on a smaller scale, and by in large cherry-picking and rebase create new commits.
+Thus creating a relationship back to the work item is tricky and knowing what has been committed to which environment is difficult.
+
+In most branching models, a developer integrates into a branch through a merge.
+When that is done a work item is tracked on what they commit in source control via tags and the work item.
+This can automatically flow through most modern tracking systems today as code moves from branch to branch.
+As code is merged, eventually it makes it to a branch for a release at which point all the links in the system resolve.
+
+However, in an Environment based branching model it is nearly impossible to determine what has been applied where.
+The commits end up being duplicated due to the use of rebase or cherry-pick.
+When they do diverge it becomes difficult to reconcile.
+
+#### Increased QA Cost
+
+This leads to an increase in cost required to merge the code and cost to test the code.
+Since there are different build artifacts per environment and potentially different code bases QA efforts often end up needing to be duplicated.
+The manual effort to move the changes from one branch to another lead to problems where a change is made in one environment but not another.
+
+This may not be as big of an issue for businesses that have embraced automation.
+However, if a business is running manual tests, the amount of testing that needs to be done is much more.
+
+Often things will be found in one environment that never occurred in another.
+Maintaining a consistent environments is difficult in and of itself unless an organization embraces automation.
+This just adds another place where problems can occur.
+
+#### Increased Development Cost and Anti-Agile
+
+Since every change requires effort to move from branch to branch individually as the development organization scales up the amount of work to manage the release increases dramatically.
+As more developers come into the organization, the amount of work to move commits from environment to environment and increases as it is directly proportion to the number of developers.
+
+This stands in direct odds with Agile practices where developers are asked to break work into smaller pieces.
+The smaller the work becomes, the more work it becomes to move the work from environment to environment.
+
+This tends to lead to a drive to attempt to release less often due to the inherent work in the branching model.
+A team or group of individuals is tasked with the work of moving code around.
+It consumes a majority of their time.
+The organization either ends up needing to scale up it's team of individuals dedicated to moving code as it hires developers, or reducing its number of releases.
+
+## Wrapping Up
+
+I've seen many branching strategies that fit different organizations and projects.
+Hopefully this gives a good index of those branching strategies to consider.
+
+I've had to go through the process so many times of asking, "What branching strategy should I use for this project?"
+Writing them down on a blog post would help organize my thoughts.
+
+However, the one thing I can never stress enough to teams thinking about using GIT as their source control system is don't roll your own branching strategy.
+
+Be agile.
+Focus on your customer.
+
+There are plenty of good branching strategies out there.
+It should be possible to find one that fits your project and organization.
