@@ -426,19 +426,11 @@
   }
 
   .aside {
-    position: static;
-  }
-
-  .asideCard {
-    padding: 1rem;
+    display: none;
   }
 }
 
 @media (max-width: 767px) {
-  .aside {
-    top: 3.7rem;
-  }
-
   .hero {
     margin-bottom: 1.5rem;
   }
