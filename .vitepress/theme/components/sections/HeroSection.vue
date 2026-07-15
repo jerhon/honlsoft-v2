@@ -21,134 +21,87 @@ const latestPost = computed(() => posts[0] ?? null)
     <div
       :class="[
         styles.heroShellContent,
-        'hs-page-width relative z-10 flex items-center px-6 py-24 sm:px-8 lg:px-12',
+        'hs-page-width relative z-10 flex flex-col items-center px-6 py-16 sm:px-8 lg:px-12 lg:py-24',
       ]"
     >
-      <div class="grid w-full gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-        <div class="space-y-8">
-          <div class="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-center">
-            <div
-              :class="[
-                styles.heroKicker,
-                styles.fadeUp,
-                'border-white/20 text-center lg:border-r lg:pr-8 lg:text-right',
-              ]"
-            >
-              <div class="font-title text-3xl font-bold sm:text-4xl lg:text-5xl">
-                Jeremy's
-              </div>
-              <div
-                :class="[
-                  styles.fadeUp,
-                  styles.delay1,
-                  'font-title text-3xl font-bold sm:text-4xl lg:text-5xl',
-                ]"
-              >
-                Technology Blog
-              </div>
-            </div>
+      <!-- Main headline section -->
+      <div :class="[styles.fadeUp, 'max-w-4xl text-center']">
+        <h1 class="font-title text-4xl font-bold sm:text-5xl lg:text-6xl leading-tight">
+          Let's build software
+          <br />
+          people <span :class="styles.heroHighlight">dream</span> of using.
+        </h1>
+        <p
+          :class="[
+            styles.fadeUp,
+            styles.delay1,
+            'mt-6 text-lg text-blue-50/85 sm:text-xl max-w-2xl mx-auto leading-relaxed',
+          ]"
+        >
+          Practical notes on software architecture, .NET, containers, AI-assisted development, and the side projects that keep engineering fun.
+        </p>
+      </div>
 
-            <div class="space-y-4 text-center lg:text-left">
-              <p
-                :class="[
-                  styles.fadeUp,
-                  styles.delay3,
-                  'font-title text-4xl font-bold leading-none text-blue-50 sm:text-4xl lg:text-4xl',
-
-                ]"
-              >
-
-                Let's build software
-                people <span :class="styles.heroHighlight">dream</span> of using.
-              </p>
-            </div>
-          </div>
-
-          <p
-            :class="[
-              styles.fadeUp,
-              styles.delay4,
-              'max-w-3xl py-8 text-lg leading-8 text-blue-50/85 sm:text-xl',
-            ]"
-          >
-            Practical notes on software architecture, .NET, containers, AI-assisted
-            development, and the side projects that keep engineering fun.
+      <!-- Feature cards -->
+      <div
+        :class="[
+          styles.fadeUp,
+          styles.delay2,
+          'mt-12 w-full grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl',
+        ]"
+      >
+        <div class="hs-card p-5 sm:p-6 text-center">
+          <p class="hs-meta-label text-blue-200/70">Focus</p>
+          <p class="mt-3 font-title text-2xl font-bold text-white">Practical DX</p>
+          <p class="mt-2 text-sm text-blue-50/75">
+            Developer experience first, always
           </p>
-
-          <section
-            v-if="latestPost"
-            :class="[styles.fadeUp, styles.delay5, 'hs-card max-w-3xl p-5 sm:p-6']"
-          >
-            <p class="hs-meta-label pb-4 text-blue-200/70">Latest post</p>
-            <h2 class="mt-3 font-title text-2xl font-bold text-white sm:text-3xl">
-              {{ latestPost.title }}
-            </h2>
-            <p v-if="latestPost.date" class="mt-2 text-sm font-semibold text-blue-100/75">
-              {{ formatDate(latestPost.date) }}
-            </p>
-            <p v-if="latestPost.description" class="mt-4 pt-4 text-base text-blue-50/85">
-              {{ latestPost.description }}
-            </p>
-            <div class="mt-5">
-              <a :href="latestPost.url" class="hs-btn hs-btn-primary">
-                Read this post
-              </a>
-            </div>
-          </section>
         </div>
 
-        <div :class="[styles.fadeUp, styles.delay4, 'relative']">
-          <div :class="[styles.heroPanel, 'hs-panel p-6']">
-            <div class="absolute inset-0 bg-linear-to-br from-white/10 via-transparent to-blue-300/10"></div>
+        <div class="hs-card p-5 sm:p-6 text-center">
+          <p class="hs-meta-label text-blue-200/70">Coverage</p>
+          <p class="mt-3 font-title text-2xl font-bold text-white">4+ Topics</p>
+          <p class="mt-2 text-sm text-blue-50/75">
+            architecture, containers, AI, projects
+          </p>
+        </div>
 
-            <div class="relative space-y-6">
-              <div class="flex items-center justify-between">
-                <div>
-                  <p class="mt-2 font-title text-2xl font-bold text-white">
-                    What you'll find here
-                  </p>
-                </div>
-
-                <div class="hs-card bg-white/10 px-4 py-3 text-center">
-                  <p class="hs-meta-label text-blue-100/70">Focus</p>
-                  <p class="mt-1 font-title text-xl font-bold text-white">Practical DX</p>
-                </div>
-              </div>
-
-              <div class="space-y-4">
-                <div class="hs-card p-4">
-                  <p class="hs-meta-label text-blue-200/70">Recently</p>
-                  <p class="mt-2 font-title text-xl font-bold text-white">
-                    AI workflows and developer productivity
-                  </p>
-                  <p class="mt-2 text-sm leading-6 text-blue-50/75">
-                    Notes on using Copilot agents, CLI workflows, and implementation
-                    experiments that save real engineering time.
-                  </p>
-                </div>
-
-                <div class="grid gap-4 sm:grid-cols-2">
-                  <div class="hs-card-blue p-4">
-                    <p class="hs-meta-label text-blue-200/70">Topics</p>
-                    <p class="mt-2 text-3xl font-bold text-white">4+</p>
-                    <p class="mt-1 text-sm text-blue-50/75">
-                      architecture, containers, AI, and projects
-                    </p>
-                  </div>
-                  <div class="hs-card-red p-4">
-                    <p class="hs-meta-label text-red-200/70">Style</p>
-                    <p class="mt-2 text-3xl font-bold text-white">Hands-on</p>
-                    <p class="mt-1 text-sm text-blue-50/75">
-                      implementation-first writeups with concrete examples
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="hs-card p-5 sm:p-6 text-center">
+          <p class="hs-meta-label text-blue-200/70">Approach</p>
+          <p class="mt-3 font-title text-2xl font-bold text-white">Hands-on</p>
+          <p class="mt-2 text-sm text-blue-50/75">
+            implementation-first, concrete examples
+          </p>
         </div>
       </div>
-    </div>
 
+      <!-- Latest post card -->
+      <section
+        v-if="latestPost"
+        :class="[
+          styles.fadeUp,
+          styles.delay3,
+          'mt-12 w-full max-w-4xl hs-card p-6 sm:p-8',
+        ]"
+      >
+        <div class="flex items-center justify-between mb-4">
+          <p class="hs-meta-label text-blue-200/70">Latest post</p>
+          <p class="text-sm font-semibold text-blue-100/75">
+            {{ formatDate(latestPost.date) }}
+          </p>
+        </div>
+        <h2 class="font-title text-2xl font-bold text-white sm:text-3xl">
+          {{ latestPost.title }}
+        </h2>
+        <p v-if="latestPost.description" class="mt-4 text-base text-blue-50/85 leading-relaxed">
+          {{ latestPost.description }}
+        </p>
+        <div class="mt-6">
+          <a :href="latestPost.url" class="hs-btn hs-btn-primary">
+            Read this post
+          </a>
+        </div>
+      </section>
+    </div>
   </section>
 </template>
