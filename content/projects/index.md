@@ -5,4 +5,8 @@ sidebar: false
 outline: false
 ---
 
+# Projects
+
+Things I've built, tried, and learned from.
+
 <ProjectArchive />

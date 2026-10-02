@@ -8,7 +8,7 @@
 }
 
 .postItem + .postItem {
-  border-top: 1px solid rgba(148, 163, 184, 0.18);
+  border-top: 1px solid var(--vp-c-divider);
 }
 
 .postLink {
@@ -34,7 +34,7 @@
   bottom: 0.6rem;
   width: 3px;
   border-radius: 999px;
-  background: linear-gradient(180deg, #60a5fa, #f97316);
+  background: #176c5b;
   opacity: 0;
   transform: scaleY(0.35);
   transform-origin: center;
@@ -56,17 +56,15 @@
 }
 
 .postLink:focus-visible {
-  outline: 2px solid rgba(147, 197, 253, 0.8);
+  outline: 2px solid #176c5b;
   outline-offset: 2px;
 }
 
 .postMeta {
   padding-top: 0.25rem;
-  color: #93c5fd;
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  color: var(--vp-c-text-3);
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .postMetaColumn {
@@ -81,9 +79,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  border-radius: 12px;
-  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 5px;
+  background: #f1f5f2;
   overflow: hidden;
 }
 
@@ -102,7 +100,7 @@
   display: inline-flex;
   align-items: center;
   margin: 0;
-  color: #fff;
+  color: var(--vp-c-text-1);
   font-family: "Lato", sans-serif;
   font-size: clamp(1.25rem, 1.8vw, 1.6rem);
   transition:
@@ -122,7 +120,7 @@
 .postItem:hover .postTitle,
 .postLink:focus-visible .postTitle {
   transform: translateX(4px);
-  color: #dbeafe;
+  color: #176c5b;
 }
 
 .postItem:hover .postExcerpt,
@@ -138,10 +136,10 @@
   width: 2.4rem;
   height: 2.4rem;
   align-self: center;
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  border-radius: 9999px;
-  background: rgba(15, 23, 42, 0.35);
-  color: #dbeafe;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 5px;
+  background: #fff;
+  color: #176c5b;
   opacity: 0;
   transform: translateX(10px);
   transition:
@@ -152,8 +150,8 @@
 }
 
 .postItem:hover .postArrow {
-  border-color: rgba(147, 197, 253, 0.4);
-  background: rgba(30, 41, 59, 0.7);
+  border-color: #80ad9e;
+  background: #e4f1ec;
 }
 
 .postArrow svg {
@@ -176,10 +174,10 @@
 }
 
 .paginationButton {
-  border: 1px solid rgba(148, 163, 184, 0.24);
-  border-radius: 999px;
-  background: rgba(15, 23, 42, 0.5);
-  color: #dbeafe;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 5px;
+  background: #fff;
+  color: #176c5b;
   padding: 0.4rem 0.9rem;
   font-size: 0.9rem;
   font-weight: 600;
@@ -190,9 +188,9 @@
 }
 
 .paginationButton:hover:not(:disabled) {
-  border-color: rgba(147, 197, 253, 0.5);
-  background: rgba(30, 41, 59, 0.7);
-  color: #fff;
+  border-color: #80ad9e;
+  background: #e4f1ec;
+  color: #175c50;
 }
 
 .paginationButton:disabled {

@@ -97,17 +97,17 @@ watch(
 </script>
 
 <template>
-  <div class="pb-24">
+  <div>
     <PostList :posts="visiblePosts" />
 
     <nav
       v-if="typeof props.limit !== 'number' && totalPages > 1"
-      class="fixed inset-x-0 bottom-0 z-20 flex flex-wrap items-center justify-center gap-2 border-t border-b border-slate-400/20 bg-[rgba(9,21,40,0.9)] px-3 py-3 backdrop-blur-md sm:gap-3 sm:px-4 sm:py-4 md:gap-4 md:px-6 md:py-5 lg:pr-40"
+      class="mt-8 mb-12 flex flex-wrap items-center justify-center gap-3 border-t border-[#dae4df] py-6"
       aria-label="Blog archive pagination"
     >
       <button
         type="button"
-        class="group cursor-pointer rounded-full border border-slate-400/25 bg-slate-900/50 p-2.5 text-blue-100 transition duration-200 hover:border-blue-300/50 hover:bg-slate-800/70 hover:text-white disabled:cursor-not-allowed disabled:opacity-45 sm:p-3 md:p-3.5"
+        class="group cursor-pointer rounded-md border border-[#dae4df] bg-white p-2.5 text-[#176c5b] transition hover:bg-[#e4f1ec] disabled:cursor-not-allowed disabled:opacity-45"
         :disabled="currentPage === 1"
         aria-label="Previous page"
         @click="goToPage(currentPage - 1)"
@@ -144,13 +144,13 @@ watch(
         </span>
       </button>
 
-      <span class="text-sm font-semibold text-slate-300 sm:text-sm md:text-base">
+      <span class="text-sm font-semibold text-[#4f625d]">
         Page {{ currentPage }} of {{ totalPages }}
       </span>
 
       <button
         type="button"
-        class="group cursor-pointer rounded-full border border-slate-400/25 bg-slate-900/50 p-2.5 text-blue-100 transition duration-200 hover:border-blue-300/50 hover:bg-slate-800/70 hover:text-white disabled:cursor-not-allowed disabled:opacity-45 sm:p-3 md:p-3.5"
+        class="group cursor-pointer rounded-md border border-[#dae4df] bg-white p-2.5 text-[#176c5b] transition hover:bg-[#e4f1ec] disabled:cursor-not-allowed disabled:opacity-45"
         :disabled="currentPage === totalPages"
         aria-label="Next page"
         @click="goToPage(currentPage + 1)"
@@ -187,7 +187,7 @@ watch(
         </span>
       </button>
 
-      <span class="absolute right-6 hidden text-sm font-semibold text-slate-300 lg:block">
+      <span class="ml-3 hidden text-sm font-semibold text-[#697b75] lg:block">
         {{ posts.length }} total post<span v-if="posts.length !== 1">s</span>
       </span>
     </nav>
