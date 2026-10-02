@@ -1,7 +1,12 @@
 <script setup lang="ts">
+import { onMounted, ref } from "vue"
 import styles from "./SiteFooter.module.css"
 
-const year = new Date().getFullYear()
+const year = ref<number | null>(null)
+
+onMounted(() => {
+  year.value = new Date().getFullYear()
+})
 </script>
 
 <template>
@@ -23,7 +28,7 @@ const year = new Date().getFullYear()
       </div>
 
       <div :class="styles.bottom">
-        <span>&copy; {{ year }} Jeremy Honl</span>
+        <span>&copy; <template v-if="year">{{ `${year} ` }}</template>Jeremy Honl</span>
         <span>Built with curiosity.</span>
       </div>
     </div>
