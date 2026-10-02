@@ -6,6 +6,7 @@ import mermaid from "mermaid"
 import BlogArticleLayout from "./components/layouts/BlogArticleLayout.vue"
 import EmptyViewLayout from "./components/layouts/EmptyViewLayout.vue"
 import PageLayout from "./components/layouts/PageLayout.vue"
+import SiteFooter from "./components/sections/SiteFooter.vue"
 import SiteNavbar from "./components/sections/SiteNavbar.vue"
 
 const { page, frontmatter } = useData()
@@ -80,5 +81,7 @@ watch(
     <main class="hs-layout__content">
       <component :is="currentLayout" />
     </main>
+
+    <SiteFooter v-if="frontmatter.unstyled !== true" />
   </div>
 </template>

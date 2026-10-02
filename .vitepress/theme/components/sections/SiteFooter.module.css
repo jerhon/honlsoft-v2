@@ -1,0 +1,78 @@
+.footer {
+  margin-top: auto;
+  border-top: 1px solid var(--vp-c-divider);
+  background: #f1f5f2;
+}
+
+.inner {
+  padding-block: 2.5rem 1.25rem;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.brand {
+  max-width: 25rem;
+}
+
+.name {
+  color: var(--vp-c-text-1);
+  font-family: "Oswald", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand p {
+  margin: 0.7rem 0 0;
+  color: var(--vp-c-text-2);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  justify-content: flex-end;
+  gap: 0.75rem 1.5rem;
+}
+
+.nav a {
+  color: var(--vp-c-text-2);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav a:hover,
+.name:hover {
+  color: var(--vp-c-brand-1);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 1.25rem;
+  color: var(--vp-c-text-3);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 639px) {
+  .top {
+    flex-direction: column;
+    gap: 1.75rem;
+    padding-bottom: 2rem;
+  }
+
+  .nav {
+    justify-content: flex-start;
+  }
+}
