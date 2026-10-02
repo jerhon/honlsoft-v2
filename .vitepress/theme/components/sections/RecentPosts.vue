@@ -17,6 +17,13 @@ const recentPosts = computed(() => posts.slice(0, 10))
       'hs-page-width scroll-mt-30 px-6 sm:px-8 lg:px-12',
     ]"
   >
+    <div :class="styles.heading">
+      <div>
+        <p :class="styles.eyebrow">The journal</p>
+        <h2>Recent writing</h2>
+      </div>
+      <a href="/blog/">All posts <span aria-hidden="true">&rarr;</span></a>
+    </div>
     <PostList :posts="recentPosts" />
   </section>
 </template>
